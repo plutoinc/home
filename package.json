@@ -1,0 +1,24 @@
+{
+  "name": "pluto-home",
+  "version": "0.0.1",
+  "description": "pluto home page node package manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pluto-net/home.git"
+  },
+  "keywords": [
+    "pluto",
+    "pluto-net",
+    "pluto-network"
+  ],
+  "author": "Pluto Network",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/pluto-net/home/issues"
+  },
+  "homepage": "https://github.com/pluto-net/home#readme"
+}
