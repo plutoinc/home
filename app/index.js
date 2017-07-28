@@ -6,7 +6,7 @@ import { Router, createMemoryHistory, browserHistory, hashHistory } from 'react-
 import { Provider } from 'react-redux';
 // server
 import { handler as lambdaHandler } from './server';
-// redux middlewares
+// Middleware
 import * as ReactRouterRedux from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
@@ -29,7 +29,6 @@ if (EnvChecker.isServer()) {
 
 const routerMid = ReactRouterRedux.routerMiddleware(history);
 
-// Create store
 let AppInitialState;
 if (!EnvChecker.isServer()) {
   try {
@@ -54,14 +53,12 @@ if (EnvChecker.isServer() || !EnvChecker.isDev()) {
   store = createStore(
     rootReducer,
     AppInitialState,
-    // TODO: Add InitialState and Define State types to change 'any' type
     applyMiddleware(routerMid, thunkMiddleware),
   );
 } else {
-  // Set logger middleware to convert from ImmutableJS to plainJS
   const logger = createLogger({
     stateTransformer: (state) => {
-      const newState = {}; // HACK: Should assign proper type later
+      const newState = {};
       for (const i of Object.keys(state)) {
         if (Immutable.Iterable.isIterable(state[i])) {
           newState[i] = state[i].toJS();
@@ -80,7 +77,6 @@ if (EnvChecker.isServer() || !EnvChecker.isDev()) {
   );
 }
 
-// Create history with store
 const appHistory = ReactRouterRedux.syncHistoryWithStore(
   history,
   store,
@@ -89,7 +85,6 @@ const appHistory = ReactRouterRedux.syncHistoryWithStore(
 export const appStore = store;
 const routes = createRoute(store);
 
-// Browser Side Rendering to develop React Web-app
 if (!EnvChecker.isServer()) {
   ReactDom.render(
     <CssInjector>
