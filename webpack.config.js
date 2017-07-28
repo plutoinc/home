@@ -29,10 +29,10 @@ module.exports = {
       {
         test: /\.svg$/,
         exclude: /node_modules/,
-        loader: "svg-inline-loader",
+        loader: 'svg-inline-loader',
         options: {
-          classPrefix: true
-        }
+          classPrefix: true,
+        },
       },
       {
         test: /\.scss$/,
@@ -53,7 +53,7 @@ module.exports = {
                 return [
                   require('precss'),
                   require('autoprefixer'),
-                  require('postcss-flexbugs-fixes')
+                  require('postcss-flexbugs-fixes'),
                 ];
               },
             },
@@ -67,6 +67,9 @@ module.exports = {
         loader: 'babel-loader',
       },
     ],
+  },
+  node: {
+    fs: 'empty',
   },
   plugins: [
     new webpack.DefinePlugin({
