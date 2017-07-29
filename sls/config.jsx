@@ -9,12 +9,10 @@ export const S3_CLIENT_OPTIONS = {
   },
 };
 
-// NOTE: Change below options following your environment
-// Local defined Constants
 export const DEPLOY_VERSION = process.env.DEPLOY_VERSION;
 export const PRODUCTION_GIT_TAG = 'production';
-export const AWS_S3_BUCKET = 'serverless-react-tylor-app';
+export const AWS_S3_BUCKET = 'pluto-home';
 export const AWS_S3_FOLDER_PREFIX = 'react-app';
-export const APP_DEST = './dist/';
+export const APP_DEST = './dst/';
 export const VERSION_FILE_NAME = 'production_version';
-export const VERSION_FILE_PATH = `./temp/${VERSION_FILE_NAME}`;
+export const VERSION_FILE_PATH = `./tmp/${VERSION_FILE_NAME}`;

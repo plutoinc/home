@@ -60,3 +60,11 @@ typings/
 # Build output
 output
 dst
+tmp
+dst.zip
+
+# Editor
+.vscode
+
+# Serverless directories
+.serverless

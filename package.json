@@ -4,10 +4,13 @@
   "description": "pluto home page node package manager",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf output",
+    "clean": "rm -rf dst && rm -rf tmp && rm -f dst.zip",
     "build": "npm run clean && npm run build:browser && npm run build:server",
     "build:browser": "webpack --config webpack.browser.config.js -p",
     "build:server": "webpack --config webpack.server.config.js -p",
+    "pack": "rm -f dst.zip && rm -f dst/bundleBrowser.js && cp sls/package.json dst/package.json && cd dst && npm install --p && zip -r ../dst.zip . ** && cd ..",
+    "deploy:stage": "npm run build && babel-node sls/deployToStage.js && cp tmp/version dst && cp sls/handler.js dst && npm run pack && serverless deploy --stage stage",
+    "deploy:prod": "npm run build && babel-node sls/deployToStage.js && cp tmp/version dst && cp sls/handler.js dst && npm run pack && serverless deploy --stage production",
     "dev": "webpack-dev-server --content-base app/ --hot --progress --colors --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

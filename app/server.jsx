@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import { applyMiddleware, createStore } from 'redux';
 import { RouterContext, match, createMemoryHistory } from 'react-router';
 import { Provider } from 'react-redux';
-// redux middlewares
+// Redux Middleware
 import * as ReactRouterRedux from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
 // helpers
@@ -16,7 +16,7 @@ import { rootReducer, initialState } from './rootReducer';
 import createRoute from './routes';
 // deploy
 import fs from 'fs';
-import DeployConfig from '../scripts/config';
+import * as DeployConfig from '../sls/config';
 
 const history = createMemoryHistory();
 const routerMid = ReactRouterRedux.routerMiddleware(history);
@@ -79,22 +79,16 @@ export async function serverSideRender(requestUrl, scriptPath) {
 // Lambda Handler
 export async function handler(event, context) {
   if (EnvChecker.isServer()) {
-    const LAMBDA_SERVICE_NAME = 'pluto-home';
+    const LAMBDA_FUNCTION_NAME = 'frontRender';
     const path = event.path;
     const version = fs.readFileSync('./version');
 
-    let requestPath;
-    if (path === `/${LAMBDA_SERVICE_NAME}`) {
-      requestPath = '/';
-    } else {
-      requestPath = path.replace(`/${LAMBDA_SERVICE_NAME}`, '');
-    }
+    const requestPath = path.replace(`/${LAMBDA_FUNCTION_NAME}`, '');
 
     try {
       const bundledJsForBrowserPath = `https://s3.amazonaws.com/${DeployConfig.AWS_S3_BUCKET}/${DeployConfig.AWS_S3_FOLDER_PREFIX}/${version}/bundleBrowser.js`;
-      const response = await serverSideRender(requestPath, bundledJsForBrowserPath); // NOTE: Should change this address
+      const response = await serverSideRender(requestPath, bundledJsForBrowserPath);
 
-      console.log(response);
       context.succeed({
         statusCode: 200,
         headers: {
