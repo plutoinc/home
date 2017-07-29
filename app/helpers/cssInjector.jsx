@@ -11,9 +11,8 @@ class CssInjector extends React.PureComponent {
           return [{}];
         }
         styles.forEach((style) => {
-          if (EnvChecker.isServer()) {
-            css.add(style._getCss());
-          } else {
+          css.add(style._getCss());
+          if (!EnvChecker.isServer()) {
             style._insertCss();
           }
         });

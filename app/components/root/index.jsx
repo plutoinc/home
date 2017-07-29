@@ -1,7 +1,12 @@
 import React from 'react';
+// styles
+import styles from './root.scss';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-export default class Root extends React.PureComponent {
+class Root extends React.PureComponent {
   render() {
-    return <div>hello 2world</div>;
+    return <div>{this.props.children}</div>;
   }
 }
+
+export default withStyles(styles)(Root);
