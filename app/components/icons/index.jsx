@@ -6,6 +6,11 @@ const ICONS = {
   INCREASING_REVENUE: require('./increasing-revenue.svg'),
   RACK_OF_TRUST: require('./rack-of-trust.svg'),
   RESOURCE_COST: require('./resource-cost.svg'),
+  GITHUB: require('./github.svg'),
+  REDDIT: require('./reddit.svg'),
+  HIP_CHAT: require('./hip-chat.svg'),
+  TWITTER: require('./twitter.svg'),
+  MEDIUM: require('./medium.svg'),
 };
 
 class Icon extends React.PureComponent {
