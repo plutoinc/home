@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "8"
+sudo: enabled
+dist: trusty
+
+branches:
+  only:
+  - master
+
+install:
+  - npm install
+
+script: npm run deploy:prod
