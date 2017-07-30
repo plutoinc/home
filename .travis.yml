@@ -12,4 +12,4 @@ branches:
 install:
   - npm install
 
-script: build.sh
+script: sudo sh build.sh
