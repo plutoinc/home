@@ -7,9 +7,8 @@ dist: trusty
 branches:
   only:
   - master
-  - develop
 
 install:
   - npm install
 
-script: sudo sh build.sh
+script: npm run deploy:prod
