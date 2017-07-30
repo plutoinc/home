@@ -12,4 +12,4 @@ branches:
 install:
   - npm install
 
-script: .travis/build.sh
+script: build.sh
