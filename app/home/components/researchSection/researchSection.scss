@@ -1,0 +1,63 @@
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.researchSectionContainer {
+  padding-top: 74px;
+  padding-bottom: 81px;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 1.5;
+  color: #172649;
+  margin-bottom: 41px;
+}
+
+.effectWrapper {
+  padding: 0;
+  list-style: none;
+}
+
+.effectItem {
+  display: inline-block;
+  vertical-align: top;
+  width: 460px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px #f0f0f0;
+  padding: 40px 45px 22px 45px;
+}
+
+.effectItem + .effectItem {
+  margin-left: 20px;
+}
+
+.effectItemImage {
+  display: inline-block;
+  vertical-align: top;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-right: 24.5px;
+}
+
+.effectItemTitle {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 44px;
+  color: #323c47;
+}
+
+.effectItemDescription {
+  margin-top: 27px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7f8593;
+}
+
+.row {
+  margin-bottom: 20px;
+}
