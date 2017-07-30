@@ -5,7 +5,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { Router, createMemoryHistory, browserHistory, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 // server
-import { handler as lambdaHandler } from './server';
+import { handler as lambdaHandler, serverSideRender } from './server';
 // Middleware
 import * as ReactRouterRedux from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
@@ -22,8 +22,10 @@ let history;
 if (EnvChecker.isServer()) {
   history = createMemoryHistory();
 } else if (EnvChecker.isDev()) {
+  require('bootstrap');
   history = hashHistory;
 } else {
+  require('bootstrap');
   history = browserHistory;
 }
 
@@ -94,6 +96,13 @@ if (!EnvChecker.isServer()) {
     </CssInjector>,
     document.getElementById('react-app'),
   );
+} else if (EnvChecker.isServer() && process.env.NODE_ENV === 'test') {
+  serverSideRender('/', 'dsf').then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 }
 
 // Lambda handler
