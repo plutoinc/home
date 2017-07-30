@@ -1,0 +1,65 @@
+.carouselItemWrapper {
+  width: 678px;
+  height: 100%;
+  padding-top: 102.5px;
+  margin: auto;
+}
+
+.userImgWrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 52px;
+}
+
+.userImg {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.descriptionWrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 575px;
+  color: #4c4c4c;
+}
+
+.doubleQuotationWrapper {
+  position: absolute;
+  top: 0;
+  left: -29px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.doubleQuotation {
+  display: inline-block;
+  vertical-align: top;
+  width: 17px;
+  height: 12px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.73;
+  letter-spacing: 0.5px;
+  margin-bottom: 21px;
+}
+
+.authorInfo {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8.5px;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.bioInfo {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+}
