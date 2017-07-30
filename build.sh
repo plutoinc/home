@@ -1,7 +1,7 @@
 #!/bin/bash
 echo $TRAVIS_BRANCH
 
-if [[ $TRAVIS_BRANCH == 'master' ]]
+if [$TRAVIS_BRANCH == 'master']
 then
   npm run deploy:prod
 else
