@@ -1,0 +1,12 @@
+language: node_js
+sudo: enabled
+dist: trusty
+branches:
+  only:
+  - master
+  - develop
+
+install:
+  - npm install
+
+script: .travis/build.sh
