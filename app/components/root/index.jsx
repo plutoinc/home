@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap';
 // styles
 import styles from './root.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
