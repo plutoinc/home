@@ -1,0 +1,56 @@
+.criticismSection {
+  height: 660px;
+  background-color: #f8f7f7;
+  padding-top: 75px;
+  padding-bottom: 95px;
+}
+
+.headline {
+  font-size: 24px;
+  line-height: 1.83;
+  color: #323c47;
+  text-align: center;
+}
+
+.cardItemWrapper {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 78px;
+}
+
+.subTitle {
+  font-size: 17px;
+  line-height: 1.65;
+  text-align: center;
+  color: #8d8d8d;
+}
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.cardTitle {
+  margin-top: 49px;
+  margin-bottom: 36px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #172649;
+}
+
+.cardDescription {
+  font-size: 15px;
+  line-height: 1.73;
+  letter-spacing: -0.2px;
+  color: #2d2c44;
+  text-align: center;
+}
+
+.cardItemIcon {
+  display: inline-block;
+  vertical-align: top;
+  width: 65px;
+  height: 65px;
+}

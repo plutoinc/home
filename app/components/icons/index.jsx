@@ -3,6 +3,9 @@ const InlineSVG = require('svg-inline-react');
 
 const ICONS = {
   DOUBLE_QUOTATION: require('./double-quotation.svg'),
+  INCREASING_REVENUE: require('./increasing-revenue.svg'),
+  RACK_OF_TRUST: require('./rack-of-trust.svg'),
+  RESOURCE_COST: require('./resource-cost.svg'),
 };
 
 class Icon extends React.PureComponent {
