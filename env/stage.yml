@@ -1,2 +1,3 @@
 DNS_ALIAS1: next.pluto.network
 DNS_ALIAS2: future.pluto.network
+MAILCHIMP_API_KEY: ${env:MAILCHIMP_API_KEY}
