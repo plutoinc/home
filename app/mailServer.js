@@ -41,6 +41,7 @@ export default async function handler(event) {
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
+    console.error(err);
     return {
       statusCode: err.response.data.status,
       headers: {
