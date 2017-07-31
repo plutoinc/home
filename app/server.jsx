@@ -86,7 +86,7 @@ export async function handler(event, context) {
     const requestPath = path.replace(`/${LAMBDA_FUNCTION_NAME}`, '');
 
     try {
-      const bundledJsForBrowserPath = `https://d146wza8np03cp.cloudfront.net/${DeployConfig.AWS_S3_BUCKET}/${DeployConfig.AWS_S3_FOLDER_PREFIX}/${version}/bundleBrowser.js`;
+      const bundledJsForBrowserPath = `https://d146wza8np03cp.cloudfront.net/${DeployConfig.AWS_S3_FOLDER_PREFIX}/${version}/bundleBrowser.js`;
       const response = await serverSideRender(requestPath, bundledJsForBrowserPath);
 
       context.succeed({
