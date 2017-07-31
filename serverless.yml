@@ -28,6 +28,15 @@ functions:
           path: frontRender/{proxy+}
           method: any
 
+  subscribeMail:
+    handler: handler.subscribeMail
+    timeout: 10
+    events:
+      - http:
+          path: subscribeMailingList
+          method: post
+          cors: true
+
 resources:
   Resources:
     PlutoRenderLogGroup:

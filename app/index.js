@@ -6,6 +6,7 @@ import { Router, createMemoryHistory, browserHistory, hashHistory } from 'react-
 import { Provider } from 'react-redux';
 // server
 import { handler as lambdaHandler, serverSideRender } from './server';
+import mailHandler from './mailServer';
 // Middleware
 import * as ReactRouterRedux from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
@@ -107,3 +108,4 @@ if (!EnvChecker.isServer()) {
 
 // Lambda handler
 export const handler = lambdaHandler;
+export const subscribeMailHandler = mailHandler;
