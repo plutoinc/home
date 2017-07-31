@@ -16,7 +16,7 @@ const ResearchSection = () => {
             <li className={styles.effectItem}>
               <img
                 className={styles.effectItemImage}
-                src="https://pluto-asset.s3-accelerate.amazonaws.com/effect-icon-1.jpg"
+                src="https://d2vo77dayzjoat.cloudfront.net/effect-icon-1.jpg"
               />
               <div className={styles.effectItemTitle}>
                 리뷰 퀄리티 향상
@@ -28,7 +28,7 @@ const ResearchSection = () => {
             <li className={styles.effectItem}>
               <img
                 className={styles.effectItemImage}
-                src="https://pluto-asset.s3-accelerate.amazonaws.com/effect-icon-2.jpg"
+                src="https://d2vo77dayzjoat.cloudfront.net/effect-icon-2.jpg"
               />
               <div className={styles.effectItemTitle}>
                 개제 시간 단축
@@ -42,7 +42,7 @@ const ResearchSection = () => {
             <li className={styles.effectItem}>
               <img
                 className={styles.effectItemImage}
-                src="https://pluto-asset.s3-accelerate.amazonaws.com/effect-icon-3.jpg"
+                src="https://d2vo77dayzjoat.cloudfront.net/effect-icon-3.jpg"
               />
               <div className={styles.effectItemTitle}>
                 합리적인 비용
@@ -54,7 +54,7 @@ const ResearchSection = () => {
             <li className={styles.effectItem}>
               <img
                 className={styles.effectItemImage}
-                src="https://pluto-asset.s3-accelerate.amazonaws.com/effect-icon-4.jpg"
+                src="https://d2vo77dayzjoat.cloudfront.net/effect-icon-4.jpg"
               />
               <div className={styles.effectItemTitle}>
                 효과적인 공유
