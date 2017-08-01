@@ -20,6 +20,8 @@ export default async function handler(event) {
       status: 'subscribed',
     };
 
+    console.log(process.env);
+
     const stringifiedParam = JSON.stringify(param);
     await Axios.post('https://us16.api.mailchimp.com/3.0/lists/938e6d7f93/members', stringifiedParam,
       {
@@ -37,6 +39,7 @@ export default async function handler(event) {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST,GET,OPTIONS',
       },
       body: JSON.stringify({ success: true }),
     };
@@ -47,6 +50,7 @@ export default async function handler(event) {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST,GET,OPTIONS',
       },
       body: JSON.stringify({ error: err.response.data.title }),
     };
