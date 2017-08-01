@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './mainSection.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-const MainSection = ({ email, subscribeEmail, handleEmailChange }) => {
+const MainSection = ({ intl, email, subscribeEmail, handleEmailChange }) => {
   return (
     <div className={styles.mainSectionContainer}>
       <div className="container">
@@ -14,7 +14,7 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => {
               Platform, Pluto
             </div>
             <div className={`col-md-8 col-xs-12 ${styles.subTitle}`}>
-              학술정보를 블록체인상에 구현하여 연구자가 연구에만 집중 할 수 있는 세상을 만듭니다.
+              {intl.formatMessage({ id: 'MAIN_SECTION.subtitle' })}
             </div>
           </div>
 
@@ -30,7 +30,7 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => {
               type="text"
             />
             <button className={`btn ${styles.emailSubmitButton}`}>
-              구독하기
+              {intl.formatMessage({ id: 'MAIN_SECTION.subscribe' })}
             </button>
           </form>
         </div>

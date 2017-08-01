@@ -33,20 +33,21 @@ class HomeContainer extends React.PureComponent {
 
     return (
       <div>
-        {intl.formatMessage({ id: 'HELLO' })}
-        <Navbar />
+        <Navbar intl={intl} />
         <MainSection
           email={homeState.get('email')}
           subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
+          intl={intl}
         />
-        <ScholarCarousel />
-        <CriticismSection />
-        <PlatformSection />
-        <RoadMapSection />
-        <ResearchSection />
-        <BlogSection />
+        <ScholarCarousel intl={intl} />
+        <CriticismSection intl={intl} />
+        <PlatformSection intl={intl} />
+        <RoadMapSection intl={intl} />
+        <ResearchSection intl={intl} />
+        <BlogSection intl={intl} />
         <MailSection
+          intl={intl}
           email={homeState.get('email')}
           subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
