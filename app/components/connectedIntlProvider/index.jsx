@@ -47,11 +47,11 @@ class ConnectedIntlProvider extends React.PureComponent {
 
     let currentLocale;
     if (userLocale) {
-      console.log(userLocale);
-      currentLocale = userLocale;
+      currentLocale = userLocale.split('-')[0];
     } else {
       currentLocale = localeFinder();
     }
+    console.log(currentLocale);
     const currentMessage = getMessages(currentLocale);
     dispatch(changeLocale(currentLocale));
     dispatch(changeMessages(currentMessage));
