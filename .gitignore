@@ -64,6 +64,7 @@ tmp
 dst.zip
 
 # Editor
+.idea
 .vscode
 
 # Serverless directories

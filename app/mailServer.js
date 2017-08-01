@@ -20,8 +20,6 @@ export default async function handler(event, context) {
       status: 'subscribed',
     };
 
-    console.log(process.env);
-
     const stringifiedParam = JSON.stringify(param);
     await Axios.post('https://us16.api.mailchimp.com/3.0/lists/938e6d7f93/members', stringifiedParam,
       {

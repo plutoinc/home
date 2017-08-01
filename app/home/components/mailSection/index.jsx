@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './mailSection.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-const MailSection = () => {
+const MailSection = ({ email, subscribeEmail, handleEmailChange }) => {
   return (
     <div className={styles.mailSectionContainer}>
       <div className={styles.title}>
@@ -14,11 +14,13 @@ const MailSection = () => {
         업데이트 사항 및 ICO 정보등 유용한 정보를 보내드립니다.
       </div>
       <div className={styles.emailInputWrapper}>
-        <form className={`form-inline ${styles.emailWrapper}`}>
+        <form onSubmit={subscribeEmail} className={`form-inline ${styles.emailWrapper}`}>
           <input
+            onChange={handleEmailChange}
             style={{ width: '300px' }}
             placeholder="Enter your email"
             className={`form-control ${styles.emailSubmitInput}`}
+            value={email}
             type="text"
           />
           <button className={`btn ${styles.emailSubmitButton}`}>
