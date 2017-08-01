@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import { connect } from 'react-redux';
+import { injectIntl } from 'react-intl';
 import MainSection from './components/mainSection';
 import Navbar from '../components/navbar';
 import ScholarCarousel from './components/scholarCarousel';
@@ -28,10 +29,11 @@ class HomeContainer extends React.PureComponent {
   }
 
   render() {
-    const { homeState } = this.props;
+    const { intl, homeState } = this.props;
 
     return (
       <div>
+        {intl.formatMessage({ id: 'HELLO' })}
         <Navbar />
         <MainSection
           email={homeState.get('email')}
@@ -79,4 +81,4 @@ class HomeContainer extends React.PureComponent {
   }
 }
 
-export default connect(mapStateToProps)(HomeContainer);
+export default injectIntl(connect(mapStateToProps)(HomeContainer));

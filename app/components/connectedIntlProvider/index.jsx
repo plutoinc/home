@@ -63,7 +63,7 @@ class ConnectedIntlProvider extends React.PureComponent {
 }
 
 function mapStateToProps(appState) {
-  return { locale: appState.locale.get('lang'), messages: appState.locale.get('messages') };
+  return { locale: appState.locale.lang, messages: appState.locale.messages };
 }
 
 export default connect(mapStateToProps)(ConnectedIntlProvider);
