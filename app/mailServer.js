@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-export default async function handler(event) {
+export default async function handler(event, context) {
   if (!event.queryStringParameters || !event.queryStringParameters.email) {
     return {
       statusCode: 500,
@@ -34,7 +34,7 @@ export default async function handler(event) {
           password: process.env.MAILCHIMP_API_KEY,
         },
       });
-    return {
+    return context.succeed({
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
@@ -42,10 +42,10 @@ export default async function handler(event) {
         'Access-Control-Allow-Methods': 'POST,GET,OPTIONS',
       },
       body: JSON.stringify({ success: true }),
-    };
+    });
   } catch (err) {
     console.error(err);
-    return {
+    return context.done(null, {
       statusCode: err.response.data.status,
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
@@ -53,6 +53,6 @@ export default async function handler(event) {
         'Access-Control-Allow-Methods': 'POST,GET,OPTIONS',
       },
       body: JSON.stringify({ error: err.response.data.title }),
-    };
+    });
   }
 };
