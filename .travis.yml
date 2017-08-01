@@ -6,12 +6,13 @@ dist: trusty
 branches:
   only:
   - master
+  - develop
 install:
 - npm install
 before_script:
 - git config --global user.email "engineers@pluto.network"
 - git config --global user.name "Travis CI"
-script: npm run deploy:prod
+script: ./scripts/travisBuild.sh
 after_script:
 - sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/pluto-net/home.git
   --tags -f'

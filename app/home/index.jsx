@@ -27,7 +27,7 @@ class HomeContainer extends React.PureComponent {
   }
 
   render() {
-    const { homeState } = this.props; 
+    const { homeState } = this.props;
 
     return (
       <div>
