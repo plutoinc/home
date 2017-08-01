@@ -41,7 +41,7 @@ if (!EnvChecker.isServer()) {
     const __INITIAL_STATE__ = window.__INITIAL_STATE__;
 
     for (const k in __INITIAL_STATE__) {
-      if (__INITIAL_STATE__.hasOwnProperty(k)) {
+      if (__INITIAL_STATE__.hasOwnProperty(k) && Immutable.isImmutable(__INITIAL_STATE__[k])) {
         appInitialState[k] = Immutable.fromJS(__INITIAL_STATE__[k]);
       }
     }
