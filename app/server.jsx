@@ -17,6 +17,8 @@ import createRoute from './routes';
 // deploy
 import fs from 'fs';
 import * as DeployConfig from '../sls/config';
+// i18n
+import ConnectedIntlProvider from './components/connectedIntlProvider';
 
 const history = createMemoryHistory();
 const routerMid = ReactRouterRedux.routerMiddleware(history);
@@ -50,7 +52,9 @@ export async function serverSideRender(requestUrl, scriptPath) {
           renderedHTML = ReactDOMServer.renderToString(
             <CssInjector>
               <Provider store={store}>
-                <RouterContext {...renderProps} />
+                <ConnectedIntlProvider>
+                  <RouterContext {...renderProps} />
+                </ConnectedIntlProvider>
               </Provider>
             </CssInjector>,
           );
