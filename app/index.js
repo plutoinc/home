@@ -18,6 +18,8 @@ import CssInjector from './helpers/cssInjector';
 import { rootReducer, initialState } from './rootReducer';
 // routes
 import createRoute from './routes';
+// i18n
+import ConnectedIntlProvider from './components/connectedIntlProvider';
 
 let history;
 if (EnvChecker.isServer()) {
@@ -39,7 +41,7 @@ if (!EnvChecker.isServer()) {
     const __INITIAL_STATE__ = window.__INITIAL_STATE__;
 
     for (const k in __INITIAL_STATE__) {
-      if (__INITIAL_STATE__.hasOwnProperty(k)) {
+      if (__INITIAL_STATE__.hasOwnProperty(k) && Immutable.isImmutable(__INITIAL_STATE__[k])) {
         appInitialState[k] = Immutable.fromJS(__INITIAL_STATE__[k]);
       }
     }
@@ -92,7 +94,9 @@ if (!EnvChecker.isServer()) {
   ReactDom.render(
     <CssInjector>
       <Provider store={store}>
-        <Router history={appHistory} children={routes} />
+        <ConnectedIntlProvider>
+          <Router history={appHistory} children={routes} />
+        </ConnectedIntlProvider>
       </Provider>
     </CssInjector>,
     document.getElementById('react-app'),

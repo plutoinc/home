@@ -3,15 +3,14 @@ import React from 'react';
 import styles from './mailSection.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-const MailSection = ({ email, subscribeEmail, handleEmailChange }) => {
+const MailSection = ({ intl, email, subscribeEmail, handleEmailChange }) => {
   return (
     <div className={styles.mailSectionContainer}>
       <div className={styles.title}>
-        플루토와 함께 혁신에 동참하세요
+        {intl.formatMessage({ id: 'MailSection.title' })}
       </div>
       <div className={styles.subTitle}>
-        지금 메일을 등록하고 플루토 소식을 받아보세요.<br />
-        업데이트 사항 및 ICO 정보등 유용한 정보를 보내드립니다.
+        {intl.formatMessage({ id: 'MailSection.subTitle' })}
       </div>
       <div className={styles.emailInputWrapper}>
         <form onSubmit={subscribeEmail} className={`form-inline ${styles.emailWrapper}`}>
@@ -24,7 +23,7 @@ const MailSection = ({ email, subscribeEmail, handleEmailChange }) => {
             type="text"
           />
           <button className={`btn ${styles.emailSubmitButton}`}>
-            구독하기
+            {intl.formatMessage({ id: 'MAIN_SECTION.subscribe' })}
           </button>
         </form>
       </div>

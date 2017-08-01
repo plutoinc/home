@@ -3,11 +3,11 @@ import React from 'react';
 import styles from './blogSection.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-const BlogSection = () => {
+const BlogSection = ({ intl }) => {
   return (
     <div className={styles.blogSectionContainer}>
       <div className={styles.blogTitle}>
-        최신 블로그 글
+        {intl.formatMessage({ id: 'BlogSection.blogTitle' })}
       </div>
       <div className={styles.blogCardWrapper}>
         <div className={styles.blogCard}>
@@ -43,7 +43,9 @@ const BlogSection = () => {
             </div>
           </div>
         </div>
-        <button className={styles.blogButton}>Pluto 블로그 바로가기</button>
+        <button className={styles.blogButton}>
+          {intl.formatMessage({ id: 'BlogSection.blogButton' })}
+        </button>
       </div>
     </div>
   );

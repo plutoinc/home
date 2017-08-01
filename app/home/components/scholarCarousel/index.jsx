@@ -5,7 +5,7 @@ import ScholarCarouselItem from './scholarCarouselItem';
 import styles from './scholarCarousel.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-const ScholarCarousel = () => {
+const ScholarCarousel = ({ intl }) => {
   const settings = {
     dots: false,
     arrows: false,
@@ -19,30 +19,34 @@ const ScholarCarousel = () => {
     <Slider {...settings}>
       <div>
         <ScholarCarouselItem
-          author="RANDY SCHEKMAN"
-          description="저는 제가 노벨상을 받을 수 있게 만든 논문을 포함하여 주요 학술지에 논문을 출판해왔습니다. 하지만 더이상은 아닙니다. 월스트리트가 보너스 문화를 깨뜨릴 필요가 있는 것처럼, 과학은 귀족 저널의 가혹한 행위를 깨버려야 합니다."
-          bio="생명과학/약학 분야 노벨상 수상자 "
+          imgUrl="https://d2vo77dayzjoat.cloudfront.net/randy-schekman-profile.jpg"
+          author={intl.formatMessage({ id: 'ScholarCarousel.author1' })}
+          description={intl.formatMessage({ id: 'ScholarCarousel.description1' })}
+          bio={intl.formatMessage({ id: 'ScholarCarousel.bio1' })}
         />
       </div>
       <div>
         <ScholarCarouselItem
-          author="Tylor Shin"
-          description="AWESOME"
-          bio="Enginner"
+          imgUrl="https://d2vo77dayzjoat.cloudfront.net/julia-belluz.jpg"
+          author={intl.formatMessage({ id: 'ScholarCarousel.author2' })}
+          description={intl.formatMessage({ id: 'ScholarCarousel.description2' })}
+          bio={intl.formatMessage({ id: 'ScholarCarousel.bio2' })}
         />
       </div>
       <div>
         <ScholarCarouselItem
-          author="daskjfksjf"
-          description="AWESOME"
-          bio="Enginner"
+          imgUrl="https://d2vo77dayzjoat.cloudfront.net/david-kent.jpg"
+          author={intl.formatMessage({ id: 'ScholarCarousel.author3' })}
+          description={intl.formatMessage({ id: 'ScholarCarousel.description3' })}
+          bio={intl.formatMessage({ id: 'ScholarCarousel.bio3' })}
         />
       </div>
       <div>
         <ScholarCarouselItem
-          author="dsl;kcvfl;kvdzx"
-          description="AWESOME"
-          bio="Enginner"
+          imgUrl="https://d2vo77dayzjoat.cloudfront.net/jason-schmitt.jpg"
+          author={intl.formatMessage({ id: 'ScholarCarousel.author4' })}
+          description={intl.formatMessage({ id: 'ScholarCarousel.description4' })}
+          bio={intl.formatMessage({ id: 'ScholarCarousel.bio4' })}
         />
       </div>
     </Slider>
