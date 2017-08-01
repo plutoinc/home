@@ -6,6 +6,7 @@ import Navbar from '../components/navbar';
 import ScholarCarousel from './components/scholarCarousel';
 import CriticismSection from './components/criticismSection';
 import PlatformSection from './components/platformSection';
+import RoadMapSection from './components/roadMapSection';
 import ResearchSection from './components/researchSection';
 import BlogSection from './components/blogSection';
 import MailSection from './components/mailSection';
@@ -40,6 +41,7 @@ class HomeContainer extends React.PureComponent {
         <ScholarCarousel />
         <CriticismSection />
         <PlatformSection />
+        <RoadMapSection />
         <ResearchSection />
         <BlogSection />
         <MailSection
