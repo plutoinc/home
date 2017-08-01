@@ -3,6 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import { applyMiddleware, createStore } from 'redux';
 import { RouterContext, match, createMemoryHistory } from 'react-router';
 import { Provider } from 'react-redux';
+import acceptLanguage from 'accept-language';
 // Redux Middleware
 import * as ReactRouterRedux from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
@@ -33,7 +34,7 @@ const store = createStore(
 );
 const routes = createRoute(store);
 
-export async function serverSideRender(requestUrl, scriptPath) {
+export async function serverSideRender(requestUrl, scriptPath, userLocale) {
   let renderedHTML;
   let stringifiedInitialReduxState;
 
@@ -52,7 +53,7 @@ export async function serverSideRender(requestUrl, scriptPath) {
           renderedHTML = ReactDOMServer.renderToString(
             <CssInjector>
               <Provider store={store}>
-                <ConnectedIntlProvider>
+                <ConnectedIntlProvider userLocale={userLocale}>
                   <RouterContext {...renderProps} />
                 </ConnectedIntlProvider>
               </Provider>
@@ -88,10 +89,12 @@ export async function handler(event, context) {
     const version = fs.readFileSync('./version');
 
     const requestPath = path.replace(`/${LAMBDA_FUNCTION_NAME}`, '');
+    acceptLanguage.languages(['en-US', 'ko-KR']);
+    const userLocale = acceptLanguage.get(event.headers['Accept-Language']);
 
     try {
       const bundledJsForBrowserPath = `https://d146wza8np03cp.cloudfront.net/${DeployConfig.AWS_S3_FOLDER_PREFIX}/${version}/bundleBrowser.js`;
-      const response = await serverSideRender(requestPath, bundledJsForBrowserPath);
+      const response = await serverSideRender(requestPath, bundledJsForBrowserPath, userLocale);
 
       context.succeed({
         statusCode: 200,

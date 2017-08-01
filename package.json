@@ -82,6 +82,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "accept-language": "^3.0.17",
     "axios": "^0.16.2",
     "babel-runtime": "^6.23.0",
     "bootstrap": "^3.3.7",

@@ -41,11 +41,17 @@ export function getMessages(locale) {
 
 class ConnectedIntlProvider extends React.PureComponent {
   componentWillMount() {
-    const { dispatch } = this.props;
+    const { dispatch, userLocale } = this.props;
 
     addLocaleDataSet();
 
-    const currentLocale = localeFinder();
+    let currentLocale;
+    if (userLocale) {
+      console.log(userLocale);
+      currentLocale = userLocale;
+    } else {
+      currentLocale = localeFinder();
+    }
     const currentMessage = getMessages(currentLocale);
     dispatch(changeLocale(currentLocale));
     dispatch(changeMessages(currentMessage));
