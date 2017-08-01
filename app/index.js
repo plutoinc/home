@@ -18,6 +18,8 @@ import CssInjector from './helpers/cssInjector';
 import { rootReducer, initialState } from './rootReducer';
 // routes
 import createRoute from './routes';
+// i18n
+import ConnectedIntlProvider from './components/connectedIntlProvider';
 
 let history;
 if (EnvChecker.isServer()) {
@@ -92,7 +94,9 @@ if (!EnvChecker.isServer()) {
   ReactDom.render(
     <CssInjector>
       <Provider store={store}>
-        <Router history={appHistory} children={routes} />
+        <ConnectedIntlProvider>
+          <Router history={appHistory} children={routes} />
+        </ConnectedIntlProvider>
       </Provider>
     </CssInjector>,
     document.getElementById('react-app'),
