@@ -100,6 +100,14 @@ export async function handler(event, context) {
     } catch (e) {
       console.error(e);
       console.error(e.meesage);
+      context.succeed({
+        statusCode: 500,
+        headers: {
+          'Content-Type': 'text/html',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: e.message,
+      });
     }
   }
 }
