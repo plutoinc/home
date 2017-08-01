@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import styles from './navbar.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-const Navbar = () => (
+const Navbar = ({ intl }) => (
   <nav className={`navbar navbar-default navbar-fixed-top ${styles.navbar}`}>
     <div className="container">
       <div className="navbar-header">
@@ -29,9 +29,9 @@ const Navbar = () => (
       </div>
       <div className="collapse navbar-collapse" id="pluto-main-navbar">
         <ul className="nav navbar-nav navbar-right">
-          <li><Link style={{ color: '#fff' }} to="/">백서</Link></li>
-          <li><Link style={{ color: '#fff' }} to="/">블로그</Link></li>
-          <li><Link style={{ color: '#fff' }} to="/">깃헙</Link></li>
+          <li><Link style={{ color: '#fff' }} to="/">{intl.formatMessage({ id: 'NAVBAR.whitePaper' })}</Link></li>
+          <li><Link style={{ color: '#fff' }} to="/">{intl.formatMessage({ id: 'NAVBAR.blog' })}</Link></li>
+          <li><Link style={{ color: '#fff' }} to="/">{intl.formatMessage({ id: 'NAVBAR.github' })}</Link></li>
           <li>
             <Link
               style={{
@@ -47,7 +47,7 @@ const Navbar = () => (
               }}
               to="/"
             >
-              기여하기
+              {intl.formatMessage({ id: 'NAVBAR.contribute' })}
             </Link>
           </li>
         </ul>

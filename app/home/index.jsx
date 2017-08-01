@@ -1,11 +1,13 @@
 import React from 'react';
 import Axios from 'axios';
 import { connect } from 'react-redux';
+import { injectIntl } from 'react-intl';
 import MainSection from './components/mainSection';
 import Navbar from '../components/navbar';
 import ScholarCarousel from './components/scholarCarousel';
 import CriticismSection from './components/criticismSection';
 import PlatformSection from './components/platformSection';
+import RoadMapSection from './components/roadMapSection';
 import ResearchSection from './components/researchSection';
 import BlogSection from './components/blogSection';
 import MailSection from './components/mailSection';
@@ -27,22 +29,25 @@ class HomeContainer extends React.PureComponent {
   }
 
   render() {
-    const { homeState } = this.props; 
+    const { intl, homeState } = this.props;
 
     return (
       <div>
-        <Navbar />
+        <Navbar intl={intl} />
         <MainSection
           email={homeState.get('email')}
           subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
+          intl={intl}
         />
-        <ScholarCarousel />
-        <CriticismSection />
-        <PlatformSection />
-        <ResearchSection />
-        <BlogSection />
+        <ScholarCarousel intl={intl} />
+        <CriticismSection intl={intl} />
+        <PlatformSection intl={intl} />
+        <RoadMapSection intl={intl} />
+        <ResearchSection intl={intl} />
+        <BlogSection intl={intl} />
         <MailSection
+          intl={intl}
           email={homeState.get('email')}
           subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
@@ -77,4 +82,4 @@ class HomeContainer extends React.PureComponent {
   }
 }
 
-export default connect(mapStateToProps)(HomeContainer);
+export default injectIntl(connect(mapStateToProps)(HomeContainer));

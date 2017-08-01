@@ -1,5 +1,4 @@
 .criticismSection {
-  height: 660px;
   background-color: #f8f7f7;
   padding-top: 75px;
   padding-bottom: 95px;
@@ -10,6 +9,7 @@
   line-height: 1.83;
   color: #323c47;
   text-align: center;
+  white-space: pre;
 }
 
 .cardItemWrapper {
@@ -23,6 +23,7 @@
   line-height: 1.65;
   text-align: center;
   color: #8d8d8d;
+  white-space: pre;
 }
 
 .card {
@@ -38,6 +39,7 @@
   font-size: 20px;
   line-height: 1.1;
   color: #172649;
+  white-space: pre;
 }
 
 .cardDescription {
