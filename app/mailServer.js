@@ -21,6 +21,7 @@ export default async function handler(event) {
     };
 
     const stringifiedParam = JSON.stringify(param);
+    console.log(process.env);
     await Axios.post('https://us16.api.mailchimp.com/3.0/lists/938e6d7f93/members', stringifiedParam,
       {
         headers: {
