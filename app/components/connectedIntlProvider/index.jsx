@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addLocaleData, IntlProvider } from 'react-intl';
-import * as enLocaleData from 'react-intl/locale-data/en';
-import * as koLocaleData from 'react-intl/locale-data/ko';
+import enLocaleData from 'react-intl/locale-data/en';
+import koLocaleData from 'react-intl/locale-data/ko';
 import EnvChecker from '../../helpers/envChecker';
 import { changeLocale, changeMessages } from './actions';
 
 const SUPPORTED_LANGUAGES = ['en', 'ko'];
-const DEFAULT_LANGUAGE = 'ko';
+const DEFAULT_LANGUAGE = 'en';
 const TRANSLATIONS = {};
 
 for (const locale of SUPPORTED_LANGUAGES) {
@@ -39,11 +39,15 @@ export function getMessages(locale) {
   return localeData;
 }
 
-class ConnectedIntlProvider extends React.PureComponent {
-  componentWillMount() {
-    const { dispatch, userLocale } = this.props;
+class ConnectedIntlProvider extends React.Component {
+  constructor(props) {
+    super(props);
 
     addLocaleDataSet();
+  }
+
+  componentWillMount() {
+    const { dispatch, userLocale } = this.props;
 
     let currentLocale;
     if (userLocale) {
@@ -51,9 +55,12 @@ class ConnectedIntlProvider extends React.PureComponent {
     } else {
       currentLocale = localeFinder();
     }
-    const currentMessage = getMessages(currentLocale);
-    dispatch(changeLocale(currentLocale));
-    dispatch(changeMessages(currentMessage));
+    const currentMessage = getMessages('ko');
+    dispatch(changeLocale('ko', currentMessage));
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return (this.props.locale !== nextProps.locale);
   }
 
   render() {
