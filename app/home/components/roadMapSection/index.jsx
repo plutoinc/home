@@ -6,7 +6,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 const RoadMapSection = ({ intl }) => {
   let imageUrl;
   if (intl.locale === 'ko') {
-    imageUrl = 'https://d2vo77dayzjoat.cloudfront.net/process-background.jpg';
+    imageUrl = 'https://d2vo77dayzjoat.cloudfront.net/process-kor.jpg';
   } else {
     imageUrl = 'https://d2vo77dayzjoat.cloudfront.net/process-en.jpg';
   }
