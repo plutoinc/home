@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import throttle from 'lodash.throttle';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import MainSection from './components/mainSection';
@@ -12,7 +13,7 @@ import ResearchSection from './components/researchSection';
 import BlogSection from './components/blogSection';
 import MailSection from './components/mailSection';
 import Footer from '../components/footer';
-import { changeEmailInput } from './actions';
+import { changeEmailInput, leaveScrollTop, enterScrollTop } from './actions';
 
 function mapStateToProps(appState) {
   return {
@@ -26,6 +27,17 @@ class HomeContainer extends React.PureComponent {
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.subscribeEmail = this.subscribeEmail.bind(this);
+    this.handleScrollEvent = this.handleScrollEvent.bind(this);
+    this.handleScroll = throttle(this.handleScrollEvent, 100);
+    this.handleScroll();
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
@@ -33,12 +45,13 @@ class HomeContainer extends React.PureComponent {
 
     return (
       <div>
-        <Navbar intl={intl} />
+        <Navbar intl={intl} isTop={homeState.get('isTop')} />
         <MainSection
           email={homeState.get('email')}
           subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
           intl={intl}
+          mainRef={elem => this.mainSection = elem}
         />
         <ScholarCarousel intl={intl} />
         <CriticismSection intl={intl} />
@@ -55,6 +68,16 @@ class HomeContainer extends React.PureComponent {
         <Footer />
       </div>
     );
+  }
+
+  handleScrollEvent() {
+    const { dispatch } = this.props;
+    const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    if (parseInt(top, 10) < 700) {
+      dispatch(enterScrollTop());
+    } else {
+      dispatch(leaveScrollTop());
+    }
   }
 
   handleEmailChange(e) {

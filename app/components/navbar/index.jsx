@@ -3,9 +3,10 @@ import { Link } from 'react-router';
 // styles
 import styles from './navbar.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Icon from '../icons';
 
-const Navbar = ({ intl }) => (
-  <nav className={`navbar navbar-default navbar-fixed-top ${styles.navbar}`}>
+const Navbar = ({ intl, isTop = false }) => (
+  <nav className={`navbar navbar-default navbar-fixed-top ${styles.navbar} ${isTop ? styles.transparent : ''}`}>
     <div className="container">
       <div className="navbar-header">
         <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#pluto-main-navbar" aria-expanded="false">
@@ -24,7 +25,7 @@ const Navbar = ({ intl }) => (
           className={`navbar-brand ${styles.logo}`}
           to="/"
         >
-          PLUTO
+          <Icon icon="PLUTO" />
         </Link>
       </div>
       <div className="collapse navbar-collapse" id="pluto-main-navbar">

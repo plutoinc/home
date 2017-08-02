@@ -11,6 +11,7 @@ const ICONS = {
   HIP_CHAT: require('./hip-chat.svg'),
   TWITTER: require('./twitter.svg'),
   MEDIUM: require('./medium.svg'),
+  PLUTO: require('./pluto.svg'),
 };
 
 class Icon extends React.PureComponent {
