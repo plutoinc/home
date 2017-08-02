@@ -88,7 +88,7 @@
     "bootstrap": "^3.3.7",
     "fs": "0.0.1-security",
     "history": "^4.6.2",
-    "immutable": "^3.8.1",
+    "immutable": "^4.0.0-rc.2",
     "jquery": "^3.2.1",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
