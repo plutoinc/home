@@ -19,10 +19,6 @@ $mobile-width : 768px;
     position: relative;
     flex-direction: row;
   }
-
-  @media (max-width: $mobile-width) {
-
-  }
 }
 
 .mobileBtn {
@@ -65,15 +61,13 @@ $mobile-width : 768px;
 
   @media (max-width: $mobile-width) {
     display: none;
-    opacity: 0;
     background-color: #A1958D;
     position: absolute;
     top: $navbar-height;
     left: 0;
-    transition: opacity 0.25s ease;
+
     &.isOpen {
       display: inherit;
-      opacity: 1;
     }
 
     li {
