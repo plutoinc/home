@@ -3,6 +3,14 @@
   background-size: cover;
   background-position: center bottom;
   padding: 138.5px 0;
+
+  @media (max-width: 768px) {
+    padding: 118px 0;
+  }
+}
+
+.innerContainer {
+  max-width: 940px;
 }
 
 .title {
@@ -12,6 +20,10 @@
   margin-bottom: 33px;
   color: #fff;
   white-space: pre;
+
+  @media (max-width: 768px) {
+    white-space: normal;
+  }
 }
 
 .description {
@@ -21,4 +33,8 @@
   text-align: center;
   color: #ffffff;
   white-space: pre;
+
+  @media (max-width: 768px) {
+    white-space: normal;
+  }
 }

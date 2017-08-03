@@ -8,6 +8,11 @@
   font-size: 24px;
   line-height: 1.83;
   color: #172649;
+
+  @media (max-width: 768px) {
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
 }
 
 .subTitle {
@@ -15,10 +20,15 @@
   line-height: 2.59;
   color: #8d8d8d;
   margin-bottom: 38px;
+
+  @media (max-width: 768px) {
+    line-height: 1.41;
+  }
 }
 
 .processImage {
   display: inline-block;
   vertical-align: top;
-  width: 783px;
+  max-width: 783px;
+  width: 100%;
 }
