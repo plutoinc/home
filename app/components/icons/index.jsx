@@ -12,6 +12,7 @@ const ICONS = {
   TWITTER: require('./twitter.svg'),
   MEDIUM: require('./medium.svg'),
   PLUTO: require('./pluto.svg'),
+  MOBILE_BTN: require('./mobile-btn.svg'),
 };
 
 class Icon extends React.PureComponent {

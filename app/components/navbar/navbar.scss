@@ -1,29 +1,114 @@
 $navbar-height : 75px;
+$mobile-width : 768px;
 
 .navbar {
-  border: none;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
   background-color: #A1958D;
   transition: background-color 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
-  height: $navbar-height;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $navbar-height;
+    position: relative;
+    flex-direction: row;
+  }
+
+  @media (max-width: $mobile-width) {
+
+  }
+}
+
+.mobileBtn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .navbar.transparent {
   background-color: transparent;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    align-items: flex-start;
+.menuList {
+  margin: 0;
+  padding: 0;
+  flex: 1 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
+
+  li {
+    display: inline-block;
+    min-width: 100px;
+    margin-right: 20px;
+    text-align: center;
+
+    .menuItem {
+      display: block;
+      color: #fff;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+    opacity: 0;
+    background-color: #A1958D;
+    position: absolute;
+    top: $navbar-height;
+    left: 0;
+    transition: opacity 0.25s ease;
+    &.isOpen {
+      display: inherit;
+      opacity: 1;
+    }
+
+    li {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }
 
 .logo {
+  display: inline-block;
+  vertical-align: top;
+  font-style: 18px;
+  color: #fff;
+
   svg {
     width: 150px;
     height: 20px;
+  }
+}
+
+.contributeBtn {
+  display: inline-block;
+  color: #fff;
+  width: 140px;
+  height: 42px;
+  line-height: 42px;
+  background-color: #172649;
+  border-radius: 4px;
+  padding: 0;
+  text-align: center;
+  font-size: 16px;
+
+  &:hover {
+    text-decoration: inherit;
+    color: #fff;
   }
 }
