@@ -1,3 +1,6 @@
 .carouselWrapper {
-  height: 330px;
+  min-height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

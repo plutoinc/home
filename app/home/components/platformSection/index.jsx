@@ -6,7 +6,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 const PlatformSection = ({ intl }) => {
   return (
     <div className={styles.platformSectionContainer}>
-      <div className="container">
+      <div className={`container ${styles.innerContainer}`}>
         <div className={styles.title}>
           {intl.formatMessage({ id: 'PlatformSection.title' })}
         </div>
