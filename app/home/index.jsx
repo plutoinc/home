@@ -14,6 +14,7 @@ import BlogSection from './components/blogSection';
 import MailSection from './components/mailSection';
 import Footer from '../components/footer';
 import { changeEmailInput, leaveScrollTop, enterScrollTop } from './actions';
+import EnvChecker from '../helpers/envChecker';
 
 function mapStateToProps(appState) {
   return {
@@ -33,11 +34,15 @@ class HomeContainer extends React.PureComponent {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    if (!EnvChecker.isServer()) {
+      window.addEventListener('scroll', this.handleScroll);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    if (!EnvChecker.isServer()) {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 
   render() {
@@ -72,11 +77,13 @@ class HomeContainer extends React.PureComponent {
 
   handleScrollEvent() {
     const { dispatch } = this.props;
-    const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    if (parseInt(top, 10) < 700) {
-      dispatch(enterScrollTop());
-    } else {
-      dispatch(leaveScrollTop());
+    if (!EnvChecker.isServer()) {
+      const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      if (parseInt(top, 10) < 700) {
+        dispatch(enterScrollTop());
+      } else {
+        dispatch(leaveScrollTop());
+      }
     }
   }
 
