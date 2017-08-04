@@ -1,14 +1,27 @@
 .footer {
   position: relative;
-  width: 940px;
+}
+
+.innerContainer {
+  max-width: 940px;
+  height: 130px;
   margin: 0 auto;
-  height: 100px;
+
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 230px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .copyRight {
-  position: absolute;
-  top: 18px;
-  left: 0;
+  margin-top: 20px;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.45;
@@ -16,29 +29,30 @@
   color: #959595;
 }
 
-.footerIconWrapper {
+.iconsWrapper {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.footerIconWrapper {
+  display: block;
   width: 45px;
   height: 45px;
+  text-align: center;
+  line-height: 45px;
   margin-right: 10px;
 
   &:last-of-type {
     margin-right: 0;
   }
-}
 
-.iconsWrapper {
-  position: absolute;
-  top: 18px;
-  right: 0;
-  display: flex;
-}
-
-.footerIcon {
-  display: inline-block;
-  vertical-align: top;
-  width: 24px;
-  height: 21px;
+  svg {
+    width: 24px;
+    height: 21px;
+  }
 }

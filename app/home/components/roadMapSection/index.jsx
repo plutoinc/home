@@ -13,7 +13,7 @@ const RoadMapSection = ({ intl }) => {
 
   return (
     <div className={styles.roadMapSectionContainer}>
-      <div className={`container`}>
+      <div className={styles.innerContainer}>
         <div className={styles.title}>
           {intl.formatMessage({ id: 'RoadMapSection.title' })}
         </div>

@@ -4,7 +4,7 @@ $mobile-width : 768px;
 .navbar {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   background-color: #A1958D;
   transition: background-color 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -19,13 +19,17 @@ $mobile-width : 768px;
     position: relative;
     flex-direction: row;
   }
+
+  &.isOpen.transparent {
+    background-color: #a1958d;
+  }
 }
 
 .mobileBtn {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 15px;
 
   @media (min-width: $mobile-width) {
     display: none;
@@ -45,6 +49,7 @@ $mobile-width : 768px;
   align-content: flex-end;
   align-items: center;
   justify-content: flex-end;
+  background-color: transparent;
 
   li {
     display: inline-block;
@@ -60,19 +65,25 @@ $mobile-width : 768px;
   }
 
   @media (max-width: $mobile-width) {
-    display: none;
     background-color: #A1958D;
     position: absolute;
-    top: $navbar-height;
+    top: $navbar-height - 1;
     left: 0;
 
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 250ms, opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
     &.isOpen {
-      display: inherit;
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
     }
 
     li {
       width: 100%;
       margin-right: 0;
+      padding: 10px;
     }
   }
 }

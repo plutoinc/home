@@ -18,6 +18,7 @@ const ICONS = {
   MEDIUM_WHITE: require('./medium-white.svg'),
   PLUTO: require('./pluto.svg'),
   MOBILE_BTN: require('./mobile-btn.svg'),
+  QUOTE_ICON: require('./quote-icon.svg'),
 };
 
 class Icon extends React.PureComponent {

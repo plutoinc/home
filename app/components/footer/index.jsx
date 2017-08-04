@@ -6,29 +6,31 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <div className={styles.copyRight}>
-        ©Pluto. All Rights Reserved<br />
-        team@pluto.network
+    <footer className={styles.footer}>
+      <div className={styles.innerContainer}>
+        <div className={styles.copyRight}>
+          ©Pluto. All Rights Reserved<br />
+          team@pluto.network
+        </div>
+        <div className={styles.iconsWrapper}>
+          <a href="/" className={styles.footerIconWrapper}>
+            <Icon icon="GITHUB" />
+          </a>
+          <a href="/" className={styles.footerIconWrapper}>
+            <Icon icon="REDDIT" />
+          </a>
+          <a href="/" className={styles.footerIconWrapper}>
+            <Icon icon="HIP_CHAT" />
+          </a>
+          <a href="/" className={styles.footerIconWrapper}>
+            <Icon icon="TWITTER" />
+          </a>
+          <a href="/" className={styles.footerIconWrapper}>
+            <Icon icon="MEDIUM" />
+          </a>
+        </div>
       </div>
-      <div className={styles.iconsWrapper}>
-        <div className={styles.footerIconWrapper}>
-          <Icon className={styles.footerIcon} icon="GITHUB" />
-        </div>
-        <div className={styles.footerIconWrapper}>
-          <Icon className={styles.footerIcon} icon="REDDIT" />
-        </div>
-        <div className={styles.footerIconWrapper}>
-          <Icon className={styles.footerIcon} icon="HIP_CHAT" />
-        </div>
-        <div className={styles.footerIconWrapper}>
-          <Icon className={styles.footerIcon} icon="TWITTER" />
-        </div>
-        <div className={styles.footerIconWrapper}>
-          <Icon className={styles.footerIcon} icon="MEDIUM" />
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 };
 

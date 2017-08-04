@@ -18,7 +18,7 @@ class Navbar extends React.PureComponent {
     const { intl, isTop } = this.props;
 
     return (
-      <nav className={`${styles.navbar} ${isTop ? styles.transparent : ''}`}>
+      <nav className={`${styles.navbar} ${isTop ? styles.transparent : ''} ${this.state.isOpen ? styles.isOpen : ''}`}>
         <div className={styles.container}>
           <Link className={styles.logo} to="/" >
             <Icon icon="PLUTO" />
