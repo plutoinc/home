@@ -2,9 +2,14 @@
   background-image: url("https://d2vo77dayzjoat.cloudfront.net/mailSection-background.jpg");
   background-size: cover;
   background-position: center bottom;
-  height: 450px;
   padding-top: 119px;
   padding-bottom: 113px;
+}
+
+.innerContainer {
+  max-width: 940px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title {
@@ -32,32 +37,37 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+
 .emailInputWrapper {
-  display: block;
-
   text-align: center;
-}
+  margin-bottom: 37.5px;
 
-.emailSubmitInput {
-  display: inline-block;
-  vertical-align: top;
-  height: 50px;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.75);
-  font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: -0.1px;
-  color: #fff;
-  margin-right: 20px;
-}
+  .emailSubmitInput {
+    display: inline-block;
+    vertical-align: top;
+    height: 50px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    color: #4c4c4c;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
 
-.emailSubmitButton {
-  height: 50px;
-  border-radius: 4px;
-  background-color: #a1958d;
-  font-size: 18px;
-  text-align: center;
-  color: #fff;
-  padding-left: 30px;
-  padding-right: 30px;
+  .emailSubmitButton {
+    height: 50px;
+    border-radius: 4px;
+    background-color: #a1958d;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
 }
