@@ -13,16 +13,18 @@ const RoadMapSection = ({ intl }) => {
 
   return (
     <div className={styles.roadMapSectionContainer}>
-      <div className={styles.title}>
-        {intl.formatMessage({ id: 'RoadMapSection.title' })}
+      <div className={`container`}>
+        <div className={styles.title}>
+          {intl.formatMessage({ id: 'RoadMapSection.title' })}
+        </div>
+        <div className={styles.subTitle}>
+          {intl.formatMessage({ id: 'RoadMapSection.subTitle' })}
+        </div>
+        <img
+          className={styles.processImage}
+          src={imageUrl}
+        />
       </div>
-      <div className={styles.subTitle}>
-        {intl.formatMessage({ id: 'RoadMapSection.subTitle' })}
-      </div>
-      <img
-        className={styles.processImage}
-        src={imageUrl}
-      />
     </div>
   );
 };

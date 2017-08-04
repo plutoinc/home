@@ -6,7 +6,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 const ResearchSection = ({ intl }) => {
   return (
     <div className={styles.researchSectionContainer}>
-      <div className={styles.container}>
+      <div className={`container ${styles.container}`}>
         <div className={styles.title}>
           {intl.formatMessage({ id: 'ResearchSection.title' })}
         </div>

@@ -1,11 +1,11 @@
-.container {
-  width: 940px;
-  margin: 0 auto;
-}
-
 .researchSectionContainer {
   padding-top: 74px;
   padding-bottom: 81px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .title {
@@ -13,6 +13,13 @@
   line-height: 1.5;
   color: #172649;
   margin-bottom: 41px;
+  white-space: pre;
+
+  @media (max-width: 768px) {
+    white-space: normal;
+    font-size: 22px;
+    line-height: 1.58;
+  }
 }
 
 .effectWrapper {
@@ -23,16 +30,30 @@
 .effectItem {
   display: inline-block;
   vertical-align: top;
-  width: 460px;
+  max-width: 440px;
   height: 200px;
   border-radius: 4px;
   background-color: #fff;
   border: solid 1px #f0f0f0;
-  padding: 40px 45px 22px 45px;
-}
+  padding: 40px;
 
-.effectItem + .effectItem {
-  margin-left: 20px;
+  @media (min-width: 768px) {
+    &:hover {
+      box-shadow: 0 4px 20px 0 rgba(143, 143, 143, 0.21);
+      border-color: #efefef;
+    }
+
+    &:nth-child(even) {
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px;
+  }
 }
 
 .effectItemImage {
