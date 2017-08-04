@@ -36,6 +36,7 @@
   background-color: #fff;
   border: solid 1px #f0f0f0;
   padding: 40px;
+  transition: box-shadow 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   @media (min-width: 768px) {
     &:hover {

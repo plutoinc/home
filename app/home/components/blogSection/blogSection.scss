@@ -4,9 +4,25 @@
   background-color: #f6f9fb;
 }
 
-.blogCardWrapper {
-  width: 940px;
+.innerContainer {
+  max-width: 940px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.blogCardWrapper {
+  border: soldi 1px pink;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .blogTitle {
@@ -18,15 +34,15 @@
 }
 
 .blogCard {
-  display: inline-block;
-  vertical-align: top;
-  width: 300px;
+  flex: 1 100%;
   background-color: #ffffff;
   border: solid 1px #e2e2e2;
-}
+  text-align: center;
+  margin-bottom: 20px;
 
-.blogCard + .blogCard {
-  margin-left: 20px;
+  @media (min-width: 768px) {
+    max-width: 300px;
+  }
 }
 
 .blogImage {
@@ -51,7 +67,7 @@
 
 .blogButton {
   display: block;
-  margin-top: 49px;
+  margin-top: 48px;
   margin-left: auto;
   margin-right: auto;
   width: 212px;
@@ -62,4 +78,14 @@
   font-size: 18px;
   text-align: center;
   color: #fff;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    text-decoration: inherit;
+    color: #fff;
+  }
+
 }
