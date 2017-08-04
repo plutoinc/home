@@ -52,8 +52,11 @@
     line-height: 1.5;
     letter-spacing: -0.1px;
     color: #4c4c4c;
-    margin-right: 20px;
     margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+     margin-right: 20px;
+    }
   }
 
   .emailSubmitButton {
