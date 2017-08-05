@@ -1,9 +1,12 @@
 #!/bin/bash
-echo $TRAVIS_BRANCH
+set -ev
 
-if [$TRAVIS_BRANCH == 'master']
-then
-  npm run deploy:prod
+echo "${TRAVIS_BRANCH}"
+echo "${TRAVIS_PULL_REQUEST_BRANCH}"
+echo "${TRAVIS_PULL_REQUEST}"
+
+if [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == false ]; then
+    npm run deploy:prod
 else
-  npm run deploy:stage
+    npm run deploy:stage
 fi
