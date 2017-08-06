@@ -5,6 +5,7 @@ export const HOME_INITIAL_STATE = fromJS({
   isLoading: false,
   email: '',
   isTop: false,
+  blogPosts: [],
 });
 
 export function reducer(state = HOME_INITIAL_STATE, action) {
@@ -20,6 +21,22 @@ export function reducer(state = HOME_INITIAL_STATE, action) {
     case ACTION_TYPES.LEAVE_SCROLL_TOP: {
       return state.set('isTop', false);
     }
+
+    case ACTION_TYPES.START_TO_FETCH_BLOG_POSTS: {
+      return state.set('isLoading', true);
+    }
+
+    case ACTION_TYPES.SUCCEEDED_TO_FETCH_BLOG_POSTS: {
+      return state.withMutations((currentState) => currentState
+          .set('isLoading', false)
+          .set('blogPosts', action.payload.posts));
+    }
+
+    case ACTION_TYPES.FAILED_TO_FETCH_BLOG_POSTS: {
+      // TODO: Add error handling UI/UX
+      return state.set('isLoading', false);
+    }
+
 
     default:
       return state;
