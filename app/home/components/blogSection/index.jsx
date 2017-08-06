@@ -3,57 +3,62 @@ import React from 'react';
 import styles from './blogSection.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-class BlogSection extends React.PureComponent {
-  render() {
-    const { intl } = this.props;
-    return (
-      <div className={styles.blogSectionContainer}>
-        <div className={styles.innerContainer}>
-          <div className={styles.blogTitle}>
-            {intl.formatMessage({ id: 'BlogSection.blogTitle' })}
-          </div>
-          <div className={styles.blogCardWrapper}>
-            <div className={styles.blogCard}>
-              <img className={styles.blogImage} src="http://placehold.it/300x200" />
-              <div className={styles.content}>
-                <div className={styles.blogCardTitle}>
-                학술 논문 시장에서 파괴적 혁신의 필요성에 대하여
-              </div>
-                <div className={styles.blogCardDescription}>
-                1995년, Forbes에서 (Elsevier, the largest publisher of scientific journals, would be “the internet’s first victim”) 라는 제목의 기사가 발...
-              </div>
-              </div>
-            </div>
-            <div className={styles.blogCard}>
-              <img className={styles.blogImage} src="http://placehold.it/400x300/e0e0e0" />
-              <div className={styles.content}>
-                <div className={styles.blogCardTitle}>
-                학술 논문 시장에서 파괴적 혁신의 필요성에 대하여
-              </div>
-                <div className={styles.blogCardDescription}>
-                1995년, Forbes에서 (Elsevier, the largest publisher of scientific journals, would be “the internet’s first victim”) 라는 제목의 기사가 발...
-              </div>
-              </div>
-            </div>
-            <div className={styles.blogCard}>
-              <img className={styles.blogImage} src="http://placehold.it/100x300" />
-              <div className={styles.content}>
-                <div className={styles.blogCardTitle}>
-                학술 논문 시장에서 파괴적 혁신의 필요성에 대하여
-              </div>
-                <div className={styles.blogCardDescription}>
-                1995년, Forbes에서 (Elsevier, the largest publisher of scientific journals, would be “the internet’s first victim”) 라는 제목의 기사가 발...
-              </div>
-              </div>
-            </div>
-          </div>
-          <a className={styles.blogButton} href="/" >
-            {intl.formatMessage({ id: 'BlogSection.blogButton' })}
-          </a>
-        </div>
-      </div>
-    );
+const blogCards = (posts) => {
+  if (!posts || posts.isEmpty()) {
+    return null;
   }
-}
+
+  return posts.map((post) => {
+    let previewContent = '';
+    let previewImage = 'https://d2vo77dayzjoat.cloudfront.net/mailSection-background.jpg';
+    let targetUrl = 'https://medium.com/pluto-network/latest';
+    try {
+      previewContent = post.getIn(['previewContent', 'bodyModel', 'paragraphs', 2, 'text']);
+      previewImage = post.getIn(['virtuals', 'previewImage', 'imageId']);
+      targetUrl = `https://medium.com/pluto-network/${post.get('uniqueSlug')}`;
+    } catch (err) {
+      console.log(err);
+    }
+
+    return (
+      <a
+        href={targetUrl}
+        key={post.get('id')}
+        className={styles.blogCard}
+        target="_blank"
+      >
+        <img
+          alt={post.get('title')}
+          className={styles.blogImage}
+          src={`https://cdn-images-1.medium.com/max/1200/${previewImage}`}
+        />
+        <div className={styles.content}>
+          <div className={styles.blogCardTitle}>
+            {post.get('title')}
+          </div>
+          <div className={styles.blogCardDescription}>
+            {previewContent}
+          </div>
+        </div>
+      </a>
+    );
+  });
+};
+
+const BlogSection = ({ posts, intl }) => (
+  <div className={styles.blogSectionContainer}>
+    <div className={styles.innerContainer}>
+      <div className={styles.blogTitle}>
+        {intl.formatMessage({ id: 'BlogSection.blogTitle' })}
+      </div>
+      <div className={styles.blogCardWrapper}>
+        {blogCards(posts)}
+      </div>
+      <a className={styles.blogButton} href="https://medium.com/pluto-network" target="_blank">
+        {intl.formatMessage({ id: 'BlogSection.blogButton' })}
+      </a>
+    </div>
+  </div>
+);
 
 export default withStyles(styles)(BlogSection);
