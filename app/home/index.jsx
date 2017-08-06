@@ -3,6 +3,7 @@ import Axios from 'axios';
 import throttle from 'lodash.throttle';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
+// components
 import MainSection from './components/mainSection';
 import Navbar from '../components/navbar';
 import ScholarCarousel from './components/scholarCarousel';
@@ -13,7 +14,9 @@ import ResearchSection from './components/researchSection';
 import BlogSection from './components/blogSection';
 import MailSection from './components/mailSection';
 import Footer from '../components/footer';
-import { changeEmailInput, leaveScrollTop, enterScrollTop } from './actions';
+// actions
+import { getRecentBlogPosts, changeEmailInput, leaveScrollTop, enterScrollTop } from './actions';
+// helpers
 import EnvChecker from '../helpers/envChecker';
 
 function mapStateToProps(appState) {
@@ -34,6 +37,10 @@ class HomeContainer extends React.PureComponent {
   }
 
   componentDidMount() {
+    const { dispatch } = this.props;
+
+    dispatch(getRecentBlogPosts());
+
     if (!EnvChecker.isServer()) {
       window.addEventListener('scroll', this.handleScroll);
     }
@@ -63,7 +70,7 @@ class HomeContainer extends React.PureComponent {
         <PlatformSection intl={intl} />
         <RoadMapSection intl={intl} />
         <ResearchSection intl={intl} />
-        <BlogSection intl={intl} />
+        <BlogSection posts={homeState.get('blogPosts')} intl={intl} />
         <MailSection
           intl={intl}
           email={homeState.get('email')}
