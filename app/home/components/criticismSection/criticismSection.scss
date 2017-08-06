@@ -4,18 +4,28 @@
   padding-bottom: 95px;
 }
 
+.innerContainer {
+  max-width: 940px;
+}
+
 .headline {
   font-size: 24px;
   line-height: 1.83;
   color: #323c47;
   text-align: center;
   white-space: pre;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 1.83;
+    text-align: left;
+    white-space: normal;
+  }
 }
 
 .cardItemWrapper {
   list-style: none;
   padding-left: 0;
-  margin-top: 78px;
 }
 
 .subTitle {
@@ -24,22 +34,35 @@
   text-align: center;
   color: #8d8d8d;
   white-space: pre;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+    line-height: 1.65;
+    text-align: left;
+    white-space: normal;
+  }
 }
 
 .card {
   display: inline-block;
   vertical-align: top;
   text-align: center;
+  margin-top: 78px;
 }
 
 .cardTitle {
   margin-top: 49px;
   margin-bottom: 36px;
   text-align: center;
+  white-space: pre;
   font-size: 20px;
   line-height: 1.1;
   color: #172649;
-  white-space: pre;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    white-space: normal;
+  }
 }
 
 .cardDescription {

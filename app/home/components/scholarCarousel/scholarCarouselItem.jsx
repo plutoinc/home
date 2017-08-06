@@ -7,10 +7,10 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 const ScholarCarouselItem = ({ imgUrl, author, description, bio }) => {
   return (
     <div className={styles.carouselItemWrapper}>
-      <div className={styles.userImgWrapper}>
-        <img className={styles.userImg} src={imgUrl} />
-      </div>
       <div className={styles.descriptionWrapper}>
+        <div className={styles.userImgWrapper}>
+          <img className={styles.userImg} src={imgUrl} />
+        </div>
         <div className={styles.doubleQuotationWrapper}>
           <Icon className={styles.doubleQuotation} icon="DOUBLE_QUOTATION" />
         </div>

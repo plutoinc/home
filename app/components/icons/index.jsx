@@ -11,6 +11,14 @@ const ICONS = {
   HIP_CHAT: require('./hip-chat.svg'),
   TWITTER: require('./twitter.svg'),
   MEDIUM: require('./medium.svg'),
+  GITHUB_WHITE: require('./github-white.svg'),
+  REDDIT_WHITE: require('./reddit-white.svg'),
+  HIP_CHAT_WHITE: require('./hip-chat-white.svg'),
+  TWITTER_WHITE: require('./twitter-white.svg'),
+  MEDIUM_WHITE: require('./medium-white.svg'),
+  PLUTO: require('./pluto.svg'),
+  MOBILE_BTN: require('./mobile-btn.svg'),
+  QUOTE_ICON: require('./quote-icon.svg'),
 };
 
 class Icon extends React.PureComponent {
