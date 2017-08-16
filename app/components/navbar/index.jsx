@@ -41,20 +41,20 @@ class Navbar extends React.PureComponent {
               </Link>
             </li>
             <li>
-              <Link className={styles.menuItem} to="/">
+              <a className={styles.menuItem} href="https://medium.com/pluto-network" target="_blank">
                 {intl.formatMessage({ id: 'NAVBAR.blog' })}
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className={styles.menuItem} to="/">
+              <a className={styles.menuItem} href="https://github.com/pluto-net" target="_blank">
                 {intl.formatMessage({ id: 'NAVBAR.github' })}
-              </Link>
+              </a>
             </li>
-            <li>
+            {/* <li>
               <Link className={styles.contributeBtn} to="/">
                 {intl.formatMessage({ id: 'NAVBAR.contribute' })}
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
