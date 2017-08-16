@@ -35,19 +35,16 @@ const MainSection = ({ intl, email, subscribeEmail, handleEmailChange, mainRef }
         </form>
 
         <div className={styles.iconsWrapper}>
-          <a href="/" className={styles.icon}>
+          <a href="https://github.com/pluto-net" target="_blank" className={styles.icon}>
             <Icon icon="GITHUB_WHITE" />
           </a>
           <a href="/" className={styles.icon}>
             <Icon icon="REDDIT_WHITE" />
           </a>
           <a href="/" className={styles.icon}>
-            <Icon icon="HIP_CHAT_WHITE" />
-          </a>
-          <a href="/" className={styles.icon}>
             <Icon icon="TWITTER_WHITE" />
           </a>
-          <a href="/" className={styles.icon}>
+          <a href="https://medium.com/pluto-network" target="_blank" className={styles.icon}>
             <Icon icon="MEDIUM_WHITE" />
           </a>
         </div>

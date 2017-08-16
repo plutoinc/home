@@ -74,21 +74,12 @@ $navbar-height : 75px;
 }
 
 .iconsWrapper {
-
   .icon {
     display: inline-block;
     margin-right: 10px;
     svg {
       width: 45px;
       height: 45px;
-    }
-
-    @media (max-width: 768px) {
-      margin-right: 5px;
-      svg {
-        width: 30px;
-        height: 30px;
-      }
     }
   }
 }
