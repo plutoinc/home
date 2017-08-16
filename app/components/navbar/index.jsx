@@ -30,7 +30,8 @@ class Navbar extends React.PureComponent {
               this.setState({ isOpen: !curIsOpen });
             }}
           >
-            <Icon icon="MOBILE_BTN" />
+            <Icon icon="MOBILE_BTN" className={styles.mobileIcon} />
+            <Icon icon="CANCEL" className={styles.cancelIcon} />
           </div>
           <ul
             className={`${styles.menuList} ${this.state.isOpen ? styles.isOpen : ''}`}
