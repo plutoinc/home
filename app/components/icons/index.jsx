@@ -19,6 +19,7 @@ const ICONS = {
   PLUTO: require('./pluto.svg'),
   MOBILE_BTN: require('./mobile-btn.svg'),
   QUOTE_ICON: require('./quote-icon.svg'),
+  CANCEL: require('./cancel.svg'),
 };
 
 class Icon extends React.PureComponent {

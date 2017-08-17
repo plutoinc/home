@@ -23,6 +23,13 @@ $mobile-width : 768px;
   &.isOpen.transparent {
     background-color: #a1958d;
   }
+
+  &.isOpen {
+    .mobileBtn {
+      .mobileIcon { display: none; }
+      .cancelIcon { display: initial; }
+    }
+  }
 }
 
 .mobileBtn {
@@ -34,6 +41,8 @@ $mobile-width : 768px;
   @media (min-width: $mobile-width) {
     display: none;
   }
+
+  .cancelIcon { display: none; }
 }
 
 .navbar.transparent {

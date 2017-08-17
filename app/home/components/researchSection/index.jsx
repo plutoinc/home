@@ -7,6 +7,7 @@ const ResearchSection = ({ intl }) => {
   return (
     <div className={styles.researchSectionContainer}>
       <div className={`container ${styles.container}`}>
+        <div className={styles.smallTitle}>EFFECT</div>
         <div className={styles.title}>
           {intl.formatMessage({ id: 'ResearchSection.title' })}
         </div>

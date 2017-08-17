@@ -8,6 +8,7 @@ const CriticismSection = ({ intl }) => {
     return (
       <div className={styles.criticismSection}>
         <div className={`container ${styles.innerContainer}`}>
+          <div className={styles.smallTitle}>PROBLEM</div>
           <h1 className={styles.headline}>
             {intl.formatMessage({ id: 'criticismSection.title' })}
           </h1>
