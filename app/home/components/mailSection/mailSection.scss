@@ -58,6 +58,8 @@
     letter-spacing: -0.1px;
     color: #4c4c4c;
     margin-bottom: 10px;
+    max-width: 300px;
+    width: 100%;
 
     @media (min-width: 768px) {
      margin-right: 20px;
