@@ -20,12 +20,16 @@ export function getRecentBlogPosts() {
     try {
       const response = await Axios.get('https://a026bxmb46.execute-api.us-east-1.amazonaws.com/prod/getLatestPosts?username=pluto-network');
       const posts = fromJS(response.data);
-      const slicedPosts = posts.slice(0, 3);
+      const enPosts = posts.filter(elem => elem.get('detectedLanguage') === 'en');
+      const koPosts = posts.filter(elem => elem.get('detectedLanguage') === 'ko');
+      const enSlicedPosts = enPosts.slice(0, 3);
+      const koSlicedPosts = koPosts.slice(0, 3);
 
       dispatch({
         type: ACTION_TYPES.SUCCEEDED_TO_FETCH_BLOG_POSTS,
         payload: {
-          posts: slicedPosts,
+          enPosts: enSlicedPosts,
+          koPosts: koSlicedPosts,
         },
       });
     } catch (err) {

@@ -55,6 +55,11 @@ class HomeContainer extends React.PureComponent {
   render() {
     const { intl, homeState } = this.props;
 
+    const blogPosts = intl.locale === 'en' ?
+        homeState.get('enBlogPosts')
+      :
+        homeState.get('koBlogPosts');
+
     return (
       <div>
         <Navbar intl={intl} isTop={homeState.get('isTop')} />
@@ -70,7 +75,7 @@ class HomeContainer extends React.PureComponent {
         <PlatformSection intl={intl} />
         <RoadMapSection intl={intl} />
         <ResearchSection intl={intl} />
-        <BlogSection posts={homeState.get('blogPosts')} intl={intl} />
+        <BlogSection posts={blogPosts} intl={intl} />
         <MailSection
           intl={intl}
           email={homeState.get('email')}
@@ -85,8 +90,9 @@ class HomeContainer extends React.PureComponent {
   handleScrollEvent() {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
+      const mainHeight = window.innerHeight || 700;
       const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      if (parseInt(top, 10) < 700) {
+      if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
       } else {
         dispatch(leaveScrollTop());

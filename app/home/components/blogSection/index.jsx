@@ -13,7 +13,7 @@ const blogCards = (posts) => {
     let previewImage = 'https://d2vo77dayzjoat.cloudfront.net/mailSection-background.jpg';
     let targetUrl = 'https://medium.com/pluto-network/latest';
     try {
-      previewContent = post.getIn(['previewContent', 'bodyModel', 'paragraphs', 2, 'text']);
+      previewContent = post.getIn(['virtuals', 'subtitle']);
       previewImage = post.getIn(['virtuals', 'previewImage', 'imageId']);
       targetUrl = `https://medium.com/pluto-network/${post.get('uniqueSlug')}`;
     } catch (err) {
