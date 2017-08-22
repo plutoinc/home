@@ -27,11 +27,13 @@ const blogCards = (posts) => {
         className={styles.blogCard}
         target="_blank"
       >
-        <img
-          alt={post.get('title')}
-          className={styles.blogImage}
-          src={`https://cdn-images-1.medium.com/max/1200/${previewImage}`}
-        />
+        <div className={styles.blogImageWrapper}>
+          <img
+            alt={post.get('title')}
+            className={styles.blogImage}
+            src={`https://cdn-images-1.medium.com/max/1200/${previewImage}`}
+          />
+        </div>
         <div className={styles.content}>
           <div className={styles.blogCardTitle}>
             {post.get('title')}

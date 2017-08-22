@@ -78,49 +78,20 @@ class Navbar extends React.PureComponent {
 
   getLocaleButton() {
     const { intl, handleLocaleChange } = this.props;
+    const curLocale = intl.locale;
+    const nextLocale = curLocale === 'en' ? 'ko' : 'en';
 
-    switch (intl.locale) {
-      case "ko": {
-        return (
-          <div
-            onClick={() => {
-              handleLocaleChange("en");
-            }}
-            className={styles.langBtn}
-          >
-            <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
-            <span className={styles.active}>EN</span>;
-          </div>
-        );
-      }
-
-      case "en": {
-        return (
-          <div
-            onClick={() => {
-              handleLocaleChange("ko");
-            }}
-            className={styles.langBtn}
-          >
-            <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
-            <span className={styles.active}>KO</span>;
-          </div>
-        );
-      }
-
-      default:
-        return (
-          <div
-            onClick={() => {
-              handleLocaleChange("en");
-            }}
-            className={styles.langBtn}
-          >
-            <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
-            <span className={styles.active}>EN</span>;
-          </div>
-        );
-    }
+    return (
+      <div
+        onClick={() => {
+          handleLocaleChange(nextLocale);
+        }}
+        className={styles.langBtn}
+      >
+        <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
+        <span className={curLocale === 'en' ? styles.active : styles.notActive}>EN</span> | <span className={curLocale === 'ko' ? styles.active : styles.notActive}>KO</span>
+      </div>
+    );
   }
 }
 
