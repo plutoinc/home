@@ -58,11 +58,9 @@
     letter-spacing: -0.1px;
     color: #4c4c4c;
     margin-bottom: 10px;
-    width: 100%;
 
     @media (min-width: 768px) {
-      max-width: 300px;
-      margin-right: 20px;
+     margin-right: 20px;
     }
   }
 
@@ -75,10 +73,6 @@
     color: #fff;
     padding-left: 30px;
     padding-right: 30px;
-
-    @media (max-width: 768px) {
-      width: 100%;
-    }
   }
 
   @media (max-width: 768px) {
