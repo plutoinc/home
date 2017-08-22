@@ -13,7 +13,6 @@ class Navbar extends React.PureComponent {
 
     this.state = {
       isMobileOpen: false,
-      isLangOpen: false,
     };
   }
 
@@ -23,6 +22,13 @@ class Navbar extends React.PureComponent {
 
     return (
       <nav className={`${styles.navbar} ${isTop ? styles.transparent : ''} ${this.state.isMobileOpen ? styles.isMobileOpen : ''}`}>
+        <div
+          onClick={() => {
+            const curOpen = this.state.isMobileOpen;
+            this.setState({ isMobileOpen: !curOpen });
+          }}
+          className={`${styles.menuListOverlay} ${this.state.isMobileOpen ? styles.isMobileOpen : ''}`}
+        ></div>
         <div className={styles.container}>
           <Link className={styles.logo} to="/" >
             <Icon icon="PLUTO" />
@@ -30,8 +36,8 @@ class Navbar extends React.PureComponent {
           <div
             className={styles.mobileBtn}
             onClick={() => {
-              const d = this.state.isMobileOpen;
-              this.setState({ isMobileOpen: !d });
+              const curOpen = this.state.isMobileOpen;
+              this.setState({ isMobileOpen: !curOpen });
             }}
           >
             <Icon icon="MOBILE_BTN" className={styles.mobileIcon} />
@@ -55,36 +61,27 @@ class Navbar extends React.PureComponent {
                 {intl.formatMessage({ id: 'NAVBAR.github' })}
               </a>
             </li>
+            {/* <li className={styles.langItem}>
+              <div
+                className={styles.langBtn}
+                onClick={() => {
+                  console.log('hi');
+                }}
+              >
+                <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
+                <span className={localeIsEn ? styles.active : ''}>
+                  EN
+                </span>
+                <span className={localeIsEn ? '' : styles.active}>
+                  KO
+                </span>
+              </div>
+            </li> */}
             {/* <li>
               <Link className={styles.contributeBtn} to="/">
                 {intl.formatMessage({ id: 'NAVBAR.contribute' })}
               </Link>
             </li> */}
-            <li className={styles.langItem}>
-              <div
-                className={styles.langBtn}
-                onClick={() => {
-                  const curOpen = this.state.isLangOpen;
-                  this.setState({ isLangOpen: !curOpen });
-                }}
-              >
-                <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
-              </div>
-              <ul className={`${styles.langList} ${this.state.isLangOpen ? styles.isLangOpen : ''}`}>
-                <li
-                  className={localeIsEn ? styles.active : ''}
-                  onClick={() => console.log('sdf')}
-                >
-                  EN
-                </li>
-                <li
-                  className={localeIsEn ? '' : styles.active}
-                  onClick={() => console.log('asdf')}
-                >
-                  KO
-                </li>
-              </ul>
-            </li>
           </ul>
         </div>
       </nav>
