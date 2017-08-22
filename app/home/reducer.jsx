@@ -5,7 +5,8 @@ export const HOME_INITIAL_STATE = fromJS({
   isLoading: false,
   email: '',
   isTop: false,
-  blogPosts: [],
+  enBlogPosts: [],
+  koBlogPosts: [],
 });
 
 export function reducer(state = HOME_INITIAL_STATE, action) {
@@ -29,7 +30,9 @@ export function reducer(state = HOME_INITIAL_STATE, action) {
     case ACTION_TYPES.SUCCEEDED_TO_FETCH_BLOG_POSTS: {
       return state.withMutations((currentState) => currentState
           .set('isLoading', false)
-          .set('blogPosts', action.payload.posts));
+          .set('enBlogPosts', action.payload.enPosts)
+          .set('koBlogPosts', action.payload.koPosts),
+        );
     }
 
     case ACTION_TYPES.FAILED_TO_FETCH_BLOG_POSTS: {
