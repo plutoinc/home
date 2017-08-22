@@ -20,6 +20,8 @@ const ICONS = {
   MOBILE_BTN: require('./mobile-btn.svg'),
   QUOTE_ICON: require('./quote-icon.svg'),
   CANCEL: require('./cancel.svg'),
+  LEFT_ARROW: require('./left-arrow.svg'),
+  RIGHT_ARROW: require('./right-arrow.svg'),
 };
 
 class Icon extends React.PureComponent {

@@ -5,3 +5,79 @@
   align-items: center;
   padding: 50px 0;
 }
+
+.carouselDots {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 15px;
+
+  li {
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
+
+    button {
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: #9fa3a7;
+      font-size: 0;
+      border: none;
+      margin: 0 10px;
+      padding: 0;
+      transition: width 250ms cubic-bezier(0.4, 0.0, 0.2, 1), height 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.sliderContainer {
+  position: relative;
+
+  .prevBtn {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 400px);
+    cursor: pointer;
+
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .nextBtn {
+    position: absolute;
+    top: calc(50% - 24px);
+    right: calc(50% - 400px);
+    cursor: pointer;
+
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .prevBtn { display: none; }
+    .nextBtn { display: none; }
+  }
+}
+
+
+:global {
+  li.slick-active {
+    button {
+      width: 10px;
+      height: 10px;
+      background-color: #ccc3bd;
+    }
+  }
+}
