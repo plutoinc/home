@@ -18,23 +18,17 @@ $mobile-width : 768px;
     height: $navbar-height;
     position: relative;
     flex-direction: row;
-    z-index: 1;
   }
 
-  &.isMobileOpen.transparent {
+  &.isOpen.transparent {
     background-color: #a1958d;
   }
 
-  &.isMobileOpen {
+  &.isOpen {
     .mobileBtn {
       .mobileIcon { display: none; }
       .cancelIcon { display: initial; }
     }
-    .menuListOverlay {
-      visibility: visible;
-      opacity: 0.2;
-      transition-delay: 0s;
-     }
   }
 }
 
@@ -53,18 +47,6 @@ $mobile-width : 768px;
 
 .navbar.transparent {
   background-color: transparent;
-}
-
-.menuListOverlay {
-  position: fixed;
-  opacity: 0.2;
-  background-color: #000000;
-  top: $navbar-height;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 400ms, opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .menuList {
@@ -102,7 +84,7 @@ $mobile-width : 768px;
     opacity: 0;
     transition: visibility 0s linear 250ms, opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
 
-    &.isMobileOpen {
+    &.isOpen {
       visibility: visible;
       opacity: 1;
       transition-delay: 0s;
@@ -145,31 +127,3 @@ $mobile-width : 768px;
     color: #fff;
   }
 }
-
-.langItem {
-  position: relative;
-
-  .langBtn {
-    cursor: pointer;
-
-    img {
-      width: 23px;
-      height: 23px;
-    }
-  }
-
-  span {
-    color: #ffffff;
-    font-size: 15px;
-    letter-spacing: 0.4px;
-    vertical-align: middle;
-    margin-left: 10px;
-    cursor: pointer;
-    display: none;
-
-    &.active {
-      display: inline;
-    }
-  }
-}
-
