@@ -1,42 +1,19 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { addLocaleData, IntlProvider } from 'react-intl';
-import enLocaleData from 'react-intl/locale-data/en';
-import koLocaleData from 'react-intl/locale-data/ko';
-import EnvChecker from '../../helpers/envChecker';
-import { changeLocale, changeMessages } from './actions';
-
-const SUPPORTED_LANGUAGES = ['en', 'ko'];
-const DEFAULT_LANGUAGE = 'en';
-const TRANSLATIONS = {};
-
-for (const locale of SUPPORTED_LANGUAGES) {
-  TRANSLATIONS[locale] = require(`./assets/${locale}.json`);
-}
-
-export function addLocaleDataSet() {
-  const allLocaleData = [...enLocaleData, ...koLocaleData];
-  addLocaleData(allLocaleData);
-}
+import React from "react";
+import { connect } from "react-redux";
+import { IntlProvider } from "react-intl";
+import EnvChecker from "../../helpers/envChecker";
+import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, changeLocale, getMessages, addLocaleDataSet } from "./actions";
 
 export function localeFinder() {
   if (!EnvChecker.isServer()) {
-    let locale = navigator.language || navigator.browserLanguage;
-    locale = locale.split('-')[0];
+    let locale = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+    locale = locale.split("-")[0];
     if (!SUPPORTED_LANGUAGES.includes(locale)) {
       locale = DEFAULT_LANGUAGE;
     }
     return locale;
   }
   return DEFAULT_LANGUAGE;
-}
-
-export function getMessages(locale) {
-  let localeData = TRANSLATIONS[locale];
-  if (!localeData) {
-    localeData = TRANSLATIONS[DEFAULT_LANGUAGE];
-  }
-  return localeData;
 }
 
 class ConnectedIntlProvider extends React.Component {
@@ -51,7 +28,7 @@ class ConnectedIntlProvider extends React.Component {
 
     let currentLocale;
     if (userLocale) {
-      currentLocale = userLocale.split('-')[0];
+      currentLocale = userLocale.split("-")[0];
     } else {
       currentLocale = localeFinder();
     }
@@ -61,7 +38,7 @@ class ConnectedIntlProvider extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    return (this.props.locale !== nextProps.locale);
+    return this.props.locale !== nextProps.locale;
   }
 
   render() {

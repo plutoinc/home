@@ -5,13 +5,16 @@ $navbar-height : 75px;
   background-size: cover;
   background-position: center bottom;
   position: relative;
-  height: 100vh;
+  height: 700px;
   display: flex;
   align-items: center;
-  padding-top: $navbar-height;
 
   .innerContainer {
     max-width: 940px;
+  }
+
+  @media (max-width: 768px) {
+    height: 600px;
   }
 }
 
@@ -88,7 +91,6 @@ $navbar-height : 75px;
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      // border: solid 1.5px transparent;
       background-color: transparent;
       transition: background-color 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
 

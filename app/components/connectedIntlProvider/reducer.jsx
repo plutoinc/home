@@ -1,9 +1,8 @@
-import { ACTION_TYPES } from './actions';
-import { getMessages } from './';
+import { ACTION_TYPES, getMessages } from "./actions";
 
 export const LOCALE_INITIAL_STATE = {
-  lang: 'en',
-  messages: getMessages('en'),
+  lang: "en",
+  messages: getMessages("en"),
 };
 
 export function reducer(state = LOCALE_INITIAL_STATE, action) {
