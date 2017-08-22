@@ -8,10 +8,17 @@
 
 .carouselDots {
   position: absolute;
+  padding: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
   bottom: 15px;
 
   li {
     display: inline-block;
+    height: 15px;
+    line-height: 15px;
 
     button {
       border-radius: 50%;
@@ -22,6 +29,7 @@
       border: none;
       margin: 0 10px;
       padding: 0;
+      transition: width 250ms cubic-bezier(0.4, 0.0, 0.2, 1), height 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
 
       &:focus {
         outline: none;
