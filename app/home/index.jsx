@@ -90,8 +90,9 @@ class HomeContainer extends React.PureComponent {
   handleScrollEvent() {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
+      const mainHeight = window.innerHeight || 700;
       const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      if (parseInt(top, 10) < 700) {
+      if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
       } else {
         dispatch(leaveScrollTop());
