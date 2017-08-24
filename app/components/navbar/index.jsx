@@ -4,6 +4,8 @@ import { Link } from "react-router";
 import styles from "./navbar.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../icons";
+// tooltip
+import ReactTooltip from "react-tooltip";
 
 class Navbar extends React.PureComponent {
   constructor(props) {
@@ -48,9 +50,12 @@ class Navbar extends React.PureComponent {
           </div>
           <ul className={`${styles.menuList} ${this.state.isMobileOpen ? styles.isMobileOpen : ""}`}>
             <li>
-              <Link className={styles.menuItem} to="/">
+              <a style={{ cursor: 'pointer' }} data-tip={intl.formatMessage({ id: "NAVBAR.whitepaper_tooltip" })} className={styles.menuItem}>
                 {intl.formatMessage({ id: "NAVBAR.whitePaper" })}
-              </Link>
+              </a>
+              <ReactTooltip
+                effect="solid"
+              />
             </li>
             <li>
               <a className={styles.menuItem} href="https://medium.com/pluto-network" target="_blank">
