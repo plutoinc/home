@@ -1,11 +1,12 @@
 $navbar-height : 75px;
 
 .mainSectionContainer {
-  background-image: url("https://d2vo77dayzjoat.cloudfront.net/first-section-background.jpg");
+  background-image: url("https://d2vo77dayzjoat.cloudfront.net/main_section_bg_new.jpg");
   background-size: cover;
   background-position: center bottom;
   position: relative;
   height: 700px;
+  padding-bottom: 100px;
   display: flex;
   align-items: center;
 
@@ -19,11 +20,20 @@ $navbar-height : 75px;
 }
 
 .headline {
+  text-align: center;
   font-size: 40px;
-  line-height: 1.33;
+  line-height: 1.2;
   letter-spacing: 1.2px;
   color: #fff;
   margin-bottom: 20px;
+
+  span {
+    display: block;
+    font-size: 27px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    line-height: 1.78;
+  }
 
   @media (max-width: 768px) {
     font-size: 26px;
@@ -33,9 +43,11 @@ $navbar-height : 75px;
 }
 
 .subTitle {
+  text-align: center;
   font-size: 22px;
   line-height: 1.27;
   color: #fff;
+  opacity: 0.8;
   margin-bottom: 38px;
 
   @media (max-width: 768px) {
@@ -45,31 +57,36 @@ $navbar-height : 75px;
 }
 
 .emailWrapper {
+  text-align: center;
   margin-bottom: 37.5px;
 
   .emailSubmitInput {
     display: inline-block;
     vertical-align: top;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(10px);
     font-size: 18px;
     line-height: 1.5;
-    letter-spacing: -0.1px;
-    color: #4c4c4c;
+    letter-spacing: -0.2px;
+    font-weight: 300;
+    color: #2f344f;
     margin-bottom: 10px;
     width: 100%;
+    outline: none;
+    border: none;
 
     @media (min-width: 768px) {
-      max-width: 300px;
+      max-width: 285px;
       margin-right: 20px;
     }
   }
 
   .emailSubmitButton {
     height: 50px;
-    border-radius: 4px;
-    background-color: #a1958d;
+    border-radius: 10px;
+    background-color: #ff4689;
     font-size: 18px;
     text-align: center;
     color: #fff;
@@ -78,23 +95,6 @@ $navbar-height : 75px;
 
     @media (max-width: 768px) {
       width: 100%;
-    }
-  }
-}
-
-.iconsWrapper {
-  .icon {
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 50%;
-    svg {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: transparent;
-      transition: background-color 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
-
-      &:hover { background-color: rgba(255, 255, 255, 0.2); }
     }
   }
 }
