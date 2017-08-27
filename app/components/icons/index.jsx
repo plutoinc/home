@@ -22,6 +22,10 @@ const ICONS = {
   CANCEL: require('./cancel.svg'),
   LEFT_ARROW: require('./left-arrow.svg'),
   RIGHT_ARROW: require('./right-arrow.svg'),
+  TWITTER_COLOR: require('./twitter_color.svg'),
+  FACEBOOK_COLOR: require('./facebook_color.svg'),
+  TELEGRAM_COLOR: require('./telegram_color.svg'),
+  NEW_LOGO: require('./new-logo.svg'),
 };
 
 class Icon extends React.PureComponent {

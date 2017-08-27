@@ -35,19 +35,7 @@ class Navbar extends React.PureComponent {
           className={`${styles.menuListOverlay} ${this.state.isMobileOpen ? styles.isMobileOpen : ""}`}
         />
         <div className={styles.container}>
-          <Link className={styles.logo} to="/">
-            <Icon icon="PLUTO" />
-          </Link>
-          <div
-            className={styles.mobileBtn}
-            onClick={() => {
-              const curOpen = this.state.isMobileOpen;
-              this.setState({ isMobileOpen: !curOpen });
-            }}
-          >
-            <Icon icon="MOBILE_BTN" className={styles.mobileIcon} />
-            <Icon icon="CANCEL" className={styles.cancelIcon} />
-          </div>
+
           <ul className={`${styles.menuList} ${this.state.isMobileOpen ? styles.isMobileOpen : ""}`}>
             <li>
               <a style={{ cursor: 'pointer' }} data-tip={intl.formatMessage({ id: "NAVBAR.whitepaper_tooltip" })} className={styles.menuItem}>
@@ -67,15 +55,51 @@ class Navbar extends React.PureComponent {
                 {intl.formatMessage({ id: "NAVBAR.github" })}
               </a>
             </li>
-            <li className={styles.langItem}>
-              {this.getLocaleButton()}
-            </li>
             {/* <li>
               <Link className={styles.contributeBtn} to="/">
                 {intl.formatMessage({ id: 'NAVBAR.contribute' })}
               </Link>
             </li> */}
+            <li className={styles.langItem}>
+              {this.getLocaleButton()}
+            </li>
           </ul>
+
+          <Link className={styles.logo} to="/">
+            <Icon icon="NEW_LOGO" />
+          </Link>
+
+          <ul className={`${styles.snsBtnList} ${this.state.isMobileOpen ? styles.isMobileOpen : ''}`}>
+            <li className={styles.langItem}>
+              {this.getLocaleButton()}
+            </li>
+            <li>
+              <a className={styles.menuItem} href="https://www.facebook.com/Pluto-263226227503100/" target="_blank">
+                <Icon icon="FACEBOOK_COLOR" />
+              </a>
+            </li>
+            <li>
+              <a className={styles.menuItem} href="#" target="_blank">
+                <Icon icon="TELEGRAM_COLOR" />
+              </a>
+            </li>
+            <li>
+              <a className={styles.menuItem} href="https://twitter.com/pluto_network" target="_blank">
+                <Icon icon="TWITTER_COLOR" />
+              </a>
+            </li>
+          </ul>
+
+          <div
+            className={styles.mobileBtn}
+            onClick={() => {
+              const curOpen = this.state.isMobileOpen;
+              this.setState({ isMobileOpen: !curOpen });
+            }}
+          >
+            <Icon icon="MOBILE_BTN" className={styles.mobileIcon} />
+            <Icon icon="CANCEL" className={styles.cancelIcon} />
+          </div>
         </div>
       </nav>
     );
@@ -93,7 +117,7 @@ class Navbar extends React.PureComponent {
         }}
         className={styles.langBtn}
       >
-        <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" />
+        {/* <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" /> */}
         <span className={curLocale === 'en' ? styles.active : styles.notActive}>EN</span> | <span className={curLocale === 'ko' ? styles.active : styles.notActive}>KO</span>
       </div>
     );

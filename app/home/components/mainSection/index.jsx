@@ -2,6 +2,7 @@ import React from 'react';
 // styles
 import styles from './mainSection.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Icon from "../../../components/icons";
 
 const MainSection = ({ intl, email, subscribeEmail, handleEmailChange, mainRef }) => (
   <div className={styles.mainSectionContainer} ref={ref => { mainRef(ref); }}>
@@ -15,6 +16,24 @@ const MainSection = ({ intl, email, subscribeEmail, handleEmailChange, mainRef }
             {intl.formatMessage({ id: 'MAIN_SECTION.subtitle' })}
           </div>
         </div>
+
+        <ul className={styles.snsBtnList}>
+          <li>
+            <a className={styles.menuItem} href="https://www.facebook.com/Pluto-263226227503100/" target="_blank">
+              <Icon icon="FACEBOOK_COLOR" />
+            </a>
+          </li>
+          <li>
+            <a className={styles.menuItem} href="#" target="_blank">
+              <Icon icon="TELEGRAM_COLOR" />
+            </a>
+          </li>
+          <li>
+            <a className={styles.menuItem} href="https://twitter.com/pluto_network" target="_blank">
+              <Icon icon="TWITTER_COLOR" />
+            </a>
+          </li>
+        </ul>
 
         <form
           onSubmit={subscribeEmail}
