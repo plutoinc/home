@@ -132,10 +132,11 @@ $mobile-width : 768px;
   position: absolute;
   display: inline-block;
   vertical-align: top;
-  margin-top: 6px;
   width: 100px;
   text-align: center;
+  top: 50%;
   left: 50%;
+  margin-top: -12px;
   margin-left: -50px;
 
   svg {
@@ -206,6 +207,7 @@ $mobile-width : 768px;
     .menuItem {
       display: block;
       color: #fff;
+      margin-top: 4px;
       margin-right: 20px;
 
       svg {
