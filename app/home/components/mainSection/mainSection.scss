@@ -1,7 +1,6 @@
 $navbar-height : 75px;
 
 .mainSectionContainer {
-  background-image: url("https://d2vo77dayzjoat.cloudfront.net/main_section_bg_new.jpg");
   background-size: cover;
   background-position: center bottom;
   position: relative;
@@ -9,6 +8,18 @@ $navbar-height : 75px;
   display: flex;
   align-items: center;
   padding-bottom: 100px;
+
+  .mainBackgroundContainer {
+    background-image: url("https://d2vo77dayzjoat.cloudfront.net/main_section_bg_new.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
 
   .innerContainer {
     max-width: 940px;

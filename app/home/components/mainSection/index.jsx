@@ -6,6 +6,7 @@ import Icon from "../../../components/icons";
 
 const MainSection = ({ intl, email, subscribeEmail, handleEmailChange, mainRef }) => (
   <div className={styles.mainSectionContainer} ref={ref => { mainRef(ref); }}>
+    <div className={styles.mainBackgroundContainer}></div>
     <div className={`container ${styles.innerContainer}`}>
       <div>
         <div className="row">
