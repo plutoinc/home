@@ -1,13 +1,25 @@
 $navbar-height : 75px;
 
 .mainSectionContainer {
-  background-image: url("https://d2vo77dayzjoat.cloudfront.net/first-section-background.jpg");
   background-size: cover;
   background-position: center bottom;
   position: relative;
   height: 700px;
   display: flex;
   align-items: center;
+  padding-bottom: 100px;
+
+  .mainBackgroundContainer {
+    background-image: url("https://d2vo77dayzjoat.cloudfront.net/main_section_bg_new.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
 
   .innerContainer {
     max-width: 940px;
@@ -15,15 +27,25 @@ $navbar-height : 75px;
 
   @media (max-width: 768px) {
     height: 600px;
+    padding-bottom: 0;
   }
 }
 
 .headline {
+  text-align: center;
   font-size: 40px;
-  line-height: 1.33;
+  line-height: 1.2;
   letter-spacing: 1.2px;
   color: #fff;
   margin-bottom: 20px;
+
+  span {
+    display: block;
+    font-size: 27px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    line-height: 1.78;
+  }
 
   @media (max-width: 768px) {
     font-size: 26px;
@@ -33,43 +55,51 @@ $navbar-height : 75px;
 }
 
 .subTitle {
+  text-align: center;
   font-size: 22px;
   line-height: 1.27;
   color: #fff;
+  opacity: 0.8;
   margin-bottom: 38px;
 
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 1.75;
+    padding: 0 15px;
   }
 }
 
 .emailWrapper {
+  text-align: center;
   margin-bottom: 37.5px;
 
   .emailSubmitInput {
     display: inline-block;
     vertical-align: top;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(10px);
     font-size: 18px;
     line-height: 1.5;
-    letter-spacing: -0.1px;
-    color: #4c4c4c;
+    letter-spacing: -0.2px;
+    font-weight: 300;
+    color: #2f344f;
     margin-bottom: 10px;
     width: 100%;
+    outline: none;
+    border: none;
 
     @media (min-width: 768px) {
-      max-width: 300px;
+      max-width: 285px;
       margin-right: 20px;
     }
   }
 
   .emailSubmitButton {
     height: 50px;
-    border-radius: 4px;
-    background-color: #a1958d;
+    border-radius: 10px;
+    background-image: linear-gradient(110deg, #ff0037, #ff4689);
     font-size: 18px;
     text-align: center;
     color: #fff;
@@ -82,19 +112,22 @@ $navbar-height : 75px;
   }
 }
 
-.iconsWrapper {
-  .icon {
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 50%;
-    svg {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: transparent;
-      transition: background-color 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
+.snsBtnList {
+  padding: 0;
+  text-align: center;
 
-      &:hover { background-color: rgba(255, 255, 255, 0.2); }
+  li {
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+
+    svg {
+      width: 36px;
+      height: 36px;
     }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }

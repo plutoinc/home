@@ -12,8 +12,7 @@ export function staticHTMLWrapper(
         <link rel="shortcut icon" href="https://d2vo77dayzjoat.cloudfront.net/favicon.ico" />
         <title>Pluto | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700">
+        <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
         <style type="text/css">${css}</style>
       </head>
       <body>
