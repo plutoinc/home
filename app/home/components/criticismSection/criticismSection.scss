@@ -44,11 +44,16 @@
 }
 
 .subTitle {
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.61;
+  letter-spacing: -0.6px;
   text-align: center;
   color: #8d8d8d;
   white-space: pre;
+
+  @media (min-width: 768px) {
+    margin-left: -15px;
+  }
 
   @media (max-width: 768px) {
     font-size: 17px;
