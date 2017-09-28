@@ -1,18 +1,29 @@
 import React from "react";
 
 // components
-import Navbar from "../components/newnavbar";
+import Header from "../components/header";
 import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
+import TechSection from "./components/techSection";
+import FunctionSection from "./components/functionSection";
+import RewardSection from "./components/rewardSection";
+import POCSection from "./components/pocSection";
+import MailingSection from "./components/MailingSection";
 
 class NewHomeContainer extends React.PureComponent {
   render() {
     const { intl } = this.props;
     return (
-      <div>
+      <section>
+        <Header />
         <MainSection />
+        <TechSection />
+        <FunctionSection />
+        <RewardSection />
+        <POCSection />
+        <MailingSection />
         <Footer />
-      </div>
+      </section>
     );
   }
 }
