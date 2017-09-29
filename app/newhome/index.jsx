@@ -8,7 +8,7 @@ import TechSection from "./components/techSection";
 import FunctionSection from "./components/functionSection";
 import RewardSection from "./components/rewardSection";
 import POCSection from "./components/pocSection";
-import MailingSection from "./components/MailingSection";
+import MailingSection from "./components/mailingSection";
 
 class NewHomeContainer extends React.PureComponent {
   render() {
