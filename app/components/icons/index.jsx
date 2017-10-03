@@ -26,6 +26,9 @@ const ICONS = {
   FACEBOOK_COLOR: require('./facebook_color.svg'),
   TELEGRAM_COLOR: require('./telegram_color.svg'),
   NEW_LOGO: require('./new-logo.svg'),
+
+  LOGO: require('./logo.svg'),
+  FOOTER_LOGO: require('./footer-logo.svg'),
 };
 
 class Icon extends React.PureComponent {
