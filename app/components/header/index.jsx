@@ -16,6 +16,9 @@ class Header extends React.PureComponent {
 
           <ul className={styles.menuList}>
             <li className={styles.menuItem}>
+              <a href="#">FAQ</a>
+            </li>
+            <li className={styles.menuItem}>
               <a href="#">Blog</a>
             </li>
             <li className={styles.menuItem}>
