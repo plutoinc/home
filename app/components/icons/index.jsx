@@ -35,6 +35,8 @@ const ICONS = {
   TWITTER_FOOTER: require('./twitter-footer.svg'),
   TELEGRAM_FOOTER: require('./telegram-footer.svg'),
   GITHUB_FOOTER: require('./github-footer.svg'),
+  WAVES: require('./waves.svg'),
+  BUBBLES: require('./bubbles.svg'),
 };
 
 class Icon extends React.PureComponent {
