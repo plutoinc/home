@@ -26,6 +26,17 @@ const ICONS = {
   FACEBOOK_COLOR: require('./facebook_color.svg'),
   TELEGRAM_COLOR: require('./telegram_color.svg'),
   NEW_LOGO: require('./new-logo.svg'),
+
+  // new home icons
+  LOGO: require('./logo.svg'),
+  FOOTER_LOGO: require('./footer-logo.svg'),
+  FACEBOOK_FOOTER: require('./facebook-footer.svg'),
+  MEDIUM_FOOTER: require('./medium-footer.svg'),
+  TWITTER_FOOTER: require('./twitter-footer.svg'),
+  TELEGRAM_FOOTER: require('./telegram-footer.svg'),
+  GITHUB_FOOTER: require('./github-footer.svg'),
+  WAVES: require('./waves.svg'),
+  BUBBLES: require('./bubbles.svg'),
 };
 
 class Icon extends React.PureComponent {

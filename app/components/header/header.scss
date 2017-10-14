@@ -1,0 +1,66 @@
+$header-height: 75px;
+$container-width: 1080px;
+
+.headerContainer {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.innerContainer {
+  height: $header-height;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .logoWrapper {
+    display: inline-block;
+
+    svg {
+      width: 95px;
+      height: 45px;
+    }
+  }
+
+  .menuList {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+
+    .menuItem {
+      display: inline-block;
+      margin-right: 20px;
+
+      a {
+        display: block;
+        color: #656d7c;
+        text-align: center;
+        letter-spacing: 0.5px;
+        width: 72px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .whitePaperItem {
+      a {
+        width: 140px;
+        padding: 8px 24px;
+        color: #6096ff;
+        border: solid 1px #4da1ff;
+        border-radius: 10px;
+      }
+    }
+  }
+}

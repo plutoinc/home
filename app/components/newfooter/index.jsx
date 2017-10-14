@@ -8,24 +8,44 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.innerContainer}>
-        <div className={styles.copyRight}>
-          ©Pluto. All Rights Reserved<br />
-          team@pluto.network
+        <div className={styles.logoSection}>
+          <Icon icon="FOOTER_LOGO" />
+          <p>
+            Copyright © 2017 Pluto Network. <br />
+            All rights reserved.
+          </p>
         </div>
-        <div className={styles.iconsWrapper}>
-          <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
-            <Icon icon="GITHUB" />
-          </a>
-          {/* <a href="/" className={styles.footerIconWrapper}>
-            <Icon icon="REDDIT" />
-          </a> */}
-          <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
-            <Icon icon="TWITTER" />
+
+        <ul className={`${styles.ulSection} ${styles.plutoSection}`}>
+          <li>Pluto</li>
+          <li>Home</li>
+          <li>About us</li>
+        </ul>
+
+        <ul className={`${styles.ulSection} ${styles.resourceSection}`}>
+          <li>Resources</li>
+          <li>Blog</li>
+          <li>Whitepaper</li>
+        </ul>
+
+        <ul className={`${styles.ulSection} ${styles.followSection}`}>
+          <li>Follow</li>
+          <a href="#" target="_blank" className={styles.footerIconWrapper}>
+            <Icon icon="FACEBOOK_FOOTER" />
           </a>
           <a href="https://medium.com/pluto-network" target="_blank" className={styles.footerIconWrapper}>
-            <Icon icon="MEDIUM" />
+            <Icon icon="MEDIUM_FOOTER" />
           </a>
-        </div>
+          <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
+            <Icon icon="TWITTER_FOOTER" />
+          </a>
+          <a href="#" target="_blank" className={styles.footerIconWrapper}>
+            <Icon icon="TELEGRAM_FOOTER" />
+          </a>
+          <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
+            <Icon icon="GITHUB_FOOTER" />
+          </a>
+        </ul>
       </div>
     </footer>
   );
