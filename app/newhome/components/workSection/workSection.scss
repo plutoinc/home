@@ -1,0 +1,134 @@
+$container-width: 1080px;
+
+.workSectionContainer {
+  padding-top: 50px;
+  .innerContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+}
+
+.subTitle {
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.81;
+  letter-spacing: 7.8px;
+  color: #bbc2d0;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 1.48;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #0c1020;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.detail {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+  color: #0c1020;
+  margin-bottom: 60px;
+}
+
+.featureWrapper {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+
+  .featureItem {
+    padding-right: 25px;
+    svg {
+      width: 45px;
+    }
+
+    .itemTitle {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.55;
+      text-align: left;
+      color: #0c1020;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .itemDetail {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.78;
+      letter-spacing: -0.5px;
+      text-align: left;
+      color: #0c1020;
+    }
+  }
+}
+
+.wpBtnInfo {
+  font-size: 18px;
+  line-height: 2.81;
+  text-align: center;
+  color: #656d7c;
+}
+
+.wpBtn {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 9px;
+  background-color: #6096ff;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.iconWrapper {
+  position: absolute;
+}
+
+.reputationSection {
+  margin-top: 100px;
+  position: relative;
+  background-image: url(https://d2vo77dayzjoat.cloudfront.net/reputation_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 83%;
+  height: 500px;
+}
+
+.reputationBackground {
+  top: -90px;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.reputationItem1, .reputationItem2, .reputationItem3 {
+  transform: translateX(-50%);
+  svg {
+    height: 75px;
+  }
+}
+.reputationItem1 {
+  top: 200px;
+  left: 23%;
+}
+.reputationItem2 {
+  top: 230px;
+  left: 32%;
+}
+.reputationItem3 {
+  top: 225px;
+  left: 65%;
+}

@@ -1,0 +1,49 @@
+$container-width: 1080px;
+
+.videoSectionContainer {
+  padding-bottom: 30px;
+
+  .innerContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.videoBtn {
+  margin: 0 auto;
+  max-width: 785px;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 17.5px 55px 0 #d9dee8;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(62, 67, 89, 0.68);
+  }
+
+  .playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+  }
+}
+
+:global {
+  @import 'node_modules/react-modal-video/scss/modal-video.scss';
+}

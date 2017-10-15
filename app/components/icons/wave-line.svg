@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2880" height="400" viewBox="0 0 2880 400">
+    <defs>
+        <linearGradient id="wave_line_a" x1="5.423%" x2="93.732%" y1="64.702%" y2="34.163%">
+            <stop offset="0%" stop-color="#99C7FF"/>
+            <stop offset="14.185%" stop-color="#6399FF"/>
+            <stop offset="89.858%" stop-color="#6499FF"/>
+            <stop offset="100%" stop-color="#CFE5FF"/>
+        </linearGradient>
+        <linearGradient id="wave_line_b" x1="5.423%" x2="93.732%" y1="64.702%" y2="34.163%">
+            <stop offset="0%" stop-color="#99C7FF"/>
+            <stop offset="14.185%" stop-color="#6399FF"/>
+            <stop offset="72.63%" stop-color="#CFE0FF"/>
+            <stop offset="86.306%" stop-color="#95BCFF"/>
+            <stop offset="100%" stop-color="#CFE5FF"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke-width="2" opacity=".548">
+        <path stroke="url(#wave_line_a)" d="M177 355.845c243.14-158.43 524.277-245.933 843.413-262.507 504.639-26.207 901.953 176.448 1586.793 180.484 296.485 1.747 597.083-58.414 901.794-180.484" transform="matrix(-1 0 0 1 3283 1)"/>
+        <path stroke="url(#wave_line_b)" d="M379 332C606.14 128.57 879.277 18.567 1198.412 1.993c504.64-26.207 901.954 218.448 1586.794 222.484 296.485 1.747 597.083-58.414 901.794-180.484" transform="matrix(-1 0 0 1 3283 1)"/>
+        <path stroke="url(#wave_line_a)" d="M0 479.845c243.14-158.43 524.277-245.933 843.413-262.507 504.639-26.207 901.953 176.448 1586.793 180.484 296.485 1.747 597.083-58.414 901.794-180.484" transform="matrix(-1 0 0 1 3283 1)"/>
+    </g>
+</svg>

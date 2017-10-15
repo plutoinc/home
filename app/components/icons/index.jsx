@@ -37,6 +37,17 @@ const ICONS = {
   GITHUB_FOOTER: require('./github-footer.svg'),
   WAVES: require('./waves.svg'),
   BUBBLES: require('./bubbles.svg'),
+  PROBLEM_1: require('./problem-1.svg'),
+  PROBLEM_2: require('./problem-2.svg'),
+  PROBLEM_3: require('./problem-3.svg'),
+  WAVE_LINE: require('./wave-line.svg'),
+  FEATURE_1: require('./feature-1.svg'),
+  FEATURE_2: require('./feature-2.svg'),
+  FEATURE_3: require('./feature-3.svg'),
+  REPUTATION_BG: require('./reputation-bg.svg'),
+  REPUTATION_ITEM_1: require('./reputation-item-1.svg'),
+  REPUTATION_ITEM_2: require('./reputation-item-2.svg'),
+  REPUTATION_ITEM_3: require('./reputation-item-3.svg'),
 };
 
 class Icon extends React.PureComponent {
