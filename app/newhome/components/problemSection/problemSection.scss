@@ -2,6 +2,8 @@ $container-width: 1080px;
 
 .problemSectionContainer {
   padding: 50px 0;
+  overflow: hidden;
+
   .innerContainer {
     max-width: $container-width;
     margin: 0 auto;
@@ -16,7 +18,7 @@ $container-width: 1080px;
 }
 
 .title {
-	font-size: 32px;
+	font-size: 30px;
 	line-height: 1.48;
   color: #0c1020;
 
