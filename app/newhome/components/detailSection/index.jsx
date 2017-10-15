@@ -1,16 +1,16 @@
 import React from 'react';
 
 // styles
-import styles from "./techSection.scss";
+import styles from "./detailSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
-const TechSection = () => (
-  <section className={styles.techSectionContainer}>
+const DetailSection = () => (
+  <section className={styles.detailSectionContainer}>
     <div className={styles.innerContainer}>
-      tech Section
+      detailSection
     </div>
   </section>
 );
 
-export default withStyles(styles)(TechSection);
+export default withStyles(styles)(DetailSection);

@@ -1,16 +1,16 @@
 import React from 'react';
 
 // styles
-import styles from "./functionSection.scss";
+import styles from "./problemSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
-const FunctionSection = () => (
-  <section className={styles.functionSectionContainer}>
+const ProblemSection = () => (
+  <section className={styles.problemSectionContainer}>
     <div className={styles.innerContainer}>
-      functionSection
+      problem Section
     </div>
   </section>
 );
 
-export default withStyles(styles)(FunctionSection);
+export default withStyles(styles)(ProblemSection);

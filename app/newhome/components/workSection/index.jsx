@@ -1,16 +1,16 @@
 import React from 'react';
 
 // styles
-import styles from "./rewardSection.scss";
+import styles from "./workSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
-const RewardSection = () => (
-  <section className={styles.rewardSectionContainer}>
+const WorkSection = () => (
+  <section className={styles.workSectionContainer}>
     <div className={styles.innerContainer}>
-      rewardSection
+      workSection
     </div>
   </section>
 );
 
-export default withStyles(styles)(RewardSection);
+export default withStyles(styles)(WorkSection);

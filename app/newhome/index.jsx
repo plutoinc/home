@@ -4,10 +4,11 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
-import TechSection from "./components/techSection";
-import FunctionSection from "./components/functionSection";
-import RewardSection from "./components/rewardSection";
-import POCSection from "./components/pocSection";
+import VideoSection from "./components/videoSection";
+import ProblemSection from "./components/problemSection";
+import AchieveSection from "./components/achieveSection";
+import WorkSection from "./components/workSection";
+import DetailSection from "./components/detailSection";
 import MailingSection from "./components/mailingSection";
 
 class NewHomeContainer extends React.PureComponent {
@@ -17,10 +18,11 @@ class NewHomeContainer extends React.PureComponent {
       <section>
         <Header />
         <MainSection />
-        <TechSection />
-        <FunctionSection />
-        <RewardSection />
-        <POCSection />
+        <VideoSection />
+        <ProblemSection />
+        <AchieveSection />
+        <WorkSection />
+        <DetailSection />
         <MailingSection />
         <Footer />
       </section>
