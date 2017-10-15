@@ -1,0 +1,56 @@
+$container-width: 1080px;
+
+.mailingSectionContainer {
+  padding-top: 50px;
+  padding-bottom: 130px;
+
+  .innerContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.7;
+  text-align: center;
+  color: #172649;
+  margin-bottom: 45px;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+
+.emailFormWrapper {
+  text-align: center;
+
+  .emailSubmitInput {
+    display: inline-block;
+    vertical-align: top;
+    width: 310px;
+    height: 45px;
+    border-radius: 9px;
+    -webkit-backdrop-filter: blur(9px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 1px #6096ff;
+    padding-left: 20px;
+    padding-right: 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .emailSubmitButton {
+    margin-left: 18px;
+    padding: 0;
+    border: none;
+    vertical-align: top;
+    width: 150px;
+    height: 45px;
+    border-radius: 9px;
+    background-color: #6096ff;
+    color: #ffffff;
+  }
+}
