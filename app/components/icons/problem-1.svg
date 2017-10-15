@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="228" height="137" viewBox="0 0 228 137">
+    <g fill="none" fill-rule="evenodd">
+        <text stroke="#6096FF" stroke-width="1.458" font-family="SpoqaHanSans-Bold, SpoqaHanSans" font-size="64.881" font-weight="bold" transform="translate(-2 65.6)">
+            <tspan x=".114" y="75" fill="#F5F7FB">$ </tspan> <tspan x="55.652" y="75" fill="#6096FF">23</tspan>
+        </text>
+        <text fill="#6096FF" font-family="Montserrat-Light, Montserrat" font-size="29.16" font-weight="300" transform="translate(-2 65.6)">
+            <tspan x="149.903" y="32.645">Billon</tspan>
+        </text>
+        <g fill="#D8DDE7" transform="translate(70.723)">
+            <rect width="5.577" height="22.928" x="41.518" y="13.633" rx="2.789"/>
+            <rect width="5.577" height="6.816" x="41.518" rx="2.789"/>
+            <rect width="5.577" height="22.928" x="69.403" y="19.21" rx="2.789" transform="rotate(30 72.192 30.674)"/>
+            <rect width="5.577" height="6.816" x="79.318" y="9.295" rx="2.789" transform="rotate(30 82.107 12.703)"/>
+            <rect width="5.577" height="22.928" x="12.393" y="19.21" rx="2.789" transform="scale(-1 1) rotate(30 0 -25.986)"/>
+            <rect width="5.577" height="6.816" x="1.859" y="9.295" rx="2.789" transform="scale(-1 1) rotate(30 0 -4.642)"/>
+        </g>
+    </g>
+</svg>

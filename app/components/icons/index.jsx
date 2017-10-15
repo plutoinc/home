@@ -37,6 +37,10 @@ const ICONS = {
   GITHUB_FOOTER: require('./github-footer.svg'),
   WAVES: require('./waves.svg'),
   BUBBLES: require('./bubbles.svg'),
+  PROBLEM_1: require('./problem-1.svg'),
+  PROBLEM_2: require('./problem-2.svg'),
+  PROBLEM_3: require('./problem-3.svg'),
+  WAVE_LINE: require('./wave-line.svg'),
 };
 
 class Icon extends React.PureComponent {

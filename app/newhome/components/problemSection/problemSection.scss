@@ -1,0 +1,117 @@
+$container-width: 1080px;
+
+.problemSectionContainer {
+  padding: 50px 0;
+  .innerContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+}
+
+.subTitle {
+  font-size: 18px;
+  line-height: 2.81;
+  letter-spacing: 7.8px;
+  color: #bbc2d0;
+}
+
+.title {
+	font-size: 32px;
+	line-height: 1.48;
+  color: #0c1020;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.sliderContainer {
+  padding: 50px 0;
+
+  .sliderItem {
+    margin: 20px 10px;
+    padding: 0 30px;
+    width: 480px;
+    height: 165px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px 0 rgba(216, 221, 231, 0.64);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .iconWrapper {
+      flex: 1 1 120px;
+      margin-right: 18px;
+      svg {
+        width: 115px;
+      }
+    }
+
+    .itemText {
+      flex: 2 1 285px;
+      font-weight: 300;
+      line-height: 1.75;
+      text-align: justify;
+      color: #0c1020;
+    }
+
+  }
+}
+
+.sliderDots {
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0;
+      width: 165px;
+      height: 3px;
+      background-color: #d9dee8;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+:global {
+  .slick-active {
+    button {
+      background-color: #6096ff !important;
+    }
+  }
+
+  .slick-list {
+    max-width: $container-width;
+    margin: 0 auto;
+    overflow: initial;
+  }
+}
+
+.catchPhraseContainer {
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 25px;
+
+  .catchPhrase {
+    max-width: $container-width;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 27px;
+    line-height: 1.6;
+    color: #0c1020;
+    text-align: center;
+  }
+}
