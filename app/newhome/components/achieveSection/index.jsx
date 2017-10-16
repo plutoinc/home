@@ -52,7 +52,10 @@ const AchieveSection = () => (
       </div>
 
       <div className={`${styles.subSection} ${styles.itemImageWrapper}`}>
-        <img src="http://placehold.it/380x362/eceaea" alt="" className={styles.itemImage} />
+        <img src="http://placehold.it/380x362/eceaea?text=no1" alt="" className={`${styles.itemImage} ${styles.active}`} />
+        <img src="http://placehold.it/380x362/f0f0f0?text=no2" alt="" className={styles.itemImage} />
+        <img src="http://placehold.it/380x362/a8a8a8?text=no3" alt="" className={styles.itemImage} />
+        <img src="http://placehold.it/380x362/9f9f9f?text=no4" alt="" className={styles.itemImage} />
       </div>
 
     </div>

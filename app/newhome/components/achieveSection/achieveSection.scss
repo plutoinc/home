@@ -69,5 +69,10 @@ $container-width: 1080px;
   .itemImage {
     width: 100%;
     border-radius: 15px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 }

@@ -3,7 +3,7 @@ $container-width: 1080px;
 
 .mainSectionContainer {
   padding-top: $header-height;
-  height: 740px;
+  height: 800px;
   overflow: hidden;
   background-color: #f5f7fb;
   position: relative;
@@ -13,6 +13,7 @@ $container-width: 1080px;
     margin: 0 auto;
     position: relative;
     padding-top: 45px;
+    margin-top: 45px;
 
     & > div:not(.backgroundImage) {
       z-index: 1;
@@ -95,7 +96,6 @@ $container-width: 1080px;
 }
 
 .waveIcon {
-  z-index: 2;
   width: 100%;
   position: absolute;
   bottom: -10px;
@@ -106,7 +106,6 @@ $container-width: 1080px;
   top: 50%;
   left: 50%;
   transform: translate(-45%, -50%);
-  z-index: 2;
   max-width: 1040px;
   width: 100%;
 }
