@@ -41,11 +41,12 @@ $container-width: 1080px;
       margin-right: 20px;
 
       a {
-        display: block;
-        color: #656d7c;
-        text-align: center;
-        letter-spacing: 0.5px;
+        display: inline-block;
         width: 72px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: #656d7c;
 
         &:hover {
           text-decoration: none;
@@ -56,10 +57,22 @@ $container-width: 1080px;
     .whitePaperItem {
       a {
         width: 140px;
-        padding: 8px 24px;
+        padding: 8px;
         color: #6096ff;
         border: solid 1px #4da1ff;
         border-radius: 10px;
+      }
+    }
+
+    .langItem {
+      svg {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 8px;
+      }
+      span {
+        font-size: 14px;
+        vertical-align: middle;
       }
     }
   }

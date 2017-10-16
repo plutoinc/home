@@ -29,6 +29,7 @@ const ICONS = {
 
   // new home icons
   LOGO: require('./logo.svg'),
+  LANG: require('./lang.svg'),
   FOOTER_LOGO: require('./footer-logo.svg'),
   FACEBOOK_FOOTER: require('./facebook-footer.svg'),
   MEDIUM_FOOTER: require('./medium-footer.svg'),
@@ -37,9 +38,11 @@ const ICONS = {
   GITHUB_FOOTER: require('./github-footer.svg'),
   WAVES: require('./waves.svg'),
   BUBBLES: require('./bubbles.svg'),
+  PLAY_BUTTON: require('./play-button.svg'),
   PROBLEM_1: require('./problem-1.svg'),
   PROBLEM_2: require('./problem-2.svg'),
   PROBLEM_3: require('./problem-3.svg'),
+  PROBLEM_4: require('./problem-4.svg'),
   WAVE_LINE: require('./wave-line.svg'),
   FEATURE_1: require('./feature-1.svg'),
   FEATURE_2: require('./feature-2.svg'),

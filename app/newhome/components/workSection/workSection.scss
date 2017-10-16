@@ -19,7 +19,7 @@ $container-width: 1080px;
 .title {
   font-size: 30px;
   line-height: 1.48;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.6px;
   text-align: center;
   color: #0c1020;
 
@@ -87,6 +87,10 @@ $container-width: 1080px;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .iconWrapper {

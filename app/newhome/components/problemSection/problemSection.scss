@@ -32,7 +32,7 @@ $container-width: 1080px;
 
   .sliderItem {
     margin: 20px 10px;
-    padding: 0 30px;
+    padding: 0 16px;
     width: 480px;
     height: 165px;
     border-radius: 10px;
@@ -45,21 +45,21 @@ $container-width: 1080px;
     cursor: pointer;
 
     .iconWrapper {
-      flex: 1 1 120px;
-      margin-right: 18px;
+      flex: 1 0 132px;
       svg {
-        width: 115px;
+        width: 132px;
       }
     }
 
     .itemText {
-      flex: 2 1 285px;
+      flex: 1 1 auto;
+      font-size: 16px;
       font-weight: 300;
-      line-height: 1.75;
-      text-align: justify;
+      line-height: 1.78;
+      letter-spacing: -0.8px;
+      text-align: left;
       color: #0c1020;
     }
-
   }
 }
 

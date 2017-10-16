@@ -28,6 +28,11 @@ const DetailSection = () => (
         <img className={styles.imgComment2} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment2.png" alt=""/>
       </div>
     </div>
+
+    <div className={styles.waveIcon}>
+      <Icon icon="WAVES" />
+    </div>
+
   </section>
 );
 
