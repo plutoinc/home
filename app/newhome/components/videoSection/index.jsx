@@ -22,7 +22,9 @@ class VideoSection extends React.PureComponent {
           <ModalVideo channel='youtube' isOpen={this.state.isVideoOpen} videoId='7wtfhZwyrcc' onClose={() => this.setState({isVideoOpen: false})} />
           <div className={styles.videoBtn} onClick={this.openVideoModal}>
             <img src="https://img.youtube.com/vi/7wtfhZwyrcc/maxresdefault.jpg" alt=""/>
-            <span className={styles.playBtn}>PLAY</span>
+            <span className={styles.playBtn}>
+              <Icon icon="PLAY_BUTTON" />
+            </span>
           </div>
         </div>
       </section>

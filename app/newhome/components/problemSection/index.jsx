@@ -59,10 +59,10 @@ class ProblemSection extends React.PureComponent {
           </div>
           <div className={styles.sliderItem}>
             <div className={styles.iconWrapper}>
-              <Icon icon="PROBLEM_3" />
+              <Icon icon="PROBLEM_4" />
             </div>
             <div className={styles.itemText}>
-              Nonetheless, academic publishers are not doing their jobs properly, such as passing hundreds of fake reviews.
+              Rather, they give researchers unnecessary procedures and make them spend excessive resources to share research results.
             </div>
           </div>
         </Slider>
