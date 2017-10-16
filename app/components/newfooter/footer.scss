@@ -39,10 +39,19 @@ $container-width: 1080px;
 
   li {
     margin-bottom: 7px;
+
+    a {
+      color: inherit;
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
   }
 
   li:first-child {
     font-weight: 600;
+    cursor: default;
     margin: 12px 0;
   }
 

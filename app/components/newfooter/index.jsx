@@ -17,15 +17,27 @@ const Footer = () => {
         </div>
 
         <ul className={`${styles.ulSection} ${styles.plutoSection}`}>
-          <li>Pluto</li>
-          <li>Home</li>
-          <li>About us</li>
+          <li>
+            Pluto
+          </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
         </ul>
 
         <ul className={`${styles.ulSection} ${styles.resourceSection}`}>
-          <li>Resources</li>
-          <li>Blog</li>
-          <li>Whitepaper</li>
+          <li>
+            Resources
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Whitepaper</a>
+          </li>
         </ul>
 
         <ul className={`${styles.ulSection} ${styles.followSection}`}>

@@ -27,6 +27,12 @@ class Header extends React.PureComponent {
             <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
               <a href="#">White Paper</a>
             </li>
+            <li className={`${styles.menuItem} ${styles.langItem}`}>
+              <a href="#">
+                <Icon icon="LANG" />
+                <span>EN</span>
+              </a>
+            </li>
           </ul>
         </div>
       </header>
