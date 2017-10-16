@@ -77,6 +77,7 @@ $container-width: 1080px;
       width: 165px;
       height: 3px;
       background-color: #d9dee8;
+      transition: background-color .4s ease;
 
       &:focus {
         outline: none;

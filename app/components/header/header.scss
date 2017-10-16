@@ -61,6 +61,12 @@ $container-width: 1080px;
         color: #6096ff;
         border: solid 1px #4da1ff;
         border-radius: 10px;
+        transition: border 0.2s ease, color 0.2s ease;
+
+        &:hover {
+          background-color: #6096ff;
+          color: #ffffff;
+        }
       }
     }
 
