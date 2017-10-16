@@ -87,6 +87,10 @@ $container-width: 1080px;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .iconWrapper {
