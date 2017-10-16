@@ -18,7 +18,6 @@ class NewHomeContainer extends React.PureComponent {
       <section>
         <Header />
         <MainSection />
-        <VideoSection />
         <ProblemSection />
         <AchieveSection />
         <WorkSection />

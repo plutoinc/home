@@ -20,6 +20,15 @@ $container-width: 1080px;
       position: relative;
     }
   }
+
+  @media (max-width: 768px) {
+    height: 568px;
+    .innerContainer {
+      margin-top: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 .backgroundImage {
@@ -35,6 +44,10 @@ $container-width: 1080px;
     width: 100%;
     z-index: -1;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .title {
@@ -43,6 +56,12 @@ $container-width: 1080px;
   text-align: left;
   color: #0c1020;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 21px;
+    line-height: 1.51;
+    letter-spacing: 0.6px;
+  }
 }
 
 .subTitle {
@@ -50,7 +69,12 @@ $container-width: 1080px;
   font-weight: 300;
   text-align: left;
   color: #656d7c;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+
+  @media (max-width: 768px) {
+    font-size: 14.1px;
+    line-height: 1.75;
+  }
 }
 
 .emailFormWrapper {
@@ -83,6 +107,21 @@ $container-width: 1080px;
     background-color: #6096ff;
     color: #ffffff;
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+
+    .emailSubmitInput {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .emailSubmitButton {
+      margin-left: 0;
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .followSection {
@@ -91,7 +130,7 @@ $container-width: 1080px;
     width: 35px;
     height: 35px;
     display: inline-block;
-    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -105,7 +144,12 @@ $container-width: 1080px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-45%, -50%);
+  transform: translate(-50%, -50%);
   max-width: 1040px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 200%;
+  }
 }

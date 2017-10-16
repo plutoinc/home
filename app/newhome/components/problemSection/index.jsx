@@ -20,6 +20,17 @@ class ProblemSection extends React.PureComponent {
       variableWidth: true,
       className: styles.sliderContainer,
       dotsClass: styles.sliderDots,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          draggable: false,
+          slidesToShow: 4,
+          slidesToScroll: 0,
+          vertical: true,
+        },
+      },
+      ],
     };
 
     return (
