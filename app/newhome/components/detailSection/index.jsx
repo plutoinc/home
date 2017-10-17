@@ -23,6 +23,7 @@ const DetailSection = () => (
         {/* <a href="#" className={styles.moreDetail}>More Detail &#xE001;</a> */}
 
         <img className={styles.imgMacbook} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook.png" alt=""/>
+        <img className={styles.imgMacbookMobile} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook-mobile.png" alt=""/>
         <img className={styles.imgPeerReview} src="https://d2vo77dayzjoat.cloudfront.net/detail-peereval.png" alt=""/>
         <img className={styles.imgComment1} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment1.png" alt=""/>
         <img className={styles.imgComment2} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment2.png" alt=""/>
