@@ -109,20 +109,26 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-    height: 380px;
+    height: 450px;
     .moreDetail {
       font-size: 14px;
     }
     .imgMacbook {
-      display: none;
+      top: 55px;
+      width: 110%;
+      left: -50px;
     }
     .imgPeerReview {
-      top: 75px;
+      top: 240px;
+      right: 10px;
     }
     .imgComment1 {
-      bottom: 100px;
+      width: 80%;
+      bottom: 50px;
     }
     .imgComment2 {
+      width: 80%;
+      bottom: 0;
       right: 7px;
     }
   }
