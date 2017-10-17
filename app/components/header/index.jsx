@@ -30,24 +30,24 @@ class Header extends React.PureComponent {
           </Link>
 
           <ul className={styles.menuList}>
-            <li className={styles.menuItem}>
+            {/* <li className={styles.menuItem}>
               <a href="#">FAQ</a>
+            </li> */}
+            <li className={styles.menuItem}>
+              <a href="https://medium.com/pluto-network" target="_blank">Blog</a>
             </li>
             <li className={styles.menuItem}>
-              <a href="#">Blog</a>
-            </li>
-            <li className={styles.menuItem}>
-              <a href="#">Github</a>
+              <a href="https://github.com/pluto-net" target="_blank">Github</a>
             </li>
             <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
               <a href="#">White Paper</a>
             </li>
-            <li className={`${styles.menuItem} ${styles.langItem}`}>
+            {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
               <a href="#">
                 <Icon icon="LANG" />
                 <span>EN</span>
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <div
@@ -57,7 +57,6 @@ class Header extends React.PureComponent {
             <Icon icon="MOBILE_BTN_BLUE" className={styles.mobileIcon} />
             <Icon icon="CANCEL_BLUE" className={styles.cancelIcon} />
           </div>
-
         </div>
       </header>
     );

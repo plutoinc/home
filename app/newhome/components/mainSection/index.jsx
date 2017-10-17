@@ -9,7 +9,7 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => (
   <section className={styles.mainSectionContainer}>
     <div className={styles.innerContainer}>
       <div className={styles.title}>
-        Decentralized Scholary Communication Platform
+        Decentralized Scholarly Communication Platform
       </div>
       <div className={styles.subTitle}>
         PLUTO makes scholarly communication reasonable and transparent.
@@ -34,8 +34,8 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => (
       </div>
 
       <div className={styles.followSection}>
-        <a href="#" target="_blank" className={styles.footerIconWrapper}>
-        < Icon icon="FACEBOOK_FOOTER" />
+        <a href="https://www.facebook.com/Pluto-263226227503100/" target="_blank" className={styles.footerIconWrapper}>
+        <Icon icon="FACEBOOK_FOOTER" />
         </a>
         <a href="https://medium.com/pluto-network" target="_blank" className={styles.footerIconWrapper}>
           <Icon icon="MEDIUM_FOOTER" />
@@ -43,9 +43,9 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => (
         <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
           <Icon icon="TWITTER_FOOTER" />
         </a>
-        <a href="#" target="_blank" className={styles.footerIconWrapper}>
+        {/* <a href="#" target="_blank" className={styles.footerIconWrapper}>
           <Icon icon="TELEGRAM_FOOTER" />
-        </a>
+        </a> */}
         <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
           <Icon icon="GITHUB_FOOTER" />
         </a>

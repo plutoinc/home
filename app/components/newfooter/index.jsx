@@ -1,8 +1,9 @@
 import React from 'react';
-import Icon from '../icons';
+import { Link } from "react-router";
 // styles
 import styles from './footer.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import Icon from '../icons';
 
 const Footer = () => {
   return (
@@ -21,11 +22,11 @@ const Footer = () => {
             Pluto
           </li>
           <li>
-            <a href="#">Home</a>
+            <Link to="/newhome">Home</Link>
           </li>
-          <li>
+          {/* <li>
             <a href="#">About us</a>
-          </li>
+          </li> */}
         </ul>
 
         <ul className={`${styles.ulSection} ${styles.resourceSection}`}>
@@ -33,7 +34,7 @@ const Footer = () => {
             Resources
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="https://medium.com/pluto-network" target="_blank">Blog</a>
           </li>
           <li>
             <a href="#">Whitepaper</a>
@@ -51,9 +52,9 @@ const Footer = () => {
           <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
             <Icon icon="TWITTER_FOOTER" />
           </a>
-          <a href="#" target="_blank" className={styles.footerIconWrapper}>
+          {/* <a href="#" target="_blank" className={styles.footerIconWrapper}>
             <Icon icon="TELEGRAM_FOOTER" />
-          </a>
+          </a> */}
           <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
             <Icon icon="GITHUB_FOOTER" />
           </a>
