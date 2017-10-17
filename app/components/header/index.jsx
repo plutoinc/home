@@ -6,8 +6,8 @@ import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../icons";
 
 class Header extends React.PureComponent {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
 
     this.state = {
       isMenuOpen: false,
@@ -16,13 +16,14 @@ class Header extends React.PureComponent {
   }
 
   render() {
+    const { isTop } = this.props;
     return (
-      <header className={styles.headerContainer} >
+      <header className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ''} ${isTop ? styles.transparent : ''}`} >
         <div
           className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ''}`}
           onClick={this.toggleMobileMenu}
         />
-        <div className={`${styles.innerContainer} ${this.state.isMenuOpen ? styles.isOpen : ''}`}>
+        <div className={`${styles.innerContainer} `}>
           <Link to="/newhome" className={styles.logoWrapper}>
             <Icon icon="LOGO" className={styles.desktopLogo} />
             <Icon icon="LOGO_ONLY" className={styles.mobileLogo} />

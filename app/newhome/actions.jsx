@@ -1,0 +1,19 @@
+import Axios from "axios";
+import { fromJS } from "immutable";
+
+export const ACTION_TYPES = {
+  ENTER_SCROLL_TOP: 'NEWHOME.ENTER_SCROLL_TOP',
+  LEAVE_SCROLL_TOP: 'NEWHOME.LEAVE_SCROLL_TOP',
+}
+
+export function enterScrollTop() {
+  return {
+    type: ACTION_TYPES.ENTER_SCROLL_TOP,
+  };
+}
+
+export function leaveScrollTop() {
+  return {
+    type: ACTION_TYPES.LEAVE_SCROLL_TOP,
+  };
+}
