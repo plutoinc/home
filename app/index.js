@@ -1,34 +1,35 @@
-import Immutable from 'immutable';
-import React from 'react';
-import ReactDom from 'react-dom';
-import { applyMiddleware, createStore } from 'redux';
-import { Router, createMemoryHistory, browserHistory, hashHistory } from 'react-router';
-import { Provider } from 'react-redux';
+import Immutable from "immutable";
+import React from "react";
+import ReactDom from "react-dom";
+import { applyMiddleware, createStore } from "redux";
+import { Router, createMemoryHistory, browserHistory, hashHistory } from "react-router";
+import { Provider } from "react-redux";
+import ReactGA from "react-ga";
 // server
-import { handler as lambdaHandler, serverSideRender } from './server';
-import mailHandler from './mailServer';
+import { handler as lambdaHandler, serverSideRender } from "./server";
+import mailHandler from "./mailServer";
 // Middleware
-import * as ReactRouterRedux from 'react-router-redux';
-import thunkMiddleware from 'redux-thunk';
-import { createLogger } from 'redux-logger';
+import * as ReactRouterRedux from "react-router-redux";
+import thunkMiddleware from "redux-thunk";
+import { createLogger } from "redux-logger";
 // helpers
-import EnvChecker from './helpers/envChecker';
-import CssInjector from './helpers/cssInjector';
+import EnvChecker from "./helpers/envChecker";
+import CssInjector from "./helpers/cssInjector";
 // root reducer
-import { rootReducer, initialState } from './rootReducer';
+import { rootReducer, initialState } from "./rootReducer";
 // routes
-import createRoute from './routes';
+import createRoute from "./routes";
 // i18n
-import ConnectedIntlProvider from './components/connectedIntlProvider';
+import ConnectedIntlProvider from "./components/connectedIntlProvider";
 
 let history;
 if (EnvChecker.isServer()) {
   history = createMemoryHistory();
 } else if (EnvChecker.isDev()) {
-  require('bootstrap');
+  require("bootstrap");
   history = hashHistory;
 } else {
-  require('bootstrap');
+  require("bootstrap");
   history = browserHistory;
 }
 
@@ -48,21 +49,17 @@ if (!EnvChecker.isServer()) {
     AppInitialState = appInitialState;
   } catch (err) {
     console.error(err);
-    console.warn('There is no initial state from server');
+    console.warn("There is no initial state from server");
     AppInitialState = initialState;
   }
 }
 
 let store;
 if (EnvChecker.isServer() || !EnvChecker.isDev()) {
-  store = createStore(
-    rootReducer,
-    AppInitialState,
-    applyMiddleware(routerMid, thunkMiddleware),
-  );
+  store = createStore(rootReducer, AppInitialState, applyMiddleware(routerMid, thunkMiddleware));
 } else {
   const logger = createLogger({
-    stateTransformer: (state) => {
+    stateTransformer: state => {
       const newState = {};
       for (const i of Object.keys(state)) {
         if (Immutable.Iterable.isIterable(state[i])) {
@@ -75,39 +72,45 @@ if (EnvChecker.isServer() || !EnvChecker.isDev()) {
     },
   });
 
-  store = createStore(
-    rootReducer,
-    AppInitialState,
-    applyMiddleware(routerMid, thunkMiddleware, logger),
-  );
+  store = createStore(rootReducer, AppInitialState, applyMiddleware(routerMid, thunkMiddleware, logger));
 }
 
-const appHistory = ReactRouterRedux.syncHistoryWithStore(
-  history,
-  store,
-);
+const appHistory = ReactRouterRedux.syncHistoryWithStore(history, store);
 
 export const appStore = store;
 const routes = createRoute(store);
 
 if (!EnvChecker.isServer()) {
+  function handleLocationUpdate() {
+    if (!EnvChecker.isDev()) {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }
+
+  // initialize GA
+  if (!EnvChecker.isDev()) {
+    ReactGA.initialize("UA-108144949-1");
+    ReactGA.set({ page: window.location.pathname + window.location.search });
+  }
+
   ReactDom.render(
     <CssInjector>
       <Provider store={store}>
         <ConnectedIntlProvider>
-          <Router history={appHistory} children={routes} />
+          <Router history={appHistory} children={routes} onUpdate={handleLocationUpdate} />
         </ConnectedIntlProvider>
       </Provider>
     </CssInjector>,
-    document.getElementById('react-app'),
+    document.getElementById("react-app"),
   );
-} else if (EnvChecker.isServer() && process.env.NODE_ENV === 'test') {
-  serverSideRender('/', 'dsf').then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+} else if (EnvChecker.isServer() && process.env.NODE_ENV === "test") {
+  serverSideRender("/", "dsf")
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.error(err);
+    });
 }
 
 // Lambda handler
