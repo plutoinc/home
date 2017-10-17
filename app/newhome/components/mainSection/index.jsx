@@ -5,7 +5,7 @@ import styles from "./mainSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
-const MainSection = () => (
+const MainSection = ({ email, subscribeEmail, handleEmailChange }) => (
   <section className={styles.mainSectionContainer}>
     <div className={styles.innerContainer}>
       <div className={styles.title}>
@@ -17,14 +17,14 @@ const MainSection = () => (
 
       <div className={styles.emailFormWrapper}>
         <form
-          /* onSubmit={subscribeEmail} */
+          onSubmit={subscribeEmail}
           className={`${styles.emailWrapper}`}
         >
           <input
-            /* onChange={handleEmailChange} */
+            onChange={handleEmailChange}
             placeholder="Enter your email"
             className={`${styles.emailSubmitInput}`}
-            /* value={email} */
+            value={email}
             type="text"
           />
           <button className={`${styles.emailSubmitButton}`}>

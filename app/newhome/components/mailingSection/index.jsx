@@ -3,9 +3,8 @@ import React from 'react';
 // styles
 import styles from "./mailingSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import Icon from "../../../components/icons";
 
-const MailingSection = () => (
+const MailingSection = ({ email, subscribeEmail, handleEmailChange }) => (
   <section className={styles.mailingSectionContainer}>
     <div className={styles.innerContainer}>
 
@@ -15,14 +14,14 @@ const MailingSection = () => (
 
       <div className={styles.emailFormWrapper}>
         <form
-          /* onSubmit={subscribeEmail} */
+          onSubmit={subscribeEmail}
           className={`${styles.emailWrapper}`}
         >
           <input
-            /* onChange={handleEmailChange} */
+            onChange={handleEmailChange}
             placeholder="Enter your email"
             className={`${styles.emailSubmitInput}`}
-            /* value={email} */
+            value={email}
             type="text"
           />
           <button className={`${styles.emailSubmitButton}`}>
