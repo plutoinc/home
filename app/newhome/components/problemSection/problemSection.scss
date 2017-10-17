@@ -10,7 +10,6 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-    padding-bottom: 100px;
     .innerContainer {
       padding-left: 15px;
       padding-right: 15px;
@@ -54,7 +53,7 @@ $container-width: 1080px;
 
 @media (max-width: 768px) {
   .sliderWrapper {
-    padding: 25px 15px 130px 15px;
+    padding: 25px 15px;
   }
 }
 .sliderItem {
@@ -90,23 +89,24 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-    margin: 10px 0;
-    padding: 0 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 15px;
     width: 100%;
-    height: 100px;
+    height: auto;
     border-radius: 6px;
     box-shadow: 0 2.5px 9px 0 rgba(216, 221, 231, 0.64);
 
     .iconWrapper {
-      flex: 1 0 80px;
+      flex: 1 100%;
       svg {
-        width: 64px;
+        width: 105px;
       }
     }
     .itemText {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 300;
-      line-height: 1.68;
+      line-height: 1.82;
     }
   }
 }
@@ -167,7 +167,8 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-
+    margin-top: 200px;
+    padding-bottom: 0;
     svg {
       width: 120%;
       margin-left: -10%;
@@ -178,6 +179,7 @@ $container-width: 1080px;
       padding-right: 15px;
       font-size: 16px;
       line-height: 1.75;
+      transform: translate(-50%, -120%);
     }
   }
 }

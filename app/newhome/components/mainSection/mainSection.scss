@@ -25,6 +25,7 @@ $container-width: 1080px;
     height: 568px;
     .innerContainer {
       margin-top: 20px;
+      padding-top: 15px;
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -46,7 +47,9 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-    display: none;
+    // display: none;
+    top: 95px;
+    padding-left: 23px;
   }
 }
 
@@ -74,6 +77,7 @@ $container-width: 1080px;
   @media (max-width: 768px) {
     font-size: 14.1px;
     line-height: 1.75;
+    margin-bottom: 130px;
   }
 }
 
@@ -85,7 +89,7 @@ $container-width: 1080px;
     vertical-align: top;
     width: 310px;
     height: 45px;
-    border-radius: 9px;
+    border-radius: 10px;
     -webkit-backdrop-filter: blur(9px);
     background-color: rgba(255, 255, 255, 0.7);
     border: solid 1px #6096ff;
@@ -103,13 +107,13 @@ $container-width: 1080px;
     vertical-align: top;
     width: 150px;
     height: 45px;
-    border-radius: 9px;
+    border-radius: 10px;
     background-color: #6096ff;
     color: #ffffff;
   }
 
   @media (max-width: 768px) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     .emailSubmitInput {
       display: block;
