@@ -6,10 +6,15 @@ $container-width: 1080px;
   background-color: #373e4d;
   background-image: url(https://d2vo77dayzjoat.cloudfront.net/pattern-background.png);
   position: relative;
+  overflow: hidden;
 
   .innerContainer {
     max-width: $container-width;
     margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 15px 30px 15px;
   }
 }
 
@@ -36,6 +41,21 @@ $container-width: 1080px;
     text-align: left;
     color: #bbc2d0;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .title {
+      font-size: 18px;
+      line-height: 1.56;
+      margin-bottom: 15px;
+    }
+
+    .detail {
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
 }
 
 .imageWrapper {
@@ -57,32 +77,54 @@ $container-width: 1080px;
   }
 
   .imgMacbook{
-    width: 646.5px;
+    max-width: 646.5px;
+    width: 100%;
     object-fit: contain;
     top: 80px;
     left: 0;
   }
 
   .imgPeerReview {
-    width: 583.5px;
+    max-width: 583.5px;
+    width: 100%;
     object-fit: contain;
-    top: 0;
-    right: 10px;
-
+    top: 20px;
+    right: 20px;
   }
 
   .imgComment1 {
-    width: 419.5px;
+    max-width: 419.5px;
+    width: 100%;
     object-fit: contain;
     right: 0;
-    bottom: 140px;
+    bottom: 125px;
   }
 
   .imgComment2 {
-    width: 419.5px;
+    max-width: 419.5px;
+    width: 100%;
     object-fit: contain;
     right: 10px;
     bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    height: 380px;
+    .moreDetail {
+      font-size: 14px;
+    }
+    .imgMacbook {
+      display: none;
+    }
+    .imgPeerReview {
+      top: 75px;
+    }
+    .imgComment1 {
+      bottom: 100px;
+    }
+    .imgComment2 {
+      right: 7px;
+    }
   }
 }
 
@@ -90,5 +132,6 @@ $container-width: 1080px;
   z-index: 1;
   width: 100%;
   position: absolute;
+  left: 0;
   bottom: -12px;
 }

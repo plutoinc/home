@@ -4,7 +4,14 @@ $container-width: 1080px;
   padding-top: 50px;
   .innerContainer {
     max-width: $container-width;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 768px) {
+    .innerContainer {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 
@@ -14,6 +21,13 @@ $container-width: 1080px;
   line-height: 2.81;
   letter-spacing: 7.8px;
   color: #bbc2d0;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 4.21;
+    letter-spacing: 5.2px;
+    text-align: left;
+  }
 }
 
 .title {
@@ -26,6 +40,12 @@ $container-width: 1080px;
   strong {
     font-weight: 700;
   }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 1.56;
+    text-align: left;
+  }
 }
 
 .detail {
@@ -36,6 +56,14 @@ $container-width: 1080px;
   color: #0c1020;
   margin-top: 10px;
   margin-bottom: 60px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: -0.4px;
+    text-align: left;
+  }
 }
 
 .featureWrapper {
@@ -68,6 +96,23 @@ $container-width: 1080px;
       color: #0c1020;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .featureItem {
+      padding-right: 0;
+      padding-bottom: 40px;
+
+      .itemTitle{
+        font-size: 16px;
+      }
+      .itemDetail{
+        font-size: 14px;
+        letter-spacing: -0.4px;
+      }
+    }
+  }
 }
 
 .wpBtnInfo {
@@ -75,6 +120,11 @@ $container-width: 1080px;
   line-height: 2.81;
   text-align: center;
   color: #656d7c;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 4.21;
+  }
 }
 
 .wpBtn {
@@ -92,6 +142,11 @@ $container-width: 1080px;
     color: #fff;
     text-decoration: none;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .iconWrapper {
@@ -106,6 +161,11 @@ $container-width: 1080px;
   background-position: center bottom;
   background-size: 83%;
   height: 500px;
+
+  @media (max-width: 768px) {
+    background-size: 135%;
+    height: 440px;
+  }
 }
 
 .reputationBackground {
@@ -117,6 +177,10 @@ $container-width: 1080px;
   svg {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .reputationItem1, .reputationItem2, .reputationItem3 {
@@ -124,16 +188,30 @@ $container-width: 1080px;
   svg {
     height: 75px;
   }
+  @media (max-width: 768px) {
+    svg {
+      height: 60px;
+    }
+  }
 }
 .reputationItem1 {
   top: 200px;
   left: 23%;
+  @media (max-width: 768px) {
+    left: 20%;
+  }
 }
 .reputationItem2 {
   top: 230px;
   left: 32%;
+  @media (max-width: 768px) {
+    top: 250px;
+  }
 }
 .reputationItem3 {
   top: 225px;
   left: 65%;
+  @media (max-width: 768px) {
+    top: 270px;
+  }
 }

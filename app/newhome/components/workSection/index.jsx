@@ -48,30 +48,30 @@ const WorkSection = () => (
 
       <p className={styles.wpBtnInfo}>For a deeper look at PLUTO</p>
       <a href="#" className={styles.wpBtn}>Read the white paper</a>
+    </div>
 
-      <div className={styles.reputationSection}>
-        <div className={styles.title}>
-          <strong>The fair chance</strong> given to researchers <strong>accelerates science development.</strong>
-        </div>
-        <div className={styles.detail}>
-          Resources are saved by reasonably distributing compensation and reputation for scholarly contributions.<br />
-          They are again used for accelerating development of science and human society.
-        </div>
-
-        <div className={`${styles.iconWrapper} ${styles.reputationBackground}`}>
-          <Icon icon="REPUTATION_BG" />
-        </div>
-        <div className={`${styles.iconWrapper} ${styles.reputationItem1}`}>
-          <Icon icon="REPUTATION_ITEM_1" />
-        </div>
-        <div className={`${styles.iconWrapper} ${styles.reputationItem2}`}>
-          <Icon icon="REPUTATION_ITEM_2" />
-        </div>
-        <div className={`${styles.iconWrapper} ${styles.reputationItem3}`}>
-          <Icon icon="REPUTATION_ITEM_3" />
-        </div>
-
+    <div className={`${styles.innerContainer} ${styles.reputationSection}`}>
+      <div className={styles.title}>
+        <strong>The fair chance</strong> given to researchers <strong>accelerates science development.</strong>
       </div>
+      <div className={styles.detail}>
+        Resources are saved by reasonably distributing compensation and reputation for scholarly contributions.<br />
+        They are again used for accelerating development of science and human society.
+      </div>
+
+      <div className={`${styles.iconWrapper} ${styles.reputationBackground}`}>
+        <Icon icon="REPUTATION_BG" />
+      </div>
+      <div className={`${styles.iconWrapper} ${styles.reputationItem1}`}>
+        <Icon icon="REPUTATION_ITEM_1" />
+      </div>
+      <div className={`${styles.iconWrapper} ${styles.reputationItem2}`}>
+        <Icon icon="REPUTATION_ITEM_2" />
+      </div>
+      <div className={`${styles.iconWrapper} ${styles.reputationItem3}`}>
+        <Icon icon="REPUTATION_ITEM_3" />
+      </div>
+
     </div>
   </section>
 );

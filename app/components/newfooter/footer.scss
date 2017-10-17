@@ -3,6 +3,10 @@ $container-width: 1080px;
 .footer {
   background-color: #f5f7fb;
   position: relative;
+
+  ul {
+    padding: 0;
+  }
 }
 
 .innerContainer {
@@ -15,14 +19,22 @@ $container-width: 1080px;
   align-items: flex-start;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 35px 15px;
+
+    flex-flow: row wrap;
+  }
+
 }
 
 .logoSection {
-  flex: 2 auto;
+  flex: 2 1 0px;
 
   svg {
     width: 103.5px;
     height: 57.5px;
+    vertical-align: middle;
   }
 
   p {
@@ -30,6 +42,24 @@ $container-width: 1080px;
     color: #bbc2d0;
     font-size: 14px;
     text-align: left;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      width: auto;
+      height: 40px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 10px;
+    }
   }
 }
 
@@ -58,20 +88,43 @@ $container-width: 1080px;
 }
 
 .plutoSection {
-  flex: 1 auto;
+  flex: 1 1 0px;
 }
 
 .resourceSection {
-  flex: 2 auto;
+  flex: 2 1 0px;
 }
 
 .followSection {
-  flex: 1 auto;
+  flex: 1 1 0px;
 
   .footerIconWrapper {
     width: 30px;
     height: 30px;
     display: inline-block;
-    margin-left: 10px;
+    margin-right: 7px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logoSection {
+    flex: 1 100%;
+    order: 4;
+  }
+  .plutoSection {
+    flex: 1 auto;
+    order: 1;
+  }
+  .resourceSection {
+    flex: 1 auto;
+    order: 2;
+  }
+  .followSection {
+    flex: 1 100%;
+    order: 3;
+    margin-top: 30px;
   }
 }
