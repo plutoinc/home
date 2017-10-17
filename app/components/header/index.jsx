@@ -6,12 +6,26 @@ import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../icons";
 
 class Header extends React.PureComponent {
+  constructor () {
+    super();
+
+    this.state = {
+      isMenuOpen: false,
+    };
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+  }
+
   render() {
     return (
       <header className={styles.headerContainer} >
-        <div className={styles.innerContainer}>
+        <div
+          className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ''}`}
+          onClick={this.toggleMobileMenu}
+        />
+        <div className={`${styles.innerContainer} ${this.state.isMenuOpen ? styles.isOpen : ''}`}>
           <Link to="/newhome" className={styles.logoWrapper}>
-            <Icon icon="LOGO" />
+            <Icon icon="LOGO" className={styles.desktopLogo} />
+            <Icon icon="LOGO_ONLY" className={styles.mobileLogo} />
           </Link>
 
           <ul className={styles.menuList}>
@@ -34,9 +48,23 @@ class Header extends React.PureComponent {
               </a>
             </li>
           </ul>
+
+          <div
+            className={styles.mobileBtn}
+            onClick={this.toggleMobileMenu}
+          >
+            <Icon icon="MOBILE_BTN_BLUE" className={styles.mobileIcon} />
+            <Icon icon="CANCEL_BLUE" className={styles.cancelIcon} />
+          </div>
+
         </div>
       </header>
     );
+  }
+
+  toggleMobileMenu () {
+    const curState = this.state.isMenuOpen;
+    this.setState({ isMenuOpen: !curState });
   }
 }
 

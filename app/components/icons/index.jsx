@@ -29,7 +29,10 @@ const ICONS = {
 
   // new home icons
   LOGO: require('./logo.svg'),
+  LOGO_ONLY: require('./logo-only.svg'),
   LANG: require('./lang.svg'),
+  MOBILE_BTN_BLUE: require('./mobile-btn-blue.svg'),
+  CANCEL_BLUE: require('./cancel-blue.svg'),
   FOOTER_LOGO: require('./footer-logo.svg'),
   FACEBOOK_FOOTER: require('./facebook-footer.svg'),
   MEDIUM_FOOTER: require('./medium-footer.svg'),
