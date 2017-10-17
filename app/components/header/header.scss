@@ -8,12 +8,12 @@ $container-width: 1080px;
   width: 100%;
 
   background-color: #ffffff;
-  box-shadow: 0 1px 0 0 #eaeaea;
+  border-bottom: solid 1px #ECF1FA;
   transition: background-color .25s cubic-bezier(0.4, 0.0, 0.2, 1),
-    box-shadow .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+              border .25s cubic-bezier(0.4, 0.0, 0.2, 1);
 
   &.transparent {
-    box-shadow: none;
+    border-bottom-color: transparent;
     background-color: transparent;
   }
 }
@@ -126,7 +126,7 @@ $container-width: 1080px;
         line-height: 39px;
         margin-right: 0;
         background-color: #ffffff;
-        border-top: solid 1px #eaeaea;
+        border-top: solid 1px #ECF1FA;
 
         opacity: 0;
         transform: translateY(-100%);
@@ -136,7 +136,7 @@ $container-width: 1080px;
           font-size: 12px;
         }
         &:last-child {
-          border-bottom: solid 1px #eaeaea;
+          border-bottom: solid 1px #ECF1FA;
         }
       }
       .langItem {

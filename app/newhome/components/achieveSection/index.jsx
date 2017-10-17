@@ -101,9 +101,9 @@ class AchieveSection extends React.PureComponent {
 
             <div className={`${styles.subSection} ${styles.itemImageWrapper}`}>
               <Slider ref={(slider) => { this.slider = slider; }} {...settings}>
-                <img src="https://d2vo77dayzjoat.cloudfront.net/mokeup-1.png" alt="" className={`${styles.itemImage} ${this.state.activeItem === FIRST_ITEM ? styles.active : ''}`} />
-                <img src="https://d2vo77dayzjoat.cloudfront.net/mokeup-2.png" alt="" className={`${styles.itemImage} ${this.state.activeItem === SECOND_ITEM ? styles.active : ''}`} />
-                <img src="https://d2vo77dayzjoat.cloudfront.net/mokeup-3.png" alt="" className={`${styles.itemImage} ${this.state.activeItem === THIRD_ITEM ? styles.active : ''}`} />
+                <img src="https://d2vo77dayzjoat.cloudfront.net/mokeup-1@2x.png" alt="" className={`${styles.itemImage} ${this.state.activeItem === FIRST_ITEM ? styles.active : ''}`} />
+                <img src="https://d2vo77dayzjoat.cloudfront.net/mokeup-2@2x.png" alt="" className={`${styles.itemImage} ${this.state.activeItem === SECOND_ITEM ? styles.active : ''}`} />
+                <img src="https://d2vo77dayzjoat.cloudfront.net/mokeup-3@2x.png" alt="" className={`${styles.itemImage} ${this.state.activeItem === THIRD_ITEM ? styles.active : ''}`} />
               </Slider>
             </div>
           </div>
