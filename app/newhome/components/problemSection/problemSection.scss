@@ -15,6 +15,20 @@ $container-width: 1080px;
       padding-right: 15px;
     }
   }
+
+  :global {
+    .slick-active {
+      button {
+        background-color: #6096ff !important;
+      }
+    }
+
+    .slick-list {
+      max-width: $container-width;
+      margin: 0 auto;
+      overflow: initial;
+    }
+  }
 }
 
 .subTitle {
@@ -131,20 +145,6 @@ $container-width: 1080px;
         outline: none;
       }
     }
-  }
-}
-
-:global {
-  .slick-active {
-    button {
-      background-color: #6096ff !important;
-    }
-  }
-
-  .slick-list {
-    max-width: $container-width;
-    margin: 0 auto;
-    overflow: initial;
   }
 }
 

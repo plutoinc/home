@@ -79,7 +79,6 @@ class NewHomeContainer extends React.PureComponent {
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
       } else {
-        console.log("leaved");
         dispatch(leaveScrollTop());
       }
     }
