@@ -65,7 +65,7 @@ class Navbar extends React.PureComponent {
             </li>
           </ul>
 
-          <Link className={styles.logo} to="/">
+          <Link className={styles.logo} to="/newhome">
             <Icon icon="NEW_LOGO" />
           </Link>
 

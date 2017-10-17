@@ -22,13 +22,7 @@ class ProblemSection extends React.PureComponent {
       dotsClass: styles.sliderDots,
       responsive: [{
         breakpoint: 768,
-        settings: {
-          dots: false,
-          draggable: false,
-          slidesToShow: 4,
-          slidesToScroll: 0,
-          vertical: true,
-        },
+        settings: 'unslick',
       },
       ],
     };
@@ -43,40 +37,42 @@ class ProblemSection extends React.PureComponent {
           </div>
         </div>
 
-        <Slider {...settings}>
-          <div className={styles.sliderItem}>
-            <div className={styles.iconWrapper}>
-              <Icon icon="PROBLEM_1" />
+        <div className={styles.sliderWrapper}>
+          <Slider {...settings}>
+            <div className={styles.sliderItem}>
+              <div className={styles.iconWrapper}>
+                <Icon icon="PROBLEM_1" />
+              </div>
+              <div className={styles.itemText}>
+                Labs are paying a significant portion of their research funds to academic publishers.
+              </div>
             </div>
-            <div className={styles.itemText}>
-              Labs are paying a significant portion of their research funds to academic publishers.
+            <div className={styles.sliderItem}>
+              <div className={styles.iconWrapper}>
+                <Icon icon="PROBLEM_2" />
+              </div>
+              <div className={styles.itemText}>
+                This is because academic publishers demand high subscription and publication fees based on their past influence.
+              </div>
             </div>
-          </div>
-          <div className={styles.sliderItem}>
-            <div className={styles.iconWrapper}>
-              <Icon icon="PROBLEM_2" />
+            <div className={styles.sliderItem}>
+              <div className={styles.iconWrapper}>
+                <Icon icon="PROBLEM_3" />
+              </div>
+              <div className={styles.itemText}>
+                Nonetheless, academic publishers are not doing their jobs properly, such as passing hundreds of fake reviews.
+              </div>
             </div>
-            <div className={styles.itemText}>
-              This is because academic publishers demand high subscription and publication fees based on their past influence.
+            <div className={styles.sliderItem}>
+              <div className={styles.iconWrapper}>
+                <Icon icon="PROBLEM_4" />
+              </div>
+              <div className={styles.itemText}>
+                Rather, they give researchers unnecessary procedures and make them spend excessive resources to share research results.
+              </div>
             </div>
-          </div>
-          <div className={styles.sliderItem}>
-            <div className={styles.iconWrapper}>
-              <Icon icon="PROBLEM_3" />
-            </div>
-            <div className={styles.itemText}>
-              Nonetheless, academic publishers are not doing their jobs properly, such as passing hundreds of fake reviews.
-            </div>
-          </div>
-          <div className={styles.sliderItem}>
-            <div className={styles.iconWrapper}>
-              <Icon icon="PROBLEM_4" />
-            </div>
-            <div className={styles.itemText}>
-              Rather, they give researchers unnecessary procedures and make them spend excessive resources to share research results.
-            </div>
-          </div>
-        </Slider>
+          </Slider>
+        </div>
 
         <div className={styles.catchPhraseContainer}>
           <Icon icon="WAVE_LINE" />
