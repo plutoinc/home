@@ -1,5 +1,4 @@
 import React from 'react';
-
 // styles
 import styles from "./mainSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";

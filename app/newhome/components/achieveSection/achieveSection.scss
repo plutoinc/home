@@ -51,7 +51,7 @@ $container-width: 1080px;
 
 .subSection {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 
   @media (min-width: 768px) {
     width: 50%;
@@ -61,6 +61,7 @@ $container-width: 1080px;
 .achieveItem {
   border-radius: 10px;
   padding: 22px;
+  transition: background-color .25s cubic-bezier(0.4, 0.0, 0.2, 1);
 
   &.active {
     background-color: #f5f7fb;
@@ -80,6 +81,10 @@ $container-width: 1080px;
       letter-spacing: -0.8px;
       text-align: left;
       color: #6096ff;
+
+      strong {
+        font-weight: 400;
+      }
     }
   }
 
@@ -100,15 +105,37 @@ $container-width: 1080px;
 
 .itemImageWrapper {
   text-align: center;
-  padding: 0 70px;
+  position: relative;
 
   .itemImage {
+    float: left;
+    vertical-align: middle;
     width: 100%;
     border-radius: 15px;
-    display: none;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transform: translateX(20%);
+    transition: visibility 0s linear .5s,
+      height 0s linear 0s,
+      opacity .5s cubic-bezier(0.4, 0.0, 0.2, 1),
+      transform .5s cubic-bezier(0.4, 0.0, 0.2, 1);
 
     &.active {
+      transition-delay: 0s;
+      visibility: visible;
+      height: auto;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &:after {
+      content: '';
+      visibility: hidden;
       display: block;
+      font-size: 0;
+      height: 0;
+      clear: both;
     }
   }
 

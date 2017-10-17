@@ -20,7 +20,7 @@ const DetailSection = () => (
       </div>
 
       <div className={styles.imageWrapper}>
-        <a href="#" className={styles.moreDetail}>More Detail &#xE001;</a>
+        {/* <a href="#" className={styles.moreDetail}>More Detail &#xE001;</a> */}
 
         <img className={styles.imgMacbook} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook.png" alt=""/>
         <img className={styles.imgPeerReview} src="https://d2vo77dayzjoat.cloudfront.net/detail-peereval.png" alt=""/>
