@@ -103,9 +103,12 @@ $container-width: 1080px;
     height: 30px;
     display: inline-block;
     margin-right: 7px;
-    &:last-child {
-      margin-right: 0;
-    }
+    color: #bbc2d0;
+    transition: color .25s ease;
+
+    &:last-child { margin-right: 0; }
+    &:hover { color: #8993A8; }
+    &:active { transform: scale(0.95); }
   }
 }
 
