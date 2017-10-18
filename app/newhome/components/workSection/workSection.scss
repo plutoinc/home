@@ -10,6 +10,7 @@ $container-width: 1080px;
     margin-right: auto;
   }
   @media (max-width: 768px) {
+    padding-top: 50px;
     .innerContainer {
       padding-left: 15px;
       padding-right: 15px;
@@ -101,6 +102,7 @@ $container-width: 1080px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    margin-bottom: 0;
 
     .featureItem {
       padding-right: 0;
@@ -167,6 +169,7 @@ $container-width: 1080px;
   @media (max-width: 768px) {
     background-size: 135%;
     height: 440px;
+    margin-top: 100px;
   }
 }
 
