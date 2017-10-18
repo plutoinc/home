@@ -1,7 +1,9 @@
 $container-width: 1080px;
 
 .workSectionContainer {
-  padding-top: 50px;
+  padding-top: 70px;
+  background-image: linear-gradient(to top, #ffffff, #f5f7fb);
+
   .innerContainer {
     max-width: $container-width;
     margin-left: auto;
@@ -154,7 +156,7 @@ $container-width: 1080px;
 }
 
 .reputationSection {
-  margin-top: 100px;
+  margin-top: 190px;
   position: relative;
   background-image: url(https://d2vo77dayzjoat.cloudfront.net/reputation_bg.jpg);
   background-repeat: no-repeat;

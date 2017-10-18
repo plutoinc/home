@@ -40,6 +40,7 @@ const ICONS = {
   TELEGRAM_FOOTER: require('./telegram-footer.svg'),
   GITHUB_FOOTER: require('./github-footer.svg'),
   WAVES: require('./waves.svg'),
+  WAVES_DETAIL: require('./waves-detail.svg'),
   BUBBLES: require('./bubbles.svg'),
   PLAY_BUTTON: require('./play-button.svg'),
   PROBLEM_1: require('./problem-1.svg'),

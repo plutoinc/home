@@ -1,7 +1,7 @@
 $container-width: 1080px;
 
 .problemSectionContainer {
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
   overflow: hidden;
 
   .innerContainer {
@@ -145,6 +145,10 @@ $container-width: 1080px;
         outline: none;
       }
     }
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 60px;
   }
 }
 

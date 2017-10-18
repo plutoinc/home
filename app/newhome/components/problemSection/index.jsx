@@ -44,7 +44,7 @@ class ProblemSection extends React.PureComponent {
                 <Icon icon="PROBLEM_1" />
               </div>
               <div className={styles.itemText}>
-                Labs are paying a significant portion of their research funds to academic publishers.
+                Costs for scholarly communication is estimated to be $ 77.8 billion which accounts for 1/3 of total costs for research activities.
               </div>
             </div>
             <div className={styles.sliderItem}>
