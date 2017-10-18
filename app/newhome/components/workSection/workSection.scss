@@ -1,13 +1,16 @@
 $container-width: 1080px;
 
 .workSectionContainer {
-  padding-top: 50px;
+  padding-top: 70px;
+  background-image: linear-gradient(to top, #ffffff, #f5f7fb);
+
   .innerContainer {
     max-width: $container-width;
     margin-left: auto;
     margin-right: auto;
   }
   @media (max-width: 768px) {
+    padding-top: 50px;
     .innerContainer {
       padding-left: 15px;
       padding-right: 15px;
@@ -99,6 +102,7 @@ $container-width: 1080px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    margin-bottom: 0;
 
     .featureItem {
       padding-right: 0;
@@ -138,9 +142,12 @@ $container-width: 1080px;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
+  transition: background-color .25s ease;
+
   &:hover {
     color: #fff;
     text-decoration: none;
+    background-color: #82acff;
   }
 
   @media (max-width: 768px) {
@@ -154,7 +161,7 @@ $container-width: 1080px;
 }
 
 .reputationSection {
-  margin-top: 100px;
+  margin-top: 190px;
   position: relative;
   background-image: url(https://d2vo77dayzjoat.cloudfront.net/reputation_bg.jpg);
   background-repeat: no-repeat;
@@ -165,6 +172,7 @@ $container-width: 1080px;
   @media (max-width: 768px) {
     background-size: 135%;
     height: 440px;
+    margin-top: 100px;
   }
 }
 

@@ -2,13 +2,14 @@ $container-width: 1080px;
 
 
 .achieveSectionContainer {
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 100px;
   .innerContainer {
     max-width: $container-width;
     margin: 0 auto;
   }
   @media (max-width: 768px) {
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     .innerContainer {
       padding-left: 15px;
       padding-right: 15px;
@@ -44,7 +45,7 @@ $container-width: 1080px;
 	font-size: 30px;
 	line-height: 1.48;
   color: #0c1020;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 
   strong {
     font-weight: 700;
@@ -66,11 +67,11 @@ $container-width: 1080px;
   }
 }
 .subSection {
-  flex: 1 100%;
   vertical-align: top;
 }
 
 .detailWrapper {
+  flex: 3 auto;
   position: relative;
   @media (max-width: 768px) {
     order: 1;
@@ -84,6 +85,7 @@ $container-width: 1080px;
   transition: background-color .25s cubic-bezier(0.4, 0.0, 0.2, 1);
   cursor: pointer;
 
+  &:hover,
   &.active {
     background-color: #f5f7fb;
   }
@@ -124,7 +126,6 @@ $container-width: 1080px;
       background-color: inherit;
     }
 
-
     p {
       font-size: 14px;
       line-height: 1.82;
@@ -140,12 +141,16 @@ $container-width: 1080px;
 }
 
 .itemImageWrapper {
+  flex: 2 100%;
   text-align: center;
   position: relative;
 
   .itemImage {
-    width: 100%;
     border-radius: 15px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
   }
 
   @media (max-width: 768px) {

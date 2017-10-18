@@ -14,7 +14,7 @@ const DetailSection = () => (
           <strong>Cryptocurrency</strong>
         </div>
         <div className={styles.detail}>
-          A Proof-of-Concept prototype will be launched in October 2017,<br />
+          A Proof-of-Concept prototype will be launched in November 2017,<br />
           where Cryptocurrency related research articles, whitepapers, and technical blogs will be shared and evaluated.
         </div>
       </div>
@@ -31,7 +31,7 @@ const DetailSection = () => (
     </div>
 
     <div className={styles.waveIcon}>
-      <Icon icon="WAVES" />
+      <Icon icon="WAVES_DETAIL" />
     </div>
 
   </section>

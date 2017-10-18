@@ -106,7 +106,7 @@ class NewHomeContainer extends React.PureComponent {
 
         ReactGA.event({
           category: 'subscribe',
-          action: `subscribe-from-top-${from}`,
+          action: `subscribe-from-${from}`,
           label: 'subscribe-email',
         });
 
