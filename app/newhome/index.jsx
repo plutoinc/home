@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import ReactGA from "react-ga";
 import throttle from "lodash.throttle";
 import { connect } from "react-redux";
 // components
@@ -89,7 +90,7 @@ class NewHomeContainer extends React.PureComponent {
     dispatch(changeEmailInput(e.currentTarget.value));
   }
 
-  async subscribeEmail(e) {
+  async subscribeEmail(e, from) {
     const { homeState, dispatch } = this.props;
     e.preventDefault();
     const emailInput = homeState.get("email");
@@ -102,6 +103,13 @@ class NewHomeContainer extends React.PureComponent {
         await Axios.post(
           `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`,
         );
+
+        ReactGA.event({
+          category: 'subscribe',
+          action: `subscribe-from-top-${from}`,
+          label: 'subscribe-email',
+        });
+
         alert("You are on the subscribe list now");
         dispatch(changeEmailInput(""));
       } catch (err) {

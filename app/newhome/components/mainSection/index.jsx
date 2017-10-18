@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackAndOpenLink, trackAction } from "../../../helpers/handleGA";
 // styles
 import styles from "./mainSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -16,36 +17,36 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => (
 
       <div className={styles.emailFormWrapper}>
         <form
-          onSubmit={subscribeEmail}
-          className={`${styles.emailWrapper}`}
+          onSubmit={e => subscribeEmail(e, "MainSection")}
+          className={styles.emailWrapper}
         >
           <input
             onChange={handleEmailChange}
             placeholder="Enter your email"
-            className={`${styles.emailSubmitInput}`}
+            className={styles.emailSubmitInput}
             value={email}
             type="text"
           />
-          <button className={`${styles.emailSubmitButton}`}>
+          <button className={styles.emailSubmitButton}>
             Subscribe
           </button>
         </form>
       </div>
 
       <div className={styles.followSection}>
-        <a href="https://www.facebook.com/Pluto-263226227503100/" target="_blank" className={styles.footerIconWrapper}>
+        <a onClick={() => trackAndOpenLink("https://www.facebook.com/Pluto-263226227503100/", "Footer")} className={styles.footerIconWrapper}>
         <Icon icon="FACEBOOK_FOOTER" />
         </a>
-        <a href="https://medium.com/pluto-network" target="_blank" className={styles.footerIconWrapper}>
+        <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "MainSection")} className={styles.footerIconWrapper}>
           <Icon icon="MEDIUM_FOOTER" />
         </a>
-        <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
+        <a onClick={() => trackAndOpenLink("https://twitter.com/pluto_network", "Footer")} className={styles.footerIconWrapper}>
           <Icon icon="TWITTER_FOOTER" />
         </a>
         {/* <a href="#" target="_blank" className={styles.footerIconWrapper}>
           <Icon icon="TELEGRAM_FOOTER" />
         </a> */}
-        <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
+        <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Footer")} className={styles.footerIconWrapper}>
           <Icon icon="GITHUB_FOOTER" />
         </a>
       </div>

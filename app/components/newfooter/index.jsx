@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router";
+import { trackAndOpenLink, trackAction } from "../../helpers/handleGA";
 // styles
 import styles from './footer.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
@@ -22,7 +23,7 @@ const Footer = () => {
             Pluto
           </li>
           <li>
-            <Link to="/newhome">Home</Link>
+            <Link to="/newhome" onClick={() => trackAction("/newhome", "Footer")}>Home</Link>
           </li>
           {/* <li>
             <a href="#">About us</a>
@@ -34,7 +35,7 @@ const Footer = () => {
             Resources
           </li>
           <li>
-            <a href="https://medium.com/pluto-network" target="_blank">Blog</a>
+            <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Footer")}>Blog</a>
           </li>
           <li>
             <a href="#">Whitepaper</a>
@@ -43,19 +44,34 @@ const Footer = () => {
 
         <ul className={`${styles.ulSection} ${styles.followSection}`}>
           <li>Follow</li>
-          <a href="#" target="_blank" className={styles.footerIconWrapper}>
+          <a
+            onClick={() => trackAndOpenLink("https://www.facebook.com/Pluto-263226227503100/", "Footer")}
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="FACEBOOK_FOOTER" />
           </a>
-          <a href="https://medium.com/pluto-network" target="_blank" className={styles.footerIconWrapper}>
+          <a
+            onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Footer")}
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="MEDIUM_FOOTER" />
           </a>
-          <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
+          <a
+            onClick={() => trackAndOpenLink("https://twitter.com/pluto_network", "Footer")}
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="TWITTER_FOOTER" />
           </a>
-          {/* <a href="#" target="_blank" className={styles.footerIconWrapper}>
+          {/* <a
+            onClick={() => trackAndOpenLink("#", "Footer")}
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="TELEGRAM_FOOTER" />
           </a> */}
-          <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
+          <a
+            onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Footer")}
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="GITHUB_FOOTER" />
           </a>
         </ul>
