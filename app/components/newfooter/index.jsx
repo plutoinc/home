@@ -23,7 +23,7 @@ const Footer = () => {
             Pluto
           </li>
           <li>
-            <Link to="/newhome" onClick={() => trackAction("/newhome", "Footer")}>Home</Link>
+            <Link to="/" onClick={() => trackAction("/", "Footer")}>Home</Link>
           </li>
           {/* <li>
             <a href="#">About us</a>

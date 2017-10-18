@@ -2,13 +2,13 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 // containers
 import RootComponent from './components/root';
-import Home from './home';
-import NewHome from './newhome';
+import OldHome from './home';
+import Home from './newhome';
 import NoPage from './components/404';
 
 const createRoute = () => ([
-  <Route path="/newhome" component={RootComponent}>
-    <IndexRoute component={NewHome} />
+  <Route path="/oldhome" component={RootComponent}>
+    <IndexRoute component={OldHome} />
     <Route path="*" component={NoPage} />
   </Route>,
   <Route path="/" component={RootComponent}>
