@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { trackAndOpenLink, trackAction } from "../../helpers/handleGA";
 // styles
 import styles from "./header.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -24,7 +25,11 @@ class Header extends React.PureComponent {
           onClick={this.toggleMobileMenu}
         />
         <div className={`${styles.innerContainer} `}>
-          <Link to="/newhome" className={styles.logoWrapper}>
+          <Link
+            to="/newhome"
+            className={styles.logoWrapper}
+            onClick={() => trackAction("/newhome", "Header")}
+          >
             <Icon icon="LOGO" className={styles.desktopLogo} />
             <Icon icon="LOGO_ONLY" className={styles.mobileLogo} />
           </Link>
@@ -34,13 +39,13 @@ class Header extends React.PureComponent {
               <a href="#">FAQ</a>
             </li> */}
             <li className={styles.menuItem}>
-              <a href="https://medium.com/pluto-network" target="_blank">Blog</a>
+              <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Header")} target="_blank">Blog</a>
             </li>
             <li className={styles.menuItem}>
-              <a href="https://github.com/pluto-net" target="_blank">Github</a>
+              <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Header")} target="_blank">Github</a>
             </li>
             <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
-              <a href="#">White Paper</a>
+              <a onClick={() => trackAndOpenLink("#", "Header")}>White Paper</a>
             </li>
             {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
               <a href="#">

@@ -14,17 +14,17 @@ const MailingSection = ({ email, subscribeEmail, handleEmailChange }) => (
 
       <div className={styles.emailFormWrapper}>
         <form
-          onSubmit={subscribeEmail}
-          className={`${styles.emailWrapper}`}
+          onSubmit={e => subscribeEmail(e, "MailingSection")}
+          className={styles.emailWrapper}
         >
           <input
             onChange={handleEmailChange}
             placeholder="Enter your email"
-            className={`${styles.emailSubmitInput}`}
+            className={styles.emailSubmitInput}
             value={email}
             type="text"
           />
-          <button className={`${styles.emailSubmitButton}`}>
+          <button className={styles.emailSubmitButton}>
             Subscribe
           </button>
         </form>
