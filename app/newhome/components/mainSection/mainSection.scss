@@ -110,6 +110,11 @@ $container-width: 1080px;
     border-radius: 10px;
     background-color: #6096ff;
     color: #ffffff;
+    transition: background-color .25s ease;
+
+    &:hover {
+      background-color: #82acff;
+    }
   }
 
   @media (max-width: 768px) {

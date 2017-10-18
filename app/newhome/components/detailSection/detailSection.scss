@@ -2,7 +2,7 @@ $container-width: 1080px;
 
 .detailSectionContainer {
   padding-top: 100px;
-  padding-bottom: 120px;
+  padding-bottom: 30px;
   background-color: #373e4d;
   background-image: url(https://d2vo77dayzjoat.cloudfront.net/pattern-background.png);
   position: relative;
@@ -141,7 +141,7 @@ $container-width: 1080px;
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 125px;
+  bottom: 20px;
 
   &:after {
     content: '';
