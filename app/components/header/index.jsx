@@ -45,7 +45,7 @@ class Header extends React.PureComponent {
               <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Header")} target="_blank">Github</a>
             </li>
             <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
-              <a onClick={() => trackAndOpenLink("#", "Header")}>White Paper</a>
+              <a onClick={() => trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/pluto_whitepaper.pdf", "Header")}>White Paper</a>
             </li>
             {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
               <a href="#">

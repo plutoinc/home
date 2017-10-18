@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { trackAndOpenLink } from "../../../helpers/handleGA";
 // styles
 import styles from "./workSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -47,7 +47,12 @@ const WorkSection = () => (
       </div>
 
       <p className={styles.wpBtnInfo}>For a deeper look at PLUTO</p>
-      <a href="#" className={styles.wpBtn}>Read the white paper</a>
+      <a
+        onClick={() => trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/pluto_whitepaper.pdf", "WorkSection")}
+        className={styles.wpBtn}
+      >
+        Read the white paper
+      </a>
     </div>
 
     <div className={`${styles.innerContainer} ${styles.reputationSection}`}>
