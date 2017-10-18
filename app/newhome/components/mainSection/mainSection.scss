@@ -127,7 +127,7 @@ $container-width: 1080px;
     }
   }
 }
-// BBC2D0
+
 .followSection {
   margin-bottom: 350px;
   .footerIconWrapper {
@@ -137,6 +137,7 @@ $container-width: 1080px;
     margin-right: 10px;
     color: #bbc2d0;
     transition: color .25s ease;
+    cursor: pointer;
 
     &:hover { color: #8993A8; }
     &:active { transform: scale(0.95); }
