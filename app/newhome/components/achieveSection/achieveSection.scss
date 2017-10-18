@@ -67,11 +67,11 @@ $container-width: 1080px;
   }
 }
 .subSection {
-  flex: 1 100%;
   vertical-align: top;
 }
 
 .detailWrapper {
+  flex: 3 auto;
   position: relative;
   @media (max-width: 768px) {
     order: 1;
@@ -126,7 +126,6 @@ $container-width: 1080px;
       background-color: inherit;
     }
 
-
     p {
       font-size: 14px;
       line-height: 1.82;
@@ -142,6 +141,7 @@ $container-width: 1080px;
 }
 
 .itemImageWrapper {
+  flex: 2 100%;
   text-align: center;
   position: relative;
 
