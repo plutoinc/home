@@ -43,9 +43,9 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange }) => (
         <a onClick={() => trackAndOpenLink("https://twitter.com/pluto_network", "Footer")} className={styles.footerIconWrapper}>
           <Icon icon="TWITTER_FOOTER" />
         </a>
-        {/* <a href="#" target="_blank" className={styles.footerIconWrapper}>
+        <a onClick={() => trackAndOpenLink("https://t.me/plutonetwork", "Footer")} className={styles.footerIconWrapper}>
           <Icon icon="TELEGRAM_FOOTER" />
-        </a> */}
+        </a>
         <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Footer")} className={styles.footerIconWrapper}>
           <Icon icon="GITHUB_FOOTER" />
         </a>

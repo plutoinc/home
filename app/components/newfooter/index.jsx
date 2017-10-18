@@ -62,12 +62,12 @@ const Footer = () => {
           >
             <Icon icon="TWITTER_FOOTER" />
           </a>
-          {/* <a
-            onClick={() => trackAndOpenLink("#", "Footer")}
+          <a
+            onClick={() => trackAndOpenLink("https://t.me/plutonetwork", "Footer")}
             className={styles.footerIconWrapper}
           >
             <Icon icon="TELEGRAM_FOOTER" />
-          </a> */}
+          </a>
           <a
             onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Footer")}
             className={styles.footerIconWrapper}
