@@ -22,11 +22,11 @@ import EnvChecker from "../helpers/envChecker";
 
 function mapStateToProps(appState) {
   return {
-    homeState: appState.home,
+    homeState: appState.oldhome,
   };
 }
 
-class HomeContainer extends React.PureComponent {
+class OldHomeContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -133,4 +133,4 @@ class HomeContainer extends React.PureComponent {
   }
 }
 
-export default injectIntl(connect(mapStateToProps)(HomeContainer));
+export default injectIntl(connect(mapStateToProps)(OldHomeContainer));

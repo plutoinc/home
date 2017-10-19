@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 // containers
 import RootComponent from './components/root';
-import OldHome from './home';
+import OldHome from './oldhome';
 import Home from './newhome';
 import NoPage from './components/404';
 
