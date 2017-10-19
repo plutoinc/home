@@ -1,22 +1,20 @@
 import React from "react";
 import Axios from "axios";
+import ReactGA from "react-ga";
 import throttle from "lodash.throttle";
 import { connect } from "react-redux";
-import { injectIntl } from "react-intl";
 // components
+import Header from "../components/header";
+import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
-import Navbar from "../components/navbar";
-import ScholarCarousel from "./components/scholarCarousel";
-import CriticismSection from "./components/criticismSection";
-import PlatformSection from "./components/platformSection";
-import RoadMapSection from "./components/roadMapSection";
-import ResearchSection from "./components/researchSection";
-import BlogSection from "./components/blogSection";
-import MailSection from "./components/mailSection";
-import Footer from "../components/footer";
+// import VideoSection from "./components/videoSection";
+import ProblemSection from "./components/problemSection";
+import AchieveSection from "./components/achieveSection";
+import WorkSection from "./components/workSection";
+import DetailSection from "./components/detailSection";
+import MailingSection from "./components/mailingSection";
 // actions
-import { changeLocale, getMessages } from "../components/connectedIntlProvider/actions";
-import { getRecentBlogPosts, changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
+import { changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
 
@@ -30,19 +28,15 @@ class HomeContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.subscribeEmail = this.subscribeEmail.bind(this);
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
-    this.handleLocaleChange = this.handleLocaleChange.bind(this);
     this.handleScroll = throttle(this.handleScrollEvent, 100);
     this.handleScroll();
+
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.subscribeEmail = this.subscribeEmail.bind(this);
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-
-    dispatch(getRecentBlogPosts());
-
     if (!EnvChecker.isServer()) {
       window.addEventListener("scroll", this.handleScroll);
     }
@@ -56,47 +50,32 @@ class HomeContainer extends React.PureComponent {
 
   render() {
     const { intl, homeState } = this.props;
-
-    const blogPosts = intl.locale === "en" ? homeState.get("enBlogPosts") : homeState.get("koBlogPosts");
-
     return (
-      <div>
-        <Navbar handleLocaleChange={this.handleLocaleChange} intl={intl} isTop={homeState.get("isTop")} />
+      <section>
+        <Header isTop={homeState.get("isTop")} />
         <MainSection
           email={homeState.get("email")}
-          subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
-          intl={intl}
-          mainRef={elem => (this.mainSection = elem)}
+          subscribeEmail={this.subscribeEmail}
         />
-        <ScholarCarousel intl={intl} />
-        <CriticismSection intl={intl} />
-        <PlatformSection intl={intl} />
-        <RoadMapSection intl={intl} />
-        <ResearchSection intl={intl} />
-        <BlogSection posts={blogPosts} intl={intl} />
-        <MailSection
-          intl={intl}
+        <ProblemSection />
+        <AchieveSection />
+        <WorkSection />
+        <DetailSection />
+        <MailingSection
           email={homeState.get("email")}
-          subscribeEmail={this.subscribeEmail}
           handleEmailChange={this.handleEmailChange}
+          subscribeEmail={this.subscribeEmail}
         />
         <Footer />
-      </div>
+      </section>
     );
-  }
-
-  handleLocaleChange(localeCode) {
-    const { dispatch } = this.props;
-
-    const localeMessages = getMessages(localeCode);
-    dispatch(changeLocale(localeCode, localeMessages));
   }
 
   handleScrollEvent() {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
-      const mainHeight = window.innerWidth > 768 ? 700 : 600;
+      const mainHeight = window.innerWidth > 768 ? 800 : 568;
       const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
@@ -111,7 +90,7 @@ class HomeContainer extends React.PureComponent {
     dispatch(changeEmailInput(e.currentTarget.value));
   }
 
-  async subscribeEmail(e) {
+  async subscribeEmail(e, from) {
     const { homeState, dispatch } = this.props;
     e.preventDefault();
     const emailInput = homeState.get("email");
@@ -124,6 +103,13 @@ class HomeContainer extends React.PureComponent {
         await Axios.post(
           `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`,
         );
+
+        ReactGA.event({
+          category: "subscribe",
+          action: `subscribe-from-${from}`,
+          label: "subscribe-email",
+        });
+
         alert("You are on the subscribe list now");
         dispatch(changeEmailInput(""));
       } catch (err) {
@@ -133,4 +119,4 @@ class HomeContainer extends React.PureComponent {
   }
 }
 
-export default injectIntl(connect(mapStateToProps)(HomeContainer));
+export default connect(mapStateToProps)(HomeContainer);

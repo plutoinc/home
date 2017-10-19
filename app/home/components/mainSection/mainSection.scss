@@ -1,133 +1,171 @@
-$navbar-height : 75px;
+$header-height: 75px;
+$container-width: 1080px;
 
 .mainSectionContainer {
-  background-size: cover;
-  background-position: center bottom;
+  padding-top: $header-height;
+  height: 800px;
+  overflow: hidden;
+  background-color: #f5f7fb;
   position: relative;
-  height: 700px;
-  display: flex;
-  align-items: center;
-  padding-bottom: 100px;
-
-  .mainBackgroundContainer {
-    background-image: url("https://d2vo77dayzjoat.cloudfront.net/main_section_bg_new.jpg");
-    background-size: cover;
-    background-position: center bottom;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
 
   .innerContainer {
-    max-width: 940px;
+    max-width: $container-width;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 45px;
+    margin-top: 45px;
+
+    & > div:not(.backgroundImage) {
+      z-index: 1;
+      position: relative;
+    }
   }
 
   @media (max-width: 768px) {
-    height: 600px;
-    padding-bottom: 0;
+    height: 568px;
+    .innerContainer {
+      margin-top: 20px;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 
-.headline {
-  text-align: center;
-  font-size: 40px;
-  line-height: 1.2;
-  letter-spacing: 1.2px;
-  color: #fff;
-  margin-bottom: 20px;
+.backgroundImage {
+  z-index: 0;
+  max-width: 650px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-  span {
-    display: block;
-    font-size: 27px;
-    letter-spacing: 0.8px;
-    font-weight: 300;
-    line-height: 1.78;
+  img {
+    position: relative;
+    width: 100%;
+    z-index: -1;
   }
 
   @media (max-width: 768px) {
-    font-size: 26px;
-    line-height: 1.38;
-    letter-spacing: 0.8px;
+    top: initial;
+    bottom: 60px;
+    padding-left: 23px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: #0c1020;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 21px;
+    line-height: 1.51;
+    letter-spacing: 0.6px;
   }
 }
 
 .subTitle {
-  text-align: center;
-  font-size: 22px;
-  line-height: 1.27;
-  color: #fff;
-  opacity: 0.8;
-  margin-bottom: 38px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+  color: #656d7c;
+  margin-bottom: 35px;
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14.1px;
     line-height: 1.75;
-    padding: 0 15px;
+    margin-bottom: 150px;
   }
 }
 
-.emailWrapper {
-  text-align: center;
-  margin-bottom: 37.5px;
+.emailFormWrapper {
+  margin-bottom: 20px;
 
   .emailSubmitInput {
     display: inline-block;
     vertical-align: top;
-    height: 50px;
+    width: 310px;
+    height: 45px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
-    -webkit-backdrop-filter: blur(10px);
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.2px;
-    font-weight: 300;
-    color: #2f344f;
-    margin-bottom: 10px;
-    width: 100%;
-    outline: none;
-    border: none;
-
-    @media (min-width: 768px) {
-      max-width: 285px;
-      margin-right: 20px;
+    -webkit-backdrop-filter: blur(9px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 1px #6096ff;
+    padding-left: 20px;
+    padding-right: 20px;
+    &:focus {
+      outline: none;
     }
   }
 
   .emailSubmitButton {
-    height: 50px;
+    margin-left: 18px;
+    padding: 0;
+    border: none;
+    vertical-align: top;
+    width: 150px;
+    height: 45px;
     border-radius: 10px;
-    background-image: linear-gradient(110deg, #ff0037, #ff4689);
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
+    background-color: #6096ff;
+    color: #ffffff;
+    transition: background-color .25s ease;
 
-    @media (max-width: 768px) {
+    &:hover {
+      background-color: #82acff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+
+    .emailSubmitInput {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .emailSubmitButton {
+      margin-left: 0;
+      display: block;
       width: 100%;
     }
   }
 }
 
-.snsBtnList {
-  padding: 0;
-  text-align: center;
-
-  li {
+.followSection {
+  margin-bottom: 350px;
+  .footerIconWrapper {
+    width: 35px;
+    height: 35px;
     display: inline-block;
-    text-align: center;
-    margin: 0 8px;
+    margin-right: 10px;
+    color: #bbc2d0;
+    transition: color .25s ease;
+    cursor: pointer;
 
-    svg {
-      width: 36px;
-      height: 36px;
-    }
+    &:hover { color: #8993A8; }
+    &:active { transform: scale(0.95); }
   }
+}
 
-  @media (min-width: 768px) {
-    display: none;
+.waveIcon {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.bubblesIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1040px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 200%;
   }
 }
