@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router";
 import { trackAndOpenLink, trackAction } from "../../helpers/handleGA";
 // styles
-import styles from './footer.scss';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import Icon from '../icons';
+import styles from "./footer.scss";
+import withStyles from "isomorphic-style-loader/lib/withStyles";
+import Icon from "../icons";
 
 const Footer = () => {
   return (
@@ -19,11 +19,11 @@ const Footer = () => {
         </div>
 
         <ul className={`${styles.ulSection} ${styles.plutoSection}`}>
+          <li>Pluto</li>
           <li>
-            Pluto
-          </li>
-          <li>
-            <Link to="/" onClick={() => trackAction("/", "Footer")}>Home</Link>
+            <Link to="/" onClick={() => trackAction("/", "Footer")}>
+              Home
+            </Link>
           </li>
           {/* <li>
             <a href="#">About us</a>
@@ -31,16 +31,17 @@ const Footer = () => {
         </ul>
 
         <ul className={`${styles.ulSection} ${styles.resourceSection}`}>
-          <li>
-            Resources
-          </li>
+          <li>Resources</li>
           <li>
             <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Footer")}>Blog</a>
           </li>
           <li>
             <a
-              onClick={() => trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/pluto_whitepaper.pdf", "Footer")}
-            >Whitepaper</a>
+              onClick={() =>
+                trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO+whitepaper_ver_0.2.pdf", "Footer")}
+            >
+              Whitepaper
+            </a>
           </li>
         </ul>
 
