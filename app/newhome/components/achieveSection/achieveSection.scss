@@ -63,7 +63,7 @@ $container-width: 1080px;
   display: flex;
 
   @media (max-width: 768px) {
-    flex-flow: row wrap;
+    flex-flow: column;
   }
 }
 .subSection {

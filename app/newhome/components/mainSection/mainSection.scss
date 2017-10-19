@@ -47,8 +47,8 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-    // display: none;
-    top: 95px;
+    top: initial;
+    bottom: 60px;
     padding-left: 23px;
   }
 }
