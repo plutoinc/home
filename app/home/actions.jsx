@@ -2,10 +2,10 @@ import Axios from "axios";
 import { fromJS } from "immutable";
 
 export const ACTION_TYPES = {
-  CHANGE_EMAIL_INPUT: 'NEWHOME.CHANGE_EMAIL_INPUT',
-  ENTER_SCROLL_TOP: 'NEWHOME.ENTER_SCROLL_TOP',
-  LEAVE_SCROLL_TOP: 'NEWHOME.LEAVE_SCROLL_TOP',
-}
+  CHANGE_EMAIL_INPUT: "HOME.CHANGE_EMAIL_INPUT",
+  ENTER_SCROLL_TOP: "HOME.ENTER_SCROLL_TOP",
+  LEAVE_SCROLL_TOP: "HOME.LEAVE_SCROLL_TOP",
+};
 
 /**
  * @param {string} email user's email input

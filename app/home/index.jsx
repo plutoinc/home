@@ -20,11 +20,11 @@ import EnvChecker from "../helpers/envChecker";
 
 function mapStateToProps(appState) {
   return {
-    homeState: appState.newhome,
+    homeState: appState.home,
   };
 }
 
-class NewHomeContainer extends React.PureComponent {
+class HomeContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -105,9 +105,9 @@ class NewHomeContainer extends React.PureComponent {
         );
 
         ReactGA.event({
-          category: 'subscribe',
+          category: "subscribe",
           action: `subscribe-from-${from}`,
-          label: 'subscribe-email',
+          label: "subscribe-email",
         });
 
         alert("You are on the subscribe list now");
@@ -119,4 +119,4 @@ class NewHomeContainer extends React.PureComponent {
   }
 }
 
-export default connect(mapStateToProps)(NewHomeContainer);
+export default connect(mapStateToProps)(HomeContainer);
