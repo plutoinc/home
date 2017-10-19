@@ -7,7 +7,7 @@ import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../icons";
 
 class Header extends React.PureComponent {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -19,17 +19,17 @@ class Header extends React.PureComponent {
   render() {
     const { isTop } = this.props;
     return (
-      <header className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ''} ${isTop ? styles.transparent : ''}`} >
+      <header
+        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${isTop
+          ? styles.transparent
+          : ""}`}
+      >
         <div
-          className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ''}`}
+          className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ""}`}
           onClick={this.toggleMobileMenu}
         />
         <div className={`${styles.innerContainer} `}>
-          <Link
-            to="/"
-            className={styles.logoWrapper}
-            onClick={() => trackAction("/", "Header")}
-          >
+          <Link to="/" className={styles.logoWrapper} onClick={() => trackAction("/", "Header")}>
             <Icon icon="LOGO" className={styles.desktopLogo} />
             <Icon icon="LOGO_ONLY" className={styles.mobileLogo} />
           </Link>
@@ -39,13 +39,22 @@ class Header extends React.PureComponent {
               <a href="#">FAQ</a>
             </li> */}
             <li className={styles.menuItem}>
-              <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Header")} target="_blank">Blog</a>
+              <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Header")} target="_blank">
+                Blog
+              </a>
             </li>
             <li className={styles.menuItem}>
-              <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Header")} target="_blank">Github</a>
+              <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Header")} target="_blank">
+                Github
+              </a>
             </li>
             <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
-              <a onClick={() => trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/pluto_whitepaper.pdf", "Header")}>White Paper</a>
+              <a
+                onClick={() =>
+                  trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO+whitepaper_ver_0.2.pdf", "Header")}
+              >
+                White Paper
+              </a>
             </li>
             {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
               <a href="#">
@@ -55,10 +64,7 @@ class Header extends React.PureComponent {
             </li> */}
           </ul>
 
-          <div
-            className={styles.mobileBtn}
-            onClick={this.toggleMobileMenu}
-          >
+          <div className={styles.mobileBtn} onClick={this.toggleMobileMenu}>
             <Icon icon="MOBILE_BTN_BLUE" className={styles.mobileIcon} />
             <Icon icon="CANCEL_BLUE" className={styles.cancelIcon} />
           </div>
@@ -67,7 +73,7 @@ class Header extends React.PureComponent {
     );
   }
 
-  toggleMobileMenu () {
+  toggleMobileMenu() {
     const curState = this.state.isMenuOpen;
     this.setState({ isMenuOpen: !curState });
   }

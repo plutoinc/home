@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { trackAndOpenLink } from "../../../helpers/handleGA";
 // styles
 import styles from "./workSection.scss";
@@ -10,36 +10,32 @@ const WorkSection = () => (
     <div className={styles.innerContainer}>
       <div className={styles.subTitle}>HOW PLUTO WORKS</div>
       <div className={styles.title}>
-        <strong>Blockchain</strong> Technology takes <strong>Scholarly Communication</strong> to Whole <strong>New Level</strong>
+        <strong>Blockchain</strong> Technology takes <strong>Scholarly Communication</strong> to Whole{" "}
+        <strong>New Level</strong>
       </div>
       <div className={styles.detail}>
-        Scholarly Communication is a circulating system where academic contents are created, evaluated, shared, and reused. PLUTO makes a decentralized platform by putting this process onto blockchains.
+        Scholarly Communication is a circulating system where academic contents are created, evaluated, shared, and
+        reused. PLUTO makes a decentralized platform by putting this process onto blockchains.
       </div>
 
       <div className={styles.featureWrapper}>
         <div className={styles.featureItem}>
           <Icon icon="FEATURE_1" />
-          <p className={styles.itemTitle}>
-            Copyrights-Ensured
-          </p>
+          <p className={styles.itemTitle}>Copyrights-Ensured</p>
           <p className={styles.itemDetail}>
             Through PLUTO, research achievements are totally owned and managed by original authors, not publishers.
           </p>
         </div>
         <div className={styles.featureItem}>
           <Icon icon="FEATURE_2" />
-          <p className={styles.itemTitle}>
-            Researcher-Governed
-          </p>
+          <p className={styles.itemTitle}>Researcher-Governed</p>
           <p className={styles.itemDetail}>
             Researchers independently creates, evaluates, and disseminates the contents, without third party involvement
           </p>
         </div>
         <div className={styles.featureItem}>
           <Icon icon="FEATURE_3" />
-          <p className={styles.itemTitle}>
-            Manipulation-Free
-          </p>
+          <p className={styles.itemTitle}>Manipulation-Free</p>
           <p className={styles.itemDetail}>
             PLUTO eliminates possibility of any fabrication, manipulation, or fraud in scholarly communications.
           </p>
@@ -48,7 +44,8 @@ const WorkSection = () => (
 
       <p className={styles.wpBtnInfo}>For a deeper look at PLUTO</p>
       <a
-        onClick={() => trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/pluto_whitepaper.pdf", "WorkSection")}
+        onClick={() =>
+          trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO+whitepaper_ver_0.2.pdf", "WorkSection")}
         className={styles.wpBtn}
       >
         Read the white paper
@@ -76,7 +73,6 @@ const WorkSection = () => (
       <div className={`${styles.iconWrapper} ${styles.reputationItem3}`}>
         <Icon icon="REPUTATION_ITEM_3" />
       </div>
-
     </div>
   </section>
 );
