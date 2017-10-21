@@ -45,7 +45,7 @@ const WorkSection = () => (
       <p className={styles.wpBtnInfo}>For a deeper look at PLUTO</p>
       <a
         onClick={() =>
-          trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO_whitepaper_v0.2.pdf", "WorkSection")}
+          trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO_whitepaper_ver_0.2.pdf", "WorkSection")}
         className={styles.wpBtn}
       >
         Read the white paper

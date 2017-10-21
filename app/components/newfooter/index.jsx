@@ -38,7 +38,7 @@ const Footer = () => {
           <li>
             <a
               onClick={() =>
-                trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO_whitepaper_v0.2.pdf", "Footer")}
+                trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO_whitepaper_ver_0.2.pdf", "Footer")}
             >
               Whitepaper
             </a>
