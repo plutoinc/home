@@ -7,14 +7,12 @@ $container-width: 1080px;
   z-index: 100;
   width: 100%;
 
-  background-color: #ffffff;
-  border-bottom: solid 1px #ECF1FA;
-  transition: background-color .25s cubic-bezier(0.4, 0.0, 0.2, 1),
-              border .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  background-color: transparent;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.transparent {
-    border-bottom-color: transparent;
-    background-color: transparent;
+  &.top {
+    border-bottom: solid 1px #ecf1fa;
+    background-color: #ffffff;
   }
 }
 
@@ -27,7 +25,6 @@ $container-width: 1080px;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-
 
   .logoWrapper {
     display: block;
@@ -90,7 +87,7 @@ $container-width: 1080px;
           padding: 8px;
           border: solid 1px #6096ff;
           border-radius: 10px;
-          transition: border 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+          transition: border 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
           &:hover {
             background-color: #6096ff;
@@ -119,7 +116,7 @@ $container-width: 1080px;
       right: 0;
       flex-direction: column;
       visibility: hidden;
-      transition: visibility 0s linear .25s;
+      transition: visibility 0s linear 0.25s;
 
       .menuItem {
         width: 100%;
@@ -127,22 +124,26 @@ $container-width: 1080px;
         line-height: 39px;
         margin-right: 0;
         background-color: #ffffff;
-        border-top: solid 1px #ECF1FA;
+        border-top: solid 1px #ecf1fa;
 
         opacity: 0;
         transform: translateY(-100%);
-        transition: opacity .25s cubic-bezier(0.4, 0.0, 0.2, 1), transform .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+        transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         a {
           width: 100%;
           font-size: 12px;
         }
         &:last-child {
-          border-bottom: solid 1px #ECF1FA;
+          border-bottom: solid 1px #ecf1fa;
         }
       }
       .langItem {
-        svg { width: 16px; }
-        span { font-size: 12px; }
+        svg {
+          width: 16px;
+        }
+        span {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -153,7 +154,9 @@ $container-width: 1080px;
       width: 22px;
     }
 
-    .cancelIcon { display: none; }
+    .cancelIcon {
+      display: none;
+    }
 
     @media (min-width: 768px) {
       display: none;
@@ -173,8 +176,12 @@ $container-width: 1080px;
     opacity: 1;
   }
   .mobileBtn {
-    .cancelIcon { display: initial; }
-    .mobileIcon { display: none; }
+    .cancelIcon {
+      display: initial;
+    }
+    .mobileIcon {
+      display: none;
+    }
   }
 }
 
@@ -188,7 +195,7 @@ $container-width: 1080px;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.25);
-  transition: visibility 0s linear .25s, opacity .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.isOpen {
     visibility: visible;
