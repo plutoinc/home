@@ -29,6 +29,10 @@ $container-width: 1080px;
       overflow: initial;
     }
   }
+
+  &.shown {
+    border: solid 1px orange;
+  }
 }
 
 .subTitle {
@@ -46,8 +50,8 @@ $container-width: 1080px;
 }
 
 .title {
-	font-size: 30px;
-	line-height: 1.48;
+  font-size: 30px;
+  line-height: 1.48;
   color: #0c1020;
   text-align: left;
 
@@ -56,8 +60,8 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
-      font-size: 18px;
-      line-height: 1.56;
+    font-size: 18px;
+    line-height: 1.56;
   }
 }
 
@@ -139,12 +143,11 @@ $container-width: 1080px;
       width: 165px;
       height: 3px;
       background-color: #d9dee8;
-      transition: background-color .4s ease;
+      transition: background-color 0.4s ease;
 
       &:focus {
         outline: none;
       }
-
     }
   }
 

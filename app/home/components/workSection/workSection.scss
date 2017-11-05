@@ -16,6 +16,10 @@ $container-width: 1080px;
       padding-right: 15px;
     }
   }
+
+  &.shown {
+    border: solid 1px pink;
+  }
 }
 
 .subTitle {
@@ -108,10 +112,10 @@ $container-width: 1080px;
       padding-right: 0;
       padding-bottom: 40px;
 
-      .itemTitle{
+      .itemTitle {
         font-size: 16px;
       }
-      .itemDetail{
+      .itemDetail {
         font-size: 14px;
         letter-spacing: -0.4px;
       }
@@ -143,7 +147,7 @@ $container-width: 1080px;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
-  transition: background-color .25s ease;
+  transition: background-color 0.25s ease;
 
   &:hover {
     color: #fff;
@@ -192,7 +196,9 @@ $container-width: 1080px;
   }
 }
 
-.reputationItem1, .reputationItem2, .reputationItem3 {
+.reputationItem1,
+.reputationItem2,
+.reputationItem3 {
   transform: translateX(-50%);
   svg {
     height: 75px;

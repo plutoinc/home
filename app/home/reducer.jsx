@@ -4,6 +4,7 @@ import { ACTION_TYPES } from "./actions";
 export const HOME_INITIAL_STATE = fromJS({
   email: "",
   isTop: false,
+  maxTop: 0,
 });
 
 export function reducer(state = HOME_INITIAL_STATE, action) {
@@ -18,6 +19,12 @@ export function reducer(state = HOME_INITIAL_STATE, action) {
 
     case ACTION_TYPES.LEAVE_SCROLL_TOP: {
       return state.set("isTop", false);
+    }
+
+    case ACTION_TYPES.UPDATE_MAX_TOP: {
+      const curTop = state.get("maxTop");
+      const newTop = action.payload.maxTop;
+      return state.set("maxTop", curTop < newTop ? newTop : curTop);
     }
 
     default:

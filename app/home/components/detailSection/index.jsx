@@ -6,8 +6,8 @@ import styles from "./detailSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
-const DetailSection = () => (
-  <section className={styles.detailSectionContainer}>
+const DetailSection = ({ shown }) => (
+  <section className={`${styles.detailSectionContainer} ${shown ? styles.shown : ""}`}>
     <div className={styles.innerContainer}>
       <div className={styles.titleWrapper}>
         <div className={styles.title}>
