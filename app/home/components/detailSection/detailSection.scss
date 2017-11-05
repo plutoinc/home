@@ -16,6 +16,10 @@ $container-width: 1080px;
   @media (max-width: 768px) {
     padding: 60px 15px 30px 15px;
   }
+
+  &.shown {
+    border: solid 1px saddlebrown;
+  }
 }
 
 .titleWrapper {
@@ -76,7 +80,7 @@ $container-width: 1080px;
     position: absolute;
   }
 
-  .imgMacbook{
+  .imgMacbook {
     max-width: 646.5px;
     width: 100%;
     object-fit: contain;
@@ -107,13 +111,17 @@ $container-width: 1080px;
     right: 10px;
     bottom: 40px;
   }
-  .imgMacbookMobile { display: none; }
+  .imgMacbookMobile {
+    display: none;
+  }
   @media (max-width: 768px) {
     height: 450px;
     .moreDetail {
       font-size: 14px;
     }
-    .imgMacbook { display: none; }
+    .imgMacbook {
+      display: none;
+    }
     .imgMacbookMobile {
       display: inherit;
       top: 55px;
@@ -144,7 +152,7 @@ $container-width: 1080px;
   bottom: 20px;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;

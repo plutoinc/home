@@ -1,6 +1,5 @@
 $container-width: 1080px;
 
-
 .achieveSectionContainer {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -23,6 +22,10 @@ $container-width: 1080px;
       }
     }
   }
+
+  &.shown {
+    border: solid 1px brown;
+  }
 }
 
 .subTitle {
@@ -42,8 +45,8 @@ $container-width: 1080px;
 
 .title {
   text-align: center;
-	font-size: 30px;
-	line-height: 1.48;
+  font-size: 30px;
+  line-height: 1.48;
   color: #0c1020;
   margin-bottom: 60px;
 
@@ -82,7 +85,7 @@ $container-width: 1080px;
 .achieveItem {
   border-radius: 10px;
   padding: 22px;
-  transition: background-color .25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
   &:hover,
@@ -116,7 +119,7 @@ $container-width: 1080px;
     padding: 0 12px;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s linear .25s, opacity .25s ease;
+    transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 
     &.active {
       transition-delay: 0s;
@@ -177,7 +180,7 @@ $container-width: 1080px;
       width: 7.5px;
       height: 7.5px;
       background-color: #bbc2d0;
-      transition: background-color .4s ease;
+      transition: background-color 0.4s ease;
 
       &:focus {
         outline: none;

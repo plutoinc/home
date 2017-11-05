@@ -14,7 +14,7 @@ import WorkSection from "./components/workSection";
 import DetailSection from "./components/detailSection";
 import MailingSection from "./components/mailingSection";
 // actions
-import { changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
+import { changeEmailInput, leaveScrollTop, enterScrollTop, updateMaxTop } from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
 
@@ -34,11 +34,18 @@ class HomeContainer extends React.PureComponent {
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.subscribeEmail = this.subscribeEmail.bind(this);
+
+    this.sectionList = {};
+    this.offsetList = {};
   }
 
   componentDidMount() {
     if (!EnvChecker.isServer()) {
       window.addEventListener("scroll", this.handleScroll);
+
+      for (const key in this.sectionList) {
+        this.offsetList[key] = this.sectionList[key].getBoundingClientRect().top;
+      }
     }
   }
 
@@ -50,23 +57,66 @@ class HomeContainer extends React.PureComponent {
 
   render() {
     const { intl, homeState } = this.props;
+    const maxTop = homeState.get("maxTop");
+    const innerHeight = window.innerHeight * 0.8;
+    console.log(this.offsetList);
     return (
       <section>
         <Header isTop={homeState.get("isTop")} />
-        <MainSection
-          email={homeState.get("email")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
-        <ProblemSection />
-        <AchieveSection />
-        <WorkSection />
-        <DetailSection />
-        <MailingSection
-          email={homeState.get("email")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
+
+        <div
+          ref={elem => {
+            this.sectionList.mainSection = elem;
+          }}
+        >
+          <MainSection
+            email={homeState.get("email")}
+            handleEmailChange={this.handleEmailChange}
+            subscribeEmail={this.subscribeEmail}
+            shown={maxTop >= this.offsetList.mainSection - innerHeight}
+          />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.problemSection = elem;
+          }}
+        >
+          <ProblemSection shown={maxTop >= this.offsetList.problemSection - innerHeight} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.achieveSection = elem;
+          }}
+        >
+          <AchieveSection shown={maxTop >= this.offsetList.achieveSection - innerHeight} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.workSection = elem;
+          }}
+        >
+          <WorkSection shown={maxTop >= this.offsetList.workSection - innerHeight} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.detailSection = elem;
+          }}
+        >
+          <DetailSection shown={maxTop >= this.offsetList.detailSection - innerHeight} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.mailingSection = elem;
+          }}
+        >
+          <MailingSection
+            email={homeState.get("email")}
+            handleEmailChange={this.handleEmailChange}
+            subscribeEmail={this.subscribeEmail}
+            shown={maxTop >= this.offsetList.mailingSection - innerHeight}
+          />
+        </div>
+
         <Footer />
       </section>
     );
@@ -82,6 +132,7 @@ class HomeContainer extends React.PureComponent {
       } else {
         dispatch(leaveScrollTop());
       }
+      dispatch(updateMaxTop(parseInt(top, 10)));
     }
   }
 

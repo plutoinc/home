@@ -5,8 +5,8 @@ import styles from "./workSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
-const WorkSection = () => (
-  <section className={styles.workSectionContainer}>
+const WorkSection = ({ shown }) => (
+  <section className={`${styles.workSectionContainer} ${shown ? styles.shown : ""}`}>
     <div className={styles.innerContainer}>
       <div className={styles.subTitle}>HOW PLUTO WORKS</div>
       <div className={styles.title}>

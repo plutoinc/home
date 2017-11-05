@@ -30,6 +30,10 @@ $container-width: 1080px;
       padding-right: 15px;
     }
   }
+
+  &.shown {
+    border: solid 1px red;
+  }
 }
 
 .backgroundImage {
@@ -110,7 +114,7 @@ $container-width: 1080px;
     border-radius: 10px;
     background-color: #6096ff;
     color: #ffffff;
-    transition: background-color .25s ease;
+    transition: background-color 0.25s ease;
 
     &:hover {
       background-color: #82acff;
@@ -141,11 +145,15 @@ $container-width: 1080px;
     display: inline-block;
     margin-right: 10px;
     color: #bbc2d0;
-    transition: color .25s ease;
+    transition: color 0.25s ease;
     cursor: pointer;
 
-    &:hover { color: #8993A8; }
-    &:active { transform: scale(0.95); }
+    &:hover {
+      color: #8993a8;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }
 
