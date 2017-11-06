@@ -141,6 +141,16 @@ $container-width: 1080px;
       }
     }
   }
+
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  &:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.4s;
+  }
 }
 
 .itemImageWrapper {
@@ -159,6 +169,11 @@ $container-width: 1080px;
   @media (max-width: 768px) {
     order: 0;
   }
+
+  transform: translateY(5%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.7s, 0.7s;
 }
 
 .sliderDots {
@@ -186,5 +201,13 @@ $container-width: 1080px;
         outline: none;
       }
     }
+  }
+}
+
+.achieveSectionContainer.shown {
+  .itemImageWrapper,
+  .achieveItem {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

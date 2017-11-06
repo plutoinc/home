@@ -181,11 +181,15 @@ $container-width: 1080px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     font-size: 27px;
     line-height: 1.6;
     color: #0c1020;
     text-align: center;
+
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 1.2s, 1.2s;
   }
 
   @media (max-width: 768px) {
@@ -202,8 +206,21 @@ $container-width: 1080px;
       padding-right: 15px;
       font-size: 16px;
       line-height: 1.75;
-      transform: translate(-50%, -120%);
+      transform: translate(-50%, -100%);
     }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform 1s ease;
+    transition-delay: 0.6s;
   }
 }
 
@@ -211,5 +228,19 @@ $container-width: 1080px;
   .sliderItem {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .catchPhrase {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    @media (max-width: 768px) {
+      transform: translate(-50%, -120%);
+    }
+  }
+
+  .catchPhraseContainer {
+    &:before {
+      transform: translateX(100%);
+    }
   }
 }
