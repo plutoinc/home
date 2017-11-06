@@ -1,26 +1,22 @@
 $header-height: 75px;
 $container-width: 1080px;
-
 .mainSectionContainer {
   padding-top: $header-height;
   height: 800px;
   overflow: hidden;
   background-color: #f5f7fb;
   position: relative;
-
   .innerContainer {
     max-width: $container-width;
     margin: 0 auto;
     position: relative;
     padding-top: 45px;
     margin-top: 45px;
-
     & > div:not(.backgroundImage) {
       z-index: 1;
       position: relative;
     }
   }
-
   @media (max-width: 768px) {
     height: 568px;
     .innerContainer {
@@ -29,10 +25,6 @@ $container-width: 1080px;
       padding-left: 15px;
       padding-right: 15px;
     }
-  }
-
-  &.shown {
-    border: solid 1px red;
   }
 }
 
@@ -43,18 +35,21 @@ $container-width: 1080px;
   position: absolute;
   top: 0;
   right: 0;
-
   img {
     position: relative;
     width: 100%;
     z-index: -1;
   }
-
   @media (max-width: 768px) {
     top: initial;
     bottom: 60px;
     padding-left: 23px;
   }
+
+  transform: translateY(3%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  transition-delay: 0.4s, 0.4s;
 }
 
 .title {
@@ -63,12 +58,15 @@ $container-width: 1080px;
   text-align: left;
   color: #0c1020;
   margin-bottom: 10px;
-
   @media (max-width: 768px) {
     font-size: 21px;
     line-height: 1.51;
     letter-spacing: 0.6px;
   }
+
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
 }
 
 .subTitle {
@@ -77,17 +75,20 @@ $container-width: 1080px;
   text-align: left;
   color: #656d7c;
   margin-bottom: 35px;
-
   @media (max-width: 768px) {
     font-size: 14.1px;
     line-height: 1.75;
     margin-bottom: 150px;
   }
+
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.1s, 0.1s;
 }
 
 .emailFormWrapper {
   margin-bottom: 20px;
-
   .emailSubmitInput {
     display: inline-block;
     vertical-align: top;
@@ -103,7 +104,6 @@ $container-width: 1080px;
       outline: none;
     }
   }
-
   .emailSubmitButton {
     margin-left: 18px;
     padding: 0;
@@ -115,15 +115,12 @@ $container-width: 1080px;
     background-color: #6096ff;
     color: #ffffff;
     transition: background-color 0.25s ease;
-
     &:hover {
       background-color: #82acff;
     }
   }
-
   @media (max-width: 768px) {
     margin-bottom: 20px;
-
     .emailSubmitInput {
       display: block;
       width: 100%;
@@ -135,6 +132,11 @@ $container-width: 1080px;
       width: 100%;
     }
   }
+
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.3s, 0.3s;
 }
 
 .followSection {
@@ -147,7 +149,6 @@ $container-width: 1080px;
     color: #bbc2d0;
     transition: color 0.25s ease;
     cursor: pointer;
-
     &:hover {
       color: #8993a8;
     }
@@ -155,6 +156,11 @@ $container-width: 1080px;
       transform: scale(0.95);
     }
   }
+
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.35s, 0.35s;
 }
 
 .waveIcon {
@@ -171,9 +177,21 @@ $container-width: 1080px;
   transform: translate(-50%, -50%);
   max-width: 1040px;
   width: 100%;
-
   @media (max-width: 768px) {
     left: 0;
     width: 200%;
+  }
+}
+
+.mainSectionContainer.shown {
+  border: solid 1px red;
+
+  .backgroundImage,
+  .title,
+  .subTitle,
+  .emailFormWrapper,
+  .followSection {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
