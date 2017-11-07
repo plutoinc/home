@@ -35,7 +35,6 @@ $container-width: 1080px;
   }
 }
 
-
 .emailFormWrapper {
   text-align: center;
 
@@ -65,7 +64,7 @@ $container-width: 1080px;
     border-radius: 9px;
     background-color: #6096ff;
     color: #ffffff;
-    transition: background-color .25s ease;
+    transition: background-color 0.25s ease;
 
     &:hover {
       background-color: #82acff;

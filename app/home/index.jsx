@@ -28,6 +28,17 @@ class HomeContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    this.sectionList = {};
+    this.offsetList = {};
+
+    this.state = {
+      mainPassed: false,
+      problemPassed: false,
+      achievePassed: false,
+      workPassed: false,
+      detailPassed: false,
+    };
+
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
     this.handleScroll = throttle(this.handleScrollEvent, 100);
     this.handleScroll();
@@ -38,8 +49,13 @@ class HomeContainer extends React.PureComponent {
 
   componentDidMount() {
     if (!EnvChecker.isServer()) {
+      for (const key in this.sectionList) {
+        this.offsetList[key] = this.sectionList[key].getBoundingClientRect().top;
+      }
+
       window.addEventListener("scroll", this.handleScroll);
     }
+    this.handleScroll();
   }
 
   componentWillUnmount() {
@@ -50,23 +66,66 @@ class HomeContainer extends React.PureComponent {
 
   render() {
     const { intl, homeState } = this.props;
+    let innerHeight = 768;
+    if (!EnvChecker.isServer()) {
+    }
+
     return (
       <section>
         <Header isTop={homeState.get("isTop")} />
-        <MainSection
-          email={homeState.get("email")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
-        <ProblemSection />
-        <AchieveSection />
-        <WorkSection />
-        <DetailSection />
-        <MailingSection
-          email={homeState.get("email")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
+
+        <div
+          ref={elem => {
+            this.sectionList.mainSection = elem;
+          }}
+        >
+          <MainSection
+            email={homeState.get("email")}
+            handleEmailChange={this.handleEmailChange}
+            subscribeEmail={this.subscribeEmail}
+            shown={this.state.mainPassed}
+          />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.problemSection = elem;
+          }}
+        >
+          <ProblemSection shown={this.state.problemPassed} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.achieveSection = elem;
+          }}
+        >
+          <AchieveSection shown={this.state.achievePassed} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.workSection = elem;
+          }}
+        >
+          <WorkSection shown={this.state.workPassed} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.detailSection = elem;
+          }}
+        >
+          <DetailSection shown={this.state.detailPassed} />
+        </div>
+        <div
+          ref={elem => {
+            this.sectionList.mailingSection = elem;
+          }}
+        >
+          <MailingSection
+            email={homeState.get("email")}
+            handleEmailChange={this.handleEmailChange}
+            subscribeEmail={this.subscribeEmail}
+          />
+        </div>
+
         <Footer />
       </section>
     );
@@ -77,11 +136,22 @@ class HomeContainer extends React.PureComponent {
     if (!EnvChecker.isServer()) {
       const mainHeight = window.innerWidth > 768 ? 800 : 568;
       const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
       } else {
         dispatch(leaveScrollTop());
       }
+
+      const innerHeight = window.innerHeight * 0.8;
+
+      this.setState({
+        mainPassed: this.state.mainPassed || top >= this.offsetList.mainSection - innerHeight,
+        problemPassed: this.state.problemPassed || top >= this.offsetList.problemSection - innerHeight,
+        achievePassed: this.state.achievePassed || top >= this.offsetList.achieveSection - innerHeight,
+        workPassed: this.state.workPassed || top >= this.offsetList.workSection - innerHeight,
+        detailPassed: this.state.detailPassed || top >= this.offsetList.detailSection - innerHeight,
+      });
     }
   }
 

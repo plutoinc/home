@@ -20,9 +20,7 @@ class Header extends React.PureComponent {
     const { isTop } = this.props;
     return (
       <header
-        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${isTop
-          ? styles.transparent
-          : ""}`}
+        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${isTop ? "" : styles.top}`}
       >
         <div
           className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ""}`}
