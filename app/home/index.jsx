@@ -58,8 +58,11 @@ class HomeContainer extends React.PureComponent {
   render() {
     const { intl, homeState } = this.props;
     const maxTop = homeState.get("maxTop");
-    const innerHeight = window.innerHeight * 0.8;
-    console.log(this.offsetList);
+    let innerHeight = 768;
+    if (!EnvChecker.isServer()) {
+      innerHeight = window.innerHeight * 0.8;
+    }
+
     return (
       <section>
         <Header isTop={homeState.get("isTop")} />
