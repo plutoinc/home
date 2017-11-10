@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { trackAndOpenLink, trackAction } from "../../../helpers/handleGA";
 
 // styles
 import styles from "./detailSection.scss";
@@ -20,20 +21,28 @@ const DetailSection = () => (
       </div>
 
       <div className={styles.imageWrapper}>
-        {/* <a href="#" className={styles.moreDetail}>More Detail &#xE001;</a> */}
+        <a
+          onClick={() => trackAndOpenLink("https://poc.pluto.network/", "DetailSection")}
+          className={styles.moreDetail}
+        >
+          More Detail &#xE001;
+        </a>
 
-        <img className={styles.imgMacbook} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook.png" alt=""/>
-        <img className={styles.imgMacbookMobile} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook-mobile.png" alt=""/>
-        <img className={styles.imgPeerReview} src="https://d2vo77dayzjoat.cloudfront.net/detail-peereval.png" alt=""/>
-        <img className={styles.imgComment1} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment1.png" alt=""/>
-        <img className={styles.imgComment2} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment2.png" alt=""/>
+        <img className={styles.imgMacbook} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook.png" alt="" />
+        <img
+          className={styles.imgMacbookMobile}
+          src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook-mobile.png"
+          alt=""
+        />
+        <img className={styles.imgPeerReview} src="https://d2vo77dayzjoat.cloudfront.net/detail-peereval.png" alt="" />
+        <img className={styles.imgComment1} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment1.png" alt="" />
+        <img className={styles.imgComment2} src="https://d2vo77dayzjoat.cloudfront.net/detail-comment2.png" alt="" />
       </div>
     </div>
 
     <div className={styles.waveIcon}>
       <Icon icon="WAVES_DETAIL" />
     </div>
-
   </section>
 );
 
