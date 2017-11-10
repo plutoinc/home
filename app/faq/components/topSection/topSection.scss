@@ -27,6 +27,26 @@ $container-width: 1080px;
       color: #666d7c;
     }
   }
+
+  @media (max-width: 768px) {
+    height: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .innerContainer {
+      padding-top: 60px;
+      .title {
+        font-size: 22px;
+        line-height: 1.51;
+        letter-spacing: 0.6px;
+      }
+      .subTitle {
+        font-size: 16px;
+        line-height: 1.38;
+        font-weight: 300;
+      }
+    }
+  }
 }
 
 .arrowIcon {

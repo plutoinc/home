@@ -53,4 +53,16 @@
   &:last-child {
     border-bottom: none;
   }
+
+  @media (max-width: 768px) {
+    padding: 16px 0;
+    .itemContainer {
+      .itemTitle {
+        font-size: 18px;
+      }
+      .itemContent {
+        font-size: 14px;
+      }
+    }
+  }
 }

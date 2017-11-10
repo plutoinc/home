@@ -10,6 +10,11 @@ $container-width: 1080px;
     margin: 0 auto;
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    padding-top: 45px;
+    padding-bottom: 90px;
+  }
 }
 
 .balloonWrapper {
@@ -45,13 +50,40 @@ $container-width: 1080px;
       }
     }
   }
+
+  @media (max-width: 768px) {
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+
+    .balloonIcon {
+      svg {
+        height: 45px;
+        width: 280px;
+      }
+    }
+
+    .balloonText {
+      font-size: 14px;
+    }
+
+    &:nth-child(2) {
+      .balloonIcon {
+        svg {
+          width: 260px;
+        }
+      }
+    }
+  }
 }
 
 .telegramLink {
-  display: inline-block;
-  width: 254.5px;
-  height: 54.5px;
-  line-height: 54.5px;
+  margin: 0 auto;
+  display: block;
+  max-width: 280px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 35px;
   border-radius: 50px;
   border: solid 1px #6096ff;
   font-size: 16px;
@@ -68,5 +100,13 @@ $container-width: 1080px;
 
   &:hover {
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 250px;
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
   }
 }
