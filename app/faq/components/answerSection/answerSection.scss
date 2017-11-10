@@ -1,0 +1,14 @@
+$container-width: 1080px;
+
+.answerSectionContainer {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .innerContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
