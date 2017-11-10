@@ -3,6 +3,7 @@ import Axios from "axios";
 import ReactGA from "react-ga";
 import throttle from "lodash.throttle";
 import { connect } from "react-redux";
+import VisibilitySensor from "react-visibility-sensor";
 // components
 import Header from "../components/header";
 import Footer from "../components/newfooter";
@@ -28,9 +29,6 @@ class HomeContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.sectionList = {};
-    this.offsetList = {};
-
     this.state = {
       mainPassed: false,
       problemPassed: false,
@@ -49,10 +47,6 @@ class HomeContainer extends React.PureComponent {
 
   componentDidMount() {
     if (!EnvChecker.isServer()) {
-      for (const key in this.sectionList) {
-        this.offsetList[key] = this.sectionList[key].getBoundingClientRect().top;
-      }
-
       window.addEventListener("scroll", this.handleScroll);
     }
     this.handleScroll();
@@ -74,9 +68,15 @@ class HomeContainer extends React.PureComponent {
       <section>
         <Header isTop={homeState.get("isTop")} />
 
-        <div
-          ref={elem => {
-            this.sectionList.mainSection = elem;
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                mainPassed: true,
+              });
+            }
           }}
         >
           <MainSection
@@ -85,46 +85,69 @@ class HomeContainer extends React.PureComponent {
             subscribeEmail={this.subscribeEmail}
             shown={this.state.mainPassed}
           />
-        </div>
-        <div
-          ref={elem => {
-            this.sectionList.problemSection = elem;
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                problemPassed: true,
+              });
+            }
           }}
         >
           <ProblemSection shown={this.state.problemPassed} />
-        </div>
-        <div
-          ref={elem => {
-            this.sectionList.achieveSection = elem;
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                achievePassed: true,
+              });
+            }
           }}
         >
           <AchieveSection shown={this.state.achievePassed} />
-        </div>
-        <div
-          ref={elem => {
-            this.sectionList.workSection = elem;
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                workPassed: true,
+              });
+            }
           }}
         >
           <WorkSection shown={this.state.workPassed} />
-        </div>
-        <div
-          ref={elem => {
-            this.sectionList.detailSection = elem;
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                detailPassed: true,
+              });
+            }
           }}
         >
           <DetailSection shown={this.state.detailPassed} />
-        </div>
-        <div
-          ref={elem => {
-            this.sectionList.mailingSection = elem;
-          }}
-        >
-          <MailingSection
-            email={homeState.get("email")}
-            handleEmailChange={this.handleEmailChange}
-            subscribeEmail={this.subscribeEmail}
-          />
-        </div>
+        </VisibilitySensor>
+
+        <MailingSection
+          email={homeState.get("email")}
+          handleEmailChange={this.handleEmailChange}
+          subscribeEmail={this.subscribeEmail}
+        />
 
         <Footer />
       </section>
@@ -142,16 +165,6 @@ class HomeContainer extends React.PureComponent {
       } else {
         dispatch(leaveScrollTop());
       }
-
-      const innerHeight = window.innerHeight * 0.8;
-
-      this.setState({
-        mainPassed: this.state.mainPassed || top >= this.offsetList.mainSection - innerHeight,
-        problemPassed: this.state.problemPassed || top >= this.offsetList.problemSection - innerHeight,
-        achievePassed: this.state.achievePassed || top >= this.offsetList.achieveSection - innerHeight,
-        workPassed: this.state.workPassed || top >= this.offsetList.workSection - innerHeight,
-        detailPassed: this.state.detailPassed || top >= this.offsetList.detailSection - innerHeight,
-      });
     }
   }
 
