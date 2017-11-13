@@ -75,6 +75,14 @@ $container-width: 1080px;
       }
     }
   }
+
+  transform: translateX(-15%);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-in;
+
+  &:nth-child(2) {
+    transition-delay: 0.3s, 0.3s;
+  }
 }
 
 .telegramLink {
@@ -92,15 +100,13 @@ $container-width: 1080px;
   margin-top: 40px;
   cursor: pointer;
 
-  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
   svg {
     vertical-align: text-bottom;
     margin-right: 14px;
     width: 24px;
     color: #6096ff;
 
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
@@ -119,5 +125,18 @@ $container-width: 1080px;
     height: 45px;
     line-height: 45px;
     font-size: 14px;
+  }
+
+  transform: translateX(-15%);
+  opacity: 0;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s ease-out 0.6s, opacity 0.8s ease-out 0.6s;
+}
+
+.innerContainer.shown {
+  .telegramLink,
+  .balloonWrapper {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
