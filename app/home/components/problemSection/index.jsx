@@ -89,7 +89,6 @@ class ProblemSection extends React.PureComponent {
         </div>
 
         <VisibilitySensor
-          partialVisibility
           onChange={isVisible => {
             const curCatchShown = this.state.catchShown;
             this.setState({
