@@ -81,7 +81,7 @@ $container-width: 1080px;
     position: absolute;
 
     opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease;
   }
 
   .imgMacbook {
@@ -91,8 +91,8 @@ $container-width: 1080px;
     top: 80px;
     left: 0;
 
-    transform: translate(0, 1%);
-    transition-delay: 0.1s;
+    transform: translate(0, -3%);
+    transition-delay: 0.15s;
   }
 
   .imgPeerReview {
@@ -102,8 +102,8 @@ $container-width: 1080px;
     top: 20px;
     right: 20px;
 
-    transform: translate(-10%, 0);
-    transition-delay: 0.3s;
+    transform: translate(0, -10%);
+    transition-delay: 0.45s;
   }
 
   .imgComment1 {
@@ -114,7 +114,7 @@ $container-width: 1080px;
     bottom: 125px;
 
     transform: translate(0, -12%);
-    transition-delay: 0.6s;
+    transition-delay: 0.75s;
   }
 
   .imgComment2 {
@@ -125,13 +125,13 @@ $container-width: 1080px;
     bottom: 40px;
 
     transform: translate(0, -12%);
-    transition-delay: 0.9s;
+    transition-delay: 1.05s;
   }
   .imgMacbookMobile {
     display: none;
 
-    transform: translate(0, 1%);
-    transition-delay: 0.1s;
+    transform: translate(0, -3%);
+    transition-delay: 0.15s;
   }
   @media (max-width: 768px) {
     height: 450px;

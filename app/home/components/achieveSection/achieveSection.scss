@@ -140,12 +140,12 @@ $container-width: 1080px;
 
   transform: translateX(-20%);
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease;
   &:nth-child(2) {
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
   }
   &:nth-child(3) {
-    transition-delay: 0.4s;
+    transition-delay: 0.6s;
   }
 }
 
@@ -168,8 +168,8 @@ $container-width: 1080px;
 
   transform: translateY(5%);
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  transition-delay: 0.7s, 0.7s;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: 0.8s, 0.8s;
 }
 
 .sliderDots {
