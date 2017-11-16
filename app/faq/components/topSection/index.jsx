@@ -2,6 +2,7 @@ import React from "react";
 // styles
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import styles from "./topSection.scss";
+import Icon from "../../../components/icons";
 
 const TopSection = () => {
   return (
@@ -11,7 +12,9 @@ const TopSection = () => {
         <p className={styles.subTitle}>Browse through the most frequently asked questions.</p>
       </div>
 
-      <span className={styles.arrowIcon}>&#xE001;</span>
+      <span className={styles.arrowIcon}>
+        <Icon icon="ARROW_POINT" />
+      </span>
     </section>
   );
 };

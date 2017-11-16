@@ -25,7 +25,8 @@ const DetailSection = ({ shown }) => (
           onClick={() => trackAndOpenLink("https://poc.pluto.network/", "DetailSection")}
           className={styles.moreDetail}
         >
-          More Detail &#xE001;
+          More Detail
+          <Icon icon="ARROW_POINT" />
         </a>
 
         <img className={styles.imgMacbook} src="https://d2vo77dayzjoat.cloudfront.net/detail-macbook.png" alt="" />

@@ -55,6 +55,7 @@ const ICONS = {
   REPUTATION_ITEM_1: require("./reputation-item-1.svg"),
   REPUTATION_ITEM_2: require("./reputation-item-2.svg"),
   REPUTATION_ITEM_3: require("./reputation-item-3.svg"),
+  ARROW_POINT: require("./arrow-point.svg"),
 
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),
