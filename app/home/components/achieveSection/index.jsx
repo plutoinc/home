@@ -64,7 +64,7 @@ class AchieveSection extends React.PureComponent {
             <div className={`${styles.subSection} ${styles.detailWrapper}`}>
               <div
                 className={`${styles.achieveItem} ${this.state.activeItem === FIRST_ITEM ? styles.active : ""}`}
-                onClick={() => this.moveToSlide(FIRST_ITEM)}
+                onMouseOver={() => this.moveToSlide(FIRST_ITEM)}
               >
                 <p className={styles.itemTitle}>
                   Communication and collaboration <strong>in all phases</strong> of research
@@ -77,7 +77,7 @@ class AchieveSection extends React.PureComponent {
 
               <div
                 className={`${styles.achieveItem} ${this.state.activeItem === SECOND_ITEM ? styles.active : ""}`}
-                onClick={() => this.moveToSlide(SECOND_ITEM)}
+                onMouseOver={() => this.moveToSlide(SECOND_ITEM)}
               >
                 <p className={styles.itemTitle}>
                   <strong>Fair opportunities</strong> for researchers
@@ -90,7 +90,7 @@ class AchieveSection extends React.PureComponent {
 
               <div
                 className={`${styles.achieveItem} ${this.state.activeItem === THIRD_ITEM ? styles.active : ""}`}
-                onClick={() => this.moveToSlide(THIRD_ITEM)}
+                onMouseOver={() => this.moveToSlide(THIRD_ITEM)}
               >
                 <p className={styles.itemTitle}>
                   Research for science development, <strong>not for paper publication</strong>
