@@ -1,22 +1,18 @@
-import React from 'react';
+import React from "react";
 
 // styles
 import styles from "./mailingSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 
-const MailingSection = ({ email, subscribeEmail, handleEmailChange }) => (
-  <section className={styles.mailingSectionContainer}>
+const MailingSection = ({ email, subscribeEmail, handleEmailChange, shown }) => (
+  <section className={`${styles.mailingSectionContainer} ${shown ? styles.shown : ""}`}>
     <div className={styles.innerContainer}>
-
       <div className={styles.title}>
         Join the great <strong>Innovation on Scholarly Communication</strong> with PLUTO
       </div>
 
       <div className={styles.emailFormWrapper}>
-        <form
-          onSubmit={e => subscribeEmail(e, "MailingSection")}
-          className={styles.emailWrapper}
-        >
+        <form onSubmit={e => subscribeEmail(e, "MailingSection")} className={styles.emailWrapper}>
           <input
             onChange={handleEmailChange}
             placeholder="Enter your email"
@@ -24,13 +20,9 @@ const MailingSection = ({ email, subscribeEmail, handleEmailChange }) => (
             value={email}
             type="text"
           />
-          <button className={styles.emailSubmitButton}>
-            Subscribe
-          </button>
+          <button className={styles.emailSubmitButton}>Subscribe</button>
         </form>
       </div>
-
-
     </div>
   </section>
 );

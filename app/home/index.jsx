@@ -3,6 +3,7 @@ import Axios from "axios";
 import ReactGA from "react-ga";
 import throttle from "lodash.throttle";
 import { connect } from "react-redux";
+import VisibilitySensor from "react-visibility-sensor";
 // components
 import Header from "../components/header";
 import Footer from "../components/newfooter";
@@ -28,6 +29,14 @@ class HomeContainer extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    this.state = {
+      mainPassed: false,
+      problemPassed: false,
+      achievePassed: false,
+      workPassed: false,
+      detailPassed: false,
+    };
+
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
     this.handleScroll = throttle(this.handleScrollEvent, 100);
     this.handleScroll();
@@ -40,6 +49,7 @@ class HomeContainer extends React.PureComponent {
     if (!EnvChecker.isServer()) {
       window.addEventListener("scroll", this.handleScroll);
     }
+    this.handleScroll();
   }
 
   componentWillUnmount() {
@@ -50,23 +60,95 @@ class HomeContainer extends React.PureComponent {
 
   render() {
     const { intl, homeState } = this.props;
+    let innerHeight = 768;
+    if (!EnvChecker.isServer()) {
+    }
+
     return (
       <section>
         <Header isTop={homeState.get("isTop")} />
-        <MainSection
-          email={homeState.get("email")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
-        <ProblemSection />
-        <AchieveSection />
-        <WorkSection />
-        <DetailSection />
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                mainPassed: true,
+              });
+            }
+          }}
+        >
+          <MainSection
+            email={homeState.get("email")}
+            handleEmailChange={this.handleEmailChange}
+            subscribeEmail={this.subscribeEmail}
+            shown={this.state.mainPassed}
+          />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                problemPassed: true,
+              });
+            }
+          }}
+        >
+          <ProblemSection shown={this.state.problemPassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                achievePassed: true,
+              });
+            }
+          }}
+        >
+          <AchieveSection shown={this.state.achievePassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                workPassed: true,
+              });
+            }
+          }}
+        >
+          <WorkSection shown={this.state.workPassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                detailPassed: true,
+              });
+            }
+          }}
+        >
+          <DetailSection shown={this.state.detailPassed} />
+        </VisibilitySensor>
+
         <MailingSection
           email={homeState.get("email")}
           handleEmailChange={this.handleEmailChange}
           subscribeEmail={this.subscribeEmail}
         />
+
         <Footer />
       </section>
     );
@@ -77,6 +159,7 @@ class HomeContainer extends React.PureComponent {
     if (!EnvChecker.isServer()) {
       const mainHeight = window.innerWidth > 768 ? 800 : 568;
       const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
       } else {

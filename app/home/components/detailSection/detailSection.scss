@@ -79,6 +79,9 @@ $container-width: 1080px;
 
   img {
     position: absolute;
+
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
   }
 
   .imgMacbook {
@@ -87,6 +90,9 @@ $container-width: 1080px;
     object-fit: contain;
     top: 80px;
     left: 0;
+
+    transform: translate(0, -3%);
+    transition-delay: 0.15s;
   }
 
   .imgPeerReview {
@@ -95,6 +101,9 @@ $container-width: 1080px;
     object-fit: contain;
     top: 20px;
     right: 20px;
+
+    transform: translate(0, -10%);
+    transition-delay: 0.45s;
   }
 
   .imgComment1 {
@@ -103,6 +112,9 @@ $container-width: 1080px;
     object-fit: contain;
     right: 0;
     bottom: 125px;
+
+    transform: translate(0, -12%);
+    transition-delay: 0.75s;
   }
 
   .imgComment2 {
@@ -111,9 +123,15 @@ $container-width: 1080px;
     object-fit: contain;
     right: 10px;
     bottom: 40px;
+
+    transform: translate(0, -12%);
+    transition-delay: 1.05s;
   }
   .imgMacbookMobile {
     display: none;
+
+    transform: translate(0, -3%);
+    transition-delay: 0.15s;
   }
   @media (max-width: 768px) {
     height: 450px;
@@ -160,5 +178,14 @@ $container-width: 1080px;
     height: 200px;
     background-color: #ffffff;
     bottom: -190px;
+  }
+}
+
+.detailSectionContainer.shown {
+  .imageWrapper {
+    img {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
   }
 }

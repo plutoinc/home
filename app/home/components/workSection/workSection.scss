@@ -98,6 +98,17 @@ $container-width: 1080px;
       text-align: left;
       color: #0c1020;
     }
+
+    transform: translateY(10%);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+
+    &:nth-child(2) {
+      transition-delay: 0.3s, 0.3s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.6s, 0.6s;
+    }
   }
 
   @media (max-width: 768px) {
@@ -108,10 +119,10 @@ $container-width: 1080px;
       padding-right: 0;
       padding-bottom: 40px;
 
-      .itemTitle{
+      .itemTitle {
         font-size: 16px;
       }
-      .itemDetail{
+      .itemDetail {
         font-size: 14px;
         letter-spacing: -0.4px;
       }
@@ -129,6 +140,11 @@ $container-width: 1080px;
     font-size: 12px;
     line-height: 4.21;
   }
+
+  transform: translateY(10%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: 0.8s, 0.8s;
 }
 
 .wpBtn {
@@ -143,7 +159,7 @@ $container-width: 1080px;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
-  transition: background-color .25s ease;
+  transition: background-color 0.25s ease;
 
   &:hover {
     color: #fff;
@@ -155,6 +171,11 @@ $container-width: 1080px;
     width: 100%;
     font-size: 14px;
   }
+
+  transform: translateY(10%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: 1s, 1s;
 }
 
 .iconWrapper {
@@ -192,7 +213,9 @@ $container-width: 1080px;
   }
 }
 
-.reputationItem1, .reputationItem2, .reputationItem3 {
+.reputationItem1,
+.reputationItem2,
+.reputationItem3 {
   transform: translateX(-50%);
   svg {
     height: 75px;
@@ -202,25 +225,72 @@ $container-width: 1080px;
       height: 60px;
     }
   }
+
+  transform: scale(0);
+  transition: transform 0.6s ease;
 }
 .reputationItem1 {
   top: 200px;
-  left: 23%;
+  left: 18%;
   @media (max-width: 768px) {
     left: 20%;
   }
 }
 .reputationItem2 {
-  top: 230px;
-  left: 32%;
+  top: 240px;
+  left: 29%;
   @media (max-width: 768px) {
     top: 250px;
   }
 }
 .reputationItem3 {
   top: 225px;
-  left: 65%;
+  left: 57.5%;
   @media (max-width: 768px) {
     top: 270px;
+  }
+}
+
+.workSectionContainer.shown {
+  .featureWrapper {
+    .featureItem {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .wpBtnInfo,
+  .wpBtn {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reputationSection.shown {
+  .reputationItem1,
+  .reputationItem2,
+  .reputationItem3 {
+    animation: scaleDisplay 0.3s ease;
+    animation-fill-mode: forwards;
+  }
+  .reputationItem2 {
+    animation-delay: 0.15s;
+  }
+  .reputationItem3 {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes scaleDisplay {
+  from {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.3);
+  }
+
+  to {
+    transform: scale(1);
   }
 }
