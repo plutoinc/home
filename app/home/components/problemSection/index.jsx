@@ -1,12 +1,20 @@
 import React from "react";
 import Slider from "react-slick";
-
+import VisibilitySensor from "react-visibility-sensor";
 // styles
 import styles from "./problemSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 
 class ProblemSection extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      catchShown: false,
+    };
+  }
+
   render() {
     const settings = {
       dots: true,
@@ -80,13 +88,23 @@ class ProblemSection extends React.PureComponent {
           </Slider>
         </div>
 
-        <div className={styles.catchPhraseContainer}>
-          <Icon icon="WAVE_LINE" />
-          <div className={styles.catchPhrase}>
-            PLUTO makes Scholarly Communication Reasonable and Transparent, <br />
-            independent from Capital, Authority, and Centralization.
+        <VisibilitySensor
+          partialVisibility
+          onChange={isVisible => {
+            const curCatchShown = this.state.catchShown;
+            this.setState({
+              catchShown: curCatchShown || isVisible,
+            });
+          }}
+        >
+          <div className={`${styles.catchPhraseContainer} ${this.state.catchShown ? styles.shown : ""}`}>
+            <Icon icon="WAVE_LINE" />
+            <div className={styles.catchPhrase}>
+              PLUTO makes Scholarly Communication Reasonable and Transparent, <br />
+              independent from Capital, Authority, and Centralization.
+            </div>
           </div>
-        </div>
+        </VisibilitySensor>
       </section>
     );
   }
