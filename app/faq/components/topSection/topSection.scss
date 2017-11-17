@@ -62,8 +62,12 @@ $container-width: 1080px;
   border-radius: 50%;
   background-color: #6096ff;
   color: #fff;
-  line-height: 40px;
+  line-height: 45px;
   font-size: 18px;
   text-align: center;
   transform: rotate(90deg);
+
+  svg {
+    height: 18px;
+  }
 }
