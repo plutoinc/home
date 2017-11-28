@@ -1,23 +1,51 @@
 pipeline {
     agent any
 
-    tools {nodejs "Node920"}
+    tools {nodejs "Node891"}
 
     stages {
         stage('Checkout') {
             steps {
-                echo "Current Branch is ${env.BRANCH_NAME}"
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/pluto-net/home']]])
+                slackSend color: 'good', channel: "#ci-build", message: "PLUTO-HOMEPAGE-Build Started: ${env.JOB_NAME}"
+                checkout scm
+                sh 'git status'
             }
         }
         stage('Install dependencies'){
             steps {
-                sh 'npm install'
+                script {
+                    try {
+                        sh 'rm -rf node_modules'
+                        sh 'npm cache clean -f'
+                        sh 'npm install'
+                    } catch (err) {
+                        slackSend color: "danger", channel: "#ci-build", failOnError: true, message: "Build Failed at NPM INSTALL: ${env.JOB_NAME}"
+                        throw err
+                    }
+                }
             }
         }
         stage('Deploy') {
             steps {
-                sh 'npm run deploy:stage'
+                script {
+                    try {
+                        if (env.BRANCH_NAME == 'master') {
+                            sh 'npm run deploy:prod'
+                        } else {
+                            sh 'npm run deploy:stage'
+                        }
+                    } catch (err) {
+                        slackSend color: "danger", failOnError: true, message: "Build Failed at BUILD & DEPLOY: ${env.JOB_NAME}"
+                        throw err
+                    }
+                    def targetUrl;
+                    if (env.BRANCH_NAME == 'master') {
+                        targetUrl = "https://pluto.network"
+                    } else {
+                        targetUrl = "https://future.pluto.network"
+                    }
+                    slackSend color: 'good', channel: "#ci-build", message: "Build DONE! ${env.JOB_NAME} please check ${targetUrl}"
+                }
             }
         }
     }
