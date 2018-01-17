@@ -1,6 +1,7 @@
 import React from "react";
-import { trackAndOpenLink } from "../../../helpers/handleGA";
 import VisibilitySensor from "react-visibility-sensor";
+import { trackAndOpenLink } from "../../../helpers/handleGA";
+import { WHITE_PAPER_ADDRESS } from "../../../routes";
 // styles
 import styles from "./workSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -57,7 +58,7 @@ class WorkSection extends React.PureComponent {
           <p className={styles.wpBtnInfo}>For a deeper look at PLUTO</p>
           <a
             onClick={() =>
-              trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO_whitepaper_ver_0.2.pdf", "WorkSection")
+              trackAndOpenLink(WHITE_PAPER_ADDRESS, "WorkSection")
             }
             className={styles.wpBtn}
           >

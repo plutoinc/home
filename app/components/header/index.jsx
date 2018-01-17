@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { trackAndOpenLink, trackAction } from "../../helpers/handleGA";
+import { WHITE_PAPER_ADDRESS } from "../../routes";
 // styles
 import styles from "./header.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -53,7 +54,7 @@ class Header extends React.PureComponent {
             <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
               <a
                 onClick={() =>
-                  trackAndOpenLink("https://d2vo77dayzjoat.cloudfront.net/PLUTO_whitepaper_ver_0.2.pdf", "Header")}
+                  trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
               >
                 White Paper
               </a>
