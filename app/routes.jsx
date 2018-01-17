@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, IndexRoute } from "react-router";
 import {trackAndOpenLinkInCurrentTab } from "./helpers/handleGA";
+import EnvChecker from "./helpers/envChecker";
 // containers
 import RootComponent from "./components/root";
 import OldHome from "./oldhome";
@@ -12,7 +13,9 @@ export const WHITE_PAPER_ADDRESS = "https://pluto-asset.s3-accelerate.amazonaws.
 
 class WhitepaperRedirector extends React.Component {
   componentWillMount() {
-    trackAndOpenLinkInCurrentTab(WHITE_PAPER_ADDRESS);
+    if (!EnvChecker.isServer()) {
+      trackAndOpenLinkInCurrentTab(WHITE_PAPER_ADDRESS);
+    }
   }
 
   render() {
