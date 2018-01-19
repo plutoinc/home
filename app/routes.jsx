@@ -9,7 +9,7 @@ import Home from "./home";
 import NoPage from "./components/404";
 import FAQContainer from "./faq";
 
-export const WHITE_PAPER_ADDRESS = "https://pluto-asset.s3-accelerate.amazonaws.com/PLUTO+whitepaper_ver_0.3.pdf";
+export const WHITE_PAPER_ADDRESS = "https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf";
 
 class WhitepaperRedirector extends React.Component {
   componentWillMount() {
