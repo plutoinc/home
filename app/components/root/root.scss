@@ -1,8 +1,9 @@
 $icon-font-path: "~bootstrap-styl/fonts/";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600');
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   box-sizing: border-box;
   min-height: 0;
   min-width: 0;

@@ -1,19 +1,31 @@
 $container-width: 1080px;
 
-.problemSectionContainer {
-  padding-top: 100px;
-  background-color: #ffffff;
+.productSectionContainer {
+  padding-top: 113px;
+  background-color: #f5f7fb;
   height: 600px;
+
+  
+  .mokeupContainer {
+    max-width: 530px;
+    position: absolute;
+    img {
+    width: 705px;
+    height: 406px;
+    float: right;
+    }
+  }
 
   .innerContainer {
     max-width: $container-width;
     margin-left :auto;
     margin-right: auto;
     display: flex;
-    flex-direction: row;
     .contentsWrapper {
       max-width: 530px;
-      margin-right: 46px;
+      margin-left:auto; 
+      margin-right:0;
+      margin-top: 50px;
     }
     svg {
       width: 448px;
@@ -49,8 +61,8 @@ $container-width: 1080px;
   text-align: left;
   color: #0c1020;
   margin-top: 24px;
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-weight: 300;
+  margin-bottom: 46px;
   width: 530px;
 
   strong {
@@ -76,7 +88,7 @@ $container-width: 1080px;
   
 }
 
-.readMoreButton {
+.getStartedButton {
   width: 166px;
   height: 46px;
   border-radius: 120px;
@@ -90,7 +102,7 @@ $container-width: 1080px;
 }
 
 
-.problemSectionContainer.shown {
+.productSectionContainer.shown {
   .featureWrapper {
     .featureItem {
       transform: translateY(0);

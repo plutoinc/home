@@ -51,12 +51,16 @@ class Header extends React.PureComponent {
                 Github
               </a>
             </li>
-            <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
+            <li className={`${styles.menuItem} ${styles.demoItem}`}>
               <a
                 onClick={() =>
+<<<<<<< HEAD
                   trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
+=======
+                  trackAndOpenLink("https://poc.pluto.network", "Header")}
+>>>>>>> 4f4c0ed... Make renewal homepage frame
               >
-                White Paper
+                Try Demo
               </a>
             </li>
             {/* <li className={`${styles.menuItem} ${styles.langItem}`}>

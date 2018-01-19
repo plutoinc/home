@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
+import { trackAndOpenLink } from "../../../helpers/handleGA";
 import VisibilitySensor from "react-visibility-sensor";
 // styles
 import styles from "./problemSection.scss";
@@ -11,99 +11,29 @@ class ProblemSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      catchShown: false,
+      itemShown: false,
     };
   }
-
   render() {
-    const settings = {
-      dots: true,
-      infinite: false,
-      arrows: false,
-      autoplay: false,
-      draggable: true,
-      focusOnSelect: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      variableWidth: true,
-      className: styles.sliderContainer,
-      dotsClass: styles.sliderDots,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: "unslick",
-        },
-      ],
-    };
-
+    const { shown } = this.props;
     return (
-      <section className={`${styles.problemSectionContainer} ${this.props.shown ? styles.shown : ""}`}>
+      <section className={`${styles.problemSectionContainer} ${shown ? styles.shown : ""}`}>
         <div className={styles.innerContainer}>
-          <div className={styles.subTitle}>PROBLEM</div>
-          <div className={styles.title}>
-            <strong>Research resources</strong> for scientific development are being <strong>wasted</strong>
-            <br />
-            due to <strong>ineffective</strong> academic communications.
+          <div className={styles.contentsWrapper}>
+            <div className={styles.subTitle}>Problem</div>
+            <div className={styles.title}>
+            Academia is Obsessed with <br/> Publications
+            </div>
+            <div className={styles.contents}>
+            Scholarly communication is overwhelmed by commercial publishing companies. So is academia with publishing. <br/> <br/> Researchers are under pressure to publish more papers, and more publications means more profits for publishers, 
+  rather than genuine sciences.
+            </div>
+            <button className={styles.readMoreButton}>
+            Read More
+            </button>
           </div>
+          <Icon icon="PROBLEM_ILLUST" />
         </div>
-
-        <div className={styles.sliderWrapper}>
-          <Slider {...settings}>
-            <div className={styles.sliderItem}>
-              <div className={styles.iconWrapper}>
-                <Icon icon="PROBLEM_1" />
-              </div>
-              <div className={styles.itemText}>
-                Costs for scholarly communication is estimated to be $ 77.8 billion which accounts for 1/3 of total
-                costs for research activities.
-              </div>
-            </div>
-            <div className={styles.sliderItem}>
-              <div className={styles.iconWrapper}>
-                <Icon icon="PROBLEM_2" />
-              </div>
-              <div className={styles.itemText}>
-                This is because academic publishers demand high subscription and publication fees based on their past
-                influence.
-              </div>
-            </div>
-            <div className={styles.sliderItem}>
-              <div className={styles.iconWrapper}>
-                <Icon icon="PROBLEM_3" />
-              </div>
-              <div className={styles.itemText}>
-                Nonetheless, academic publishers are not doing their jobs properly, such as passing hundreds of fake
-                reviews.
-              </div>
-            </div>
-            <div className={styles.sliderItem}>
-              <div className={styles.iconWrapper}>
-                <Icon icon="PROBLEM_4" />
-              </div>
-              <div className={styles.itemText}>
-                Rather, they give researchers unnecessary procedures and make them spend excessive resources to share
-                research results.
-              </div>
-            </div>
-          </Slider>
-        </div>
-
-        <VisibilitySensor
-          onChange={isVisible => {
-            const curCatchShown = this.state.catchShown;
-            this.setState({
-              catchShown: curCatchShown || isVisible,
-            });
-          }}
-        >
-          <div className={`${styles.catchPhraseContainer} ${this.state.catchShown ? styles.shown : ""}`}>
-            <Icon icon="WAVE_LINE" />
-            <div className={styles.catchPhrase}>
-              PLUTO makes Scholarly Communication Reasonable and Transparent, <br />
-              independent from Capital, Authority, and Centralization.
-            </div>
-          </div>
-        </VisibilitySensor>
       </section>
     );
   }

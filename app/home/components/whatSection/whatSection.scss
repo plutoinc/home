@@ -1,13 +1,13 @@
 $container-width: 1080px;
 
-.workSectionContainer {
-  padding-top: 88px;
-  background-color: #ffffff;
+.whatSectionContainer {
+  padding-top: 70px;
+  background-color: #f5f7fb;
   height: 600px;
 
   .innerContainer {
     max-width: $container-width;
-    margin-left: auto;
+    margin-left :auto;
     margin-right: auto;
   }
   @media (max-width: 768px) {
@@ -20,32 +20,27 @@ $container-width: 1080px;
 }
 
 .subTitle {
-  text-align: left;
+  text-align: center;
   font-size: 20px;
   line-height: 1.2;
   color: #3e7fff;
-  width: 530px;
 
   @media (max-width: 768px) {
     font-size: 12px;
     line-height: 4.21;
     letter-spacing: 5.2px;
-    text-align: left;
+    text-align: center;
   }
-}
-.titleWrapper {
-  display: flex;
 }
 
 .title {
   font-size: 36px;
   line-height: 1.11;
-  text-align: left;
+  text-align: center;
   color: #0c1020;
   margin-top: 24px;
   font-weight: 600;
-  margin-bottom: 64px;
-  width: 530px;
+  margin-bottom: 70px;
 
   strong {
     font-weight: 700;
@@ -58,66 +53,26 @@ $container-width: 1080px;
   }
 }
 
-.whitepaperWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  margin-left: 240px;
-  position: relative;
-  svg {
-    width: 78px;
-    position: absolute;
-    left: -20px;
-    top: -32px;
-  }
-
-  .wpBtn {
-    margin: 0 auto;
-    height: 24px;
-    line-height: 1.2;
-    cursor: pointer;
-    border-radius: 9px;
-    font-size: 20px;
-    text-align: left;
-    text-decoration: none;
-    color: #0c1020;
-    position: relative;
-
-    svg {
-      width: 177px;
-      margin-left: 30px;
-      position: absolute;
-      top: 22px;
-      left: -15px;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-      font-size: 14px;
-    }
-
-    transform: translateY(10%);
-    opacity: 0;
-    transition: transform 0.8s ease, opacity 0.8s ease;
-    transition-delay: 0.2s, 0.2s;
-  }
-}
-
 .featureWrapper {
   margin-bottom: 40px;
   display: flex;
   flex-direction: row;
 
   .featureItem {
-    padding-right: 25px;
+    margin-left :auto;
+    margin-right: auto;
+    max-width: 346px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     svg {
-      width: 54px;
+      height: 70px;
     }
 
     .itemTitle {
       font-size: 20px;
       line-height: 1.55;
-      text-align: left;
+      text-align: center;
       color: #34495e;
       margin-top: 16px;
       margin-bottom: 16px;
@@ -126,7 +81,7 @@ $container-width: 1080px;
     .itemDetail {
       font-size: 18px;
       line-height: 1.33;
-      text-align: left;
+      text-align: center;
       color: #9aa3b5;
       font-weight: 300;
     }
@@ -162,18 +117,12 @@ $container-width: 1080px;
   }
 }
 
-.workSectionContainer.shown {
+.whatSectionContainer.shown {
   .featureWrapper {
     .featureItem {
       transform: translateY(0);
       opacity: 1;
     }
-  }
-
-  .wpBtnInfo,
-  .wpBtn {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 

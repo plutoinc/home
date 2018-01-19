@@ -1,16 +1,30 @@
 $container-width: 1080px;
 
-.problemSectionContainer {
+.visionSectionContainer {
   padding-top: 100px;
-  background-color: #ffffff;
+  background-color: #2a2a2a;
+  background-image: url("https://s3.amazonaws.com/pluto-asset/our-goal-background%402x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 600px;
+  position: relative;
+
+  svg {
+    width: 670px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .innerContainer {
     max-width: $container-width;
-    margin-left :auto;
+    margin-left: auto;
     margin-right: auto;
+    margin-top: 82px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     .contentsWrapper {
       max-width: 530px;
       margin-right: 46px;
@@ -29,7 +43,7 @@ $container-width: 1080px;
 }
 
 .subTitle {
-  text-align: left;
+  text-align: center;
   font-size: 20px;
   line-height: 1.2;
   color: #3e7fff;
@@ -44,14 +58,14 @@ $container-width: 1080px;
 }
 
 .title {
+  width: 530px;
   font-size: 36px;
   line-height: 1.11;
-  text-align: left;
-  color: #0c1020;
+  text-align: center;
+  color: #ffffff;
   margin-top: 24px;
-  font-weight: 600;
   margin-bottom: 24px;
-  width: 530px;
+  font-weight: 600;
 
   strong {
     font-weight: 700;
@@ -67,30 +81,12 @@ $container-width: 1080px;
 .contents {
   font-size: 18px;
   line-height: 1.33;
-  text-align: left;
-  color: #666d7c;
-  width: 530px;
-  margin-bottom: 48px;
+  text-align: center;
+  color: #9ea6b5;
   font-weight: 300;
-
-  
 }
 
-.readMoreButton {
-  width: 166px;
-  height: 46px;
-  border-radius: 120px;
-  background-color: #6096FF;
-  color: #ffffff;
-  font-size: 16px;
-  border: none;
-  &:hover {
-    background-color: #82acff;
-  }
-}
-
-
-.problemSectionContainer.shown {
+.visionSectionContainer.shown {
   .featureWrapper {
     .featureItem {
       transform: translateY(0);

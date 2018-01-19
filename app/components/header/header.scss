@@ -1,4 +1,4 @@
-$header-height: 75px;
+$header-height: 80px;
 $container-width: 1080px;
 
 .headerContainer {
@@ -30,7 +30,7 @@ $container-width: 1080px;
     display: block;
 
     svg {
-      height: 45px;
+      height: 40px;
     }
     .mobileLogo {
       display: none;
@@ -65,10 +65,10 @@ $container-width: 1080px;
       a {
         display: inline-block;
         width: 72px;
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing: 0.5px;
         text-align: center;
-        color: #656d7c;
+        color: #ffffff;
         cursor: pointer;
 
         &:hover {
@@ -77,16 +77,16 @@ $container-width: 1080px;
       }
     }
 
-    .whitePaperItem {
+    .demoItem {
       a {
         color: #6096ff;
       }
       @media (min-width: 768px) {
         a {
-          width: 140px;
+          width: 130px;
           padding: 8px;
           border: solid 1px #6096ff;
-          border-radius: 10px;
+          border-radius: 100px;
           transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
           &:hover {
