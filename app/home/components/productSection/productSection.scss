@@ -5,30 +5,51 @@ $container-width: 1080px;
   background-color: #f5f7fb;
   height: 600px;
 
-  
   .mokeupContainer {
     max-width: 530px;
     position: absolute;
     img {
-    width: 705px;
-    height: 406px;
-    float: right;
+      width: 705px;
+      height: 406px;
+      float: right;
     }
   }
 
   .innerContainer {
     max-width: $container-width;
-    margin-left :auto;
+    margin-left: auto;
     margin-right: auto;
     display: flex;
     .contentsWrapper {
       max-width: 530px;
-      margin-left:auto; 
-      margin-right:0;
+      margin-left: auto;
+      margin-right: 0;
       margin-top: 50px;
-    }
-    svg {
-      width: 448px;
+      position: relative;
+      .oval_1 {
+        position: absolute;
+        top: -48px;
+        left: 229px;
+        svg {
+          width: 44px;
+        }
+      }
+      .oval_2 {
+        position: absolute;
+        top: -5px;
+        left: 276px;
+        svg {
+          width: 160px;
+        }
+      }
+      .oval_3 {
+        position: absolute;
+        top: 300px;
+        left: 149px;
+        svg {
+          width: 22px;
+        }
+      }
     }
   }
   @media (max-width: 768px) {
@@ -84,15 +105,13 @@ $container-width: 1080px;
   width: 530px;
   margin-bottom: 48px;
   font-weight: 300;
-
-  
 }
 
 .getStartedButton {
   width: 166px;
   height: 46px;
   border-radius: 120px;
-  background-color: #6096FF;
+  background-color: #6096ff;
   color: #ffffff;
   font-size: 16px;
   border: none;
@@ -100,7 +119,6 @@ $container-width: 1080px;
     background-color: #82acff;
   }
 }
-
 
 .productSectionContainer.shown {
   .featureWrapper {

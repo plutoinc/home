@@ -21,9 +21,9 @@ class Header extends React.PureComponent {
     const { isTop } = this.props;
     return (
       <header
-        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${isTop
-          ? styles.transparent
-          : ""}`}
+        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${
+          isTop ? styles.transparent : ""
+        }`}
       >
         <div
           className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ""}`}
@@ -52,16 +52,7 @@ class Header extends React.PureComponent {
               </a>
             </li>
             <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a
-                onClick={() =>
-<<<<<<< HEAD
-                  trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
-=======
-                  trackAndOpenLink("https://poc.pluto.network", "Header")}
->>>>>>> 4f4c0ed... Make renewal homepage frame
-              >
-                Try Demo
-              </a>
+              <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}>Try Demo</a>
             </li>
             {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
               <a href="#">

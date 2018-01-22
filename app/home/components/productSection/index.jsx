@@ -20,19 +20,26 @@ class ProductSection extends React.PureComponent {
       <section className={`${styles.productSectionContainer} ${shown ? styles.shown : ""}`}>
         <div className={styles.innerContainer}>
           <div className={styles.mokeupContainer}>
-            <img src = "https://s3.amazonaws.com/pluto-asset/poc-mockup.png"/>
+            <img src="https://s3.amazonaws.com/pluto-asset/poc-mockup.png" />
           </div>
           <div className={styles.contentsWrapper}>
+            <div className={styles.oval_1}>
+              <Icon icon="WP_OVAL" />
+            </div>
+            <div className={styles.oval_2}>
+              <Icon icon="WP_OVAL" />
+            </div>
+            <div className={styles.oval_3}>
+              <Icon icon="WP_OVAL" />
+            </div>
             <div className={styles.subTitle}>Product</div>
             <div className={styles.title}>
-            <b>Try Pluto's prototype :</b><br/>
-            Discover research papers,<br/>
-            and put your own review.
+              <b>Try Pluto's prototype :</b>
+              <br />
+              Discover research papers,<br />
+              and put your own review.
             </div>
-            <button className={styles.getStartedButton}>
-            Get Started
-            </button>
-            
+            <button className={styles.getStartedButton}>Get Started</button>
           </div>
         </div>
       </section>

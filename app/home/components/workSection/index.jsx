@@ -63,19 +63,6 @@ class WorkSection extends React.PureComponent {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-
-          <p className={styles.wpBtnInfo}>For a deeper look at PLUTO</p>
-          <a
-            onClick={() =>
-              trackAndOpenLink(WHITE_PAPER_ADDRESS, "WorkSection")
-            }
-            className={styles.wpBtn}
-          >
-            Read the white paper
-          </a>
-=======
->>>>>>> 4f4c0ed... Make renewal homepage frame
         </div>
       </section>
     );

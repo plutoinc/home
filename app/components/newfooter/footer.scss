@@ -25,15 +25,14 @@ $container-width: 1080px;
 
     flex-flow: row wrap;
   }
-
 }
 
 .logoSection {
   flex: 2 1 0px;
 
   svg {
-    width: 103.5px;
-    height: 57.5px;
+    width: 110px;
+    height: 58px;
     vertical-align: middle;
   }
 
@@ -71,9 +70,9 @@ $container-width: 1080px;
     margin-bottom: 7px;
 
     a {
-      color: inherit;
+      color: #666d7c;
       &:hover {
-        color: inherit;
+        color: #172649;
         text-decoration: none;
       }
     }
@@ -84,15 +83,14 @@ $container-width: 1080px;
     cursor: default;
     margin: 12px 0;
   }
-
 }
 
 .plutoSection {
-  flex: 1 1 0px;
+  flex: 0.5 1 0px;
 }
 
 .resourceSection {
-  flex: 2 1 0px;
+  flex: 1 1 0px;
   a {
     cursor: pointer;
   }
@@ -107,12 +105,18 @@ $container-width: 1080px;
     display: inline-block;
     margin-right: 7px;
     color: #bbc2d0;
-    transition: color .25s ease;
+    transition: color 0.25s ease;
     cursor: pointer;
 
-    &:last-child { margin-right: 0; }
-    &:hover { color: #8993A8; }
-    &:active { transform: scale(0.95); }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #8993a8;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }
 
