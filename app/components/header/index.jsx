@@ -52,7 +52,7 @@ class Header extends React.PureComponent {
               </a>
             </li>
             <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}>Try Demo</a>
+              <a onClick={() => trackAndOpenLink("https://poc.pluto.network", "Header")}>Try Beta</a>
             </li>
             {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
               <a href="#">

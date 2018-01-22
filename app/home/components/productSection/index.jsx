@@ -23,6 +23,17 @@ class ProductSection extends React.PureComponent {
             <img src="https://s3.amazonaws.com/pluto-asset/poc-mockup.png" />
           </div>
           <div className={styles.contentsWrapper}>
+            <div className={styles.subTitle}>Product</div>
+            <div className={styles.title}>
+              <b>Try Pluto's prototype :</b>
+              <br />
+              Discover research papers,<br />
+              and put your own review.
+            </div>
+
+            <button onClick={() => trackAndOpenLink("https://poc.pluto.network")} className={styles.getStartedButton}>
+              Try Beta
+            </button>
             <div className={styles.oval_1}>
               <Icon icon="WP_OVAL" />
             </div>
@@ -32,14 +43,6 @@ class ProductSection extends React.PureComponent {
             <div className={styles.oval_3}>
               <Icon icon="WP_OVAL" />
             </div>
-            <div className={styles.subTitle}>Product</div>
-            <div className={styles.title}>
-              <b>Try Pluto's prototype :</b>
-              <br />
-              Discover research papers,<br />
-              and put your own review.
-            </div>
-            <button className={styles.getStartedButton}>Get Started</button>
           </div>
         </div>
       </section>

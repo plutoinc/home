@@ -22,14 +22,18 @@ class ProblemSection extends React.PureComponent {
           <div className={styles.contentsWrapper}>
             <div className={styles.subTitle}>Problem</div>
             <div className={styles.title}>
-            Academia is Obsessed with <br/> Publications
+              Academia is Obsessed with <br /> Publications
             </div>
             <div className={styles.contents}>
-            Scholarly communication is overwhelmed by commercial publishing companies. So is academia with publishing. <br/> <br/> Researchers are under pressure to publish more papers, and more publications means more profits for publishers, 
-  rather than genuine sciences.
+              Scholarly communication is overwhelmed by commercial publishing companies. So is academia with publishing.{" "}
+              <br /> <br /> Researchers are under pressure to publish more papers, and more publications means more
+              profits for publishers, rather than genuine sciences.
             </div>
-            <button className={styles.readMoreButton}>
-            Read More
+            <button
+              onClick={() => trackAndOpenLink("https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf")}
+              className={styles.readMoreButton}
+            >
+              Read More
             </button>
           </div>
           <Icon icon="PROBLEM_ILLUST" />
