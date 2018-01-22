@@ -31,7 +31,7 @@ $container-width: 1080px;
     height: 568px;
     .innerContainer {
       margin-top: 20px;
-      padding-top: 15px;
+      padding-top: 30px;
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -45,9 +45,10 @@ $container-width: 1080px;
   color: #ffffff;
   margin-bottom: 13px;
   @media (max-width: 768px) {
-    font-size: 21px;
-    line-height: 1.51;
+    font-size: 32px;
+    line-height: 1.3;
     letter-spacing: 0.6px;
+    margin-bottom: 20px;
   }
 
   transform: translateY(30%);
@@ -63,9 +64,9 @@ $container-width: 1080px;
   color: #bbc2d0;
   margin-bottom: 26px;
   @media (max-width: 768px) {
-    font-size: 14.1px;
-    line-height: 1.75;
-    margin-bottom: 150px;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 30px;
   }
 
   transform: translateY(30%);
@@ -118,16 +119,13 @@ $container-width: 1080px;
     }
   }
   @media (max-width: 768px) {
-    margin-bottom: 20px;
+    margin-bottom: 150px;
     .emailSubmitInput {
-      display: block;
-      width: 100%;
       margin-bottom: 8px;
+      width: 271px;
     }
     .emailSubmitButton {
       margin-left: 0;
-      display: block;
-      width: 100%;
     }
   }
 

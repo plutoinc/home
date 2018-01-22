@@ -64,7 +64,7 @@ $container-width: 1080px;
 
       a {
         display: inline-block;
-        width: 72px;
+        width: 70px;
         font-size: 15px;
         font-weight: 300;
         letter-spacing: 0.5px;
@@ -74,6 +74,7 @@ $container-width: 1080px;
 
         &:hover {
           text-decoration: none;
+          color: #bbc2d0;
         }
       }
     }
@@ -81,6 +82,7 @@ $container-width: 1080px;
     .demoItem {
       a {
         color: #6096ff;
+        margin-left: 20px;
       }
       @media (min-width: 768px) {
         a {

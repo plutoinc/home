@@ -24,7 +24,7 @@ class WorkSection extends React.PureComponent {
 
           <div className={styles.titleWrapper}>
             <div className={styles.title}>
-              Blockchain Technology takes <br /> Scholarly Communication to <br /> Whole New Level
+              {`Blockchain Technology takes\nScholarly Communication to\nWhole New Level`}
             </div>
             <div className={styles.whitepaperWrapper}>
               <Icon icon="WP_OVAL" />
