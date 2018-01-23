@@ -21,11 +21,8 @@ class WorkSection extends React.PureComponent {
       <section className={`${styles.workSectionContainer} ${shown ? styles.shown : ""}`}>
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>How Pluto Works</div>
-
           <div className={styles.titleWrapper}>
-            <div className={styles.title}>
-              {`Blockchain Technology takes\nScholarly Communication to\nWhole New Level`}
-            </div>
+            <div className={styles.title}>Blockchain Technology takes Scholarly Communication to Whole New Level</div>
             <div className={styles.whitepaperWrapper}>
               <Icon icon="WP_OVAL" />
               <a

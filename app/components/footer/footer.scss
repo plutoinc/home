@@ -15,9 +15,6 @@
   @media (max-width: 768px) {
     padding-left: 15px;
     padding-right: 15px;
-    height: 230px;
-    flex-direction: column;
-    justify-content: flex-start;
   }
 }
 
@@ -48,9 +45,11 @@
   line-height: 57px;
   margin-right: 10px;
   border-radius: 50%;
-  transition: background-color 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: background-color 100ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover { background-color: rgba(161, 149, 0141, 0.2); }
+  &:hover {
+    background-color: rgba(161, 149, 0141, 0.2);
+  }
 
   &:last-of-type {
     margin-right: 0;

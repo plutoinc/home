@@ -21,6 +21,7 @@ $container-width: 1080px;
   }
   @media (max-width: 768px) {
     padding-top: 50px;
+    height: 100%;
     .innerContainer {
       padding-left: 15px;
       padding-right: 15px;
@@ -28,10 +29,11 @@ $container-width: 1080px;
       flex-direction: column;
       position: relative;
       svg {
-        width: 320px;
-        opacity: 0.8;
-        position: absolute;
-        top: 240px;
+        max-width: 345px;
+        position: relative;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        overflow: hidden;
       }
     }
   }
@@ -48,6 +50,7 @@ $container-width: 1080px;
     font-size: 20px;
     line-height: 1.2;
     text-align: left;
+    width: 100%;
   }
 }
 

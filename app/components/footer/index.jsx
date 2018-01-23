@@ -1,8 +1,8 @@
-import React from 'react';
-import Icon from '../icons';
+import React from "react";
+import Icon from "../icons";
 // styles
-import styles from './footer.scss';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import styles from "./footer.scss";
+import withStyles from "isomorphic-style-loader/lib/withStyles";
 
 const Footer = () => {
   return (
@@ -16,9 +16,6 @@ const Footer = () => {
           <a href="https://github.com/pluto-net" target="_blank" className={styles.footerIconWrapper}>
             <Icon icon="GITHUB" />
           </a>
-          {/* <a href="/" className={styles.footerIconWrapper}>
-            <Icon icon="REDDIT" />
-          </a> */}
           <a href="https://twitter.com/pluto_network" target="_blank" className={styles.footerIconWrapper}>
             <Icon icon="TWITTER" />
           </a>

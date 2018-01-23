@@ -21,11 +21,9 @@ class ProblemSection extends React.PureComponent {
         <div className={styles.innerContainer}>
           <div className={styles.contentsWrapper}>
             <div className={styles.subTitle}>Problem</div>
-            <div className={styles.title}>
-              Academia is Obsessed with <br /> Publications
-            </div>
+            <div className={styles.title}>Academia is Obsessed with Publications</div>
             <div className={styles.contents}>
-              Scholarly communication is overwhelmed by commercial publishing companies. So is academia with publishing.{" "}
+              Scholarly communication is overwhelmed by commercial publishing companies. So is academia with publishing.
               <br /> <br /> Researchers are under pressure to publish more papers, and more publications means more
               profits for publishers, rather than genuine sciences.
             </div>

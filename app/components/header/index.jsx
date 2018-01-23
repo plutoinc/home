@@ -32,7 +32,6 @@ class Header extends React.PureComponent {
         <div className={`${styles.innerContainer} `}>
           <Link to="/" className={styles.logoWrapper} onClick={() => trackAction("/", "Header")}>
             <Icon icon="LOGO" className={styles.desktopLogo} />
-            <Icon icon="LOGO_ONLY" className={styles.mobileLogo} />
           </Link>
 
           <ul className={styles.menuList}>
