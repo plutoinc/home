@@ -20,7 +20,7 @@ class ProductSection extends React.PureComponent {
       <section className={`${styles.productSectionContainer} ${shown ? styles.shown : ""}`}>
         <div className={styles.innerContainer}>
           <div className={styles.mokeupContainer}>
-            <img src="https://s3.amazonaws.com/pluto-asset/poc-mockup.png" />
+            <img src="https://assets.pluto.network/poc-mockup.png" />
           </div>
           <div className={styles.contentsWrapper}>
             <div className={styles.subTitle}>Product</div>
@@ -31,7 +31,10 @@ class ProductSection extends React.PureComponent {
               and put your own review.
             </div>
 
-            <button onClick={() => trackAndOpenLink("https://poc.pluto.network")} className={styles.getStartedButton}>
+            <button
+              onClick={() => trackAndOpenLink("https://search.pluto.network")}
+              className={styles.getStartedButton}
+            >
               Try Beta
             </button>
             <div className={styles.oval_1}>

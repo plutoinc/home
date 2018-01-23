@@ -12,7 +12,7 @@ $container-width: 1080px;
 
   &.whitebg {
     border-bottom: solid 1px #ecf1fa;
-    background-color: #ffffff;
+    background-color: #fff;
   }
 }
 
@@ -88,7 +88,12 @@ $container-width: 1080px;
         a {
           padding: 0px;
           border: none;
+          border-radius: 0px;
           margin-left: 0px;
+          &:hover {
+            background-color: #252933;
+            color: #6096ff;
+          }
         }
       }
     }

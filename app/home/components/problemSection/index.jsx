@@ -27,10 +27,7 @@ class ProblemSection extends React.PureComponent {
               <br /> <br /> Researchers are under pressure to publish more papers, and more publications means more
               profits for publishers, rather than genuine sciences.
             </div>
-            <button
-              onClick={() => trackAndOpenLink("https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf")}
-              className={styles.readMoreButton}
-            >
+            <button onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS)} className={styles.readMoreButton}>
               Read More
             </button>
           </div>

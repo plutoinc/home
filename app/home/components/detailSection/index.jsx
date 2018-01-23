@@ -22,7 +22,7 @@ const DetailSection = ({ shown }) => (
 
       <div className={styles.imageWrapper}>
         <a
-          onClick={() => trackAndOpenLink("https://poc.pluto.network/", "DetailSection")}
+          onClick={() => trackAndOpenLink("https://search.pluto.network/", "DetailSection")}
           className={styles.moreDetail}
         >
           More Detail

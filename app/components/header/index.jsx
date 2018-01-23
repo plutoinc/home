@@ -51,24 +51,13 @@ class Header extends React.PureComponent {
               </a>
             </li>
             <li className={styles.menuItem}>
-              <a
-                onClick={() =>
-                  trackAndOpenLink("https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf", "Header")
-                }
-                target="_blank"
-              >
+              <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")} target="_blank">
                 Whitepaper
               </a>
             </li>
             <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a onClick={() => trackAndOpenLink("https://poc.pluto.network", "Header")}>Try Beta</a>
+              <a onClick={() => trackAndOpenLink("https://search.pluto.network", "Header")}>Try Beta</a>
             </li>
-            {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
-              <a href="#">
-                <Icon icon="LANG" />
-                <span>EN</span>
-              </a>
-            </li> */}
           </ul>
 
           <div className={styles.mobileBtn} onClick={this.toggleMobileMenu}>

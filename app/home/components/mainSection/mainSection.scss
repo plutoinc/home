@@ -4,7 +4,7 @@ $container-width: 1080px;
   padding-top: $header-height;
   height: 600px;
   overflow: hidden;
-  background-image: url("https://s3.amazonaws.com/pluto-asset/background%402x.png");
+  background-image: url("https://assets.pluto.network/background%402x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #4d525f;
@@ -37,6 +37,7 @@ $container-width: 1080px;
     }
   }
 }
+
 .title {
   font-size: 40px;
   font-weight: bold;
@@ -91,13 +92,13 @@ $container-width: 1080px;
     height: 46px;
     vertical-align: top;
     display: inline-block;
-    -webkit-backdrop-filter: blur(9px);
     background-color: #ffffff;
     border: solid 0px;
     &:focus {
       outline: none;
     }
   }
+
   .emailSubmitButton {
     margin-left: 21px;
     padding: 0;
