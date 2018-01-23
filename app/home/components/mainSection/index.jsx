@@ -27,7 +27,7 @@ const MainSection = ({ email, subscribeEmail, handleEmailChange, shown }) => (
           </button>
         </form>
       </div>
-      <Icon icon="SCROLL_INDECATOR" />
+      <Icon icon="SCROLL_INDICATOR" />
     </div>
   </section>
 );

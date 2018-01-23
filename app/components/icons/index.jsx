@@ -51,7 +51,7 @@ const ICONS = {
   WHAT_ITEM_2: require("./what-item-2.svg"),
   WHAT_ITEM_3: require("./what-item-3.svg"),
   ARROW_POINT: require("./arrow-point.svg"),
-  SCROLL_INDECATOR: require("./scroll-indecator.svg"),
+  SCROLL_INDICATOR: require("./scroll-indicator.svg"),
   POC_OVAL: require("./poc-oval.svg"),
   BREAKDOWN: require("./breakdown.svg"),
   WP_ARROW: require("./wp-arrow.svg"),
