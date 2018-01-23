@@ -9,10 +9,13 @@ import Header from "../components/header";
 import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
 // import VideoSection from "./components/videoSection";
+
+import ProductSection from "./components/productSection";
 import ProblemSection from "./components/problemSection";
-import AchieveSection from "./components/achieveSection";
+import WhatSection from "./components/whatSection";
+import VisionSection from "./components/visionSection";
 import WorkSection from "./components/workSection";
-import DetailSection from "./components/detailSection";
+import PressSection from "./components/pressSection";
 import MailingSection from "./components/mailingSection";
 // actions
 import { changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
@@ -31,10 +34,14 @@ class HomeContainer extends React.PureComponent {
 
     this.state = {
       mainPassed: false,
-      problemPassed: false,
+      pocPassed: false,
       achievePassed: false,
+      productPassed: false,
+      problemPassed: false,
+      whatPassed: false,
+      visionPassed: false,
       workPassed: false,
-      detailPassed: false,
+      pressPassed: false,
     };
 
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
@@ -93,6 +100,20 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
+                productPassed: true,
+              });
+            }
+          }}
+        >
+          <ProductSection shown={this.state.productPassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
                 problemPassed: true,
               });
             }
@@ -107,12 +128,26 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                achievePassed: true,
+                whatPassed: true,
               });
             }
           }}
         >
-          <AchieveSection shown={this.state.achievePassed} />
+          <WhatSection shown={this.state.whatPassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                visionPassed: true,
+              });
+            }
+          }}
+        >
+          <VisionSection shown={this.state.visionPassed} />
         </VisibilitySensor>
 
         <VisibilitySensor
@@ -135,12 +170,12 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                detailPassed: true,
+                pressPassed: true,
               });
             }
           }}
         >
-          <DetailSection shown={this.state.detailPassed} />
+          <PressSection shown={this.state.pressPassed} />
         </VisibilitySensor>
 
         <MailingSection

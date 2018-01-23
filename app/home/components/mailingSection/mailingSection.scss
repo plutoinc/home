@@ -1,88 +1,99 @@
 $container-width: 1080px;
 
 .mailingSectionContainer {
-  padding-top: 50px;
-  padding-bottom: 130px;
-
+  padding-top: 62px;
+  padding-bottom: 58px;
+  background-color: #6096ff;
   .innerContainer {
     max-width: $container-width;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    .ctaWrapper {
+      max-width: 540px;
+      svg {
+        width: 123px;
+        margin-left: 183px;
+        margin-bottom: 18px;
+      }
+      .title {
+        width: 268.5px;
+        font-size: 24px;
+        line-height: 1.38;
+        text-align: left;
+        color: #b6d0ff;
+        margin-left: 183px;
+        display: flex;
+      }
+    }
+    .emailFormWrapper {
+      border-radius: 120px;
+      background-color: #ffffff;
+      display: inline-block;
+      padding-left: 20px;
+      padding-right: 7px;
+      width: 332px;
+      height: 46px;
+      margin-left: 100px;
+      .emailSubmitInput {
+        width: 250px;
+        height: 46px;
+        vertical-align: top;
+        display: inline-block;
+        background-color: #ffffff;
+        border: solid 0px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .emailSubmitButton {
+        margin-left: 21px;
+        padding: 0;
+        border: none;
+        vertical-align: top;
+        width: 34px;
+        height: 34px;
+        border-radius: 120px;
+        background-color: #6096ff;
+        color: #ffffff;
+        transition: background-color 0.25s ease;
+        margin-top: 6px;
+        svg {
+          width: 12px;
+          margin: 11px;
+        }
+        &:hover {
+          background-color: #82acff;
+        }
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+        margin-left: 0px;
+        .emailSubmitInput {
+          width: 271px;
+          margin-bottom: 8px;
+        }
+        .emailSubmitButton {
+          margin-left: 0;
+        }
+      }
+    }
   }
-
   @media (max-width: 768px) {
-    padding-bottom: 80px;
+    height: 100%;
     .innerContainer {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
-}
-
-.title {
-  font-size: 28px;
-  line-height: 1.7;
-  text-align: center;
-  color: #172649;
-  margin-bottom: 45px;
-
-  strong {
-    font-weight: 700;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-    line-height: 1.56;
-  }
-}
-
-.emailFormWrapper {
-  text-align: center;
-
-  .emailSubmitInput {
-    display: inline-block;
-    vertical-align: top;
-    width: 310px;
-    height: 45px;
-    border-radius: 9px;
-    -webkit-backdrop-filter: blur(9px);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: solid 1px #6096ff;
-    padding-left: 20px;
-    padding-right: 20px;
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .emailSubmitButton {
-    margin-left: 18px;
-    padding: 0;
-    border: none;
-    vertical-align: top;
-    width: 150px;
-    height: 45px;
-    border-radius: 9px;
-    background-color: #6096ff;
-    color: #ffffff;
-    transition: background-color 0.25s ease;
-
-    &:hover {
-      background-color: #82acff;
-    }
-  }
-
-  @media (max-width: 768px) {
-    margin-bottom: 30px;
-
-    .emailSubmitInput {
-      display: block;
-      width: 100%;
-      margin-bottom: 8px;
-    }
-    .emailSubmitButton {
-      margin-left: 0;
-      display: block;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      .ctaWrapper {
+        svg {
+          margin-left: 0px;
+        }
+        .title {
+          margin-left: 0px;
+        }
+        margin-bottom: 40px;
+      }
     }
   }
 }

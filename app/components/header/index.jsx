@@ -21,9 +21,9 @@ class Header extends React.PureComponent {
     const { isTop } = this.props;
     return (
       <header
-        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${isTop
-          ? styles.transparent
-          : ""}`}
+        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${
+          isTop ? styles.transparent : ""
+        }`}
       >
         <div
           className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ""}`}
@@ -32,7 +32,6 @@ class Header extends React.PureComponent {
         <div className={`${styles.innerContainer} `}>
           <Link to="/" className={styles.logoWrapper} onClick={() => trackAction("/", "Header")}>
             <Icon icon="LOGO" className={styles.desktopLogo} />
-            <Icon icon="LOGO_ONLY" className={styles.mobileLogo} />
           </Link>
 
           <ul className={styles.menuList}>
@@ -51,20 +50,14 @@ class Header extends React.PureComponent {
                 Github
               </a>
             </li>
-            <li className={`${styles.menuItem} ${styles.whitePaperItem}`}>
-              <a
-                onClick={() =>
-                  trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
-              >
-                White Paper
+            <li className={styles.menuItem}>
+              <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")} target="_blank">
+                Whitepaper
               </a>
             </li>
-            {/* <li className={`${styles.menuItem} ${styles.langItem}`}>
-              <a href="#">
-                <Icon icon="LANG" />
-                <span>EN</span>
-              </a>
-            </li> */}
+            <li className={`${styles.menuItem} ${styles.demoItem}`}>
+              <a onClick={() => trackAndOpenLink("https://search.pluto.network", "Header")}>Try Beta</a>
+            </li>
           </ul>
 
           <div className={styles.mobileBtn} onClick={this.toggleMobileMenu}>

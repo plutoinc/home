@@ -37,12 +37,7 @@ const Footer = () => {
             <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Footer")}>Blog</a>
           </li>
           <li>
-            <a
-              onClick={() =>
-                trackAndOpenLink(WHITE_PAPER_ADDRESS, "Footer")}
-            >
-              Whitepaper
-            </a>
+            <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Footer")}>Whitepaper</a>
           </li>
         </ul>
 

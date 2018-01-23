@@ -2,8 +2,8 @@ $container-width: 1080px;
 
 .bottomSectionContainer {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 120px;
+  padding-top: 30px;
+  padding-bottom: 100px;
 
   .innerContainer {
     max-width: $container-width;
@@ -88,22 +88,21 @@ $container-width: 1080px;
 .telegramLink {
   margin: 0 auto;
   display: block;
-  max-width: 280px;
+  max-width: 240px;
   height: 60px;
   line-height: 60px;
-  padding: 0 35px;
+  padding: 0 20px;
   border-radius: 50px;
   border: solid 1px #6096ff;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   color: #6096ff;
-  margin-top: 40px;
+  margin-top: 50px;
   cursor: pointer;
 
   svg {
-    vertical-align: text-bottom;
     margin-right: 14px;
-    width: 24px;
+    width: 20px;
     color: #6096ff;
 
     transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
