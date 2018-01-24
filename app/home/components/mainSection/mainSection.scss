@@ -137,17 +137,11 @@ $container-width: 1080px;
 }
 
 .mainSectionContainer.shown {
-  .backgroundImage,
   .title,
   .subTitle,
   .emailFormWrapper,
   .followSection {
     transform: translateY(0);
-    opacity: 1;
-  }
-
-  .bubblesIcon {
-    transform: translate(-50%, -50%);
     opacity: 1;
   }
 }
