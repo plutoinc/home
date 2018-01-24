@@ -75,6 +75,10 @@ $container-width: 1080px;
     position: absolute;
     left: -20px;
     top: -32px;
+
+    transform: translateY(10%);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
   }
 
   .wpBtn {
@@ -172,30 +176,20 @@ $container-width: 1080px;
 }
 
 .workSectionContainer.shown {
+  .whitepaperWrapper {
+    svg {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .wpBtn {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   .featureWrapper {
     .featureItem {
       transform: translateY(0);
       opacity: 1;
     }
-  }
-
-  .wpBtnInfo,
-  .wpBtn {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes scaleDisplay {
-  from {
-    transform: scale(0);
-  }
-
-  80% {
-    transform: scale(1.3);
-  }
-
-  to {
-    transform: scale(1);
   }
 }
