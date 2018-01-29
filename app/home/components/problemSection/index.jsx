@@ -1,6 +1,7 @@
 import React from "react";
 import { trackAndOpenLink } from "../../../helpers/handleGA";
 import VisibilitySensor from "react-visibility-sensor";
+import { WHITE_PAPER_ADDRESS } from "../../../routes";
 // styles
 import styles from "./problemSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
