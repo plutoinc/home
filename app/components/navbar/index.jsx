@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router";
-// styles
-import styles from "./navbar.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import Icon from "../icons";
-// tooltip
 import ReactTooltip from "react-tooltip";
+import Icon from "../icons";
+import styles from "./navbar.scss";
 
 class Navbar extends React.PureComponent {
   constructor(props) {
@@ -117,7 +115,6 @@ class Navbar extends React.PureComponent {
         }}
         className={styles.langBtn}
       >
-        {/* <img src="https://d2vo77dayzjoat.cloudfront.net/language-change.png" /> */}
         <span className={curLocale === 'en' ? styles.active : styles.notActive}>EN</span> | <span className={curLocale === 'ko' ? styles.active : styles.notActive}>KO</span>
       </div>
     );

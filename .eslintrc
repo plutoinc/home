@@ -23,6 +23,7 @@
         "experimentalObjectRestSpread": true
     },
     "rules": {
+        "quotes": ["warn", "double"],
         "semi": [
             2,
             "always"
