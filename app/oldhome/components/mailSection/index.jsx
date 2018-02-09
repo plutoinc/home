@@ -1,20 +1,23 @@
-import React from 'react';
+import React from "react";
 // styles
-import styles from './mailSection.scss';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import styles from "./mailSection.scss";
+import withStyles from "isomorphic-style-loader/lib/withStyles";
 
 const MailSection = ({ intl, email, subscribeEmail, handleEmailChange }) => {
   return (
     <div className={styles.mailSectionContainer}>
       <div className={styles.innerContainer}>
         <div className={styles.title}>
-          {intl.formatMessage({ id: 'MailSection.title' })}
+          {intl.formatMessage({ id: "MailSection.title" })}
         </div>
         <div className={styles.subTitle}>
-          {intl.formatMessage({ id: 'MailSection.subTitle' })}
+          {intl.formatMessage({ id: "MailSection.subTitle" })}
         </div>
         <div className={styles.emailInputWrapper}>
-          <form onSubmit={subscribeEmail} className={`form-inline ${styles.emailWrapper}`}>
+          <form
+            onSubmit={subscribeEmail}
+            className={`form-inline ${styles.emailWrapper}`}
+          >
             <input
               onChange={handleEmailChange}
               placeholder="Enter your email"
@@ -23,7 +26,7 @@ const MailSection = ({ intl, email, subscribeEmail, handleEmailChange }) => {
               type="text"
             />
             <button className={`btn ${styles.emailSubmitButton}`}>
-              {intl.formatMessage({ id: 'MAIN_SECTION.subscribe' })}
+              {intl.formatMessage({ id: "MAIN_SECTION.subscribe" })}
             </button>
           </form>
         </div>

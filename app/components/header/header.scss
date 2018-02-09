@@ -8,7 +8,8 @@ $container-width: 1080px;
   width: 100%;
 
   background-color: transparent;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.whitebg {
     border-bottom: solid 1px #ecf1fa;
@@ -129,7 +130,8 @@ $container-width: 1080px;
 
         opacity: 0;
         transform: translateY(-100%);
-        transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         a {
           width: 100%;
           font-size: 16px;

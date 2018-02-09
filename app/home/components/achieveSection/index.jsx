@@ -14,7 +14,7 @@ class AchieveSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      activeItem: FIRST_ITEM,
+      activeItem: FIRST_ITEM
     };
 
     this.moveToSlide = this.moveToSlide.bind(this);
@@ -47,57 +47,73 @@ class AchieveSection extends React.PureComponent {
               if (this.state.activeItem !== curSlide) {
                 this.setState({ activeItem: curSlide });
               }
-            },
-          },
-        },
-      ],
+            }
+          }
+        }
+      ]
     };
     return (
-      <section className={`${styles.achieveSectionContainer} ${this.props.shown ? styles.shown : ""}`}>
+      <section
+        className={`${styles.achieveSectionContainer} ${
+          this.props.shown ? styles.shown : ""
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>WHAT WE ACHIEVE</div>
           <div className={styles.title}>
-            PLUTO opens a new chapter in <strong>future academic society</strong>
+            PLUTO opens a new chapter in{" "}
+            <strong>future academic society</strong>
           </div>
 
           <div className={styles.contentWrapper}>
             <div className={`${styles.subSection} ${styles.detailWrapper}`}>
               <div
-                className={`${styles.achieveItem} ${this.state.activeItem === FIRST_ITEM ? styles.active : ""}`}
+                className={`${styles.achieveItem} ${
+                  this.state.activeItem === FIRST_ITEM ? styles.active : ""
+                }`}
                 onMouseOver={() => this.moveToSlide(FIRST_ITEM)}
               >
                 <p className={styles.itemTitle}>
-                  Communication and collaboration <strong>in all phases</strong> of research
+                  Communication and collaboration <strong>in all phases</strong>{" "}
+                  of research
                 </p>
                 <p>
-                  Various forms of research achievements can be shared effectively, enabling communication and
-                  collaboration in all phases of research.
+                  Various forms of research achievements can be shared
+                  effectively, enabling communication and collaboration in all
+                  phases of research.
                 </p>
               </div>
 
               <div
-                className={`${styles.achieveItem} ${this.state.activeItem === SECOND_ITEM ? styles.active : ""}`}
+                className={`${styles.achieveItem} ${
+                  this.state.activeItem === SECOND_ITEM ? styles.active : ""
+                }`}
                 onMouseOver={() => this.moveToSlide(SECOND_ITEM)}
               >
                 <p className={styles.itemTitle}>
                   <strong>Fair opportunities</strong> for researchers
                 </p>
                 <p>
-                  Alienated researchers are also given the opportunity to be recognized and reasonably funded so that
-                  they can contribute to the advancement of the scientific community.
+                  Alienated researchers are also given the opportunity to be
+                  recognized and reasonably funded so that they can contribute
+                  to the advancement of the scientific community.
                 </p>
               </div>
 
               <div
-                className={`${styles.achieveItem} ${this.state.activeItem === THIRD_ITEM ? styles.active : ""}`}
+                className={`${styles.achieveItem} ${
+                  this.state.activeItem === THIRD_ITEM ? styles.active : ""
+                }`}
                 onMouseOver={() => this.moveToSlide(THIRD_ITEM)}
               >
                 <p className={styles.itemTitle}>
-                  Research for science development, <strong>not for paper publication</strong>
+                  Research for science development,{" "}
+                  <strong>not for paper publication</strong>
                 </p>
                 <p>
-                  Since researchers can get away with the traditional research practices that are focused on simply
-                  increasing the number of papers, they can do research in true sense.
+                  Since researchers can get away with the traditional research
+                  practices that are focused on simply increasing the number of
+                  papers, they can do research in true sense.
                 </p>
               </div>
             </div>
@@ -112,17 +128,23 @@ class AchieveSection extends React.PureComponent {
                 <img
                   src="https://d2vo77dayzjoat.cloudfront.net/mokeup-1@2x.png"
                   alt=""
-                  className={`${styles.itemImage} ${this.state.activeItem === FIRST_ITEM ? styles.active : ""}`}
+                  className={`${styles.itemImage} ${
+                    this.state.activeItem === FIRST_ITEM ? styles.active : ""
+                  }`}
                 />
                 <img
                   src="https://d2vo77dayzjoat.cloudfront.net/mokeup-2@2x.png"
                   alt=""
-                  className={`${styles.itemImage} ${this.state.activeItem === SECOND_ITEM ? styles.active : ""}`}
+                  className={`${styles.itemImage} ${
+                    this.state.activeItem === SECOND_ITEM ? styles.active : ""
+                  }`}
                 />
                 <img
                   src="https://d2vo77dayzjoat.cloudfront.net/mokeup-3@2x.png"
                   alt=""
-                  className={`${styles.itemImage} ${this.state.activeItem === THIRD_ITEM ? styles.active : ""}`}
+                  className={`${styles.itemImage} ${
+                    this.state.activeItem === THIRD_ITEM ? styles.active : ""
+                  }`}
                 />
               </Slider>
             </div>

@@ -11,7 +11,7 @@ class BottomSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      shown: false,
+      shown: false
     };
   }
   render() {
@@ -25,17 +25,30 @@ class BottomSection extends React.PureComponent {
             }
           }}
         >
-          <div className={`${styles.innerContainer} ${this.state.shown ? styles.shown : ""}`}>
+          <div
+            className={`${styles.innerContainer} ${
+              this.state.shown ? styles.shown : ""
+            }`}
+          >
             <div className={styles.balloonWrapper}>
               <Icon className={styles.balloonIcon} icon="FAQ_BALLOON" />
-              <p className={styles.balloonText}>Can`t find what you`re looking for?</p>
+              <p className={styles.balloonText}>
+                Can`t find what you`re looking for?
+              </p>
             </div>
             <div className={styles.balloonWrapper}>
               <Icon className={styles.balloonIcon} icon="FAQ_BALLOON" />
-              <p className={styles.balloonText}>Join our Telegram and ask freely!</p>
+              <p className={styles.balloonText}>
+                Join our Telegram and ask freely!
+              </p>
             </div>
 
-            <a onClick={() => trackAndOpenLink("https://t.me/plutonetwork", "FAQ")} className={styles.telegramLink}>
+            <a
+              onClick={() =>
+                trackAndOpenLink("https://t.me/plutonetwork", "FAQ")
+              }
+              className={styles.telegramLink}
+            >
               <Icon icon="TELEGRAM_ICON" />
               Join Pluto Telegram
             </a>

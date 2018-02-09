@@ -35,7 +35,8 @@
       border: none;
       margin: 0 10px;
       padding: 0;
-      transition: width 250ms cubic-bezier(0.4, 0.0, 0.2, 1), height 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
       &:focus {
         outline: none;
@@ -72,11 +73,14 @@
   }
 
   @media (max-width: 768px) {
-    .prevBtn { display: none; }
-    .nextBtn { display: none; }
+    .prevBtn {
+      display: none;
+    }
+    .nextBtn {
+      display: none;
+    }
   }
 }
-
 
 :global {
   li.slick-active {

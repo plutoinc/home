@@ -4,7 +4,7 @@ import { fromJS } from "immutable";
 export const ACTION_TYPES = {
   CHANGE_EMAIL_INPUT: "HOME.CHANGE_EMAIL_INPUT",
   ENTER_SCROLL_TOP: "HOME.ENTER_SCROLL_TOP",
-  LEAVE_SCROLL_TOP: "HOME.LEAVE_SCROLL_TOP",
+  LEAVE_SCROLL_TOP: "HOME.LEAVE_SCROLL_TOP"
 };
 
 /**
@@ -14,19 +14,19 @@ export function changeEmailInput(email) {
   return {
     type: ACTION_TYPES.CHANGE_EMAIL_INPUT,
     payload: {
-      email,
-    },
+      email
+    }
   };
 }
 
 export function enterScrollTop() {
   return {
-    type: ACTION_TYPES.ENTER_SCROLL_TOP,
+    type: ACTION_TYPES.ENTER_SCROLL_TOP
   };
 }
 
 export function leaveScrollTop() {
   return {
-    type: ACTION_TYPES.LEAVE_SCROLL_TOP,
+    type: ACTION_TYPES.LEAVE_SCROLL_TOP
   };
 }

@@ -9,7 +9,9 @@ const TopSection = () => {
     <section className={styles.topSectionContainer}>
       <div className={styles.innerContainer}>
         <p className={styles.title}>We are here to help you.</p>
-        <p className={styles.subTitle}>Browse through the most frequently asked questions.</p>
+        <p className={styles.subTitle}>
+          Browse through the most frequently asked questions.
+        </p>
       </div>
 
       <span className={styles.arrowIcon}>

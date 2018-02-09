@@ -34,41 +34,62 @@ const Footer = () => {
         <ul className={`${styles.ulSection} ${styles.resourceSection}`}>
           <li>Resources</li>
           <li>
-            <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Footer")}>Blog</a>
+            <a
+              onClick={() =>
+                trackAndOpenLink("https://medium.com/pluto-network", "Footer")
+              }
+            >
+              Blog
+            </a>
           </li>
           <li>
-            <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Footer")}>Whitepaper</a>
+            <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Footer")}>
+              Whitepaper
+            </a>
           </li>
         </ul>
 
         <ul className={`${styles.ulSection} ${styles.followSection}`}>
           <li>Follow</li>
           <a
-            onClick={() => trackAndOpenLink("https://www.facebook.com/Pluto-263226227503100/", "Footer")}
+            onClick={() =>
+              trackAndOpenLink(
+                "https://www.facebook.com/Pluto-263226227503100/",
+                "Footer"
+              )
+            }
             className={styles.footerIconWrapper}
           >
             <Icon icon="FACEBOOK_FOOTER" />
           </a>
           <a
-            onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Footer")}
+            onClick={() =>
+              trackAndOpenLink("https://medium.com/pluto-network", "Footer")
+            }
             className={styles.footerIconWrapper}
           >
             <Icon icon="MEDIUM_FOOTER" />
           </a>
           <a
-            onClick={() => trackAndOpenLink("https://twitter.com/pluto_network", "Footer")}
+            onClick={() =>
+              trackAndOpenLink("https://twitter.com/pluto_network", "Footer")
+            }
             className={styles.footerIconWrapper}
           >
             <Icon icon="TWITTER_FOOTER" />
           </a>
           <a
-            onClick={() => trackAndOpenLink("https://t.me/plutonetwork", "Footer")}
+            onClick={() =>
+              trackAndOpenLink("https://t.me/plutonetwork", "Footer")
+            }
             className={styles.footerIconWrapper}
           >
             <Icon icon="TELEGRAM_FOOTER" />
           </a>
           <a
-            onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Footer")}
+            onClick={() =>
+              trackAndOpenLink("https://github.com/pluto-net", "Footer")
+            }
             className={styles.footerIconWrapper}
           >
             <Icon icon="GITHUB_FOOTER" />

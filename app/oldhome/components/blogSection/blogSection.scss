@@ -40,7 +40,7 @@
   border-radius: 5px;
   text-align: left;
   margin-bottom: 20px;
-  transition: background-color 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 
   @media (min-width: 768px) {
@@ -109,5 +109,4 @@
     text-decoration: inherit;
     color: #fff;
   }
-
 }

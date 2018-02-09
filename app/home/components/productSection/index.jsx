@@ -11,13 +11,17 @@ class ProductSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      itemShown: false,
+      itemShown: false
     };
   }
   render() {
     const { shown } = this.props;
     return (
-      <section className={`${styles.productSectionContainer} ${shown ? styles.shown : ""}`}>
+      <section
+        className={`${styles.productSectionContainer} ${
+          shown ? styles.shown : ""
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.mokeupContainer}>
             <img src="https://assets.pluto.network/poc-mockup.png" />

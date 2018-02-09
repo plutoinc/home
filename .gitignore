@@ -69,3 +69,6 @@ dst.zip
 
 # Serverless directories
 .serverless
+
+# OS Specific
+.DS_Store

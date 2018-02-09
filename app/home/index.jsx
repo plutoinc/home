@@ -24,7 +24,7 @@ import EnvChecker from "../helpers/envChecker";
 
 function mapStateToProps(appState) {
   return {
-    homeState: appState.home,
+    homeState: appState.home
   };
 }
 
@@ -41,7 +41,7 @@ class HomeContainer extends React.PureComponent {
       whatPassed: false,
       visionPassed: false,
       workPassed: false,
-      pressPassed: false,
+      pressPassed: false
     };
 
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
@@ -81,7 +81,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                mainPassed: true,
+                mainPassed: true
               });
             }
           }}
@@ -100,7 +100,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                productPassed: true,
+                productPassed: true
               });
             }
           }}
@@ -114,7 +114,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                problemPassed: true,
+                problemPassed: true
               });
             }
           }}
@@ -128,7 +128,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                whatPassed: true,
+                whatPassed: true
               });
             }
           }}
@@ -142,7 +142,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                visionPassed: true,
+                visionPassed: true
               });
             }
           }}
@@ -156,7 +156,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                workPassed: true,
+                workPassed: true
               });
             }
           }}
@@ -170,7 +170,7 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                pressPassed: true,
+                pressPassed: true
               });
             }
           }}
@@ -193,7 +193,9 @@ class HomeContainer extends React.PureComponent {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
       const mainHeight = window.innerWidth > 768 ? 800 : 568;
-      const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      const top =
+        (document.documentElement && document.documentElement.scrollTop) ||
+        document.body.scrollTop;
 
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
@@ -219,13 +221,15 @@ class HomeContainer extends React.PureComponent {
     } else {
       try {
         await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`,
+          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${
+            emailInput
+          }`
         );
 
         ReactGA.event({
           category: "subscribe",
           action: `subscribe-from-${from}`,
-          label: "subscribe-email",
+          label: "subscribe-email"
         });
 
         alert("You are on the subscribe list now");

@@ -124,7 +124,9 @@
 
     @media (min-width: 768px) {
       &:nth-child(odd) {
-        .stepTitle { white-space: pre; }
+        .stepTitle {
+          white-space: pre;
+        }
       }
 
       &:nth-child(even) {

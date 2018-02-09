@@ -11,13 +11,17 @@ class PressSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      itemShown: false,
+      itemShown: false
     };
   }
   render() {
     const { shown } = this.props;
     return (
-      <section className={`${styles.pressSectionContainer} ${shown ? styles.shown : ""}`}>
+      <section
+        className={`${styles.pressSectionContainer} ${
+          shown ? styles.shown : ""
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>Pluto in the Press</div>
           <div className={styles.pressWrapper}>
@@ -30,17 +34,26 @@ class PressSection extends React.PureComponent {
               </a>
             </div>
             <div className={styles.pressItem}>
-              <a href="https://btcmanager.com/can-blockchain-help-science/" target="_blank">
+              <a
+                href="https://btcmanager.com/can-blockchain-help-science/"
+                target="_blank"
+              >
                 <img src="https://assets.pluto.network/btcmanager.png" />
               </a>
             </div>
             <div className={styles.pressItem}>
-              <a href="https://www.nature.com/articles/d41586-017-08589-4" target="_blank">
+              <a
+                href="https://www.nature.com/articles/d41586-017-08589-4"
+                target="_blank"
+              >
                 <img src="https://assets.pluto.network/nature.png" />
               </a>
             </div>
             <div className={styles.pressItem}>
-              <a href="http://physicstoday.scitation.org/do/10.1063/PT.6.1.20171201a/full/" target="_blank">
+              <a
+                href="http://physicstoday.scitation.org/do/10.1063/PT.6.1.20171201a/full/"
+                target="_blank"
+              >
                 <img src="https://assets.pluto.network/physics-today.png" />
               </a>
             </div>

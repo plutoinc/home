@@ -56,7 +56,8 @@ const ICONS = {
   BREAKDOWN: require("./breakdown.svg"),
   WP_ARROW: require("./wp-arrow.svg"),
   WP_OVAL: require("./wp-oval.svg"),
-
+  WHITE_LOGO: require("./pluto-white-logo.svg"),
+  MAIL: require("./mail.svg"),
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),
   TELEGRAM_ICON: require("./telegram-icon.svg"),

@@ -3,7 +3,7 @@ import { ACTION_TYPES } from "./actions";
 
 export const HOME_INITIAL_STATE = fromJS({
   email: "",
-  isTop: false,
+  isTop: false
 });
 
 export function reducer(state = HOME_INITIAL_STATE, action) {

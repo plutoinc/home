@@ -23,6 +23,7 @@
         "experimentalObjectRestSpread": true
     },
     "rules": {
+        "quotes": ["warn", "double"],
         "semi": [
             2,
             "always"
@@ -44,6 +45,7 @@
         ],
         "class-methods-use-this": 0,
         "react/sort-comp": 0,
+        "react/jsx-no-target-blank": 0,
         "import/first": 0,
         "arrow-parens": 0
     }
