@@ -35,7 +35,8 @@
   padding: 18px 17px 0 17px;
   margin: 0;
   margin-bottom: 12px !important;
-  box-shadow: none !important;
+  border: 0 !important;
+  box-shadow: 0 4.5px 8px 0 rgba(0, 0, 0, 0.1) !important;
 }
 
 .greetingBlock {
@@ -47,10 +48,10 @@
   line-height: 44.4px;
   border-radius: 3.2px;
   background-color: #ffffff;
-  border: solid 1px #d8dde7;
   font-size: 13.5px;
   text-align: center;
   color: #666d7c;
+  box-shadow: 0 4.5px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .dropdownItem {
@@ -58,6 +59,7 @@
   border-bottom : solid 1px #d8dde7;
   text-align: center;
   padding: 12px 0;
+  color: #6096ff;
 
   &:hover {
     text-decoration: none;
@@ -70,7 +72,7 @@
 
 .dropdownHeader {
   font-size: 13.5px;
-  line-height: 1.41;
+  line-height: 1.55;
   text-align: left;
   color: #666d7c;
   padding-bottom: 17.5px;
