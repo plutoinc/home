@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dst && rm -rf tmp && rm -f dst.zip",
+    "precommit": "lint-staged",
     "build": "npm run clean && npm run build:browser && npm run build:server",
     "build:browser": "webpack --config webpack.browser.config.js -p",
     "build:server": "webpack --config webpack.server.config.js -p",
@@ -23,6 +24,9 @@
     "pluto-net",
     "pluto-network"
   ],
+  "lint-staged": {
+    "*.{jsx,scss}": ["prettier --write", "git add"]
+  },
   "author": "Pluto Network",
   "license": "GPL-3.0",
   "bugs": {
@@ -63,10 +67,11 @@
     "eslint-plugin-standard": "^2.3.1",
     "fs-extra": "^3.0.1",
     "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.14.3",
     "isomorphic-style-loader": "^3.0.0",
     "jest": "^20.0.4",
     "json-loader": "^0.5.4",
-    "lint-staged": "^4.0.0",
+    "lint-staged": "^4.3.0",
     "node-sass": "^4.5.3",
     "postcss-flexbugs-fixes": "^3.0.0",
     "postcss-loader": "^2.0.6",
