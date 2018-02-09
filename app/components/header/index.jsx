@@ -12,7 +12,7 @@ class Header extends React.PureComponent {
     super(props);
 
     this.state = {
-      isMenuOpen: false,
+      isMenuOpen: false
     };
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }
@@ -21,16 +21,20 @@ class Header extends React.PureComponent {
     const { isTop } = this.props;
     return (
       <header
-        className={`${styles.headerContainer} ${this.state.isMenuOpen ? styles.isOpen : ""} ${
-          isTop ? styles.transparent : ""
-        }`}
-      >
+        className={`${styles.headerContainer} ${
+          this.state.isMenuOpen ? styles.isOpen : ""
+        } ${isTop ? styles.transparent : ""}`}>
         <div
-          className={`${styles.menuListOverlay} ${this.state.isMenuOpen ? styles.isOpen : ""}`}
+          className={`${styles.menuListOverlay} ${
+            this.state.isMenuOpen ? styles.isOpen : ""
+          }`}
           onClick={this.toggleMobileMenu}
         />
         <div className={`${styles.innerContainer} `}>
-          <Link to="/" className={styles.logoWrapper} onClick={() => trackAction("/", "Header")}>
+          <Link
+            to="/"
+            className={styles.logoWrapper}
+            onClick={() => trackAction("/", "Header")}>
             <Icon icon="LOGO" className={styles.desktopLogo} />
           </Link>
 
@@ -41,22 +45,37 @@ class Header extends React.PureComponent {
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <a onClick={() => trackAndOpenLink("https://medium.com/pluto-network", "Header")} target="_blank">
+              <a
+                onClick={() =>
+                  trackAndOpenLink("https://medium.com/pluto-network", "Header")
+                }
+                target="_blank">
                 Blog
               </a>
             </li>
             <li className={styles.menuItem}>
-              <a onClick={() => trackAndOpenLink("https://github.com/pluto-net", "Header")} target="_blank">
+              <a
+                onClick={() =>
+                  trackAndOpenLink("https://github.com/pluto-net", "Header")
+                }
+                target="_blank">
                 Github
               </a>
             </li>
             <li className={styles.menuItem}>
-              <a onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")} target="_blank">
+              <a
+                onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
+                target="_blank">
                 Whitepaper
               </a>
             </li>
             <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a onClick={() => trackAndOpenLink("https://search.pluto.network", "Header")}>Try Beta</a>
+              <a
+                onClick={() =>
+                  trackAndOpenLink("https://search.pluto.network", "Header")
+                }>
+                Try Beta
+              </a>
             </li>
           </ul>
 

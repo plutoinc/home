@@ -11,7 +11,7 @@ class AnswerSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      selected: 0,
+      selected: 0
     };
 
     this.selectAnswerItem = this.selectAnswerItem.bind(this);

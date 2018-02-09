@@ -25,7 +25,7 @@ $container-width: 1080px;
   }
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -47,5 +47,5 @@ $container-width: 1080px;
 }
 
 :global {
-  @import 'node_modules/react-modal-video/scss/modal-video.scss';
+  @import "node_modules/react-modal-video/scss/modal-video.scss";
 }

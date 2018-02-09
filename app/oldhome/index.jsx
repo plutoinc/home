@@ -15,14 +15,22 @@ import BlogSection from "./components/blogSection";
 import MailSection from "./components/mailSection";
 import Footer from "../components/footer";
 // actions
-import { changeLocale, getMessages } from "../components/connectedIntlProvider/actions";
-import { getRecentBlogPosts, changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
+import {
+  changeLocale,
+  getMessages
+} from "../components/connectedIntlProvider/actions";
+import {
+  getRecentBlogPosts,
+  changeEmailInput,
+  leaveScrollTop,
+  enterScrollTop
+} from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
 
 function mapStateToProps(appState) {
   return {
-    homeState: appState.oldhome,
+    homeState: appState.oldhome
   };
 }
 
@@ -57,11 +65,18 @@ class OldHomeContainer extends React.PureComponent {
   render() {
     const { intl, homeState } = this.props;
 
-    const blogPosts = intl.locale === "en" ? homeState.get("enBlogPosts") : homeState.get("koBlogPosts");
+    const blogPosts =
+      intl.locale === "en"
+        ? homeState.get("enBlogPosts")
+        : homeState.get("koBlogPosts");
 
     return (
       <div>
-        <Navbar handleLocaleChange={this.handleLocaleChange} intl={intl} isTop={homeState.get("isTop")} />
+        <Navbar
+          handleLocaleChange={this.handleLocaleChange}
+          intl={intl}
+          isTop={homeState.get("isTop")}
+        />
         <MainSection
           email={homeState.get("email")}
           subscribeEmail={this.subscribeEmail}
@@ -97,7 +112,9 @@ class OldHomeContainer extends React.PureComponent {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
       const mainHeight = window.innerWidth > 768 ? 700 : 600;
-      const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      const top =
+        (document.documentElement && document.documentElement.scrollTop) ||
+        document.body.scrollTop;
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
       } else {
@@ -122,7 +139,9 @@ class OldHomeContainer extends React.PureComponent {
     } else {
       try {
         await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`,
+          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${
+            emailInput
+          }`
         );
         alert("You are on the subscribe list now");
         dispatch(changeEmailInput(""));

@@ -24,7 +24,7 @@ import EnvChecker from "../helpers/envChecker";
 
 function mapStateToProps(appState) {
   return {
-    homeState: appState.home,
+    homeState: appState.home
   };
 }
 
@@ -41,7 +41,7 @@ class HomeContainer extends React.PureComponent {
       whatPassed: false,
       visionPassed: false,
       workPassed: false,
-      pressPassed: false,
+      pressPassed: false
     };
 
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
@@ -81,11 +81,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                mainPassed: true,
+                mainPassed: true
               });
             }
-          }}
-        >
+          }}>
           <MainSection
             email={homeState.get("email")}
             handleEmailChange={this.handleEmailChange}
@@ -100,11 +99,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                productPassed: true,
+                productPassed: true
               });
             }
-          }}
-        >
+          }}>
           <ProductSection shown={this.state.productPassed} />
         </VisibilitySensor>
 
@@ -114,11 +112,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                problemPassed: true,
+                problemPassed: true
               });
             }
-          }}
-        >
+          }}>
           <ProblemSection shown={this.state.problemPassed} />
         </VisibilitySensor>
 
@@ -128,11 +125,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                whatPassed: true,
+                whatPassed: true
               });
             }
-          }}
-        >
+          }}>
           <WhatSection shown={this.state.whatPassed} />
         </VisibilitySensor>
 
@@ -142,11 +138,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                visionPassed: true,
+                visionPassed: true
               });
             }
-          }}
-        >
+          }}>
           <VisionSection shown={this.state.visionPassed} />
         </VisibilitySensor>
 
@@ -156,11 +151,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                workPassed: true,
+                workPassed: true
               });
             }
-          }}
-        >
+          }}>
           <WorkSection shown={this.state.workPassed} />
         </VisibilitySensor>
 
@@ -170,11 +164,10 @@ class HomeContainer extends React.PureComponent {
           onChange={isVisible => {
             if (isVisible) {
               this.setState({
-                pressPassed: true,
+                pressPassed: true
               });
             }
-          }}
-        >
+          }}>
           <PressSection shown={this.state.pressPassed} />
         </VisibilitySensor>
 
@@ -193,7 +186,9 @@ class HomeContainer extends React.PureComponent {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
       const mainHeight = window.innerWidth > 768 ? 800 : 568;
-      const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      const top =
+        (document.documentElement && document.documentElement.scrollTop) ||
+        document.body.scrollTop;
 
       if (parseInt(top, 10) < mainHeight) {
         dispatch(enterScrollTop());
@@ -219,13 +214,15 @@ class HomeContainer extends React.PureComponent {
     } else {
       try {
         await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`,
+          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${
+            emailInput
+          }`
         );
 
         ReactGA.event({
           category: "subscribe",
           action: `subscribe-from-${from}`,
-          label: "subscribe-email",
+          label: "subscribe-email"
         });
 
         alert("You are on the subscribe list now");

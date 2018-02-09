@@ -6,7 +6,7 @@ export const SUPPORTED_LANGUAGES = ["en", "ko"];
 export const DEFAULT_LANGUAGE = "en";
 
 export const ACTION_TYPES = {
-  CHANGE_LOCALE: "LOCALE.CHANGE_LOCALE",
+  CHANGE_LOCALE: "LOCALE.CHANGE_LOCALE"
 };
 
 const TRANSLATIONS = {};
@@ -42,7 +42,7 @@ export function changeLocale(locale, messages) {
     type: ACTION_TYPES.CHANGE_LOCALE,
     payload: {
       lang: locale,
-      messages,
-    },
+      messages
+    }
   };
 }

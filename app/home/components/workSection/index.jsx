@@ -12,28 +12,33 @@ class WorkSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      itemShown: false,
+      itemShown: false
     };
   }
   render() {
     const { shown } = this.props;
     return (
-      <section className={`${styles.workSectionContainer} ${shown ? styles.shown : ""}`}>
+      <section
+        className={`${styles.workSectionContainer} ${
+          shown ? styles.shown : ""
+        }`}>
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>How Pluto Works</div>
           <div className={styles.titleWrapper}>
-            <div className={styles.title}>Blockchain Technology takes Scholarly Communication to Whole New Level</div>
+            <div className={styles.title}>
+              Blockchain Technology takes Scholarly Communication to Whole New
+              Level
+            </div>
             <div className={styles.whitepaperWrapper}>
               <Icon icon="WP_OVAL" />
               <a
                 onClick={() =>
                   trackAndOpenLink(
                     "https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf",
-                    "WorkSection",
+                    "WorkSection"
                   )
                 }
-                className={styles.wpBtn}
-              >
+                className={styles.wpBtn}>
                 Read White Paper
                 <Icon icon="WP_ARROW" />
               </a>
@@ -45,18 +50,20 @@ class WorkSection extends React.PureComponent {
               <Icon icon="FEATURE_1" />
               <p className={styles.itemTitle}>Contribution & Reputation</p>
               <p className={styles.itemDetail}>
-                Any academic activities on Pluto, including peer-reviews, are transparently recorded on public
-                blockchain ledgers, and depending on the contribution made with them, researchers are compensated with
-                their reputations.
+                Any academic activities on Pluto, including peer-reviews, are
+                transparently recorded on public blockchain ledgers, and
+                depending on the contribution made with them, researchers are
+                compensated with their reputations.
               </p>
             </div>
             <div className={styles.featureItem}>
               <Icon icon="FEATURE_2" />
               <p className={styles.itemTitle}>Decentralized Publishing</p>
               <p className={styles.itemDetail}>
-                Any academic activities on Pluto, including peer-reviews, are transparently recorded on public
-                blockchain ledgers, and depending on the contribution made with them, researchers are compensated with
-                their reputations.
+                Any academic activities on Pluto, including peer-reviews, are
+                transparently recorded on public blockchain ledgers, and
+                depending on the contribution made with them, researchers are
+                compensated with their reputations.
               </p>
             </div>
           </div>

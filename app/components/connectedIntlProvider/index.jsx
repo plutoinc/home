@@ -2,11 +2,19 @@ import React from "react";
 import { connect } from "react-redux";
 import { IntlProvider } from "react-intl";
 import EnvChecker from "../../helpers/envChecker";
-import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE, changeLocale, getMessages, addLocaleDataSet } from "./actions";
+import {
+  SUPPORTED_LANGUAGES,
+  DEFAULT_LANGUAGE,
+  changeLocale,
+  getMessages,
+  addLocaleDataSet
+} from "./actions";
 
 export function localeFinder() {
   if (!EnvChecker.isServer()) {
-    let locale = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+    let locale = navigator.languages
+      ? navigator.languages[0]
+      : navigator.language || navigator.userLanguage;
     locale = locale.split("-")[0];
     if (!SUPPORTED_LANGUAGES.includes(locale)) {
       locale = DEFAULT_LANGUAGE;

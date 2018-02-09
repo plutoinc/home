@@ -2,14 +2,16 @@
   position: fixed;
   bottom: 10%;
   right: 5%;
-  width: 63.5px;
-  height: 63.5px;
+  width: 153.5px;
+  height: 46.5px;
+  border-radius: 45px;
+  background-color: #6096ff;
 }
 
 .dropdownButton {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 45px;
   background-color: #6096ff;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.5) !important;
   cursor: pointer;
@@ -17,6 +19,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
 
   &:active {
     margin-top: 1px;
@@ -26,8 +29,14 @@
 .logoIcon {
   display: inline-block;
   vertical-align: top;
-  width: 19.5px;
-  height: 31.5px;
+  width: 14px;
+  height: 14px;
+  margin-right: 9px;
+
+  svg {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 .dropdownMenuWrapper {
@@ -56,7 +65,7 @@
 
 .dropdownItem {
   display: block;
-  border-bottom : solid 1px #d8dde7;
+  border-bottom: solid 1px #d8dde7;
   text-align: center;
   padding: 12px 0;
   color: #6096ff;
@@ -77,5 +86,5 @@
   color: #666d7c;
   padding-bottom: 17.5px;
   white-space: pre-wrap;
-  border-bottom : solid 1px #d8dde7;
+  border-bottom: solid 1px #d8dde7;
 }

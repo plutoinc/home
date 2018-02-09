@@ -1,5 +1,5 @@
-$navbar-height : 75px;
-$mobile-width : 768px;
+$navbar-height: 75px;
+$mobile-width: 768px;
 
 .navbar {
   position: fixed;
@@ -7,7 +7,7 @@ $mobile-width : 768px;
   z-index: 100;
   width: 100%;
   background-color: #0b1024;
-  transition: background-color 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   .container {
     max-width: 940px;
@@ -27,14 +27,18 @@ $mobile-width : 768px;
 
   &.isMobileOpen {
     .mobileBtn {
-      .mobileIcon { display: none; }
-      .cancelIcon { display: initial; }
+      .mobileIcon {
+        display: none;
+      }
+      .cancelIcon {
+        display: initial;
+      }
     }
     .menuListOverlay {
       visibility: visible;
       opacity: 0.2;
       transition-delay: 0s;
-     }
+    }
   }
 }
 
@@ -50,7 +54,9 @@ $mobile-width : 768px;
     display: none;
   }
 
-  .cancelIcon { display: none; }
+  .cancelIcon {
+    display: none;
+  }
 }
 
 .navbar.transparent {
@@ -66,7 +72,8 @@ $mobile-width : 768px;
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 400ms, opacity 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: visibility 0s linear 400ms,
+    opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menuList {
@@ -97,7 +104,9 @@ $mobile-width : 768px;
     }
   }
 
-  .langItem { display: none; }
+  .langItem {
+    display: none;
+  }
 
   @media (max-width: $mobile-width) {
     background-color: #0b1024;
@@ -107,7 +116,8 @@ $mobile-width : 768px;
 
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s linear 250ms, opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: visibility 0s linear 250ms,
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &.isMobileOpen {
       visibility: visible;
@@ -180,11 +190,15 @@ $mobile-width : 768px;
     }
 
     span {
-      transition: opacity 250ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
       vertical-align: middle;
     }
-    .active { opacity: 1; }
-    .notActive { opacity: 0.6; }
+    .active {
+      opacity: 1;
+    }
+    .notActive {
+      opacity: 0.6;
+    }
   }
 }
 

@@ -12,23 +12,32 @@ class ProblemSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      itemShown: false,
+      itemShown: false
     };
   }
   render() {
     const { shown } = this.props;
     return (
-      <section className={`${styles.problemSectionContainer} ${shown ? styles.shown : ""}`}>
+      <section
+        className={`${styles.problemSectionContainer} ${
+          shown ? styles.shown : ""
+        }`}>
         <div className={styles.innerContainer}>
           <div className={styles.contentsWrapper}>
             <div className={styles.subTitle}>Problem</div>
-            <div className={styles.title}>Academia is Obsessed with Publications</div>
-            <div className={styles.contents}>
-              Scholarly communication is overwhelmed by commercial publishing companies. So is academia with publishing.
-              <br /> <br /> Researchers are under pressure to publish more papers, and more publications means more
-              profits for publishers, rather than genuine sciences.
+            <div className={styles.title}>
+              Academia is Obsessed with Publications
             </div>
-            <button onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS)} className={styles.readMoreButton}>
+            <div className={styles.contents}>
+              Scholarly communication is overwhelmed by commercial publishing
+              companies. So is academia with publishing.
+              <br /> <br /> Researchers are under pressure to publish more
+              papers, and more publications means more profits for publishers,
+              rather than genuine sciences.
+            </div>
+            <button
+              onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS)}
+              className={styles.readMoreButton}>
               Read More
             </button>
           </div>
