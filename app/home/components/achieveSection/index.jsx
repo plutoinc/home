@@ -56,7 +56,8 @@ class AchieveSection extends React.PureComponent {
       <section
         className={`${styles.achieveSectionContainer} ${
           this.props.shown ? styles.shown : ""
-        }`}>
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>WHAT WE ACHIEVE</div>
           <div className={styles.title}>
@@ -70,7 +71,8 @@ class AchieveSection extends React.PureComponent {
                 className={`${styles.achieveItem} ${
                   this.state.activeItem === FIRST_ITEM ? styles.active : ""
                 }`}
-                onMouseOver={() => this.moveToSlide(FIRST_ITEM)}>
+                onMouseOver={() => this.moveToSlide(FIRST_ITEM)}
+              >
                 <p className={styles.itemTitle}>
                   Communication and collaboration <strong>in all phases</strong>{" "}
                   of research
@@ -86,7 +88,8 @@ class AchieveSection extends React.PureComponent {
                 className={`${styles.achieveItem} ${
                   this.state.activeItem === SECOND_ITEM ? styles.active : ""
                 }`}
-                onMouseOver={() => this.moveToSlide(SECOND_ITEM)}>
+                onMouseOver={() => this.moveToSlide(SECOND_ITEM)}
+              >
                 <p className={styles.itemTitle}>
                   <strong>Fair opportunities</strong> for researchers
                 </p>
@@ -101,7 +104,8 @@ class AchieveSection extends React.PureComponent {
                 className={`${styles.achieveItem} ${
                   this.state.activeItem === THIRD_ITEM ? styles.active : ""
                 }`}
-                onMouseOver={() => this.moveToSlide(THIRD_ITEM)}>
+                onMouseOver={() => this.moveToSlide(THIRD_ITEM)}
+              >
                 <p className={styles.itemTitle}>
                   Research for science development,{" "}
                   <strong>not for paper publication</strong>
@@ -119,7 +123,8 @@ class AchieveSection extends React.PureComponent {
                 ref={slider => {
                   this.slider = slider;
                 }}
-                {...settings}>
+                {...settings}
+              >
                 <img
                   src="https://d2vo77dayzjoat.cloudfront.net/mokeup-1@2x.png"
                   alt=""

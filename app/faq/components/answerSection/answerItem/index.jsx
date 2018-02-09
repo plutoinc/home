@@ -9,7 +9,8 @@ const AnswerItem = ({ isOpen, selectAnswerItem, index, question, answer }) => {
       <div className={styles.itemContainer}>
         <div
           className={styles.itemTitle}
-          onClick={() => selectAnswerItem(index)}>
+          onClick={() => selectAnswerItem(index)}
+        >
           {question}
         </div>
         <div className={styles.itemContent}>{answer}</div>

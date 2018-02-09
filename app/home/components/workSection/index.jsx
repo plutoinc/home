@@ -21,7 +21,8 @@ class WorkSection extends React.PureComponent {
       <section
         className={`${styles.workSectionContainer} ${
           shown ? styles.shown : ""
-        }`}>
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>How Pluto Works</div>
           <div className={styles.titleWrapper}>
@@ -38,7 +39,8 @@ class WorkSection extends React.PureComponent {
                     "WorkSection"
                   )
                 }
-                className={styles.wpBtn}>
+                className={styles.wpBtn}
+              >
                 Read White Paper
                 <Icon icon="WP_ARROW" />
               </a>

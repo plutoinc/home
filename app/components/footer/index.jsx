@@ -16,19 +16,22 @@ const Footer = () => {
           <a
             href="https://github.com/pluto-net"
             target="_blank"
-            className={styles.footerIconWrapper}>
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="GITHUB" />
           </a>
           <a
             href="https://twitter.com/pluto_network"
             target="_blank"
-            className={styles.footerIconWrapper}>
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="TWITTER" />
           </a>
           <a
             href="https://medium.com/pluto-network"
             target="_blank"
-            className={styles.footerIconWrapper}>
+            className={styles.footerIconWrapper}
+          >
             <Icon icon="MEDIUM" />
           </a>
         </div>

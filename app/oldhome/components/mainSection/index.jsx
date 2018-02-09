@@ -15,7 +15,8 @@ const MainSection = ({
     className={styles.mainSectionContainer}
     ref={ref => {
       mainRef(ref);
-    }}>
+    }}
+  >
     <div className={styles.mainBackgroundContainer} />
     <div className={`container ${styles.innerContainer}`}>
       <div>
@@ -33,7 +34,8 @@ const MainSection = ({
             <a
               className={styles.menuItem}
               href="https://www.facebook.com/Pluto-263226227503100/"
-              target="_blank">
+              target="_blank"
+            >
               <Icon icon="FACEBOOK_COLOR" />
             </a>
           </li>
@@ -46,7 +48,8 @@ const MainSection = ({
             <a
               className={styles.menuItem}
               href="https://twitter.com/pluto_network"
-              target="_blank">
+              target="_blank"
+            >
               <Icon icon="TWITTER_COLOR" />
             </a>
           </li>
@@ -54,7 +57,8 @@ const MainSection = ({
 
         <form
           onSubmit={subscribeEmail}
-          className={`form-inline ${styles.emailWrapper}`}>
+          className={`form-inline ${styles.emailWrapper}`}
+        >
           <input
             onChange={handleEmailChange}
             placeholder="Enter your email"

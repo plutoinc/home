@@ -20,7 +20,8 @@ class VisionSection extends React.PureComponent {
       <section
         className={`${styles.visionSectionContainer} ${
           shown ? styles.shown : ""
-        }`}>
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>Our Vision</div>
           <div className={styles.title}>

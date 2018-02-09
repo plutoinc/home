@@ -20,7 +20,8 @@ class WhatSection extends React.PureComponent {
       <section
         className={`${styles.whatSectionContainer} ${
           shown ? styles.shown : ""
-        }`}>
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.subTitle}>What Pluto Does</div>
           <div className={styles.title}>

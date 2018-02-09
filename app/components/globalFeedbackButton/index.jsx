@@ -11,11 +11,15 @@ const GlobalFeedbackButton = () => {
           className={`dropdown-toggle ${styles.dropdownButton}`}
           data-toggle="dropdown"
           aria-haspopup="true"
-          aria-expanded="false">
+          aria-expanded="false"
+        >
           <Icon icon="MAIL" className={styles.logoIcon} /> Contact Us
         </div>
         <div
-          className={`dropdown-menu dropdown-menu-right ${styles.dropdownMenuWrapper}`}>
+          className={`dropdown-menu dropdown-menu-right ${
+            styles.dropdownMenuWrapper
+          }`}
+        >
           <div className={styles.greetingBlock}>Hi, There! 👋</div>
           <div className={`${styles.dropdownHeader}`}>
             {`Need help?\nHave any inquiry about us?\nLeave a message or join to chat with us!\nOne of our staff will respond lightning fast.`}
@@ -26,13 +30,15 @@ const GlobalFeedbackButton = () => {
           <a
             className={styles.dropdownItem}
             target="_blank"
-            href="https://goo.gl/forms/K9koaC32cnMi0Ez32">
+            href="https://goo.gl/forms/K9koaC32cnMi0Ez32"
+          >
             Whitepaper Feedback ✍️
           </a>
           <a
             className={styles.dropdownItem}
             target="_blank"
-            href="https://t.me/plutonetwork">
+            href="https://t.me/plutonetwork"
+          >
             Direct Conversation 🗣
           </a>
         </div>

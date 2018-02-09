@@ -84,7 +84,8 @@ class HomeContainer extends React.PureComponent {
                 mainPassed: true
               });
             }
-          }}>
+          }}
+        >
           <MainSection
             email={homeState.get("email")}
             handleEmailChange={this.handleEmailChange}
@@ -102,7 +103,8 @@ class HomeContainer extends React.PureComponent {
                 productPassed: true
               });
             }
-          }}>
+          }}
+        >
           <ProductSection shown={this.state.productPassed} />
         </VisibilitySensor>
 
@@ -115,7 +117,8 @@ class HomeContainer extends React.PureComponent {
                 problemPassed: true
               });
             }
-          }}>
+          }}
+        >
           <ProblemSection shown={this.state.problemPassed} />
         </VisibilitySensor>
 
@@ -128,7 +131,8 @@ class HomeContainer extends React.PureComponent {
                 whatPassed: true
               });
             }
-          }}>
+          }}
+        >
           <WhatSection shown={this.state.whatPassed} />
         </VisibilitySensor>
 
@@ -141,7 +145,8 @@ class HomeContainer extends React.PureComponent {
                 visionPassed: true
               });
             }
-          }}>
+          }}
+        >
           <VisionSection shown={this.state.visionPassed} />
         </VisibilitySensor>
 
@@ -154,7 +159,8 @@ class HomeContainer extends React.PureComponent {
                 workPassed: true
               });
             }
-          }}>
+          }}
+        >
           <WorkSection shown={this.state.workPassed} />
         </VisibilitySensor>
 
@@ -167,7 +173,8 @@ class HomeContainer extends React.PureComponent {
                 pressPassed: true
               });
             }
-          }}>
+          }}
+        >
           <PressSection shown={this.state.pressPassed} />
         </VisibilitySensor>
 

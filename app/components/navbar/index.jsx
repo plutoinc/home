@@ -23,7 +23,8 @@ class Navbar extends React.PureComponent {
       <nav
         className={`${styles.navbar} ${isTop ? styles.transparent : ""} ${
           this.state.isMobileOpen ? styles.isMobileOpen : ""
-        }`}>
+        }`}
+      >
         <div
           onClick={() => {
             const curOpen = this.state.isMobileOpen;
@@ -37,14 +38,16 @@ class Navbar extends React.PureComponent {
           <ul
             className={`${styles.menuList} ${
               this.state.isMobileOpen ? styles.isMobileOpen : ""
-            }`}>
+            }`}
+          >
             <li>
               <a
                 style={{ cursor: "pointer" }}
                 data-tip={intl.formatMessage({
                   id: "NAVBAR.whitepaper_tooltip"
                 })}
-                className={styles.menuItem}>
+                className={styles.menuItem}
+              >
                 {intl.formatMessage({ id: "NAVBAR.whitePaper" })}
               </a>
               <ReactTooltip effect="solid" />
@@ -53,7 +56,8 @@ class Navbar extends React.PureComponent {
               <a
                 className={styles.menuItem}
                 href="https://medium.com/pluto-network"
-                target="_blank">
+                target="_blank"
+              >
                 {intl.formatMessage({ id: "NAVBAR.blog" })}
               </a>
             </li>
@@ -61,7 +65,8 @@ class Navbar extends React.PureComponent {
               <a
                 className={styles.menuItem}
                 href="https://github.com/pluto-net"
-                target="_blank">
+                target="_blank"
+              >
                 {intl.formatMessage({ id: "NAVBAR.github" })}
               </a>
             </li>
@@ -80,13 +85,15 @@ class Navbar extends React.PureComponent {
           <ul
             className={`${styles.snsBtnList} ${
               this.state.isMobileOpen ? styles.isMobileOpen : ""
-            }`}>
+            }`}
+          >
             <li className={styles.langItem}>{this.getLocaleButton()}</li>
             <li>
               <a
                 className={styles.menuItem}
                 href="https://www.facebook.com/Pluto-263226227503100/"
-                target="_blank">
+                target="_blank"
+              >
                 <Icon icon="FACEBOOK_COLOR" />
               </a>
             </li>
@@ -99,7 +106,8 @@ class Navbar extends React.PureComponent {
               <a
                 className={styles.menuItem}
                 href="https://twitter.com/pluto_network"
-                target="_blank">
+                target="_blank"
+              >
                 <Icon icon="TWITTER_COLOR" />
               </a>
             </li>
@@ -110,7 +118,8 @@ class Navbar extends React.PureComponent {
             onClick={() => {
               const curOpen = this.state.isMobileOpen;
               this.setState({ isMobileOpen: !curOpen });
-            }}>
+            }}
+          >
             <Icon icon="MOBILE_BTN" className={styles.mobileIcon} />
             <Icon icon="CANCEL" className={styles.cancelIcon} />
           </div>
@@ -129,7 +138,8 @@ class Navbar extends React.PureComponent {
         onClick={() => {
           handleLocaleChange(nextLocale);
         }}
-        className={styles.langBtn}>
+        className={styles.langBtn}
+      >
         <span className={curLocale === "en" ? styles.active : styles.notActive}>
           EN
         </span>{" "}

@@ -21,7 +21,8 @@ class ProblemSection extends React.PureComponent {
       <section
         className={`${styles.problemSectionContainer} ${
           shown ? styles.shown : ""
-        }`}>
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.contentsWrapper}>
             <div className={styles.subTitle}>Problem</div>
@@ -37,7 +38,8 @@ class ProblemSection extends React.PureComponent {
             </div>
             <button
               onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS)}
-              className={styles.readMoreButton}>
+              className={styles.readMoreButton}
+            >
               Read More
             </button>
           </div>

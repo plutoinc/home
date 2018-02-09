@@ -16,7 +16,8 @@ const MailSection = ({ intl, email, subscribeEmail, handleEmailChange }) => {
         <div className={styles.emailInputWrapper}>
           <form
             onSubmit={subscribeEmail}
-            className={`form-inline ${styles.emailWrapper}`}>
+            className={`form-inline ${styles.emailWrapper}`}
+          >
             <input
               onChange={handleEmailChange}
               placeholder="Enter your email"

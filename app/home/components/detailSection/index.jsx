@@ -8,7 +8,8 @@ import Icon from "../../../components/icons";
 
 const DetailSection = ({ shown }) => (
   <section
-    className={`${styles.detailSectionContainer} ${shown ? styles.shown : ""}`}>
+    className={`${styles.detailSectionContainer} ${shown ? styles.shown : ""}`}
+  >
     <div className={styles.innerContainer}>
       <div className={styles.titleWrapper}>
         <div className={styles.title}>
@@ -27,7 +28,8 @@ const DetailSection = ({ shown }) => (
           onClick={() =>
             trackAndOpenLink("https://search.pluto.network/", "DetailSection")
           }
-          className={styles.moreDetail}>
+          className={styles.moreDetail}
+        >
           More Detail
           <Icon icon="ARROW_POINT" />
         </a>

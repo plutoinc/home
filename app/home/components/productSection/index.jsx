@@ -20,7 +20,8 @@ class ProductSection extends React.PureComponent {
       <section
         className={`${styles.productSectionContainer} ${
           shown ? styles.shown : ""
-        }`}>
+        }`}
+      >
         <div className={styles.innerContainer}>
           <div className={styles.mokeupContainer}>
             <img src="https://assets.pluto.network/poc-mockup.png" />
@@ -36,7 +37,8 @@ class ProductSection extends React.PureComponent {
 
             <button
               onClick={() => trackAndOpenLink("https://search.pluto.network")}
-              className={styles.getStartedButton}>
+              className={styles.getStartedButton}
+            >
               Try Beta
             </button>
             <div className={styles.oval_1}>

@@ -12,9 +12,8 @@ const MailingSection = ({
   shown
 }) => (
   <section
-    className={`${styles.mailingSectionContainer} ${
-      shown ? styles.shown : ""
-    }`}>
+    className={`${styles.mailingSectionContainer} ${shown ? styles.shown : ""}`}
+  >
     <div className={styles.innerContainer}>
       <div className={styles.ctaWrapper}>
         <Icon icon="LOGO_WHITE" />
@@ -25,7 +24,8 @@ const MailingSection = ({
       <div className={styles.emailFormWrapper}>
         <form
           onSubmit={e => subscribeEmail(e, "MailingSection")}
-          className={styles.emailWrapper}>
+          className={styles.emailWrapper}
+        >
           <input
             onChange={handleEmailChange}
             placeholder="Enter your email"

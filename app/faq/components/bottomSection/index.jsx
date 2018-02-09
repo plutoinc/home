@@ -23,11 +23,13 @@ class BottomSection extends React.PureComponent {
             if (isVisible) {
               this.setState({ shown: true });
             }
-          }}>
+          }}
+        >
           <div
             className={`${styles.innerContainer} ${
               this.state.shown ? styles.shown : ""
-            }`}>
+            }`}
+          >
             <div className={styles.balloonWrapper}>
               <Icon className={styles.balloonIcon} icon="FAQ_BALLOON" />
               <p className={styles.balloonText}>
@@ -45,7 +47,8 @@ class BottomSection extends React.PureComponent {
               onClick={() =>
                 trackAndOpenLink("https://t.me/plutonetwork", "FAQ")
               }
-              className={styles.telegramLink}>
+              className={styles.telegramLink}
+            >
               <Icon icon="TELEGRAM_ICON" />
               Join Pluto Telegram
             </a>

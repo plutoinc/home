@@ -23,7 +23,8 @@ class Header extends React.PureComponent {
       <header
         className={`${styles.headerContainer} ${
           this.state.isMenuOpen ? styles.isOpen : ""
-        } ${isTop ? styles.transparent : ""}`}>
+        } ${isTop ? styles.transparent : ""}`}
+      >
         <div
           className={`${styles.menuListOverlay} ${
             this.state.isMenuOpen ? styles.isOpen : ""
@@ -34,7 +35,8 @@ class Header extends React.PureComponent {
           <Link
             to="/"
             className={styles.logoWrapper}
-            onClick={() => trackAction("/", "Header")}>
+            onClick={() => trackAction("/", "Header")}
+          >
             <Icon icon="LOGO" className={styles.desktopLogo} />
           </Link>
 
@@ -49,7 +51,8 @@ class Header extends React.PureComponent {
                 onClick={() =>
                   trackAndOpenLink("https://medium.com/pluto-network", "Header")
                 }
-                target="_blank">
+                target="_blank"
+              >
                 Blog
               </a>
             </li>
@@ -58,14 +61,16 @@ class Header extends React.PureComponent {
                 onClick={() =>
                   trackAndOpenLink("https://github.com/pluto-net", "Header")
                 }
-                target="_blank">
+                target="_blank"
+              >
                 Github
               </a>
             </li>
             <li className={styles.menuItem}>
               <a
                 onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
-                target="_blank">
+                target="_blank"
+              >
                 Whitepaper
               </a>
             </li>
@@ -73,7 +78,8 @@ class Header extends React.PureComponent {
               <a
                 onClick={() =>
                   trackAndOpenLink("https://search.pluto.network", "Header")
-                }>
+                }
+              >
                 Try Beta
               </a>
             </li>

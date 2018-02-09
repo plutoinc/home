@@ -26,7 +26,8 @@ const blogCards = posts => {
         href={targetUrl}
         key={post.get("id")}
         className={styles.blogCard}
-        target="_blank">
+        target="_blank"
+      >
         <div className={styles.blogImageWrapper}>
           <img
             alt={post.get("title")}
@@ -53,7 +54,8 @@ const BlogSection = ({ posts, intl }) => (
       <a
         className={styles.blogButton}
         href="https://medium.com/pluto-network"
-        target="_blank">
+        target="_blank"
+      >
         {intl.formatMessage({ id: "BlogSection.blogButton" })}
       </a>
     </div>
