@@ -7,6 +7,7 @@ import Icon from "../../../components/icons";
 
 const MailingSection = ({
   email,
+  emailSubscribed,
   subscribeEmail,
   handleEmailChange,
   shown
@@ -21,23 +22,31 @@ const MailingSection = ({
           Join the great Innovation on Science with Pluto
         </div>
       </div>
-      <div className={styles.emailFormWrapper}>
-        <form
-          onSubmit={e => subscribeEmail(e, "MailingSection")}
-          className={styles.emailWrapper}
-        >
-          <input
-            onChange={handleEmailChange}
-            placeholder="Enter your email and subscribe us"
-            className={styles.emailSubmitInput}
-            value={email}
-            type="text"
-          />
-          <button className={styles.emailSubmitButton}>
-            <Icon icon="RIGHT_SIDE_ARROW" />
-          </button>
-        </form>
-      </div>
+
+      {!emailSubscribed && (
+        <div className={styles.emailFormWrapper}>
+          <form
+            onSubmit={e => subscribeEmail(e, "MainSection")}
+            className={styles.emailWrapper}
+          >
+            <input
+              onChange={handleEmailChange}
+              placeholder="Enter your email and subscribe us"
+              className={styles.emailSubmitInput}
+              value={email}
+              type="text"
+            />
+            <button className={styles.emailSubmitButton}>
+              <Icon icon="RIGHT_SIDE_ARROW" />
+            </button>
+          </form>
+        </div>
+      )}
+      {emailSubscribed && (
+        <div className={styles.submittedMessage}>
+          Thank for your subscription!<br /> Pluto will send you important news.
+        </div>
+      )}
     </div>
   </section>
 );

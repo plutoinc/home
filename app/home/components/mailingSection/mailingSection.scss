@@ -79,6 +79,20 @@ $container-width: 1080px;
         }
       }
     }
+    .submittedMessage {
+      width: 332px;
+      height: 69px;
+      border-radius: 120px;
+      background-color: rgba(255, 255, 255, 0.2);
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+      color: #fff;
+      vertical-align: top;
+      display: inline-block;
+      padding-top: 13.5px;
+      font-weight: 300;
+    }
   }
   @media (max-width: 768px) {
     height: 100%;

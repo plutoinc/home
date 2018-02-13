@@ -186,6 +186,7 @@ class HomeContainer extends React.PureComponent {
 
         <MailingSection
           email={homeState.get("email")}
+          emailSubscribed={homeState.get("emailSubscribed")}
           handleEmailChange={this.handleEmailChange}
           subscribeEmail={this.subscribeEmail}
         />
