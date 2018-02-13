@@ -4,7 +4,8 @@ import { fromJS } from "immutable";
 export const ACTION_TYPES = {
   CHANGE_EMAIL_INPUT: "HOME.CHANGE_EMAIL_INPUT",
   ENTER_SCROLL_TOP: "HOME.ENTER_SCROLL_TOP",
-  LEAVE_SCROLL_TOP: "HOME.LEAVE_SCROLL_TOP"
+  LEAVE_SCROLL_TOP: "HOME.LEAVE_SCROLL_TOP",
+  EMAIL_SUBSCRIPBED: "HOME.EMAIL_SUBSCRIPBED"
 };
 
 /**
@@ -28,5 +29,11 @@ export function enterScrollTop() {
 export function leaveScrollTop() {
   return {
     type: ACTION_TYPES.LEAVE_SCROLL_TOP
+  };
+}
+
+export function emailSubscribed() {
+  return {
+    type: ACTION_TYPES.EMAIL_SUBSCRIPBED
   };
 }

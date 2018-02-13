@@ -25,7 +25,10 @@
     "pluto-network"
   ],
   "lint-staged": {
-    "*.{jsx,scss}": ["prettier --write", "git add"]
+    "*.{jsx,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "Pluto Network",
   "license": "GPL-3.0",

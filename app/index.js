@@ -2,12 +2,7 @@ import Immutable from "immutable";
 import React from "react";
 import ReactDom from "react-dom";
 import { applyMiddleware, createStore } from "redux";
-import {
-  Router,
-  createMemoryHistory,
-  browserHistory,
-  hashHistory
-} from "react-router";
+import { Router, createMemoryHistory, browserHistory, hashHistory } from "react-router";
 import { Provider } from "react-redux";
 import ReactGA from "react-ga";
 // server
@@ -47,10 +42,7 @@ if (!EnvChecker.isServer()) {
     const __INITIAL_STATE__ = window.__INITIAL_STATE__;
 
     for (const k in __INITIAL_STATE__) {
-      if (
-        __INITIAL_STATE__.hasOwnProperty(k) &&
-        Immutable.isImmutable(__INITIAL_STATE__[k])
-      ) {
+      if (__INITIAL_STATE__.hasOwnProperty(k) && Immutable.isImmutable(__INITIAL_STATE__[k])) {
         appInitialState[k] = Immutable.fromJS(__INITIAL_STATE__[k]);
       }
     }
@@ -64,11 +56,7 @@ if (!EnvChecker.isServer()) {
 
 let store;
 if (EnvChecker.isServer() || !EnvChecker.isDev()) {
-  store = createStore(
-    rootReducer,
-    AppInitialState,
-    applyMiddleware(routerMid, thunkMiddleware)
-  );
+  store = createStore(rootReducer, AppInitialState, applyMiddleware(routerMid, thunkMiddleware));
 } else {
   const logger = createLogger({
     stateTransformer: state => {
@@ -81,14 +69,10 @@ if (EnvChecker.isServer() || !EnvChecker.isDev()) {
         }
       }
       return newState;
-    }
+    },
   });
 
-  store = createStore(
-    rootReducer,
-    AppInitialState,
-    applyMiddleware(routerMid, thunkMiddleware, logger)
-  );
+  store = createStore(rootReducer, AppInitialState, applyMiddleware(routerMid, thunkMiddleware, logger));
 }
 
 const appHistory = ReactRouterRedux.syncHistoryWithStore(history, store);
@@ -113,15 +97,11 @@ if (!EnvChecker.isServer()) {
     <CssInjector>
       <Provider store={store}>
         <ConnectedIntlProvider>
-          <Router
-            history={appHistory}
-            children={routes}
-            onUpdate={handleLocationUpdate}
-          />
+          <Router history={appHistory} children={routes} onUpdate={handleLocationUpdate} />
         </ConnectedIntlProvider>
       </Provider>
     </CssInjector>,
-    document.getElementById("react-app")
+    document.getElementById("react-app"),
   );
 } else if (EnvChecker.isServer() && process.env.NODE_ENV === "test") {
   serverSideRender("/", "dsf")

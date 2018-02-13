@@ -18,7 +18,12 @@ import WorkSection from "./components/workSection";
 import PressSection from "./components/pressSection";
 import MailingSection from "./components/mailingSection";
 // actions
-import { changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
+import {
+  changeEmailInput,
+  leaveScrollTop,
+  enterScrollTop,
+  emailSubscribed
+} from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
 
@@ -88,6 +93,7 @@ class HomeContainer extends React.PureComponent {
         >
           <MainSection
             email={homeState.get("email")}
+            emailSubscribed={homeState.get("emailSubscribed")}
             handleEmailChange={this.handleEmailChange}
             subscribeEmail={this.subscribeEmail}
             shown={this.state.mainPassed}
@@ -232,7 +238,8 @@ class HomeContainer extends React.PureComponent {
           label: "subscribe-email"
         });
 
-        alert("You are on the subscribe list now");
+        // alert("You are on the subscribe list now");
+        dispatch(emailSubscribed());
         dispatch(changeEmailInput(""));
       } catch (err) {
         alert(`Failed: ${err.response.data.error}`);
