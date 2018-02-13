@@ -28,7 +28,7 @@ const MailingSection = ({
         >
           <input
             onChange={handleEmailChange}
-            placeholder="Enter your email"
+            placeholder="Enter your email and subscribe us"
             className={styles.emailSubmitInput}
             value={email}
             type="text"
