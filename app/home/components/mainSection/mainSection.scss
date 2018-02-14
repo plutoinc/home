@@ -134,7 +134,24 @@ $container-width: 1080px;
   transition: transform 0.8s ease, opacity 0.8s ease;
   transition-delay: 0.5s, 0.5s;
 }
-
+.submittedMessage {
+  width: 332px;
+  height: 69px;
+  border-radius: 120px;
+  background-color: rgba(118, 124, 135, 0.55);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 13.5px;
+  font-weight: 300;
+  margin-bottom: 180px;
+  @media (max-width: 768px) {
+    margin-bottom: 134px;
+  }
+}
 .mainSectionContainer.shown {
   .title,
   .subTitle,
