@@ -22,10 +22,6 @@ $container-width: 1080px;
     svg {
       width: 18px;
     }
-    & > div:not(.backgroundImage) {
-      z-index: 1;
-      position: relative;
-    }
   }
   @media (max-width: 768px) {
     height: 568px;
