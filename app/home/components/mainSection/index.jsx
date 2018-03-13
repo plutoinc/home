@@ -42,6 +42,14 @@ function mailSubscribeCheck(params) {
   }
 }
 
+function scrollDown() {
+  window.scroll({
+    top: 600,
+    left: 0,
+    behavior: "smooth"
+  });
+}
+
 const MainSection = params => {
   const {
     email,
@@ -62,7 +70,12 @@ const MainSection = params => {
           Breaking down barriers in academia
         </div>
         {mailSubscribeCheck(params)}
-        <Icon icon="SCROLL_INDICATOR" />
+        <button
+          onClick={() => scrollDown()}
+          className={styles.scrollDownButton}
+        >
+          <Icon icon="SCROLL_INDICATOR" />
+        </button>
       </div>
     </section>
   );

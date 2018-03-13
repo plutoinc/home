@@ -53,6 +53,14 @@ $container-width: 1080px;
   transition: transform 0.7s ease, opacity 0.7s ease;
 }
 
+.scrollDownButton {
+  background: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
 .subTitle {
   font-size: 20px;
   font-weight: 300;
