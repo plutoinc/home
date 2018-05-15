@@ -6,6 +6,8 @@ import { WHITE_PAPER_ADDRESS } from "../../routes";
 import styles from "./header.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../icons";
+import { HeaderButton } from "../../home/components/commonButton";
+import { PRODUCT_URL } from "../../routes";
 
 class Header extends React.PureComponent {
   constructor(props) {
@@ -74,15 +76,7 @@ class Header extends React.PureComponent {
                 Whitepaper
               </a>
             </li>
-            <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a
-                onClick={() =>
-                  trackAndOpenLink("https://search.pluto.network", "Header")
-                }
-              >
-                Try Beta
-              </a>
-            </li>
+            <HeaderButton url={PRODUCT_URL} text="Try Beta" from="header" />
           </ul>
 
           <div className={styles.mobileBtn} onClick={this.toggleMobileMenu}>

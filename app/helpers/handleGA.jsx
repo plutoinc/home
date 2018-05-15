@@ -9,6 +9,14 @@ export function trackAndOpenLink(url, from) {
   window.open(url, "_blank");
 }
 
+export function trackLink(url, from) {
+  ReactGA.event({
+    category: "link-click",
+    action: `click-from-${from}`,
+    label: url
+  });
+}
+
 export function trackAndOpenLinkInCurrentTab(url, from) {
   ReactGA.event({
     category: "link-click",

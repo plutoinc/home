@@ -5,6 +5,8 @@ import VisibilitySensor from "react-visibility-sensor";
 import styles from "./productSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
+import { DefaultButton } from "../commonButton";
+import { PRODUCT_URL } from "../../../routes";
 
 class ProductSection extends React.PureComponent {
   constructor(props) {
@@ -34,13 +36,11 @@ class ProductSection extends React.PureComponent {
               Discover research papers,<br />
               and put your own review.
             </div>
-
-            <button
-              onClick={() => trackAndOpenLink("https://search.pluto.network")}
-              className={styles.getStartedButton}
-            >
-              Try Beta
-            </button>
+            <DefaultButton
+              url={PRODUCT_URL}
+              text="Try Beta"
+              from="productSection"
+            />
             <div className={styles.oval_1}>
               <Icon icon="WP_OVAL" />
             </div>
