@@ -71,6 +71,35 @@ $container-width: 1080px;
       }
     }
 
+    .demoItem {
+      a {
+        width: 130px;
+        padding: 8px;
+        border: 1px solid #6096ff;
+        border-radius: 100px;
+        color: #6096ff;
+        margin-left: 20px;
+        transition: ease-in-out 0.2s;
+        &:hover {
+          text-decoration: none;
+          background-color: #6096ff;
+          color: #ffffff;
+        }
+      }
+      @media (max-width: 768px) {
+        a {
+          padding: 0px;
+          border: none;
+          border-radius: 0px;
+          margin-left: 0px;
+          &:hover {
+            background-color: #252933;
+            color: #6096ff;
+          }
+        }
+      }
+    }
+
     .langItem {
       svg {
         vertical-align: text-top;
