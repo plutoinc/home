@@ -17,8 +17,10 @@ import VisionSection from "./components/visionSection";
 import WorkSection from "./components/workSection";
 import PressSection from "./components/pressSection";
 import MailingSection from "./components/mailingSection";
+import BlogSection from "./components/blogSection";
 // actions
 import {
+  getRecentBlogPosts,
   changeEmailInput,
   leaveScrollTop,
   enterScrollTop,
@@ -46,7 +48,8 @@ class HomeContainer extends React.PureComponent {
       whatPassed: false,
       visionPassed: false,
       workPassed: false,
-      pressPassed: false
+      pressPassed: false,
+      blogPassed: false
     };
 
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
@@ -58,6 +61,9 @@ class HomeContainer extends React.PureComponent {
   }
 
   componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(getRecentBlogPosts());
+
     if (!EnvChecker.isServer()) {
       window.addEventListener("scroll", this.handleScroll);
     }
@@ -75,6 +81,8 @@ class HomeContainer extends React.PureComponent {
     let innerHeight = 768;
     if (!EnvChecker.isServer()) {
     }
+
+    const blogPosts = homeState.get("blogPosts");
 
     return (
       <section>
@@ -168,6 +176,20 @@ class HomeContainer extends React.PureComponent {
           }}
         >
           <WorkSection shown={this.state.workPassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                blogPassed: true
+              });
+            }
+          }}
+        >
+          <BlogSection posts={blogPosts} shown={this.state.blogPassed} />
         </VisibilitySensor>
 
         <VisibilitySensor

@@ -83,6 +83,7 @@ $container-width: 1080px;
           text-decoration: none;
           background-color: #6096ff;
           color: #ffffff;
+          transition: ease-in-out 0.2s;
         }
       }
       @media (max-width: 768px) {

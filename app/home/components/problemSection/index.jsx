@@ -6,6 +6,7 @@ import { WHITE_PAPER_ADDRESS } from "../../../routes";
 import styles from "./problemSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
+import { DefaultButton } from "../commonButton";
 
 class ProblemSection extends React.PureComponent {
   constructor(props) {
@@ -36,12 +37,11 @@ class ProblemSection extends React.PureComponent {
               papers, and more publications means more profits for publishers,
               rather than genuine sciences.
             </div>
-            <button
-              onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS)}
-              className={styles.readMoreButton}
-            >
-              Read More
-            </button>
+            <DefaultButton
+              url={WHITE_PAPER_ADDRESS}
+              text="Read More"
+              from="problemSection"
+            />
           </div>
           <Icon icon="PROBLEM_ILLUST" />
         </div>

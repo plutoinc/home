@@ -1,6 +1,6 @@
 import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
-import { trackAndOpenLink } from "../../../helpers/handleGA";
+import { trackLink } from "../../../helpers/handleGA";
 import { WHITE_PAPER_ADDRESS } from "../../../routes";
 // styles
 import styles from "./workSection.scss";
@@ -33,12 +33,9 @@ class WorkSection extends React.PureComponent {
             <div className={styles.whitepaperWrapper}>
               <Icon icon="WP_OVAL" />
               <a
-                onClick={() =>
-                  trackAndOpenLink(
-                    "https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf",
-                    "WorkSection"
-                  )
-                }
+                href={WHITE_PAPER_ADDRESS}
+                target="_blank"
+                onClick={() => trackLink(WHITE_PAPER_ADDRESS, "WorkSection")}
                 className={styles.wpBtn}
               >
                 Read White Paper

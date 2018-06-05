@@ -91,19 +91,6 @@ $container-width: 1080px;
   }
 }
 
-.readMoreButton {
-  width: 166px;
-  height: 46px;
-  border-radius: 120px;
-  background-color: #6096ff;
-  color: #ffffff;
-  font-size: 16px;
-  border: none;
-  &:hover {
-    background-color: #82acff;
-  }
-}
-
 .problemSectionContainer.shown {
   .featureWrapper {
     .featureItem {

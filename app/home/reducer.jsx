@@ -25,6 +25,10 @@ export function reducer(state = HOME_INITIAL_STATE, action) {
       return state.set("emailSubscribed", true);
     }
 
+    case ACTION_TYPES.SUCCEEDED_TO_FETCH_BLOG_POSTS: {
+      return state.set("blogPosts", action.payload.posts);
+    }
+
     default:
       return state;
   }

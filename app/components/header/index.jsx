@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import { trackAndOpenLink, trackAction } from "../../helpers/handleGA";
-import { WHITE_PAPER_ADDRESS } from "../../routes";
+import { trackLink, trackAction } from "../../helpers/handleGA";
+import { WHITE_PAPER_ADDRESS, PRODUCT_URL } from "../../routes";
 // styles
 import styles from "./header.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -48,8 +48,9 @@ class Header extends React.PureComponent {
             </li>
             <li className={styles.menuItem}>
               <a
+                href="https://medium.com/pluto-network"
                 onClick={() =>
-                  trackAndOpenLink("https://medium.com/pluto-network", "Header")
+                  trackLink("https://medium.com/pluto-network", "Header")
                 }
                 target="_blank"
               >
@@ -58,8 +59,9 @@ class Header extends React.PureComponent {
             </li>
             <li className={styles.menuItem}>
               <a
+                href="https://github.com/pluto-net"
                 onClick={() =>
-                  trackAndOpenLink("https://github.com/pluto-net", "Header")
+                  trackLink("https://github.com/pluto-net", "Header")
                 }
                 target="_blank"
               >
@@ -68,7 +70,8 @@ class Header extends React.PureComponent {
             </li>
             <li className={styles.menuItem}>
               <a
-                onClick={() => trackAndOpenLink(WHITE_PAPER_ADDRESS, "Header")}
+                href={WHITE_PAPER_ADDRESS}
+                onClick={() => tracknLink(WHITE_PAPER_ADDRESS, "Header")}
                 target="_blank"
               >
                 Whitepaper
@@ -76,9 +79,9 @@ class Header extends React.PureComponent {
             </li>
             <li className={`${styles.menuItem} ${styles.demoItem}`}>
               <a
-                onClick={() =>
-                  trackAndOpenLink("https://search.pluto.network", "Header")
-                }
+                href={PRODUCT_URL}
+                onClick={() => trackLink(PRODUCT_URL, "Header")}
+                target="_blank"
               >
                 Try Beta
               </a>

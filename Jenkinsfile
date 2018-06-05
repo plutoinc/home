@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "Node891"}
+    tools {nodejs "Node810"}
 
     stages {
         stage('Checkout') {

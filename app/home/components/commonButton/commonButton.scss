@@ -1,0 +1,52 @@
+@import "../../../variables";
+
+.defaultButton {
+  display: inline-block;
+  width: 166px;
+  height: 46px;
+  line-height: 46px;
+  background-color: $royal_blue1;
+  font-size: 16px;
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none all;
+
+  &:hover {
+    background-color: $royal_blue2;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.headerButton {
+  display: inline-block;
+  width: 130px;
+  height: 39px;
+  line-height: 39px;
+  border: 1px solid $royal_blue1;
+  font-size: 16px;
+  border-radius: 100px;
+  text-align: center;
+  color: $royal_blue1;
+  text-decoration: none all;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: $royal_blue1;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+}

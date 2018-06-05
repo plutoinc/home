@@ -85,12 +85,12 @@ $container-width: 1080px;
   }
 }
 
-.plutoSection {
-  flex: 0.5 1 0px;
+.productSection {
+  flex: 1 1 0px;
 }
 
 .resourceSection {
-  flex: 1 1 0px;
+  flex: 0.7 1 0px;
   a {
     cursor: pointer;
   }
@@ -125,7 +125,7 @@ $container-width: 1080px;
     flex: 1 100%;
     order: 4;
   }
-  .plutoSection {
+  .productSection {
     flex: 1 auto;
     order: 1;
   }

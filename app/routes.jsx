@@ -12,6 +12,10 @@ import FAQContainer from "./faq";
 export const WHITE_PAPER_ADDRESS =
   "https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf";
 
+export const PRODUCT_URL = "https://scinapse.io";
+
+export const BLOG_URL = "https://medium.com/pluto-network";
+
 class WhitepaperRedirector extends React.Component {
   componentWillMount() {
     if (!EnvChecker.isServer()) {
