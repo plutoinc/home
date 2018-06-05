@@ -14,7 +14,7 @@ const Footer = () => {
         <div className={styles.logoSection}>
           <Icon icon="FOOTER_LOGO" />
           <p>
-            Copyright © 2018 Pluto Network. <br />
+            © Copyright {new Date().getFullYear()} Pluto Network. <br />
             All rights reserved.
           </p>
         </div>

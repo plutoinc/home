@@ -14,6 +14,8 @@ export const WHITE_PAPER_ADDRESS =
 
 export const PRODUCT_URL = "https://scinapse.io";
 
+export const BLOG_URL = "https://medium.com/pluto-network";
+
 class WhitepaperRedirector extends React.Component {
   componentWillMount() {
     if (!EnvChecker.isServer()) {

@@ -79,11 +79,11 @@ $container-width: 1080px;
         border-radius: 100px;
         color: #6096ff;
         margin-left: 20px;
-        transition: ease-in-out 0.2s;
         &:hover {
           text-decoration: none;
           background-color: #6096ff;
           color: #ffffff;
+          transition: ease-in-out 0.2s;
         }
       }
       @media (max-width: 768px) {
