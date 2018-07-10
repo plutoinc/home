@@ -10,7 +10,6 @@ $container-width: 1080px;
     position: absolute;
     img {
       width: 705px;
-      height: 406px;
       float: right;
     }
     @media (max-width: 768px) {
@@ -18,7 +17,6 @@ $container-width: 1080px;
       width: 100%;
       img {
         width: 420px;
-        height: 242px;
       }
     }
   }

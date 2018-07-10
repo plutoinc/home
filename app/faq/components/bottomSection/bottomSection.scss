@@ -89,15 +89,16 @@ $container-width: 1080px;
   margin: 0 auto;
   display: block;
   max-width: 240px;
-  height: 60px;
-  line-height: 60px;
+  height: 54px;
+  line-height: 54px;
   padding: 0 20px;
   border-radius: 50px;
   border: solid 1px #6096ff;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   color: #6096ff;
   margin-top: 50px;
+  font-weight: bold;
   cursor: pointer;
 
   svg {

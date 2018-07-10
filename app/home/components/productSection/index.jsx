@@ -26,19 +26,19 @@ class ProductSection extends React.PureComponent {
       >
         <div className={styles.innerContainer}>
           <div className={styles.mokeupContainer}>
-            <img src="https://assets.pluto.network/poc-mockup.png" />
+            <img src="https://assets.pluto.network/Macbook.png" />
           </div>
           <div className={styles.contentsWrapper}>
             <div className={styles.subTitle}>Product</div>
             <div className={styles.title}>
-              <b>Try Pluto's prototype :</b>
+              <b>Try Scinapse :</b>
               <br />
               Discover research papers,<br />
               and put your own review.
             </div>
             <DefaultButton
               url={PRODUCT_URL}
-              text="Try Beta"
+              text="Get Started"
               from="productSection"
             />
             <div className={styles.oval_1}>

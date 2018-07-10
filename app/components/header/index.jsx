@@ -46,6 +46,17 @@ class Header extends React.PureComponent {
                 FAQ
               </Link>
             </li>
+
+            <li className={styles.menuItem}>
+              <a
+                href={WHITE_PAPER_ADDRESS}
+                onClick={() => tracknLink(WHITE_PAPER_ADDRESS, "Header")}
+                target="_blank"
+              >
+                Whitepaper
+              </a>
+            </li>
+
             <li className={styles.menuItem}>
               <a
                 href="https://medium.com/pluto-network"
@@ -57,6 +68,7 @@ class Header extends React.PureComponent {
                 Blog
               </a>
             </li>
+
             <li className={styles.menuItem}>
               <a
                 href="https://github.com/pluto-net"
@@ -68,22 +80,14 @@ class Header extends React.PureComponent {
                 Github
               </a>
             </li>
-            <li className={styles.menuItem}>
-              <a
-                href={WHITE_PAPER_ADDRESS}
-                onClick={() => tracknLink(WHITE_PAPER_ADDRESS, "Header")}
-                target="_blank"
-              >
-                Whitepaper
-              </a>
-            </li>
+
             <li className={`${styles.menuItem} ${styles.demoItem}`}>
               <a
                 href={PRODUCT_URL}
                 onClick={() => trackLink(PRODUCT_URL, "Header")}
                 target="_blank"
               >
-                Try Beta
+                Our Product
               </a>
             </li>
           </ul>
