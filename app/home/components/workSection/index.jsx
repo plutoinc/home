@@ -59,10 +59,10 @@ class WorkSection extends React.PureComponent {
               <Icon icon="FEATURE_2" />
               <p className={styles.itemTitle}>Decentralized Publishing</p>
               <p className={styles.itemDetail}>
-                Any academic activities on Pluto, including peer-reviews, are
-                transparently recorded on public blockchain ledgers, and
-                depending on the contribution made with them, researchers are
-                compensated with their reputations.
+                The process of publicizing research findings is decentralized on
+                Pluto, including its peer review system. Credits on research
+                works and their copyrights are reserved for the original
+                authors.
               </p>
             </div>
           </div>
