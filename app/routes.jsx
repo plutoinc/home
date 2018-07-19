@@ -10,7 +10,7 @@ import NoPage from "./components/404";
 import FAQContainer from "./faq";
 
 export const WHITE_PAPER_ADDRESS =
-  "https://assets.pluto.network/Pluto_white_paper_v04_180108_2130_BSH.pdf";
+  "https://assets.pluto.network/Pluto_white_paper_v04_180719_1355_BSH.pdf";
 
 export const PRODUCT_URL = "https://scinapse.io";
 
