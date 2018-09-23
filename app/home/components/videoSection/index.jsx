@@ -4,36 +4,46 @@ import ModalVideo from "react-modal-video";
 // styles
 import styles from "./videoSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import Icon from "../../../components/icons";
 
 class VideoSection extends React.PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
+      itemShown: false,
       isVideoOpen: false
     };
     this.openVideoModal = this.openVideoModal.bind(this);
   }
 
   render() {
+    const { shown } = this.props;
     return (
-      <section className={styles.videoSectionContainer}>
+      <section
+        className={`${styles.problemSectionContainer} ${
+          shown ? styles.shown : ""
+        }`}
+      >
         <div className={styles.innerContainer}>
+          <div className={styles.contentsWrapper}>
+            <div className={styles.subTitle}>Video</div>
+            <div className={styles.title}>Introducing Pluto</div>
+            <div className={styles.contents}>
+              Global research environment suffers under a distorted structure.
+              Watch the infographic to see how Pluto's tackling the problems in
+              scholarly communication.
+            </div>
+          </div>
           <ModalVideo
             channel="youtube"
             isOpen={this.state.isVideoOpen}
-            videoId="7wtfhZwyrcc"
+            videoId="t5R94Ah2Wgg"
             onClose={() => this.setState({ isVideoOpen: false })}
           />
-          <div className={styles.videoBtn} onClick={this.openVideoModal}>
-            <img
-              src="https://img.youtube.com/vi/7wtfhZwyrcc/maxresdefault.jpg"
-              alt=""
-            />
-            <span className={styles.playBtn}>
-              <Icon icon="PLAY_BUTTON" />
-            </span>
-          </div>
+          <div
+            className={styles.videoWrapper}
+            onClick={() => this.setState({ isVideoOpen: true })}
+          />
         </div>
       </section>
     );
