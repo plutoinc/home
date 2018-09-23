@@ -1,6 +1,5 @@
 import React from "react";
-import ModalVideo from "react-modal-video";
-
+import { trackAndOpen, trackAndOpenLink } from "../../../helpers/handleGA";
 // styles
 import styles from "./videoSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -10,10 +9,8 @@ class VideoSection extends React.PureComponent {
     super(props);
 
     this.state = {
-      itemShown: false,
-      isVideoOpen: false
+      itemShown: false
     };
-    this.openVideoModal = this.openVideoModal.bind(this);
   }
 
   render() {
@@ -34,23 +31,18 @@ class VideoSection extends React.PureComponent {
               scholarly communication.
             </div>
           </div>
-          <ModalVideo
-            channel="youtube"
-            isOpen={this.state.isVideoOpen}
-            videoId="t5R94Ah2Wgg"
-            onClose={() => this.setState({ isVideoOpen: false })}
-          />
           <div
             className={styles.videoWrapper}
-            onClick={() => this.setState({ isVideoOpen: true })}
+            onClick={() =>
+              trackAndOpenLink(
+                "https://www.youtube.com/watch?v=t5R94Ah2Wgg&feature=youtu.be",
+                "Video"
+              )
+            }
           />
         </div>
       </section>
     );
-  }
-
-  openVideoModal() {
-    this.setState({ isVideoOpen: true });
   }
 }
 
