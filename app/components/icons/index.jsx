@@ -58,6 +58,8 @@ const ICONS = {
   WP_OVAL: require("./wp-oval.svg"),
   WHITE_LOGO: require("./pluto-white-logo.svg"),
   MAIL: require("./mail.svg"),
+  VIDEO_BUTTON: require("./video-button.svg"),
+
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),
   TELEGRAM_ICON: require("./telegram-icon.svg"),

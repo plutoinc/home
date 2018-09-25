@@ -1,46 +1,48 @@
 import React from "react";
-import ModalVideo from "react-modal-video";
-
+import { trackAndOpen, trackAndOpenLink } from "../../../helpers/handleGA";
 // styles
 import styles from "./videoSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import Icon from "../../../components/icons";
 
 class VideoSection extends React.PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
-      isVideoOpen: false
+      itemShown: false
     };
-    this.openVideoModal = this.openVideoModal.bind(this);
   }
 
   render() {
+    const { shown } = this.props;
     return (
-      <section className={styles.videoSectionContainer}>
+      <section
+        className={`${styles.problemSectionContainer} ${
+          shown ? styles.shown : ""
+        }`}
+      >
         <div className={styles.innerContainer}>
-          <ModalVideo
-            channel="youtube"
-            isOpen={this.state.isVideoOpen}
-            videoId="7wtfhZwyrcc"
-            onClose={() => this.setState({ isVideoOpen: false })}
-          />
-          <div className={styles.videoBtn} onClick={this.openVideoModal}>
-            <img
-              src="https://img.youtube.com/vi/7wtfhZwyrcc/maxresdefault.jpg"
-              alt=""
-            />
-            <span className={styles.playBtn}>
-              <Icon icon="PLAY_BUTTON" />
-            </span>
+          <div className={styles.contentsWrapper}>
+            <div className={styles.subTitle}>Video</div>
+            <div className={styles.title}>Introducing Pluto</div>
+            <div className={styles.contents}>
+              Global research environment suffers under a distorted structure.
+              Watch the infographic to see how Pluto's tackling the problems in
+              scholarly communication.
+            </div>
           </div>
+          <div
+            className={styles.videoWrapper}
+            onClick={() =>
+              trackAndOpenLink(
+                "https://www.youtube.com/watch?v=t5R94Ah2Wgg&feature=youtu.be",
+                "Video"
+              )
+            }
+          />
         </div>
       </section>
     );
-  }
-
-  openVideoModal() {
-    this.setState({ isVideoOpen: true });
   }
 }
 

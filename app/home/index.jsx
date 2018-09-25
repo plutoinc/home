@@ -8,16 +8,17 @@ import VisibilitySensor from "react-visibility-sensor";
 import Header from "../components/header";
 import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
-// import VideoSection from "./components/videoSection";
 
 import ProductSection from "./components/productSection";
 import ProblemSection from "./components/problemSection";
+import VideoSection from "./components/videoSection";
 import WhatSection from "./components/whatSection";
 import VisionSection from "./components/visionSection";
 import WorkSection from "./components/workSection";
 import PressSection from "./components/pressSection";
 import MailingSection from "./components/mailingSection";
 import BlogSection from "./components/blogSection";
+
 // actions
 import {
   getRecentBlogPosts,
@@ -45,6 +46,7 @@ class HomeContainer extends React.PureComponent {
       achievePassed: false,
       productPassed: false,
       problemPassed: false,
+      videoPassed: false,
       whatPassed: false,
       visionPassed: false,
       workPassed: false,
@@ -134,6 +136,20 @@ class HomeContainer extends React.PureComponent {
           }}
         >
           <ProblemSection shown={this.state.problemPassed} />
+        </VisibilitySensor>
+
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({
+                videoPassed: true
+              });
+            }
+          }}
+        >
+          <VideoSection shown={this.state.videoPassed} />
         </VisibilitySensor>
 
         <VisibilitySensor
