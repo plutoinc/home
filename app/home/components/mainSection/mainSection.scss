@@ -80,7 +80,6 @@ $container-width: 1080px;
   transform: translateY(30%);
   opacity: 0;
   transition: transform 0.7s ease, opacity 0.7s ease;
-  transition-delay: 0.3s, 0.3s;
 }
 
 .videoButton {
@@ -99,6 +98,11 @@ $container-width: 1080px;
     height: 22px;
     margin-left: 6px;
   }
+
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  transition-delay: 0.7s;
 }
 
 .emailFormWrapper {
@@ -160,7 +164,7 @@ $container-width: 1080px;
   transform: translateY(30%);
   opacity: 0;
   transition: transform 0.8s ease, opacity 0.8s ease;
-  transition-delay: 0.5s, 0.5s;
+  transition-delay: 0.3s, 0.3s;
 }
 
 .submittedMessage {
@@ -183,6 +187,7 @@ $container-width: 1080px;
 }
 
 .mainSectionContainer.shown {
+  .videoButton,
   .title,
   .subTitle,
   .emailFormWrapper,
