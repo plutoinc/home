@@ -70,6 +70,18 @@ const MainSection = params => {
           Breaking down barriers in academia
         </div>
         {mailSubscribeCheck(params)}
+        <div
+          className={styles.videoButton}
+          onClick={() =>
+            trackAndOpenLink(
+              "https://www.youtube.com/watch?v=t5R94Ah2Wgg&feature=youtu.be",
+              "Video"
+            )
+          }
+        >
+          WATCH VIDEO
+          <Icon icon="VIDEO_BUTTON" />
+        </div>
         <button
           onClick={() => scrollDown()}
           className={styles.scrollDownButton}

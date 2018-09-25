@@ -1,5 +1,6 @@
 $header-height: 80px;
 $container-width: 1080px;
+
 .mainSectionContainer {
   padding-top: $header-height;
   height: 600px;
@@ -10,6 +11,7 @@ $container-width: 1080px;
   background-color: #4d525f;
   position: relative;
   max-width: 100%;
+
   .innerContainer {
     max-width: $container-width;
     margin: 0 auto;
@@ -56,6 +58,7 @@ $container-width: 1080px;
 .scrollDownButton {
   background: none;
   border: none;
+
   &:focus {
     outline: none;
   }
@@ -67,6 +70,7 @@ $container-width: 1080px;
   text-align: center;
   color: #bbc2d0;
   margin-bottom: 26px;
+
   @media (max-width: 768px) {
     font-size: 18px;
     line-height: 1.2;
@@ -79,9 +83,27 @@ $container-width: 1080px;
   transition-delay: 0.3s, 0.3s;
 }
 
+.videoButton {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #6096ff;
+  margin-bottom: 160px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    margin-left: 6px;
+  }
+}
+
 .emailFormWrapper {
   max-width: $container-width;
-  margin-bottom: 206px;
+  margin-bottom: 20px;
   border-radius: 120px;
   background-color: #ffffff;
   display: inline-block;
@@ -114,16 +136,18 @@ $container-width: 1080px;
     color: #ffffff;
     transition: background-color 0.25s ease;
     margin-top: 6px;
+
     svg {
       width: 12px;
       margin: 11px;
     }
+
     &:hover {
       background-color: #82acff;
     }
   }
+
   @media (max-width: 768px) {
-    margin-bottom: 160px;
     .emailSubmitInput {
       margin-bottom: 8px;
       width: 271px;
@@ -138,6 +162,7 @@ $container-width: 1080px;
   transition: transform 0.8s ease, opacity 0.8s ease;
   transition-delay: 0.5s, 0.5s;
 }
+
 .submittedMessage {
   width: 332px;
   height: 69px;
@@ -156,6 +181,7 @@ $container-width: 1080px;
     margin-bottom: 134px;
   }
 }
+
 .mainSectionContainer.shown {
   .title,
   .subTitle,
