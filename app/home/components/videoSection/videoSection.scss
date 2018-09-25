@@ -92,6 +92,7 @@ $container-width: 1080px;
   height: 400px;
   position: relative;
   background-repeat: no-repeat;
+  outline-style: unset;
   cursor: pointer;
 
   @media (max-width: 768px) {

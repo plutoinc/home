@@ -1,5 +1,4 @@
 import React from "react";
-import { trackAndOpen, trackAndOpenLink } from "../../../helpers/handleGA";
 // styles
 import styles from "./videoSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -31,15 +30,21 @@ class VideoSection extends React.PureComponent {
               scholarly communication.
             </div>
           </div>
+
           <div
             className={styles.videoWrapper}
-            onClick={() =>
-              trackAndOpenLink(
-                "https://www.youtube.com/watch?v=t5R94Ah2Wgg&feature=youtu.be",
-                "Video"
-              )
-            }
-          />
+            onClick={() => this.setState({ isVideoOpen: true })}
+          >
+            <iframe
+              id="ytplayer"
+              type="text/html"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/t5R94Ah2Wgg?rel=0"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
     );
