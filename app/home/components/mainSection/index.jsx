@@ -73,10 +73,11 @@ const MainSection = params => {
         <div
           className={styles.videoButton}
           onClick={() =>
-            trackAndOpenLink(
-              "https://www.youtube.com/watch?v=t5R94Ah2Wgg&feature=youtu.be",
-              "Video"
-            )
+            window.scroll({
+              top: 1800,
+              left: 0,
+              behavior: "smooth"
+            })
           }
         >
           WATCH VIDEO
