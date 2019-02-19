@@ -4,14 +4,14 @@ provider:
   runtime: nodejs6.10
   environment: ${file(./env/${opt:stage}.yml)}
   iamRoleStatements:
-   - Effect: "Allow"
-     Action:
-       - "s3:*"
-     Resource: "arn:aws:s3:::pluto-home/*"
-   - Effect: Allow
-     Action:
-       - 'cloudwatch:PutMetricData'
-     Resource: '*'
+    - Effect: "Allow"
+      Action:
+        - "s3:*"
+      Resource: "arn:aws:s3:::pluto-home/*"
+    - Effect: Allow
+      Action:
+        - "cloudwatch:PutMetricData"
+      Resource: "*"
 
 package:
   artifact: dst.zip
@@ -49,7 +49,7 @@ resources:
           ViewerCertificate:
             AcmCertificateArn: arn:aws:acm:us-east-1:966390130392:certificate/db902af7-a1ee-40ab-8145-9bd8b786ba39
             SslSupportMethod: sni-only
-          DefaultRootObject: ''
+          DefaultRootObject: ""
           Enabled: true
           DefaultCacheBehavior:
             DefaultTTL: 300
@@ -63,20 +63,23 @@ resources:
               - GET
             ForwardedValues:
               QueryString: true
-              Headers:
-                - original-uri
-                - User-Agent
-                - X-Forwarded-For
             TargetOriginId: "${self:service}-${opt:stage}-api-gateway"
             ViewerProtocolPolicy: redirect-to-https
           Aliases:
             - ${file(./env/${opt:stage}.yml):DNS_ALIAS1}
             - ${file(./env/${opt:stage}.yml):DNS_ALIAS2}
           Origins:
-          - CustomOriginConfig:
-              HTTPSPort: 443
-              OriginProtocolPolicy: https-only
-            DomainName:
-              "Fn::Join": ["", [{"Ref": "ApiGatewayRestApi"}, ".execute-api.${self:provider.region}.amazonaws.com"]]
-            Id: "${self:service}-${opt:stage}-api-gateway"
-            OriginPath: /${opt:stage}/frontRender
+            - CustomOriginConfig:
+                HTTPSPort: 443
+                OriginProtocolPolicy: https-only
+              DomainName:
+                "Fn::Join":
+                  [
+                    "",
+                    [
+                      { "Ref": "ApiGatewayRestApi" },
+                      ".execute-api.${self:provider.region}.amazonaws.com",
+                    ],
+                  ]
+              Id: "${self:service}-${opt:stage}-api-gateway"
+              OriginPath: /${opt:stage}/frontRender
