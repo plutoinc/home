@@ -91,6 +91,9 @@ export async function handler(event, context) {
     const path = event.path;
     const version = fs.readFileSync("./version");
 
+    console.log(event);
+    console.log(event.headers);
+
     const requestPath = path.replace(`/${LAMBDA_FUNCTION_NAME}`, "");
     acceptLanguage.languages(["en-US", "ko-KR"]);
     const userLocale = acceptLanguage.get(event.headers["Accept-Language"]);
