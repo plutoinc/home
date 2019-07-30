@@ -43,52 +43,26 @@ class Header extends React.PureComponent {
           <ul className={styles.menuList}>
             <li className={styles.menuItem}>
               <Link to="/faq" onClick={() => trackAction("/faq", "Header")}>
-                FAQ
+                Product
               </Link>
             </li>
 
             <li className={styles.menuItem}>
-              <a
-                href={WHITE_PAPER_ADDRESS}
-                onClick={() => tracknLink(WHITE_PAPER_ADDRESS, "Header")}
-                target="_blank"
-              >
-                Whitepaper
-              </a>
+              <Link to="/faq" onClick={() => trackAction("/faq", "Header")}>
+                Solution
+              </Link>
             </li>
 
             <li className={styles.menuItem}>
-              <a
-                href="https://medium.com/pluto-network"
-                onClick={() =>
-                  trackLink("https://medium.com/pluto-network", "Header")
-                }
-                target="_blank"
-              >
-                Blog
-              </a>
+              <Link to="/faq" onClick={() => trackAction("/faq", "Header")}>
+                About us
+              </Link>
             </li>
 
             <li className={styles.menuItem}>
-              <a
-                href="https://github.com/pluto-net"
-                onClick={() =>
-                  trackLink("https://github.com/pluto-net", "Header")
-                }
-                target="_blank"
-              >
-                Github
-              </a>
-            </li>
-
-            <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a
-                href={PRODUCT_URL}
-                onClick={() => trackLink(PRODUCT_URL, "Header")}
-                target="_blank"
-              >
-                Our Product
-              </a>
+              <Link to="/faq" onClick={() => trackAction("/faq", "Header")}>
+                Contact us
+              </Link>
             </li>
           </ul>
 

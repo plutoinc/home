@@ -1,26 +1,9 @@
 $icon-font-path: "~bootstrap-styl/fonts/";
 
-@font-face {
-  font-family: AvertaStd;
-  src: url("https://assets.pluto.network/font/avertastdcy-regular-webfont.woff");
-}
-
-@font-face {
-  font-family: AvertaStd;
-  font-weight: bold;
-  src: url("https://assets.pluto.network/font/avertastdcy-semibold-webfont.woff");
-}
-
-@font-face {
-  font-family: AvertaStd;
-  font-weight: lighter;
-  src: url("https://assets.pluto.network/font/avertastdcy-light-webfont.woff");
-}
-
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
 
 * {
-  font-family: "AvertaStd", sans-serif;
+  font-family: "DM Sans", sans-serif;
   box-sizing: border-box;
   min-height: 0;
   min-width: 0;

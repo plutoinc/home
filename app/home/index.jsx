@@ -18,6 +18,7 @@ import WorkSection from "./components/workSection";
 import PressSection from "./components/pressSection";
 import MailingSection from "./components/mailingSection";
 import BlogSection from "./components/blogSection";
+import ServiceInfoSection from "./components/serviceInfoSection";
 
 // actions
 import {
@@ -29,6 +30,9 @@ import {
 } from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
+import SolutionSection from "./components/solutionSection";
+import TeamInfoSection from "./components/teamInfoSection";
+import RepresentSection from "./components/representSection";
 
 function mapStateToProps(appState) {
   return {
@@ -123,90 +127,9 @@ class HomeContainer extends React.PureComponent {
         >
           <ProductSection shown={this.state.productPassed} />
         </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                problemPassed: true
-              });
-            }
-          }}
-        >
-          <ProblemSection shown={this.state.problemPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                videoPassed: true
-              });
-            }
-          }}
-        >
-          <VideoSection shown={this.state.videoPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                whatPassed: true
-              });
-            }
-          }}
-        >
-          <WhatSection shown={this.state.whatPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                visionPassed: true
-              });
-            }
-          }}
-        >
-          <VisionSection shown={this.state.visionPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                workPassed: true
-              });
-            }
-          }}
-        >
-          <WorkSection shown={this.state.workPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                blogPassed: true
-              });
-            }
-          }}
-        >
-          <BlogSection posts={blogPosts} shown={this.state.blogPassed} />
-        </VisibilitySensor>
+        <ServiceInfoSection />
+        <SolutionSection />
+        <TeamInfoSection />
 
         <VisibilitySensor
           partialVisibility
@@ -221,13 +144,7 @@ class HomeContainer extends React.PureComponent {
         >
           <PressSection shown={this.state.pressPassed} />
         </VisibilitySensor>
-
-        <MailingSection
-          email={homeState.get("email")}
-          emailSubscribed={homeState.get("emailSubscribed")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
+        <RepresentSection />
 
         <Footer />
       </section>
@@ -266,9 +183,7 @@ class HomeContainer extends React.PureComponent {
     } else {
       try {
         await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${
-            emailInput
-          }`
+          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`
         );
 
         ReactGA.event({
