@@ -36,7 +36,8 @@ function mailSubscribeCheck(params) {
   } else {
     return (
       <div className={styles.submittedMessage}>
-        Thank for your subscription!<br /> Pluto will send you important news.
+        Thank for your subscription!
+        <br /> Pluto will send you important news.
       </div>
     );
   }
@@ -44,7 +45,7 @@ function mailSubscribeCheck(params) {
 
 function scrollDown() {
   window.scroll({
-    top: 600,
+    top: 650,
     left: 0,
     behavior: "smooth"
   });
@@ -63,33 +64,14 @@ const MainSection = params => {
       className={`${styles.mainSectionContainer} ${shown ? styles.shown : ""}`}
     >
       <div className={styles.innerContainer}>
-        <div className={styles.title}>
-          Decentralized <br /> Scholarly Communication
-        </div>
+        <div className={styles.title}>Rediscover knowledge</div>
         <div className={styles.subTitle}>
-          Breaking down barriers in academia
+          Pluto, where new research begins...
         </div>
-        {mailSubscribeCheck(params)}
-        <div
-          className={styles.videoButton}
-          onClick={() =>
-            window.scroll({
-              top: 1800,
-              left: 0,
-              behavior: "smooth"
-            })
-          }
-        >
-          WATCH VIDEO
-          <Icon icon="VIDEO_BUTTON" />
-        </div>
-        <button
-          onClick={() => scrollDown()}
-          className={styles.scrollDownButton}
-        >
-          <Icon icon="SCROLL_INDICATOR" />
-        </button>
       </div>
+      <button onClick={() => scrollDown()} className={styles.scrollDownButton}>
+        <Icon icon="SCROLL_INDICATOR" className={styles.scrollDownButtonIcon} />
+      </button>
     </section>
   );
 };

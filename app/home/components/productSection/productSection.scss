@@ -3,14 +3,14 @@ $container-width: 1080px;
 .productSectionContainer {
   padding-top: 113px;
   background-color: #f5f7fb;
-  height: 600px;
+  background-image: url("https://assets.pluto.network/pluto_team_hompage/descript-section-background.png");
+  height: 650px;
 
   .mokeupContainer {
-    max-width: 530px;
-    position: absolute;
+    margin-top: 52px;
+
     img {
-      width: 705px;
-      float: right;
+      width: 678px;
     }
     @media (max-width: 768px) {
       margin-top: 320px;
@@ -28,46 +28,8 @@ $container-width: 1080px;
     display: flex;
     .contentsWrapper {
       max-width: 530px;
-      margin-left: auto;
-      margin-right: 0;
       margin-top: 50px;
       position: relative;
-      .oval_1 {
-        position: absolute;
-        top: -48px;
-        left: 229px;
-        svg {
-          width: 44px;
-        }
-        transform: translateY(30%);
-        opacity: 0;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        transition-delay: 0.4s, 0.4s;
-      }
-      .oval_2 {
-        position: absolute;
-        top: -5px;
-        left: 276px;
-        svg {
-          width: 160px;
-        }
-        transform: translateY(30%);
-        opacity: 0;
-        transition: transform 0.8s ease, opacity 0.8s ease;
-        transition-delay: 0.5s, 0.5s;
-      }
-      .oval_3 {
-        position: absolute;
-        top: 300px;
-        left: 149px;
-        svg {
-          width: 22px;
-        }
-        transform: translateY(30%);
-        opacity: 0;
-        transition: transform 0.9s ease, opacity 0.9s ease;
-        transition-delay: 0.8s, 0.8s;
-      }
     }
   }
   @media (max-width: 768px) {
@@ -80,38 +42,18 @@ $container-width: 1080px;
       .contentsWrapper {
         margin-top: 30px;
         margin-left: 0px;
-        .oval_1 {
-          top: 0px;
-          left: 160px;
-          svg {
-            width: 40px;
-          }
-        }
-        .oval_2 {
-          top: 40px;
-          left: 240px;
-          svg {
-            width: 130px;
-          }
-        }
-        .oval_3 {
-          top: 200px;
-          left: 190px;
-          svg {
-            width: 16px;
-          }
-        }
       }
     }
   }
 }
 
 .subTitle {
-  text-align: left;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #3e7fff;
-  width: 530px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 3.75;
+  letter-spacing: 1.31px;
+  color: #5b83ee;
 
   @media (max-width: 768px) {
     font-size: 18px;
@@ -122,18 +64,11 @@ $container-width: 1080px;
 }
 
 .title {
+  margin: 6px 0 24px 0;
   font-size: 36px;
-  line-height: 1.11;
-  text-align: left;
-  color: #0c1020;
-  margin-top: 24px;
-  font-weight: 300;
-  margin-bottom: 40px;
-  width: 530px;
-
-  strong {
-    font-weight: 700;
-  }
+  font-weight: bold;
+  line-height: 1.39;
+  color: #062e4e;
 
   @media (max-width: 768px) {
     font-size: 28px;
@@ -141,6 +76,13 @@ $container-width: 1080px;
     text-align: left;
     width: 100%;
   }
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #667997;
+  margin-bottom: 48px;
 }
 
 .contents {
@@ -182,5 +124,34 @@ $container-width: 1080px;
         opacity: 1;
       }
     }
+  }
+}
+
+.learnMoreButton {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5b83ee;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.forwardArrowIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  transform: rotateY(180deg);
+
+  svg {
+    width: 16px;
+    height: 16px;
   }
 }

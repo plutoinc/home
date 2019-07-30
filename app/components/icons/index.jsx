@@ -59,10 +59,12 @@ const ICONS = {
   WHITE_LOGO: require("./pluto-white-logo.svg"),
   MAIL: require("./mail.svg"),
   VIDEO_BUTTON: require("./video-button.svg"),
+  ARROW_FORWARD: require("./arrow-forward.svg"),
 
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),
   TELEGRAM_ICON: require("./telegram-icon.svg"),
+
 };
 
 class Icon extends React.PureComponent {
