@@ -14,31 +14,40 @@ class DesignedForResearcherSection extends React.PureComponent {
   }
 
   render() {
+    const { featureStep } = this.state;
     return (
       <section className={styles.designedForResearcherSectionContainer}>
         <div className={styles.innerContainer}>
           <div className={styles.title}>Designed for Researchers</div>
           <div className={styles.tab}>
             <div
-              className={styles.tabItem}
+              className={`${styles.tabItem} ${
+                featureStep === "filter" ? styles.active : ""
+              }`}
               onClick={() => this.onClickTab("filter")}
             >
               Customized Filters
             </div>
             <div
-              className={styles.tabItem}
+              className={`${styles.tabItem} ${
+                featureStep === "collection" ? styles.active : ""
+              }`}
               onClick={() => this.onClickTab("collection")}
             >
               Collections
             </div>
             <div
-              className={styles.tabItem}
+              className={`${styles.tabItem} ${
+                featureStep === "recommendation" ? styles.active : ""
+              }`}
               onClick={() => this.onClickTab("recommendation")}
             >
               Recommendation
             </div>
             <div
-              className={styles.tabItem}
+              className={`${styles.tabItem} ${
+                featureStep === "paperRequest" ? styles.active : ""
+              }`}
               onClick={() => this.onClickTab("paperRequest")}
             >
               Paper Requests

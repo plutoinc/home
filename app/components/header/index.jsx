@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import { trackLink, trackAction } from "../../helpers/handleGA";
-import { WHITE_PAPER_ADDRESS, PRODUCT_URL } from "../../routes";
+import { trackAction } from "../../helpers/handleGA";
 // styles
 import styles from "./header.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -12,7 +11,8 @@ class Header extends React.PureComponent {
     super(props);
 
     this.state = {
-      isMenuOpen: false
+      isMenuOpen: false,
+      currentCategory: ""
     };
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }

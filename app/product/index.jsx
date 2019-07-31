@@ -6,6 +6,7 @@ import KeyInfoSection from "./component/keyInfoSection";
 import ChartInfoSection from "./component/chartInfoSection";
 import ScinapseFeatureInfoSection from "./component/scinapseFeatureInfoSection";
 import DesignedForResearcherSection from "./component/designedForResearcherSection";
+import RepresentSection from "../home/components/representSection";
 
 const ProductContainer = () => {
   return (
@@ -15,6 +16,7 @@ const ProductContainer = () => {
       <ChartInfoSection />
       <ScinapseFeatureInfoSection />
       <DesignedForResearcherSection />
+      <RepresentSection />
       <Footer />
     </section>
   );

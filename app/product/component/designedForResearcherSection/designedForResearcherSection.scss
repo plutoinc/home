@@ -17,7 +17,6 @@
 }
 
 .tab {
-  border-bottom: solid 1px #e9edf1;
   padding: 0 24px;
   display: flex;
   max-width: 978px;
@@ -32,14 +31,18 @@
 
 .tabItem {
   cursor: pointer;
+  border-bottom: 1px solid #e9edf1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  &:hover {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 2.22;
-    color: #5b83ee;
-    border-bottom: 4px solid #5b83ee;
-  }
+.tabItem.active {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2.22;
+  color: #5b83ee;
+  border-bottom: 4px solid #5b83ee;
 }
 
 .featureWrapper {
