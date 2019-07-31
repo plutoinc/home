@@ -73,7 +73,7 @@ const ICONS = {
   NO_MORE_BUNDLING: require("./no-more-bundling.svg"),
   KNOW_YOUR_RESEARCHER: require("./know-your-researcher.svg"),
   INTUITIVE: require("./intuitive.svg"),
-
+  CHECK_ICON: require("./check-icon.svg"),
 
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),
