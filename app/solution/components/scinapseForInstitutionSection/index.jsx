@@ -24,6 +24,9 @@ const ScinapseForInstitutionSection = () => {
             <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
           </a>
         </div>
+        <div className={styles.rightBox}>
+          <img src="https://assets.pluto.network/pluto_team_hompage/solution%403x.png" />
+        </div>
       </div>
     </section>
   );

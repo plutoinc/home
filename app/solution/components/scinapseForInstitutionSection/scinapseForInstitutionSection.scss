@@ -6,8 +6,9 @@
 }
 
 .innerContainer {
-  max-width: 1024px;
+  max-width: 1080px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -68,5 +69,14 @@
   svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+.rightBox {
+  margin-left: 22px;
+
+  img {
+    width: 477px;
+    height: 462px;
   }
 }
