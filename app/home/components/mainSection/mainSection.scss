@@ -3,9 +3,9 @@ $container-width: 1080px;
 
 .mainSectionContainer {
   padding-top: $header-height;
-  height: 650px;
+  height: 844px;
   overflow: hidden;
-  // background-image: url("https://assets.pluto.network/background%402x.jpg");
+  background-image: url("https://assets.pluto.network/pluto_team_hompage/home-background%403x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
@@ -16,7 +16,7 @@ $container-width: 1080px;
     max-width: $container-width;
     margin: 0 auto;
     position: relative;
-    margin-top: 127px;
+    margin-top: 82px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@ $container-width: 1080px;
 .title {
   font-size: 48px;
   font-weight: 500;
-  color: #062e4e;
+  color: #1b3e9a;
   margin-bottom: 8px;
 
   @media (max-width: 768px) {
@@ -74,7 +74,7 @@ $container-width: 1080px;
 
 .subTitle {
   font-size: 24px;
-  color: #062e4e;
+  color: #1b3e9a;
 
   @media (max-width: 768px) {
     font-size: 18px;

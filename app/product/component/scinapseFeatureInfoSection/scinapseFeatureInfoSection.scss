@@ -23,3 +23,55 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.68);
 }
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabWrapper {
+  margin-top: 40px;
+}
+
+.active {
+  border-radius: 8px;
+  background-color: #456eda;
+  color: white;
+}
+
+.tabItem {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+
+  &:hover {
+    @extend .active;
+    transition: ease-in-out 0.2s;
+  }
+
+  & + & {
+    margin-top: 4px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  margin-top: 80px;
+}
+
+.paperItemImg {
+  width: 894px;
+  height: 414px;
+}
+
+.focusedImg {
+  width: 778px;
+  height: 300px;
+  position: absolute;
+  top: 39px;
+  left: 58px;
+}

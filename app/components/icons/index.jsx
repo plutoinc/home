@@ -74,6 +74,7 @@ const ICONS = {
   KNOW_YOUR_RESEARCHER: require("./know-your-researcher.svg"),
   INTUITIVE: require("./intuitive.svg"),
   CHECK_ICON: require("./check-icon.svg"),
+  PLUTO_NEW_LOGO: require('./pluto-new-logo.svg'),
 
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),

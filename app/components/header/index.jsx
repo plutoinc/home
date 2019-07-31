@@ -37,7 +37,7 @@ class Header extends React.PureComponent {
             className={styles.logoWrapper}
             onClick={() => trackAction("/", "Header")}
           >
-            <Icon icon="LOGO" className={styles.desktopLogo} />
+            <Icon icon="PLUTO_NEW_LOGO" className={styles.desktopLogo} />
           </Link>
 
           <ul className={styles.menuList}>

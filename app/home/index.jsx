@@ -105,13 +105,7 @@ class HomeContainer extends React.PureComponent {
             }
           }}
         >
-          <MainSection
-            email={homeState.get("email")}
-            emailSubscribed={homeState.get("emailSubscribed")}
-            handleEmailChange={this.handleEmailChange}
-            subscribeEmail={this.subscribeEmail}
-            shown={this.state.mainPassed}
-          />
+          <MainSection shown={this.state.mainPassed} />
         </VisibilitySensor>
 
         <VisibilitySensor
