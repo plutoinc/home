@@ -1,0 +1,75 @@
+.compareChartSectionContainer {
+  height: 880px;
+  padding: 38px 0;
+  margin: 0 auto;
+  background-color: #f5f6fa;
+}
+
+.innerContainer {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subTitle {
+  height: 60px;
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 3.75;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #5b83ee;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.56;
+  text-align: center;
+  color: #062e4e;
+  margin-bottom: 20px;
+}
+
+.contentDivider {
+  width: 40px;
+  height: 2px;
+  background-color: #6096ff;
+  margin: 0 auto;
+}
+
+.chartContainer {
+  position: relative;
+}
+
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+
+  img {
+    width: 978px;
+    height: 609px;
+    object-fit: contain;
+  }
+}
+
+.focusArea {
+  width: 944px;
+  height: 85px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  border: solid 4px #5b83ee;
+  background-color: rgba(91, 131, 238, 0.05);
+}
+
+.smallContext {
+  width: 944px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #8c9fbf;
+  margin: 0 auto;
+}
