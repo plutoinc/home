@@ -1,0 +1,76 @@
+.innerContainer {
+  background-color: #062e4e;
+  padding: 72px 0;
+  margin: 0 auto;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: white;
+}
+
+.subTitle {
+  margin-left: 100px;
+  width: 578px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+}
+
+.graphContent {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+
+  img {
+    width: 578px;
+    height: 330px;
+  }
+}
+
+.graphDescription {
+  color: white;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+
+  & + & {
+    margin-top: 80px;
+  }
+
+  .magnification {
+    width: 120px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 2.25px;
+  }
+
+  .subDesc {
+    width: 370px;
+    margin-left: 8px;
+    font-size: 16px;
+  }
+}
+
+.bottomDesc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: center;
+  margin-top: 42px;
+  color: rgba(255, 255, 255, 0.86);
+}

@@ -1,9 +1,26 @@
 $icon-font-path: "~bootstrap-styl/fonts/";
 
-@import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+
+@font-face {
+  font-family: DMSans;
+  src: url("https://assets.pluto.network/font/DMSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: DMSans;
+  font-weight: 700;
+  src: url("https://assets.pluto.network/font/DMSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: DMSans;
+  font-weight: 500;
+  src: url("https://assets.pluto.network/font/DMSans-Medium.ttf");
+}
 
 * {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DMSans", sans-serif;
   box-sizing: border-box;
   min-height: 0;
   min-width: 0;

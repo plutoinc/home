@@ -1,0 +1,77 @@
+.designedForResearcherSectionContainer {
+  height: 720px;
+}
+
+.innerContainer {
+  background-color: white;
+  padding: 72px 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.88;
+  margin-bottom: 48px;
+  text-align: center;
+  color: #062e4e;
+}
+
+.tab {
+  border-bottom: solid 1px #e9edf1;
+  padding: 0 24px;
+  display: flex;
+  max-width: 978px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2.22;
+  color: rgba(6, 46, 78, 0.4);
+}
+
+.tabItem {
+  cursor: pointer;
+
+  &:hover {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.22;
+    color: #5b83ee;
+    border-bottom: 4px solid #5b83ee;
+  }
+}
+
+.featureWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .contentsWrapper {
+    margin-top: 60px;
+  }
+
+  .featureTitle {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: -0.89px;
+    color: #062e4e;
+    margin-bottom: 24px;
+  }
+
+  .featureDesc {
+    max-width: 378px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #5e7598;
+  }
+
+  img {
+    width: 578px;
+    height: 410px;
+    object-fit: contain;
+    margin-left: 20px;
+  }
+}
