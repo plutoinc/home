@@ -156,3 +156,45 @@
     }
   }
 }
+
+@media (max-width: 1080px) {
+  .bottomContainer {
+    display: block;
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    width: 100%;
+  }
+
+  .leftBox {
+    margin-top: 0;
+  }
+
+  .rightBox {
+    margin-top: 0;
+  }
+
+  .bottomContainer {
+    display: block;
+    width: 100%;
+    padding: 40px 32px 58px 32px;
+
+    .bottomSubtitle {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.71;
+      color: #062e4e;
+    }
+
+    .bottomTitle {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.71;
+      color: #062e4e;
+    }
+  }
+}
