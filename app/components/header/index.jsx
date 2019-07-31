@@ -51,7 +51,10 @@ class Header extends React.PureComponent {
             </li>
 
             <li className={styles.menuItem}>
-              <Link to="/faq" onClick={() => trackAction("/faq", "Header")}>
+              <Link
+                to="/solution"
+                onClick={() => trackAction("/faq", "Header")}
+              >
                 Solution
               </Link>
             </li>
