@@ -60,6 +60,7 @@ const ICONS = {
   MAIL: require("./mail.svg"),
   VIDEO_BUTTON: require("./video-button.svg"),
   ARROW_FORWARD: require("./arrow-forward.svg"),
+  CHECK_ICON: require("./check-icon.svg"),
 
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),

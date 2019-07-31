@@ -1,0 +1,158 @@
+%base-label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.47px;
+  color: #7e8698;
+}
+
+%base-input {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  border: solid 1px #d8dde7;
+  padding: 10px 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.23px;
+  color: #7e8698;
+
+  &.hasError {
+    border-color: #e22319;
+  }
+}
+
+%base-check-icon {
+  display: flex;
+  align-items: center;
+  width: 22px;
+  height: 40px;
+
+  svg {
+    width: 22px;
+    height: 16px;
+  }
+}
+
+%base-submit-button {
+  font-family: DMSans;
+  padding: 10px 18px;
+  border-radius: 4px;
+  background-color: #5b83ee;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #456eda;
+  }
+}
+
+%base-error-msg {
+  font-size: 13px;
+  color: #e22319;
+  margin-top: 2px;
+}
+
+.pageWrapper {
+  background-color: #f5f6fa;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 185px 0 113px 0;
+  max-width: 1080px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: normal;
+  color: #5b83ee;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.greeting {
+  font-size: 24px;
+  line-height: 1.67;
+  text-align: center;
+  color: #8c9fbf;
+  margin-bottom: 105px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & + & {
+    margin-top: 133px;
+  }
+}
+
+.formTitle {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #062e4e;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.bottomSection {
+  background-color: white;
+  padding-bottom: 56px;
+}
+
+.bottomContainer {
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+
+  .bottomSubtitle {
+    font-size: 28px;
+    line-height: 1.43;
+    color: #062e4e;
+  }
+
+  .bottomTitle {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 2;
+    color: #062e4e;
+  }
+
+  .leftBox {
+    margin-top: 54px;
+  }
+
+  .rightBox {
+    margin-top: 82px;
+  }
+
+  .scinapseLink {
+    border-radius: 4px;
+    background-color: #5b83ee;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #456eda;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      filter: saturate(150%);
+    }
+  }
+}

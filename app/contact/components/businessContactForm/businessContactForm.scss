@@ -1,0 +1,131 @@
+@import "../../contact";
+
+$information-section-padding: 64px;
+
+.componentWrapper {
+  display: flex;
+  border-radius: 8px;
+}
+
+.informationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 478px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #5b83ee;
+  padding: $information-section-padding $information-section-padding 32px;
+  color: white;
+}
+
+.title {
+  font-family: DMSans;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.43;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.featureListWrapper {
+  padding: 0;
+  margin: 0 0 8px 0;
+  list-style: none;
+}
+
+.featureListItem {
+  display: inline-block;
+  vertical-align: top;
+  font-family: DMSans;
+  height: 40px;
+  font-size: 18px;
+  line-height: 2.22;
+  color: white;
+  margin-left: 16px;
+}
+
+.formLabel {
+  @extend %base-label;
+  margin-bottom: 8px;
+}
+
+.nameWrapper {
+  display: flex;
+}
+
+.inputWrapper {
+  & + & {
+    margin-top: 28px;
+  }
+}
+
+.checkIcon {
+  @extend %base-check-icon;
+  color: #48d2a0;
+}
+
+.formInput {
+  @extend %base-input;
+}
+
+.nameControl + .nameControl {
+  margin-left: 16px;
+}
+
+.furtherInformation {
+  font-family: DMSans;
+  font-size: 18px;
+  line-height: 2.22;
+  color: rgba(255, 255, 255, 0.67);
+}
+
+.sendEmail {
+  margin-top: 46px;
+  height: 40px;
+  font-family: DMSans;
+  font-size: 18px;
+  line-height: 2.22;
+  color: white;
+  white-space: pre;
+}
+
+.emailLink {
+  text-decoration: underline;
+  color: white;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 43px 22px 24px 22px;
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.submitBtn {
+  @extend %base-submit-button;
+  margin-top: 25px;
+  width: 106px;
+  align-self: flex-end;
+
+  &:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+}
+
+.textarea {
+  resize: none;
+}
+
+.errorMsg {
+  @extend %base-error-msg;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+}
