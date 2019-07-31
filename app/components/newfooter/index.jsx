@@ -5,10 +5,12 @@ import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../icons";
 
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <footer className={styles.footer}>
       <div className={styles.innerContainer}>
-        <p>© Copyright 2019 Pluto Network. All rights reserved.</p>
+        <p>{`© Copyright ${year} Pluto Inc. All rights reserved.`}</p>
       </div>
     </footer>
   );

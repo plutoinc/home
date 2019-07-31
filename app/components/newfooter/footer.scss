@@ -8,3 +8,12 @@ $container-width: 1080px;
   line-height: 2.44;
   color: #364a6a;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 8px 15px;
+    font-size: 13px;
+    line-height: 1;
+    height: auto;
+  }
+}
