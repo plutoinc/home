@@ -26,6 +26,7 @@ $information-section-padding: 64px;
   line-height: 1.43;
   color: white;
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .featureListWrapper {
@@ -128,4 +129,16 @@ $information-section-padding: 64px;
 .featureItem {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 920px) {
+  .informationSection {
+    display: none;
+  }
+
+  .formWrapper {
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
