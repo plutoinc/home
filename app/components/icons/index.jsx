@@ -60,6 +60,20 @@ const ICONS = {
   MAIL: require("./mail.svg"),
   VIDEO_BUTTON: require("./video-button.svg"),
   ARROW_FORWARD: require("./arrow-forward.svg"),
+  PLUS: require("./plus.svg"),
+  OPTIONS: require("./options.svg"),
+  PIE_CHART: require("./pie-chart.svg"),
+  BAR_CHART: require("./bar-chart.svg"),
+  MESSAGE_SQUARE: require("./message-square.svg"),
+  CLOUD_UPLOAD: require("./cloud-upload.svg"),
+  FILE_TEXT: require("./file-text.svg"),
+  PERSON_DONE: require("./person-done.svg"),
+  TRENDING_DOWN: require("./trending-down.svg"),
+  CREDIT_CARD: require("./credit-card.svg"),
+  NO_MORE_BUNDLING: require("./no-more-bundling.svg"),
+  KNOW_YOUR_RESEARCHER: require("./know-your-researcher.svg"),
+  INTUITIVE: require("./intuitive.svg"),
+
 
   // faq page
   FAQ_BALLOON: require("./faq-balloon.svg"),

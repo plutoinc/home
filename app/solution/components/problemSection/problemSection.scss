@@ -1,0 +1,42 @@
+.problemSectionContainer {
+  height: 720px;
+  padding: 126px 0;
+  margin: 0 auto;
+  background-color: #6e71e4;
+}
+
+.innerContainer {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.leftBox {
+  margin-right: 48px;
+
+  img {
+    width: 450px;
+    height: 449px;
+    object-fit: contain;
+  }
+}
+
+.rightBox {
+  max-width: 478px;
+  width: 100%;
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.39;
+    color: white;
+    margin-bottom: 34px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

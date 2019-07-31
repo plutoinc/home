@@ -1,4 +1,4 @@
-.solutionSectionContainer {
+.scinapseForInstitutionSectionContainer {
   height: 740px;
   padding: 78px 0;
   margin: 0 auto;
@@ -30,61 +30,23 @@
 }
 
 .contents {
-  width: 499px;
+  width: 478px;
   font-size: 20px;
   margin-bottom: 40px;
   color: #667997;
 }
 
-.menuWrapper {
-  display: flex;
-}
-
-.menuItem {
-  width: 478px;
-  height: 190px;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 5px 12px 0 rgba(94, 117, 152, 0.2);
-  background-color: white;
-  display: flex;
-
-  & + & {
-    margin-left: 22px;
-  }
-}
-
-.menuIcon {
-  margin-right: 24px;
-  margin-top: 8px;
-  width: 80px;
-  height: 80px;
-}
-
-.menuContentWrapper {
-  margin-top: -8px;
-}
-
-.menuTitle {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 2.5;
-  color: #062e4e;
-}
-
-.menuContent {
-  font-size: 18px;
-  color: #667997;
-  width: 334px;
-}
-
 .learnMoreButton {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #5b83ee;
   font-size: 18px;
   font-weight: 500;
-  color: #5b83ee;
-  margin-top: 32px;
+  color: white;
   cursor: pointer;
 
   &:hover {

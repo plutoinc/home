@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+    <defs>
+        <rect id="knowYourResearcher" width="95" height="95" rx="20"/>
+        <path id="knowYourResearcherC" d="M12.6 14.667c-3.97 0-7.2-3.29-7.2-7.334S8.63 0 12.6 0s7.2 3.289 7.2 7.333c0 4.045-3.23 7.334-7.2 7.334zM27 18.333c-2.977 0-5.4-2.467-5.4-5.5 0-3.032 2.423-5.5 5.4-5.5 2.977 0 5.4 2.468 5.4 5.5 0 3.033-2.423 5.5-5.4 5.5zm7.2 12.834h-9c0 1.012-.805 1.833-1.8 1.833H1.8C.805 33 0 32.179 0 31.167c0-7.077 5.654-12.834 12.6-12.834 3.469 0 6.611 1.436 8.892 3.751A8.884 8.884 0 0 1 27 20.167c4.963 0 9 4.112 9 9.166 0 1.012-.805 1.834-1.8 1.834z"/>
+        <path id="knowYourResearcherD" d="M29.953.529c.483.376.759.943.759 1.553v18.405c0 .9-.607 1.684-1.477 1.908l-11.91 3.057V2.982L28.252.176c.6-.155 1.216-.02 1.7.354zM14.175 2.982v22.47l-11.91-3.058a1.966 1.966 0 0 1-1.478-1.907V2.083A1.969 1.969 0 0 1 3.242.174l10.934 2.808z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="knowYourResearcherB" fill="#fff">
+            <use xlink:href="#knowYourResearcher"/>
+        </mask>
+        <use fill="#456EDA" xlink:href="#knowYourResearcher"/>
+        <g mask="url(#knowYourResearcherB)">
+            <use fill="#1B3E9A" fill-rule="nonzero" transform="translate(22 23)" xlink:href="#knowYourResearcherC"/>
+            <use fill="#00D2AF" fill-rule="nonzero" transform="translate(42 46)" xlink:href="#knowYourResearcherD"/>
+        </g>
+    </g>
+</svg>
