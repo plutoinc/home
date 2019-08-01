@@ -1,5 +1,5 @@
 .compareChartSectionContainer {
-  height: 880px;
+  max-height: 880px;
   padding: 38px 0;
   margin: 0 auto;
   background-color: #f5f6fa;
@@ -49,7 +49,7 @@
 
   img {
     width: 978px;
-    height: 609px;
+    max-height: 609px;
     object-fit: contain;
   }
 }
@@ -67,9 +67,18 @@
 }
 
 .smallContext {
-  width: 944px;
+  max-width: 944px;
   font-size: 16px;
   line-height: 1.75;
   color: #8c9fbf;
   margin: 0 auto;
+}
+
+@media (max-width: 1080px) {
+  .compareChartSectionContainer {
+    padding: 40px 16px;
+  }
+  .focusArea {
+    display: none;
+  }
 }

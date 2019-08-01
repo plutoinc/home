@@ -52,3 +52,15 @@
   line-height: 1.56;
   color: #364a6a;
 }
+
+@media (max-width: 920px) {
+  .contentWrapper {
+    justify-content: center;
+  }
+
+  .featureItem {
+    & + & {
+      margin-top: 24px;
+    }
+  }
+}

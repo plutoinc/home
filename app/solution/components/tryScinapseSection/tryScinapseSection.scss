@@ -55,3 +55,38 @@
     height: 16px;
   }
 }
+
+@media (max-width: 1080px) {
+  .tryScinapseSectionContainer {
+    display: flex;
+    padding: 62px 32px;
+    align-items: center;
+  }
+
+  .contentsWrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .learnMoreButton {
+    margin: 24px 0 0 0;
+  }
+
+  .title,
+  .subTitle {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.71;
+    color: #062e4e;
+  }
+}
+
+@media (max-width: 920px) {
+  .contents {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.71;
+    color: #062e4e;
+  }
+}

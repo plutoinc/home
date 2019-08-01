@@ -47,3 +47,23 @@
 .numberInfo {
   font-size: 42px;
 }
+
+@media (max-width: 1080px) {
+  .serviceInfoSectionContainer {
+    padding: 84px 0;
+  }
+
+  .serviceInfoWrapper {
+    flex-direction: column;
+  }
+
+  .serviceInfo {
+    & + & {
+      margin-top: 64px;
+    }
+
+    & + &:after {
+      display: none;
+    }
+  }
+}

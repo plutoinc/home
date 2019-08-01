@@ -1,5 +1,5 @@
 .problemSectionContainer {
-  height: 720px;
+  height: 100%;
   padding: 126px 0;
   margin: 0 auto;
   background-color: #6e71e4;
@@ -38,5 +38,31 @@
     font-size: 20px;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media (max-width: 1080px) {
+  .problemSectionContainer {
+    padding: 40px 0;
+  }
+
+  .innerContainer {
+    flex-direction: column-reverse;
+  }
+
+  .contentsWrapper {
+    height: 100%;
+  }
+
+  .rightBox {
+    width: 100%;
+    max-width: unset;
+    padding: 0 16px;
+  }
+
+  .leftBox {
+    text-align: center;
+    margin: 24px 0 0 0;
+    overflow-x: hidden;
   }
 }

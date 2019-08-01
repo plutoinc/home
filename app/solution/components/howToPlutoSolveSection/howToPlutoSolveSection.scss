@@ -39,6 +39,7 @@
 .contentWrapper {
   margin-top: 120px;
 }
+
 .contentTitle {
   position: relative;
 
@@ -170,5 +171,51 @@
       height: 24px;
       color: #5b83ee;
     }
+  }
+}
+
+@media (max-width: 1080px) {
+  .howToPlutoSolveSectionContainer {
+    padding: 40px 16px;
+  }
+
+  .contentTitle {
+    .number {
+      left: -4px;
+    }
+
+    .titleContext {
+      margin-left: 24px;
+    }
+  }
+
+  .firstContent {
+    flex-direction: column;
+  }
+
+  .longBox {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .smallBox {
+    width: 100%;
+
+    & + & {
+      margin: 16px 0 0 0;
+    }
+  }
+
+  .plusIcon {
+    margin: 16px 0;
+  }
+
+  .firstContentDesc {
+    margin: 16px 0 0 0;
+    text-align: center;
+  }
+
+  .cardContents {
+    justify-content: center;
   }
 }

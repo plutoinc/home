@@ -57,3 +57,30 @@ $container-width: 1080px;
     margin-left: 22px;
   }
 }
+
+@media (max-width: 1080px) {
+  .pressSectionContainer {
+    height: 100%;
+    padding: 20px 40px;
+  }
+  .pressWrapper {
+    flex-direction: column;
+  }
+
+  .pressItemWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pressItem {
+    & + & {
+      margin: 16px 0 0 0;
+    }
+  }
+
+  .pressItemContainer {
+    & + & {
+      margin: 32px 0 0 0;
+    }
+  }
+}

@@ -75,3 +75,9 @@
   top: 39px;
   left: 58px;
 }
+
+@media (max-width: 1080px) {
+  .innerContainer {
+    display: none;
+  }
+}

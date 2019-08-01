@@ -12,13 +12,6 @@ $container-width: 1080px;
     img {
       width: 678px;
     }
-    @media (max-width: 768px) {
-      margin-top: 320px;
-      width: 100%;
-      img {
-        width: 420px;
-      }
-    }
   }
 
   .innerContainer {
@@ -32,19 +25,6 @@ $container-width: 1080px;
       width: 100%;
       margin-top: 50px;
       position: relative;
-    }
-  }
-  @media (max-width: 768px) {
-    padding-top: 20px;
-    overflow: hidden;
-    position: relative;
-    .innerContainer {
-      padding-left: 15px;
-      padding-right: 15px;
-      .contentsWrapper {
-        margin-top: 30px;
-        margin-left: 0px;
-      }
     }
   }
 }
@@ -73,7 +53,7 @@ $container-width: 1080px;
   color: #062e4e;
 
   @media (max-width: 768px) {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.3;
     text-align: left;
     width: 100%;
@@ -155,5 +135,35 @@ $container-width: 1080px;
   svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .productSectionContainer {
+    padding: 20px 0;
+    height: 100%;
+
+    .mokeupContainer {
+      overflow-x: hidden;
+      text-align: center;
+    }
+  }
+
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .contentsWrapper {
+    padding: 0 16px;
+    height: 100%;
+  }
+
+  .rightBox {
+    margin: 40px 0 0 0;
+
+    img {
+      max-width: 328px;
+      max-height: 462px;
+    }
   }
 }

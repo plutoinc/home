@@ -1,6 +1,6 @@
 .scinapseForInstitutionSectionContainer {
-  height: 720px;
-  padding: 78px 0;
+  height: 100%;
+  padding: 120px 0;
   margin: 0 auto;
   background-color: #fbfbfd;
 }
@@ -11,6 +11,7 @@
   height: 100%;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .contents {
-  width: 478px;
+  max-width: 478px;
   font-size: 20px;
   margin-bottom: 40px;
   color: #667997;
@@ -77,6 +78,30 @@
 
   img {
     width: 477px;
-    height: 462px;
+    max-height: 462px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1080px) {
+  .scinapseForInstitutionSectionContainer {
+    padding: 80px 16px 40px 16px;
+  }
+
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .contentsWrapper {
+    height: 100%;
+  }
+
+  .rightBox {
+    margin: 40px 0 0 0;
+
+    img {
+      max-width: 328px;
+      max-height: 462px;
+    }
   }
 }

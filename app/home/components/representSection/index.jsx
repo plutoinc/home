@@ -7,18 +7,18 @@ import withStyles from "isomorphic-style-loader/lib/withStyles";
 const RepresentSection = () => {
   return (
     <section className={styles.representSectionContainer}>
-      <div className={styles.innerContainer}>
-        <div className={styles.contentsWrapper}>
-          <div className={styles.contents}>
-            Do you represent a library or a university?
-            <br />
+      <div className={styles.contentsWrapper}>
+        <div className={styles.contents}>
+          Do you represent a library or a university?
+          <br />
+          <span className={styles.smallContext}>
             See our scinapse for institution.
-          </div>
-          <a className={styles.learnMoreButton}>
-            Learn more
-            <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-          </a>
+          </span>
         </div>
+        <a className={styles.learnMoreButton}>
+          Learn more
+          <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
+        </a>
       </div>
     </section>
   );

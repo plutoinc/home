@@ -1,6 +1,5 @@
 .representSectionContainer {
   padding: 62px 230px;
-  height: 208px;
   background-color: #f5f6fa;
 }
 
@@ -8,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .contents {
@@ -48,5 +48,36 @@
   svg {
     width: 16px;
     height: 16px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .representSectionContainer {
+    display: flex;
+    padding: 62px 32px;
+    align-items: center;
+  }
+
+  .contentsWrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .learnMoreButton {
+    margin: 24px 0 0 0;
+  }
+
+  .smallContext {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 920px) {
+  .contents {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.71;
+    color: #062e4e;
   }
 }

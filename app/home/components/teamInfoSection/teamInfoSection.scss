@@ -34,35 +34,12 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-.buttonWrapper {
-  text-align: center;
-}
-
-.learnMoreButton {
-  display: inline-flex;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 500;
-  color: #5b83ee;
-  margin-top: 32px;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: none;
+@media (max-width: 1080px) {
+  .teamInfoSectionContainer {
+    padding: 154px 16px;
   }
-}
 
-.forwardArrowIcon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  margin-left: 4px;
-  transform: rotateY(180deg);
-
-  svg {
-    width: 16px;
-    height: 16px;
+  .contents {
+    width: 100%;
   }
 }

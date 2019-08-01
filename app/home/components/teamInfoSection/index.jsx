@@ -21,12 +21,6 @@ const TeamInfoSection = () => {
         We hope for a open & transparent academia world for the advancement of
         human knowledge and science.
       </div>
-      <div className={styles.buttonWrapper}>
-        <a className={styles.learnMoreButton}>
-          Read more
-          <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-        </a>
-      </div>
     </section>
   );
 };
