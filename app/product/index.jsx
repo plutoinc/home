@@ -46,7 +46,7 @@ class ProductContainer extends React.PureComponent {
 
     return (
       <section>
-        <Header isTop={homeState.get("isTop")} />
+        <Header isTop={homeState.get("isTop")} currentCategory={"product"} />
         <KeyInfoSection />
         <ChartInfoSection />
         <ScinapseFeatureInfoSection />

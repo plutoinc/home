@@ -47,7 +47,7 @@ class SolutionContainer extends React.PureComponent {
 
     return (
       <section>
-        <Header isTop={homeState.get("isTop")} />
+        <Header isTop={homeState.get("isTop")} currentCategory={"solution"} />
         <ScinapseForInstitutionSection />
         <ProblemSection />
         <HowToPlutoSolveSection />

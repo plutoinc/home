@@ -11,15 +11,13 @@ class Header extends React.PureComponent {
     super(props);
 
     this.state = {
-      isMenuOpen: false,
-      currentCategory: ""
+      isMenuOpen: false
     };
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }
 
   render() {
-    const { isTop } = this.props;
-    const { currentCategory } = this.state;
+    const { isTop, currentCategory } = this.props;
     return (
       <header
         className={`${styles.headerContainer} ${
@@ -52,7 +50,6 @@ class Header extends React.PureComponent {
                 to="/product"
                 onClick={() => {
                   trackAction("/product", "Header");
-                  this.changeCurrentCategory("product");
                 }}
               >
                 Product
@@ -67,7 +64,6 @@ class Header extends React.PureComponent {
                 to="/solution"
                 onClick={() => {
                   trackAction("/solution", "Header");
-                  this.changeCurrentCategory("solution");
                 }}
               >
                 Solution
@@ -82,7 +78,6 @@ class Header extends React.PureComponent {
                 to="/contact"
                 onClick={() => {
                   trackAction("/contact", "Header");
-                  this.changeCurrentCategory("contact");
                 }}
               >
                 Contact us
@@ -102,13 +97,6 @@ class Header extends React.PureComponent {
   toggleMobileMenu() {
     const curState = this.state.isMenuOpen;
     this.setState({ isMenuOpen: !curState });
-  }
-
-  changeCurrentCategory(nextCategory) {
-    this.setState(prevState => ({
-      ...prevState,
-      currentCategory: nextCategory
-    }));
   }
 }
 

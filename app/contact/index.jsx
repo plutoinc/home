@@ -44,7 +44,7 @@ class Contact extends React.PureComponent {
 
     return (
       <div className={styles.pageWrapper}>
-        <Header isTop={homeState.get("isTop")} />
+        <Header isTop={homeState.get("isTop")} currentCategory={"contact"} />
         <div className={styles.container}>
           <h1 className={styles.title}>Contact us</h1>
           <div className={styles.greeting}> Thanks for reaching out!</div>
