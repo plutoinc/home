@@ -56,6 +56,7 @@
   &:hover {
     text-decoration: none;
     background-color: #456eda;
+    color: white;
   }
 }
 
@@ -94,6 +95,8 @@
   }
 
   .contentsWrapper {
+    margin-top: 50px;
+    width: 100%;
     height: 100%;
   }
 

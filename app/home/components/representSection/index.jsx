@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import Icon from "../../../components/icons";
 // styles
 import styles from "./representSection.scss";
@@ -15,10 +16,10 @@ const RepresentSection = () => {
             See our scinapse for institution.
           </span>
         </div>
-        <a className={styles.learnMoreButton}>
+        <Link className={styles.learnMoreButton} to="/solution">
           Learn more
           <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-        </a>
+        </Link>
       </div>
     </section>
   );

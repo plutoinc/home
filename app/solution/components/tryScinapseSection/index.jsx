@@ -13,7 +13,11 @@ const TryScinapseSection = () => {
             <div className={styles.subTitle}>Are you a researcher? </div>
             <div className={styles.title}>Try scinapse now!</div>
           </div>
-          <a className={styles.learnMoreButton}>
+          <a
+            className={styles.learnMoreButton}
+            href="https://scinapse.io"
+            target="_blank"
+          >
             Go to Scinapse
             <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
           </a>

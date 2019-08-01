@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import Icon from "../../../components/icons";
 // styles
 import styles from "./scinapseForInstitutionSection.scss";
@@ -19,10 +20,10 @@ const ScinapseForInstitutionSection = () => {
             Academic search engine, discovery service, resource and user data
             management for your institution. All in one.
           </div>
-          <a className={styles.learnMoreButton}>
+          <Link className={styles.learnMoreButton} to="/contact">
             Contact us
             <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-          </a>
+          </Link>
         </div>
         <div className={styles.rightBox}>
           <img src="https://assets.pluto.network/pluto_team_hompage/solution%403x.png" />

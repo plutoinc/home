@@ -41,6 +41,8 @@ $container-width: 1080px;
   }
 
   @media (max-width: 768px) {
+    padding: 0 16px;
+
     .logoWrapper {
       margin-left: 15px;
     }

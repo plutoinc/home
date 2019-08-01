@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 // styles
 import Icon from "../../../components/icons";
 import styles from "./productSection.scss";
@@ -38,10 +39,10 @@ class ProductSection extends React.PureComponent {
               text="Try Scinapse"
               from="productSection"
             />
-            <a className={styles.learnMoreButton}>
+            <Link className={styles.learnMoreButton} to="/product">
               Learn more
               <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-            </a>
+            </Link>
           </div>
           <div className={styles.mokeupContainer}>
             <img src="https://assets.pluto.network/pluto_team_hompage/scinapse-mock.png" />
