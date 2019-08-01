@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import Axios from "axios";
 import { Field, Form, Formik } from "formik";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
@@ -71,14 +72,31 @@ class PersonalContactForm extends React.Component {
           initialValues={{
             firstName: "",
             lastName: "",
-            position: "",
+            affiliation: "",
             email: "",
             comments: ""
           }}
           validate={this.validateForm}
           validateOnChange={false}
-          onSubmit={values => {
-            console.log(values);
+          onSubmit={async values => {
+            const {
+              firstName,
+              lastName,
+              affiliation,
+              email,
+              comments
+            } = values;
+            const finalParams = {
+              first_name: firstName,
+              last_name: lastName,
+              affiliation,
+              email,
+              comment: comments
+            };
+            await Axios.post(
+              `https://dev-api.scinapse.io/contact/researcher`,
+              finalParams
+            );
           }}
           render={props => (
             <Form className={styles.formWrapper}>

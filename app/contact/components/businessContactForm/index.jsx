@@ -1,4 +1,5 @@
 import React from "react";
+import Axios from "axios";
 import classNames from "classnames";
 import { Field, Form, Formik } from "formik";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -71,8 +72,27 @@ class BusinessContactForm extends React.Component {
           validate={this.validateForm}
           validateOnBlur
           validateOnChange={false}
-          onSubmit={values => {
-            console.log(values);
+          onSubmit={async values => {
+            const {
+              firstName,
+              lastName,
+              affiliation,
+              position,
+              email,
+              comments
+            } = values;
+            const finalParams = {
+              first_name: firstName,
+              last_name: lastName,
+              university: affiliation,
+              position,
+              email,
+              comment: comments
+            };
+            await Axios.post(
+              `https://dev-api.scinapse.io/contact/university`,
+              finalParams
+            );
           }}
           render={props => (
             <Form className={styles.formWrapper}>
