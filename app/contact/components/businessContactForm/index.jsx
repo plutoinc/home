@@ -94,7 +94,7 @@ class BusinessContactForm extends React.Component {
                 `https://dev-api.scinapse.io/contact/university`,
                 finalParams
               );
-              alert("Successfully delivered. We'll reply soon, thank you.");
+              alert("Thank you for your message, we will respond soon.");
             } catch (err) {
               console.error(err);
             }
