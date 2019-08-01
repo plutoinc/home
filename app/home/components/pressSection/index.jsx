@@ -12,28 +12,19 @@ const PressSection = () => {
             <div className={styles.title}>FEATURED ON</div>
             <div className={styles.pressItemWrapper}>
               <div className={styles.pressItem}>
-                <a
-                  href="http://physicstoday.scitation.org/do/10.1063/PT.6.1.20171201a/full/"
-                  target="_blank"
-                >
+                <div className={styles.pressImgWrapper}>
                   <img src="https://assets.pluto.network/pluto_team_hompage/physics-today%403x.png" />
-                </a>
+                </div>
               </div>
               <div className={styles.pressItem}>
-                <a
-                  href="http://physicstoday.scitation.org/do/10.1063/PT.6.1.20171201a/full/"
-                  target="_blank"
-                >
+                <div className={styles.pressImgWrapper}>
                   <img src="https://assets.pluto.network/pluto_team_hompage/elife%403x.png" />
-                </a>
+                </div>
               </div>
               <div className={styles.pressItem}>
-                <a
-                  href="http://physicstoday.scitation.org/do/10.1063/PT.6.1.20171201a/full/"
-                  target="_blank"
-                >
+                <div className={styles.pressImgWrapper}>
                   <img src="https://assets.pluto.network/pluto_team_hompage/nature%403x.png" />
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -41,12 +32,9 @@ const PressSection = () => {
             <div className={styles.title}>PARTNERS</div>
             <div className={styles.pressItemWrapper}>
               <div className={styles.pressItem}>
-                <a
-                  href="http://physicstoday.scitation.org/do/10.1063/PT.6.1.20171201a/full/"
-                  target="_blank"
-                >
+                <div className={styles.pressImgWrapper}>
                   <img src="https://assets.pluto.network/pluto_team_hompage/microsoft-research%403x.png" />
-                </a>
+                </div>
               </div>
             </div>
           </div>

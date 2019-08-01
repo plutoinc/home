@@ -1,13 +1,15 @@
 .representSectionContainer {
-  padding: 62px 230px;
+  padding: 62px 0;
   background-color: #f5f6fa;
 }
 
 .contentsWrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .contents {
