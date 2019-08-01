@@ -89,10 +89,15 @@ class BusinessContactForm extends React.Component {
               email,
               comment: comments
             };
-            await Axios.post(
-              `https://dev-api.scinapse.io/contact/university`,
-              finalParams
-            );
+            try {
+              await Axios.post(
+                `https://dev-api.scinapse.io/contact/university`,
+                finalParams
+              );
+              alert("Your message has been delivered!");
+            } catch (err) {
+              console.error(err);
+            }
           }}
           render={props => (
             <Form className={styles.formWrapper}>

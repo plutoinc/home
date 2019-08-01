@@ -93,10 +93,16 @@ class PersonalContactForm extends React.Component {
               email,
               comment: comments
             };
-            await Axios.post(
-              `https://dev-api.scinapse.io/contact/researcher`,
-              finalParams
-            );
+
+            try {
+              await Axios.post(
+                `https://dev-api.scinapse.io/contact/researcher`,
+                finalParams
+              );
+              alert("Your message has been delivered!");
+            } catch (err) {
+              console.error(err);
+            }
           }}
           render={props => (
             <Form className={styles.formWrapper}>
