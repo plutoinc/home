@@ -110,7 +110,7 @@ class MobileDesignedForResearcherSection extends React.PureComponent {
                 <br />
                 <br />
                 Easily manage all your papers that you searched, viewed, or
-                read, from your search results.
+                read, from your search results. <br />
                 <b>Add papers to your collection</b> or create a new collection
                 to share with other researchers, export a citation list, or just
                 to keep them as a reading list.

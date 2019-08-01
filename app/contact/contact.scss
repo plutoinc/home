@@ -157,6 +157,21 @@
   }
 }
 
+.forwardArrowIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  transform: rotateY(180deg);
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 @media (max-width: 1080px) {
   .bottomContainer {
     display: block;

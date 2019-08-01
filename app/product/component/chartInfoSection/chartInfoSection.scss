@@ -6,7 +6,9 @@
 
 .titleWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .title {
@@ -46,8 +48,27 @@
     margin-top: 80px;
   }
 
-  img {
-    width: 578px;
+  .imageWrapper {
+    max-width: 578px;
+    width: 100%;
+
+    .desktopGraph1 {
+      width: 558px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .desktopGraph2 {
+      width: 420px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .desktopGraph3 {
+      width: 445px;
+      height: 80px;
+      object-fit: contain;
+    }
   }
 
   .magnification {
@@ -78,7 +99,21 @@
   margin-left: 20px;
 }
 
+.mobileGraph {
+  display: none;
+}
+
 @media (max-width: 1080px) {
+  .desktopGraph1,
+  .desktopGraph2,
+  .desktopGraph3 {
+    display: none;
+  }
+
+  .mobileGraph {
+    display: block;
+  }
+
   .innerContainer {
     padding: 42px 16px;
   }
@@ -99,6 +134,7 @@
       margin-bottom: 18px;
       max-width: 578px;
       width: 100%;
+      height: 80px;
       object-fit: contain;
     }
   }

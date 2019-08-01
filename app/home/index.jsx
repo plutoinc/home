@@ -10,14 +10,7 @@ import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
 
 import ProductSection from "./components/productSection";
-import ProblemSection from "./components/problemSection";
-import VideoSection from "./components/videoSection";
-import WhatSection from "./components/whatSection";
-import VisionSection from "./components/visionSection";
-import WorkSection from "./components/workSection";
 import PressSection from "./components/pressSection";
-import MailingSection from "./components/mailingSection";
-import BlogSection from "./components/blogSection";
 import ServiceInfoSection from "./components/serviceInfoSection";
 
 // actions
@@ -25,8 +18,7 @@ import {
   getRecentBlogPosts,
   changeEmailInput,
   leaveScrollTop,
-  enterScrollTop,
-  emailSubscribed
+  enterScrollTop
 } from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
@@ -148,12 +140,11 @@ class HomeContainer extends React.PureComponent {
   handleScrollEvent() {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
-      const mainHeight = window.innerWidth > 768 ? 800 : 568;
       const top =
         (document.documentElement && document.documentElement.scrollTop) ||
         document.body.scrollTop;
 
-      if (parseInt(top, 10) < mainHeight) {
+      if (parseInt(top, 10) === 0) {
         dispatch(enterScrollTop());
       } else {
         dispatch(leaveScrollTop());

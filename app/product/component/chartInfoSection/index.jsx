@@ -22,7 +22,16 @@ const ChartInfoSection = () => {
         <div className={styles.graphContent}>
           <div className={styles.graphDescription}>
             <div className={styles.description}>
-              <img src="https://assets.pluto.network/pluto_team_hompage/graph-1%403x.png" />
+              <div className={styles.imageWrapper}>
+                <img
+                  src="https://assets.pluto.network/pluto_team_hompage/graph-1-pc%403x.png"
+                  className={styles.desktopGraph1}
+                />
+                <img
+                  src="https://assets.pluto.network/pluto_team_hompage/graph-1%403x.png"
+                  className={styles.mobileGraph}
+                />
+              </div>
               <div className={styles.textWrapper}>
                 <div className={styles.magnification}>↑ 4x</div>
                 <div className={styles.subDesc}>
@@ -32,7 +41,17 @@ const ChartInfoSection = () => {
               </div>
             </div>
             <div className={styles.description}>
-              <img src="https://assets.pluto.network/pluto_team_hompage/graph-2%403x.png" />
+              <div className={styles.imageWrapper}>
+                <img
+                  src="https://assets.pluto.network/pluto_team_hompage/graph-2-pc%403x.png"
+                  className={styles.desktopGraph2}
+                />
+                <img
+                  src="https://assets.pluto.network/pluto_team_hompage/graph-2%403x.png"
+                  className={styles.mobileGraph}
+                />
+              </div>
+
               <div className={styles.textWrapper}>
                 <div className={styles.magnification}>↑ 1.4x</div>
                 <div className={styles.subDesc}>
@@ -42,7 +61,17 @@ const ChartInfoSection = () => {
               </div>
             </div>
             <div className={styles.description}>
-              <img src="https://assets.pluto.network/pluto_team_hompage/graph-3%403x.png" />
+              <div className={styles.imageWrapper}>
+                <img
+                  src="https://assets.pluto.network/pluto_team_hompage/graph-3-pc%403x.png"
+                  className={styles.desktopGraph3}
+                />
+                <img
+                  src="https://assets.pluto.network/pluto_team_hompage/graph-3%403x.png"
+                  className={styles.mobileGraph}
+                />
+              </div>
+
               <div className={styles.textWrapper}>
                 <div className={styles.magnification}>↑ 1.5x</div>
                 <div className={styles.subDesc}>

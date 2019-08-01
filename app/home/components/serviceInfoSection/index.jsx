@@ -10,11 +10,11 @@ const ServiceInfoSection = () => {
       <div className={styles.serviceInfoWrapper}>
         <div className={styles.serviceInfo}>
           <span className={styles.numberInfo}>196</span>
-          <span className={styles.targetInfo}>contries</span>
+          <span className={styles.targetInfo}>Contries</span>
         </div>
         <div className={styles.serviceInfo}>
-          <span className={styles.numberInfo}>1130</span>
-          <span className={styles.targetInfo}>universities</span>
+          <span className={styles.numberInfo}>1,130</span>
+          <span className={styles.targetInfo}>Universities</span>
         </div>
         <div className={styles.serviceInfo}>
           <span className={styles.numberInfo}>83+</span>
@@ -22,7 +22,7 @@ const ServiceInfoSection = () => {
         </div>
         <div className={styles.serviceInfo}>
           <span className={styles.numberInfo}>75%+</span>
-          <span className={styles.targetInfo}>graduated level</span>
+          <span className={styles.targetInfo}>Graduated level</span>
         </div>
       </div>
     </div>

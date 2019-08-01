@@ -19,11 +19,12 @@ class Header extends React.PureComponent {
 
   render() {
     const { isTop } = this.props;
+    const { currentCategory } = this.state;
     return (
       <header
         className={`${styles.headerContainer} ${
           this.state.isMenuOpen ? styles.isOpen : ""
-        } ${isTop ? styles.transparent : ""}`}
+        } ${isTop ? styles.topToHeader : ""}`}
       >
         <div
           className={`${styles.menuListOverlay} ${
@@ -35,34 +36,54 @@ class Header extends React.PureComponent {
           <Link
             to="/"
             className={styles.logoWrapper}
-            onClick={() => trackAction("/", "Header")}
+            onClick={() => {
+              trackAction("/", "Header");
+            }}
           >
             <Icon icon="PLUTO_NEW_LOGO" className={styles.desktopLogo} />
           </Link>
 
           <ul className={styles.menuList}>
-            <li className={styles.menuItem}>
+            <li
+              className={`${styles.menuItem} ${currentCategory === "product" &&
+                styles.active}`}
+            >
               <Link
                 to="/product"
-                onClick={() => trackAction("/product", "Header")}
+                onClick={() => {
+                  trackAction("/product", "Header");
+                  this.changeCurrentCategory("product");
+                }}
               >
                 Product
               </Link>
             </li>
 
-            <li className={styles.menuItem}>
+            <li
+              className={`${styles.menuItem} ${currentCategory === "solution" &&
+                styles.active}`}
+            >
               <Link
                 to="/solution"
-                onClick={() => trackAction("/faq", "Header")}
+                onClick={() => {
+                  trackAction("/solution", "Header");
+                  this.changeCurrentCategory("solution");
+                }}
               >
                 Solution
               </Link>
             </li>
 
-            <li className={styles.menuItem}>
+            <li
+              className={`${styles.menuItem} ${currentCategory === "contact" &&
+                styles.active}`}
+            >
               <Link
                 to="/contact"
-                onClick={() => trackAction("/contact", "Header")}
+                onClick={() => {
+                  trackAction("/contact", "Header");
+                  this.changeCurrentCategory("contact");
+                }}
               >
                 Contact us
               </Link>
@@ -81,6 +102,13 @@ class Header extends React.PureComponent {
   toggleMobileMenu() {
     const curState = this.state.isMenuOpen;
     this.setState({ isMenuOpen: !curState });
+  }
+
+  changeCurrentCategory(nextCategory) {
+    this.setState(prevState => ({
+      ...prevState,
+      currentCategory: nextCategory
+    }));
   }
 }
 

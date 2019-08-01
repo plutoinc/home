@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import Icon from "../../../components/icons";
 // styles
 import styles from "./solutionSection.scss";
@@ -47,10 +48,10 @@ const SolutionSection = () => {
               </div>
             </div>
           </div>
-          <a className={styles.learnMoreButton}>
+          <Link to="/solution" className={styles.learnMoreButton}>
             Learn more
             <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
