@@ -1,10 +1,11 @@
-.designedForResearcherSectionContainer {
-  height: 720px;
+.mobileDesignedForResearcherSectionContainer {
+  height: 100%;
+  display: none;
 }
 
 .innerContainer {
   background-color: white;
-  padding: 72px 0;
+  padding: 52px 0;
 }
 
 .title {
@@ -17,41 +18,39 @@
 }
 
 .tab {
-  padding: 0 24px;
-  display: flex;
-  max-width: 978px;
+  padding: 12px 0;
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
   font-size: 18px;
   font-weight: 500;
   line-height: 2.22;
-  color: rgba(6, 46, 78, 0.4);
+  color: #667997;
 }
 
 .tabItem {
   cursor: pointer;
   border-bottom: 1px solid #e9edf1;
+  border-top: solid 1px #e9edf1;
   width: 100%;
+  padding: 12px 16px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tabItem.active {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 2.22;
   color: #5b83ee;
-  border-bottom: 4px solid #5b83ee;
 }
 
 .featureWrapper {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding: 0 16px;
 
   .contentsWrapper {
-    margin-top: 60px;
+    margin-top: 24px;
   }
 
   .featureTitle {
@@ -72,15 +71,45 @@
   }
 
   img {
-    width: 578px;
+    max-width: 578px;
+    width: 100%;
     height: 410px;
     object-fit: contain;
-    margin-left: 20px;
+  }
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transform: rotateZ(90deg);
+  }
+}
+
+.active {
+  .arrowIcon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transform: rotateZ(270deg);
+    }
   }
 }
 
 @media (max-width: 1080px) {
-  .designedForResearcherSectionContainer {
-    display: none;
+  .mobileDesignedForResearcherSectionContainer {
+    display: block;
   }
 }
