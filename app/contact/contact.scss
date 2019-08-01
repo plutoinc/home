@@ -144,6 +144,9 @@
     font-weight: 500;
     color: white;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       text-decoration: none;
