@@ -99,7 +99,7 @@ class PersonalContactForm extends React.Component {
                 `https://dev-api.scinapse.io/contact/researcher`,
                 finalParams
               );
-              alert("Your message has been delivered!");
+              alert("Successfully delivered. We'll reply soon, thank you.");
             } catch (err) {
               console.error(err);
             }
