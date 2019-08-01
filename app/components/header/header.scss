@@ -6,6 +6,7 @@ $container-width: 1080px;
   top: 0;
   width: 100%;
   background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .desktopLogo {
@@ -20,6 +21,7 @@ $container-width: 1080px;
   background-color: white;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
   &.whitebg {
     border-bottom: solid 1px #ecf1fa;
