@@ -28,16 +28,10 @@
   display: flex;
   margin-top: 80px;
   justify-content: center;
-
-  img {
-    width: 578px;
-    height: 330px;
-  }
 }
 
 .graphDescription {
   color: white;
-  margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +44,10 @@
 
   & + & {
     margin-top: 80px;
+  }
+
+  img {
+    width: 578px;
   }
 
   .magnification {
@@ -73,4 +71,48 @@
   text-align: center;
   margin-top: 42px;
   color: rgba(255, 255, 255, 0.86);
+}
+
+.textWrapper {
+  display: flex;
+  margin-left: 20px;
+}
+
+@media (max-width: 1080px) {
+  .innerContainer {
+    padding: 42px 16px;
+  }
+
+  .titleWrapper {
+    flex-direction: column;
+  }
+
+  .subTitle {
+    margin: 16px 0 0 0;
+    width: 100%;
+  }
+
+  .description {
+    flex-direction: column;
+
+    img {
+      margin-bottom: 18px;
+      max-width: 578px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .textWrapper {
+    width: 100%;
+  }
+
+  .magnification {
+    width: 100% !important;
+    max-width: 120px;
+  }
+
+  .subDesc {
+    font-size: 14px;
+  }
 }
