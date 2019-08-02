@@ -47,7 +47,11 @@ class Contact extends React.PureComponent {
         <Header isTop={homeState.get("isTop")} currentCategory={"contact"} />
         <div className={styles.container}>
           <h1 className={styles.title}>Contact us</h1>
-          <div className={styles.greeting}> Thanks for reaching out!</div>
+          <div className={styles.greeting}>
+            We'd love to hear from you.
+            <br />
+            Send us a message and we'll get back to you soon.
+          </div>
           <div className={styles.formWrapper}>
             <div className={styles.formTitle}>
               Contact Form for corporate/university

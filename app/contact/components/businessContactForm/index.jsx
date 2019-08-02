@@ -94,7 +94,7 @@ class BusinessContactForm extends React.Component {
                 `https://dev-api.scinapse.io/contact/university`,
                 finalParams
               );
-              alert("Thank you for your message, we will respond soon.");
+              alert("Thanks for reaching out!");
             } catch (err) {
               console.error(err);
             }
@@ -141,9 +141,7 @@ class BusinessContactForm extends React.Component {
                 </div>
 
                 <div className={styles.inputWrapper}>
-                  <label className={styles.formLabel}>
-                    UNIVERSITY / CORPORATE NAME*
-                  </label>
+                  <label className={styles.formLabel}>AFFILIATION*</label>
                   <Field
                     type="text"
                     className={classNames({
