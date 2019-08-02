@@ -26,7 +26,7 @@ class DesignedForResearcherSection extends React.PureComponent {
               }`}
               onClick={() => this.onClickTab("filter")}
             >
-              Customized Filters
+              Filters
             </div>
             <div
               className={`${styles.tabItem} ${

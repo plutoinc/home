@@ -26,7 +26,7 @@ class MobileDesignedForResearcherSection extends React.PureComponent {
               }`}
               onClick={() => this.onClickTab("filter")}
             >
-              Customized Filters
+              Filters
               <Icon icon="ARROW_POINT" className={styles.arrowIcon} />
             </div>
             {featureStep === "filter" && this.getFeatureByStep()}
