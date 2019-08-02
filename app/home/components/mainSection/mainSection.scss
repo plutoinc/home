@@ -3,7 +3,7 @@ $container-width: 1080px;
 
 .mainSectionContainer {
   padding-top: $header-height;
-  height: 768px;
+  height: 100vh;
   overflow: hidden;
   background: linear-gradient(
     to bottom,
@@ -28,7 +28,6 @@ $container-width: 1080px;
   }
 
   @media (max-width: 1080px) {
-    height: 708px;
     .innerContainer {
       margin-top: 20px;
       padding-top: 30px;
