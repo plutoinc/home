@@ -3,13 +3,15 @@ $container-width: 1080px;
 
 .mainSectionContainer {
   padding-top: $header-height;
-  height: 844px;
+  height: 768px;
   overflow: hidden;
-  background-image: url("https://assets.pluto.network/pluto_team_hompage/home-background%403x.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  background-color: white;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #feffff 79%,
+    #f9fbff 89%,
+    #f1f7ff
+  );
   position: relative;
   max-width: 100%;
 
@@ -17,15 +19,15 @@ $container-width: 1080px;
     max-width: $container-width;
     margin: 0 auto;
     position: relative;
-    margin-top: 82px;
+    padding-top: 146px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     svg {
       width: 18px;
     }
   }
-  @media (max-width: 768px) {
+
+  @media (max-width: 1080px) {
     height: 708px;
     .innerContainer {
       margin-top: 20px;
@@ -36,15 +38,66 @@ $container-width: 1080px;
   }
 }
 
+.learnMoreButton {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5b83ee;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: #456eda;
+  }
+}
+
+.forwardArrowIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  transform: rotateY(180deg);
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.buttonWrapper {
+  margin-top: 48px;
+
+  @media (max-width: 1080px) {
+    text-align: center;
+    margin-top: 32px;
+  }
+}
+.backgroundImg {
+  background: url("https://assets.pluto.network/pluto_team_hompage/home-character%403x.png");
+  width: 100%;
+  height: 100%;
+  background-size: 717px 615px;
+  background-repeat: no-repeat;
+  background-position: 90% 100%;
+
+  @media (max-width: 1080px) {
+    background-size: 360px 346px;
+    background-position: bottom;
+  }
+}
+
 .title {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 500;
   color: #1b3e9a;
   margin-bottom: 8px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -74,11 +127,12 @@ $container-width: 1080px;
 }
 
 .subTitle {
-  font-size: 24px;
-  color: #1b3e9a;
+  font-size: 26px;
+  color: #7085a8;
 
-  @media (max-width: 768px) {
-    font-size: 20px;
+  @media (max-width: 1080px) {
+    text-align: center;
+    font-size: 18px;
     margin-bottom: 30px;
   }
 
@@ -156,7 +210,7 @@ $container-width: 1080px;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     .emailSubmitInput {
       margin-bottom: 8px;
       width: 271px;
@@ -186,7 +240,7 @@ $container-width: 1080px;
   padding-top: 13.5px;
   font-weight: 300;
   margin-bottom: 180px;
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     margin-bottom: 134px;
   }
 }
