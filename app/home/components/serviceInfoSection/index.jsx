@@ -10,7 +10,7 @@ const ServiceInfoSection = () => {
       <div className={styles.serviceInfoWrapper}>
         <div className={styles.serviceInfo}>
           <span className={styles.numberInfo}>196</span>
-          <span className={styles.targetInfo}>Contries</span>
+          <span className={styles.targetInfo}>Countries</span>
         </div>
         <div className={styles.serviceInfo}>
           <span className={styles.numberInfo}>1,130</span>
