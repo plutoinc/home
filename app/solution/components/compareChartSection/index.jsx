@@ -12,9 +12,8 @@ const CompareChartSection = () => {
         <div className={styles.contentDivider} />
         <div className={styles.chartContainer}>
           <div className={styles.chartWrapper}>
-            <img src="https://assets.pluto.network/pluto_team_hompage/compareChart%403x.png" />
+            <img src="https://assets.pluto.network/pluto_team_hompage/compareChartFocus%403x.png" />
           </div>
-          <div className={styles.focusArea} />
         </div>
         <div className={styles.smallContext}>
           *duplicate results may occur due to error in metadata aggregation,
