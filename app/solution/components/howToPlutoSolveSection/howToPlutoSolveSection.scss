@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 277px;
+  max-width: 300px;
   width: 100%;
   height: 120px;
   border-radius: 8px;
@@ -93,7 +93,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 180px;
+  width: 200px;
   height: 120px;
   border-radius: 8px;
   background-color: #f6f8fb;
@@ -131,7 +131,7 @@
 }
 
 .card {
-  max-width: 477px;
+  max-width: 520px;
   width: 100%;
   border-radius: 8px;
   border: solid 1px #e9edf1;
@@ -141,7 +141,7 @@
   margin: 12px 10px;
 
   .cardContent {
-    max-width: 408px;
+    max-width: 450px;
   }
 
   .cardTitle {
@@ -158,13 +158,19 @@
     color: #667997;
   }
 
+  .iconWrapper {
+    max-width: 32px;
+    width: 100%;
+    height: 32px;
+    margin-right: 8px;
+  }
+
   .cardIcon {
     display: inline-flex;
     width: 32px;
     height: 32px;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
 
     svg {
       width: 24px;
@@ -217,5 +223,13 @@
 
   .cardContents {
     justify-content: center;
+  }
+
+  .card {
+    max-width: 100%;
+
+    .cardContent {
+      max-width: 100%;
+    }
   }
 }

@@ -64,7 +64,9 @@ const HowToPlutoSolveSection = () => {
           </div>
           <div className={styles.cardContents}>
             <div className={styles.card}>
-              <Icon icon="PIE_CHART" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="PIE_CHART" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Analytics & Reporting</div>
                 <div className={styles.cardContext}>
@@ -75,7 +77,10 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="OPTIONS" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="OPTIONS" className={styles.cardIcon} />
+              </div>
+
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Customization</div>
                 <div className={styles.cardContext}>
@@ -87,7 +92,10 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="BAR_CHART" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="BAR_CHART" className={styles.cardIcon} />
+              </div>
+
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Assess True Usage</div>
                 <div className={styles.cardContext}>
@@ -98,7 +106,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="MESSAGE_SQUARE" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="MESSAGE_SQUARE" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Consultation</div>
                 <div className={styles.cardContext}>
@@ -109,7 +119,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="FILE_TEXT" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="FILE_TEXT" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Indexing</div>
                 <div className={styles.cardContext}>
@@ -120,7 +132,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="CLOUD_UPLOAD" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="CLOUD_UPLOAD" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Cloud</div>
                 <div className={styles.cardContext}>
@@ -143,7 +157,9 @@ const HowToPlutoSolveSection = () => {
           </div>
           <div className={styles.cardContents}>
             <div className={styles.card}>
-              <Icon icon="OPTIONS" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="OPTIONS" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>
                   Select Your Subscriptions
@@ -156,7 +172,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="PERSON_DONE" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="PERSON_DONE" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>
                   Library/Researcher-friendly
@@ -169,7 +187,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="TRENDING_DOWN" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="TRENDING_DOWN" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Reduce Your Cost</div>
                 <div className={styles.cardContext}>
@@ -180,7 +200,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="FILE_TEXT" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="FILE_TEXT" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Indexing</div>
                 <div className={styles.cardContext}>
@@ -191,7 +213,9 @@ const HowToPlutoSolveSection = () => {
               </div>
             </div>
             <div className={styles.card}>
-              <Icon icon="CREDIT_CARD" className={styles.cardIcon} />
+              <div className={styles.iconWrapper}>
+                <Icon icon="CREDIT_CARD" className={styles.cardIcon} />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardTitle}>Payments* (2021)</div>
                 <div className={styles.cardContext}>
