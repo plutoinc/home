@@ -211,6 +211,7 @@ class BusinessContactForm extends React.Component {
                         props.touched.comments && props.errors.comments
                     })}
                     name="comments"
+                    placeholder="Write a comment..."
                   />
                   {props.touched.comments && props.errors.comments && (
                     <div className={styles.errorMsg}>
