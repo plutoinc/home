@@ -24,9 +24,12 @@ const HowToPlutoSolveSection = () => {
           <div className={styles.contentTitle}>
             <div className={styles.number}>01</div>
             <div className={styles.titleContext}>
-              Scinapse Search Engine
+              Academic Search Engine: Scinapse
               <br />
-              via IP & Remote Access
+              <div className={styles.subTitleContext}>
+                Powerful and intuitive search with access to all licensed
+                journals regardless of vendor.
+              </div>
             </div>
           </div>
 
@@ -58,8 +61,11 @@ const HowToPlutoSolveSection = () => {
           <div className={styles.contentTitle}>
             <div className={styles.number}>02</div>
             <div className={styles.titleContext}>
-              Journal Subscription/User Data Analytics
-              <br />& Resource Management
+              Journal Subscription Manager
+              <br />
+              <div className={styles.subTitleContext}>
+                Optimize your resources for your users.
+              </div>
             </div>
           </div>
           <div className={styles.cardContents}>
@@ -150,9 +156,11 @@ const HowToPlutoSolveSection = () => {
           <div className={styles.contentTitle}>
             <div className={styles.number}>03</div>
             <div className={styles.titleContext}>
-              Journal subscription market place
-              <br />
-              <small>*coming soon</small>
+              Journal Marketplace
+              <small> *coming soon</small>
+              <div className={styles.subTitleContext}>
+                Only subscribe to journals that are necessary.
+              </div>
             </div>
           </div>
           <div className={styles.cardContents}>

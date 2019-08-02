@@ -65,6 +65,17 @@
       font-size: 24px;
       color: #8c9fbf;
     }
+
+    .subTitleContext {
+      font-size: 20px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.4;
+      letter-spacing: normal;
+      color: #667997;
+      margin-top: 8px;
+    }
   }
 }
 
@@ -192,6 +203,10 @@
 
     .titleContext {
       margin-left: 24px;
+
+      small {
+        display: block;
+      }
     }
   }
 
