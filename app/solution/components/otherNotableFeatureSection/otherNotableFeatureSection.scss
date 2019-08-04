@@ -1,0 +1,65 @@
+.otherNotableFeatureSectionContainer {
+  padding: 62px 0;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.innerContainer {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.13;
+  text-align: center;
+  color: #062e4e;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+.featureItem {
+  display: flex;
+  width: 478px;
+  margin: 4px 10px;
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 18px;
+
+  svg {
+    width: 21px;
+    height: 16px;
+    color: #48d2a0;
+  }
+}
+
+.featureContext {
+  width: 438px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #364a6a;
+}
+
+@media (max-width: 920px) {
+  .contentWrapper {
+    justify-content: center;
+  }
+
+  .featureItem {
+    & + & {
+      margin-top: 8px;
+    }
+  }
+}

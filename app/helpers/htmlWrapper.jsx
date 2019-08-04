@@ -7,26 +7,26 @@ export function staticHTMLWrapper(reactDom, scriptPath, initialState, css) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <link rel="shortcut icon" href="https://assets.pluto.network/favicon.png" />
 
-      <title>Pluto Network | Decentralized scholarly communication</title>
-      <meta name="description" content="A dedicated team building digital tools to break down barriers in academia, Pluto Network advances the way science evolves. Join the great march and empower the community."
+      <title>Pluto | Optimize Your Research</title>
+      <meta name="description" content="Pluto is a dedicated team building digital tools to break down barriers in academia. We're here to support all researchers and the advancement of science."
       />
 
-      <meta itemprop="name" content="Pluto Network | Decentralized scholarly communication">
-      <meta itemprop="description" content="A dedicated team building digital tools to break down barriers in academia, Pluto Network advances the way science evolves. Join the great march and empower the community.">
-      <meta itemprop="image" content="https://assets.pluto.network/pluto-home-meta.jpg">
+      <meta itemprop="name" content="Pluto | Optimize Your Research">
+      <meta itemprop="description" content="Pluto is a dedicated team building digital tools to break down barriers in academia. We're here to support all researchers and the advancement of science.">
+      <meta itemprop="image" content="https://assets.pluto.network/pluto_team_hompage/og-image.png">
 
       <meta name="twitter:card" content="Pluto Network">
       <meta name="twitter:site" content="@pluto_network">
-      <meta name="twitter:title" content="Pluto Network | Decentralized scholarly communication">
-      <meta name="twitter:description" content="A dedicated team building digital tools to break down barriers in academia, Pluto Network advances the way science evolves. Join the great march and empower the community.">
+      <meta name="twitter:title" content="Pluto | Optimize Your Research">
+      <meta name="twitter:description" content="Pluto is a dedicated team building digital tools to break down barriers in academia. We're here to support all researchers and the advancement of science.">
       <meta name="twitter:creator" content="@pluto_network">
-      <meta name="twitter:image" content="https://assets.pluto.network/pluto-home-meta.jpg">
+      <meta name="twitter:image" content="https://assets.pluto.network/pluto_team_hompage/og-image.png">
 
-      <meta property="og:title" content="Pluto Network | Decentralized scholarly communication" />
+      <meta property="og:title" content="Pluto | Optimize Your Research" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="https://pluto.network" />
-      <meta property="og:image" content="https://assets.pluto.network/pluto-home-meta.jpg" />
-      <meta property="og:description" content="A dedicated team building digital tools to break down barriers in academia, Pluto Network advances the way science evolves. Join the great march and empower the community."
+      <meta property="og:image" content="https://assets.pluto.network/pluto_team_hompage/og-image.png" />
+      <meta property="og:description" content="Pluto is a dedicated team building digital tools to break down barriers in academia. We're here to support all researchers and the advancement of science."
       />
       <meta property="og:site_name" content="Pluto Network" />
         <style type="text/css">${css}</style>

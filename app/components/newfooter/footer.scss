@@ -1,141 +1,18 @@
 $container-width: 1080px;
 
 .footer {
-  background-color: #f5f7fb;
-  position: relative;
-
-  ul {
-    padding: 0;
-  }
-}
-
-.innerContainer {
-  max-width: $container-width;
-  height: 260px;
-  padding-top: 42.5px;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  @media (max-width: 768px) {
-    height: auto;
-    padding: 35px 15px;
-
-    flex-flow: row wrap;
-  }
-}
-
-.logoSection {
-  flex: 2 1 0px;
-
-  svg {
-    width: 110px;
-    height: 58px;
-    vertical-align: middle;
-  }
-
-  p {
-    margin-top: 32px;
-    color: #bbc2d0;
-    font-size: 14px;
-    text-align: left;
-    vertical-align: middle;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    svg {
-      width: auto;
-      height: 40px;
-    }
-    p {
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: 10px;
-    }
-  }
-}
-
-.ulSection {
-  list-style: none;
-  font-size: 18px;
-
-  li {
-    margin-bottom: 7px;
-
-    a {
-      color: #666d7c;
-      &:hover {
-        color: #172649;
-        text-decoration: none;
-      }
-    }
-  }
-
-  li:first-child {
-    font-weight: 600;
-    cursor: default;
-    margin: 12px 0;
-  }
-}
-
-.productSection {
-  flex: 1 1 0px;
-}
-
-.resourceSection {
-  flex: 0.7 1 0px;
-  a {
-    cursor: pointer;
-  }
-}
-
-.followSection {
-  flex: 1 1 0px;
-
-  .footerIconWrapper {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    margin-right: 7px;
-    color: #bbc2d0;
-    transition: color 0.25s ease;
-    cursor: pointer;
-
-    &:last-child {
-      margin-right: 0;
-    }
-    &:hover {
-      color: #8993a8;
-    }
-    &:active {
-      transform: scale(0.95);
-    }
-  }
+  background-color: white;
+  height: 84px;
+  padding: 24px 130px;
+  font-size: 16px;
+  line-height: 1.44;
+  color: #364a6a;
 }
 
 @media (max-width: 768px) {
-  .logoSection {
-    flex: 1 100%;
-    order: 4;
-  }
-  .productSection {
-    flex: 1 auto;
-    order: 1;
-  }
-  .resourceSection {
-    flex: 1 auto;
-    order: 2;
-  }
-  .followSection {
-    flex: 1 100%;
-    order: 3;
-    margin-top: 30px;
+  .footer {
+    padding: 16px 16px;
+    font-size: 14px;
+    height: auto;
   }
 }

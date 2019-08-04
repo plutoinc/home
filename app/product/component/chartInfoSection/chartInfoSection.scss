@@ -1,0 +1,155 @@
+.innerContainer {
+  background-color: #062e4e;
+  padding: 72px 0;
+  margin: 0 auto;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: white;
+}
+
+.subTitle {
+  margin-left: 0px;
+  width: 720px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+
+.graphContent {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.graphDescription {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+
+  & + & {
+    margin-top: 64px;
+  }
+
+  .imageWrapper {
+    max-width: 578px;
+    width: 100%;
+
+    .desktopGraph1 {
+      width: 558px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .desktopGraph2 {
+      width: 420px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .desktopGraph3 {
+      width: 445px;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+
+  .magnification {
+    width: 120px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 2.25px;
+  }
+
+  .subDesc {
+    width: 370px;
+    margin-left: 8px;
+    font-size: 16px;
+  }
+}
+
+.bottomDesc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: center;
+  margin-top: 80px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.textWrapper {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.mobileGraph {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .desktopGraph1,
+  .desktopGraph2,
+  .desktopGraph3 {
+    display: none;
+  }
+
+  .mobileGraph {
+    display: block;
+  }
+
+  .innerContainer {
+    padding: 42px 16px;
+  }
+
+  .titleWrapper {
+    flex-direction: column;
+  }
+
+  .subTitle {
+    margin: 32px 0 0 0;
+    width: 100%;
+  }
+
+  .description {
+    flex-direction: column;
+
+    img {
+      margin-bottom: 18px;
+      max-width: 578px;
+      width: 100%;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+
+  .textWrapper {
+    width: 100%;
+  }
+
+  .magnification {
+    width: 100% !important;
+    max-width: 120px;
+  }
+
+  .subDesc {
+    font-size: 14px;
+  }
+}

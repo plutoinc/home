@@ -10,25 +10,21 @@ import Footer from "../components/newfooter";
 import MainSection from "./components/mainSection";
 
 import ProductSection from "./components/productSection";
-import ProblemSection from "./components/problemSection";
-import VideoSection from "./components/videoSection";
-import WhatSection from "./components/whatSection";
-import VisionSection from "./components/visionSection";
-import WorkSection from "./components/workSection";
 import PressSection from "./components/pressSection";
-import MailingSection from "./components/mailingSection";
-import BlogSection from "./components/blogSection";
+import ServiceInfoSection from "./components/serviceInfoSection";
 
 // actions
 import {
   getRecentBlogPosts,
   changeEmailInput,
   leaveScrollTop,
-  enterScrollTop,
-  emailSubscribed
+  enterScrollTop
 } from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
+import SolutionSection from "./components/solutionSection";
+import TeamInfoSection from "./components/teamInfoSection";
+import RepresentSection from "./components/representSection";
 
 function mapStateToProps(appState) {
   return {
@@ -88,7 +84,7 @@ class HomeContainer extends React.PureComponent {
 
     return (
       <section>
-        <Header isTop={homeState.get("isTop")} />
+        <Header isTop={homeState.get("isTop")} currentCategory={"home"} />
 
         <VisibilitySensor
           partialVisibility
@@ -101,13 +97,7 @@ class HomeContainer extends React.PureComponent {
             }
           }}
         >
-          <MainSection
-            email={homeState.get("email")}
-            emailSubscribed={homeState.get("emailSubscribed")}
-            handleEmailChange={this.handleEmailChange}
-            subscribeEmail={this.subscribeEmail}
-            shown={this.state.mainPassed}
-          />
+          <MainSection shown={this.state.mainPassed} />
         </VisibilitySensor>
 
         <VisibilitySensor
@@ -123,90 +113,9 @@ class HomeContainer extends React.PureComponent {
         >
           <ProductSection shown={this.state.productPassed} />
         </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                problemPassed: true
-              });
-            }
-          }}
-        >
-          <ProblemSection shown={this.state.problemPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                videoPassed: true
-              });
-            }
-          }}
-        >
-          <VideoSection shown={this.state.videoPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                whatPassed: true
-              });
-            }
-          }}
-        >
-          <WhatSection shown={this.state.whatPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                visionPassed: true
-              });
-            }
-          }}
-        >
-          <VisionSection shown={this.state.visionPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                workPassed: true
-              });
-            }
-          }}
-        >
-          <WorkSection shown={this.state.workPassed} />
-        </VisibilitySensor>
-
-        <VisibilitySensor
-          partialVisibility
-          minTopValue={300}
-          onChange={isVisible => {
-            if (isVisible) {
-              this.setState({
-                blogPassed: true
-              });
-            }
-          }}
-        >
-          <BlogSection posts={blogPosts} shown={this.state.blogPassed} />
-        </VisibilitySensor>
+        <ServiceInfoSection />
+        <SolutionSection />
+        <TeamInfoSection />
 
         <VisibilitySensor
           partialVisibility
@@ -221,13 +130,7 @@ class HomeContainer extends React.PureComponent {
         >
           <PressSection shown={this.state.pressPassed} />
         </VisibilitySensor>
-
-        <MailingSection
-          email={homeState.get("email")}
-          emailSubscribed={homeState.get("emailSubscribed")}
-          handleEmailChange={this.handleEmailChange}
-          subscribeEmail={this.subscribeEmail}
-        />
+        <RepresentSection />
 
         <Footer />
       </section>
@@ -237,12 +140,11 @@ class HomeContainer extends React.PureComponent {
   handleScrollEvent() {
     const { dispatch } = this.props;
     if (!EnvChecker.isServer()) {
-      const mainHeight = window.innerWidth > 768 ? 800 : 568;
       const top =
         (document.documentElement && document.documentElement.scrollTop) ||
         document.body.scrollTop;
 
-      if (parseInt(top, 10) < mainHeight) {
+      if (parseInt(top, 10) === 0) {
         dispatch(enterScrollTop());
       } else {
         dispatch(leaveScrollTop());

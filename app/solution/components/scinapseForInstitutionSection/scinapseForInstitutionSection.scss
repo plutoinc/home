@@ -1,0 +1,116 @@
+.scinapseForInstitutionSectionContainer {
+  height: 100%;
+  padding: 120px 0;
+  margin: 0 auto;
+  background-color: #fbfbfd;
+}
+
+.innerContainer {
+  max-width: 1080px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.39;
+  color: #062e4e;
+  margin-bottom: 24px;
+}
+
+.subTitle {
+  height: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 3.75;
+  letter-spacing: 1.31px;
+  color: #5b83ee;
+  margin-bottom: 6px;
+}
+
+.contents {
+  max-width: 478px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #667997;
+}
+
+.learnMoreButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #5b83ee;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #456eda;
+    color: white;
+  }
+}
+
+.forwardArrowIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  transform: rotateY(180deg);
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.rightBox {
+  margin-left: 22px;
+
+  img {
+    width: 477px;
+    max-height: 462px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1080px) {
+  .title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .scinapseForInstitutionSectionContainer {
+    padding: 80px 16px 40px 16px;
+  }
+
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .contentsWrapper {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rightBox {
+    margin: 40px 0 0 0;
+
+    img {
+      max-width: 328px;
+      max-height: 462px;
+    }
+  }
+}

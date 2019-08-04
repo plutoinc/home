@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import { trackLink, trackAction } from "../../helpers/handleGA";
-import { WHITE_PAPER_ADDRESS, PRODUCT_URL } from "../../routes";
+import { trackAction } from "../../helpers/handleGA";
 // styles
 import styles from "./header.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
@@ -18,12 +17,12 @@ class Header extends React.PureComponent {
   }
 
   render() {
-    const { isTop } = this.props;
+    const { isTop, currentCategory } = this.props;
     return (
       <header
         className={`${styles.headerContainer} ${
           this.state.isMenuOpen ? styles.isOpen : ""
-        } ${isTop ? styles.transparent : ""}`}
+        } ${isTop ? styles.topToHeader : ""}`}
       >
         <div
           className={`${styles.menuListOverlay} ${
@@ -35,60 +34,68 @@ class Header extends React.PureComponent {
           <Link
             to="/"
             className={styles.logoWrapper}
-            onClick={() => trackAction("/", "Header")}
+            onClick={() => {
+              trackAction("/", "Header");
+            }}
           >
-            <Icon icon="LOGO" className={styles.desktopLogo} />
+            <Icon icon="PLUTO_NEW_LOGO" className={styles.desktopLogo} />
           </Link>
 
           <ul className={styles.menuList}>
-            <li className={styles.menuItem}>
-              <Link to="/faq" onClick={() => trackAction("/faq", "Header")}>
-                FAQ
+            <li
+              className={`${styles.menuItem} ${currentCategory === "home" &&
+                styles.active}`}
+            >
+              <Link
+                to="/"
+                onClick={() => {
+                  trackAction("/", "Header");
+                }}
+              >
+                Home
               </Link>
             </li>
 
-            <li className={styles.menuItem}>
-              <a
-                href={WHITE_PAPER_ADDRESS}
-                onClick={() => tracknLink(WHITE_PAPER_ADDRESS, "Header")}
-                target="_blank"
+            <li
+              className={`${styles.menuItem} ${currentCategory === "product" &&
+                styles.active}`}
+            >
+              <Link
+                to="/product"
+                onClick={() => {
+                  trackAction("/product", "Header");
+                }}
               >
-                Whitepaper
-              </a>
+                Product
+              </Link>
             </li>
 
-            <li className={styles.menuItem}>
-              <a
-                href="https://medium.com/pluto-network"
-                onClick={() =>
-                  trackLink("https://medium.com/pluto-network", "Header")
-                }
-                target="_blank"
+            <li
+              className={`${styles.menuItem} ${currentCategory === "solution" &&
+                styles.active}`}
+            >
+              <Link
+                to="/solution"
+                onClick={() => {
+                  trackAction("/solution", "Header");
+                }}
               >
-                Blog
-              </a>
+                Solution
+              </Link>
             </li>
 
-            <li className={styles.menuItem}>
-              <a
-                href="https://github.com/pluto-net"
-                onClick={() =>
-                  trackLink("https://github.com/pluto-net", "Header")
-                }
-                target="_blank"
+            <li
+              className={`${styles.menuItem} ${currentCategory === "contact" &&
+                styles.active}`}
+            >
+              <Link
+                to="/contact"
+                onClick={() => {
+                  trackAction("/contact", "Header");
+                }}
               >
-                Github
-              </a>
-            </li>
-
-            <li className={`${styles.menuItem} ${styles.demoItem}`}>
-              <a
-                href={PRODUCT_URL}
-                onClick={() => trackLink(PRODUCT_URL, "Header")}
-                target="_blank"
-              >
-                Our Product
-              </a>
+                Contact us
+              </Link>
             </li>
           </ul>
 

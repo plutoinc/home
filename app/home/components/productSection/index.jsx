@@ -1,10 +1,9 @@
 import React from "react";
-import { trackAndOpenLink } from "../../../helpers/handleGA";
-import VisibilitySensor from "react-visibility-sensor";
+import { Link } from "react-router";
 // styles
+import Icon from "../../../components/icons";
 import styles from "./productSection.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import Icon from "../../../components/icons";
 import { DefaultButton } from "../commonButton";
 import { PRODUCT_URL } from "../../../routes";
 
@@ -25,31 +24,28 @@ class ProductSection extends React.PureComponent {
         }`}
       >
         <div className={styles.innerContainer}>
-          <div className={styles.mokeupContainer}>
-            <img src="https://assets.pluto.network/Macbook.png" />
-          </div>
           <div className={styles.contentsWrapper}>
-            <div className={styles.subTitle}>Product</div>
+            <div className={styles.subTitle}>SCINAPSE</div>
             <div className={styles.title}>
-              <b>Try Scinapse :</b>
+              {`Researcher's favorite`}
               <br />
-              Discover research papers,<br />
-              and put your own review.
+              search engine
+            </div>
+            <div className={styles.description}>
+              Your true search experience begins here.
             </div>
             <DefaultButton
               url={PRODUCT_URL}
-              text="Get Started"
+              text="Try Scinapse"
               from="productSection"
             />
-            <div className={styles.oval_1}>
-              <Icon icon="WP_OVAL" />
-            </div>
-            <div className={styles.oval_2}>
-              <Icon icon="WP_OVAL" />
-            </div>
-            <div className={styles.oval_3}>
-              <Icon icon="WP_OVAL" />
-            </div>
+            <Link className={styles.learnMoreButton} to="/product">
+              Learn more
+              <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
+            </Link>
+          </div>
+          <div className={styles.mokeupContainer}>
+            <img src="https://assets.pluto.network/pluto_team_hompage/scinapse-mock.png" />
           </div>
         </div>
       </section>

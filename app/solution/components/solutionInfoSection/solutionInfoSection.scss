@@ -1,0 +1,74 @@
+.solutionInfoSectionContainer {
+  height: 100%;
+  padding: 180px 0;
+  margin: 0 auto;
+  background-color: #5b83ee;
+}
+
+.innerContainer {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapper {
+  display: flex;
+}
+
+.infoWrapper {
+  width: 380px;
+
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+.infoIcon {
+  display: inline-flex;
+  width: 95px;
+  height: 95px;
+  margin-bottom: 34px;
+
+  svg {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.42;
+  color: white;
+  margin-bottom: 24px;
+  height: 68px;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1080px) {
+  .solutionInfoSectionContainer {
+    padding: 60px 16px;
+  }
+  .contentWrapper {
+    flex-direction: column;
+  }
+  .title {
+    max-height: 68px;
+    height: 100%;
+  }
+
+  .infoWrapper {
+    width: 100%;
+
+    & + & {
+      margin: 48px 0 0 0;
+    }
+  }
+}

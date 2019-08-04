@@ -1,0 +1,49 @@
+.teamInfoSectionContainer {
+  padding: 120px 0;
+  height: 602px;
+  background-color: rgba(6, 46, 78, 0.88);
+  background-image: url("https://assets.pluto.network/pluto_team_hompage/team-background@3x.png");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.subTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 3.75;
+  letter-spacing: 1.31px;
+  text-align: center;
+  color: #5b83ee;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.39;
+  text-align: center;
+  color: white;
+  margin: 8px 0 24px 0;
+}
+
+.contents {
+  width: 477px;
+  height: 120px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1080px) {
+  .teamInfoSectionContainer {
+    padding: 120px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .contents {
+    width: 100%;
+  }
+}
