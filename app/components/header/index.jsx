@@ -43,6 +43,20 @@ class Header extends React.PureComponent {
 
           <ul className={styles.menuList}>
             <li
+              className={`${styles.menuItem} ${currentCategory === "home" &&
+                styles.active}`}
+            >
+              <Link
+                to="/"
+                onClick={() => {
+                  trackAction("/", "Header");
+                }}
+              >
+                Home
+              </Link>
+            </li>
+
+            <li
               className={`${styles.menuItem} ${currentCategory === "product" &&
                 styles.active}`}
             >

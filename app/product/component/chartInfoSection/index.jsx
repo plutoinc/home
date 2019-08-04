@@ -15,10 +15,12 @@ const ChartInfoSection = () => {
           <div className={styles.subTitle}>
             Our algorithm is designed to give best search results for academic
             papers based on published date, citations, publisher, and many more.
-            <br />
             We support Google-like semantic search.
           </div>
         </div>
+        <div
+          className={styles.bottomDesc}
+        >{`< Comparison of top 10 papers search results between Scinapse and Google Scholar >`}</div>
         <div className={styles.graphContent}>
           <div className={styles.graphDescription}>
             <div className={styles.description}>
@@ -82,9 +84,6 @@ const ChartInfoSection = () => {
             </div>
           </div>
         </div>
-        <div
-          className={styles.bottomDesc}
-        >{`< Comparison of top 10 papers search results between Scinapse and Google Scholar >`}</div>
       </div>
     </section>
   );

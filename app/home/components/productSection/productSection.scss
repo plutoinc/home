@@ -2,7 +2,7 @@ $container-width: 1080px;
 
 .productSectionContainer {
   padding: 130px 0;
-  background-color: #f5f7fb;
+  background-color: white;
   background-image: url("https://assets.pluto.network/pluto_team_hompage/background.png");
   background-size: 1440px 651px;
   background-position: bottom;
@@ -28,21 +28,25 @@ $container-width: 1080px;
       position: relative;
     }
   }
+
+  @media (max-width: 1080px) {
+    background-image: unset;
+  }
 }
 
 .subTitle {
-  height: 60px;
   font-size: 16px;
   font-weight: 500;
   line-height: 3.75;
   letter-spacing: 1.31px;
   color: #5b83ee;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     font-size: 18px;
     line-height: 1;
     text-align: left;
     width: 100%;
+    margin-bottom: 16px;
   }
 }
 
@@ -142,17 +146,22 @@ $container-width: 1080px;
 
 @media (max-width: 1080px) {
   .productSectionContainer {
-    padding: 20px 0;
+    padding: 80px 0 40px 0;
     height: 100%;
 
     .mokeupContainer {
       overflow-x: hidden;
       text-align: center;
-
       img {
-        margin: 50px 0 0 0;
+        width: 600px;
+        margin: 40px 0 0 0;
       }
     }
+  }
+
+  .description {
+    margin-bottom: 32px;
+    font-size: 18px;
   }
 
   .innerContainer {

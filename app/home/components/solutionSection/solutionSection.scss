@@ -20,7 +20,7 @@
 }
 
 .subTitle {
-  height: 60px;
+  height: 40px;
   font-size: 16px;
   font-weight: 500;
   line-height: 3.75;
@@ -84,7 +84,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #5b83ee;
-  margin-top: 32px;
+  margin: 32px 0px;
   cursor: pointer;
 
   &:hover {
@@ -116,6 +116,7 @@
 
   .contents {
     width: 100%;
+    font-size: 18px;
   }
 
   .menuWrapper {
@@ -136,12 +137,16 @@
     width: 100%;
   }
 
+  .title {
+    font-size: 32px;
+  }
+
   .menuTitle {
     font-size: 18px;
   }
 
   .menuContent {
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
   }
 }

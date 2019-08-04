@@ -3,7 +3,7 @@ $container-width: 1080px;
 
 .mainSectionContainer {
   padding-top: $header-height;
-  height: 848px;
+  height: 800px;
   overflow: hidden;
   background: linear-gradient(
     to bottom,
@@ -19,7 +19,7 @@ $container-width: 1080px;
     max-width: $container-width;
     margin: 0 auto;
     position: relative;
-    padding-top: 146px;
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
     svg {
@@ -31,8 +31,7 @@ $container-width: 1080px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 166px;
-    height: 44px;
+    padding: 8px 16px;
     border-radius: 4px;
     background-color: #5b83ee;
     font-size: 18px;
@@ -93,19 +92,26 @@ $container-width: 1080px;
 
   @media (max-width: 1080px) {
     text-align: center;
-    margin-top: 32px;
+    margin-top: 0px;
   }
 }
 .backgroundImg {
   background: url("https://assets.pluto.network/pluto_team_hompage/home-character%403x.png");
-  width: 100%;
+  max-width: 1080px;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background-size: 717px 615px;
   background-repeat: no-repeat;
-  background-position: 90% 100%;
+  background-position: 100% 100%;
 
   @media (max-width: 1080px) {
-    background-size: 360px 346px;
+    background-size: 500px;
+    background-position: bottom;
+  }
+
+  @media (max-width: 450px) {
+    background-size: 130%;
     background-position: bottom;
   }
 }
@@ -113,7 +119,7 @@ $container-width: 1080px;
 .title {
   font-size: 50px;
   font-weight: 500;
-  color: #1b3e9a;
+  color: #364a6a;
   margin-bottom: 8px;
 
   @media (max-width: 1080px) {
@@ -153,7 +159,7 @@ $container-width: 1080px;
 
   @media (max-width: 1080px) {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
 

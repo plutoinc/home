@@ -84,7 +84,7 @@ class HomeContainer extends React.PureComponent {
 
     return (
       <section>
-        <Header isTop={homeState.get("isTop")} />
+        <Header isTop={homeState.get("isTop")} currentCategory={"home"} />
 
         <VisibilitySensor
           partialVisibility
@@ -168,7 +168,9 @@ class HomeContainer extends React.PureComponent {
     } else {
       try {
         await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`
+          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${
+            emailInput
+          }`
         );
 
         ReactGA.event({

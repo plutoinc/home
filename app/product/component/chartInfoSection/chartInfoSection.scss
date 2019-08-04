@@ -19,16 +19,16 @@
 }
 
 .subTitle {
-  margin-left: 100px;
-  width: 578px;
-  font-size: 16px;
+  margin-left: 0px;
+  width: 720px;
+  font-size: 18px;
   line-height: 1.5;
   color: white;
 }
 
 .graphContent {
   display: flex;
-  margin-top: 80px;
+  margin-top: 40px;
   justify-content: center;
 }
 
@@ -45,7 +45,7 @@
   align-items: center;
 
   & + & {
-    margin-top: 80px;
+    margin-top: 64px;
   }
 
   .imageWrapper {
@@ -90,13 +90,14 @@
   font-weight: 500;
   line-height: 1.33;
   text-align: center;
-  margin-top: 42px;
-  color: rgba(255, 255, 255, 0.86);
+  margin-top: 80px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .textWrapper {
   display: flex;
   margin-left: 20px;
+  margin-top: 20px;
 }
 
 .mobileGraph {
@@ -123,7 +124,7 @@
   }
 
   .subTitle {
-    margin: 16px 0 0 0;
+    margin: 32px 0 0 0;
     width: 100%;
   }
 

@@ -52,7 +52,7 @@
 
 @media (max-width: 1080px) {
   .serviceInfoSectionContainer {
-    padding: 84px 0;
+    padding: 64px 0;
   }
 
   .serviceInfoWrapper {
@@ -63,11 +63,15 @@
 
   .serviceInfo {
     & + & {
-      margin-top: 64px;
+      margin-top: 40px;
     }
 
     & + &:after {
       display: none;
     }
+  }
+
+  .numberInfo {
+    font-size: 36px;
   }
 }

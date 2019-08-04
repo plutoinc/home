@@ -34,9 +34,9 @@ $container-width: 1080px;
     align-items: center;
 
     img {
-      width: 70%;
+      width: 60%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       overflow: hidden;
     }
   }

@@ -5,15 +5,14 @@ $container-width: 1080px;
   height: 84px;
   padding: 24px 130px;
   font-size: 16px;
-  line-height: 2.44;
+  line-height: 1.44;
   color: #364a6a;
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 8px 15px;
-    font-size: 13px;
-    line-height: 1;
+    padding: 16px 16px;
+    font-size: 14px;
     height: auto;
   }
 }
