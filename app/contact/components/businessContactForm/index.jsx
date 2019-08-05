@@ -91,7 +91,7 @@ class BusinessContactForm extends React.Component {
             };
             try {
               await Axios.post(
-                `https://dev-api.scinapse.io/contact/university`,
+                `https://api.scinapse.io/contact/university`,
                 finalParams
               );
               alert("Thanks for reaching out!");
