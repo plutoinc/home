@@ -96,7 +96,7 @@ class PersonalContactForm extends React.Component {
 
             try {
               await Axios.post(
-                `https://dev-api.scinapse.io/contact/researcher`,
+                `https://api.scinapse.io/contact/researcher`,
                 finalParams
               );
               alert("Thanks for reaching out!");
