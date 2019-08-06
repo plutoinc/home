@@ -95,15 +95,17 @@ $container-width: 1080px;
     margin-top: 0px;
   }
 }
+
 .backgroundImg {
   background: url("https://assets.pluto.network/pluto_team_hompage/home-character%403x.png");
   max-width: 1080px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-size: 717px 615px;
+  background-size: 700px auto;
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: 100% 120%;
+  position: relative;
 
   @media (max-width: 1080px) {
     background-size: 500px;
@@ -269,6 +271,110 @@ $container-width: 1080px;
   margin-bottom: 180px;
   @media (max-width: 1080px) {
     margin-bottom: 134px;
+  }
+}
+
+.blobs {
+  max-width: 1080px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0;
+
+  .blobGreen {
+    content: "";
+    position: absolute;
+    top: 120px;
+    right: 0px;
+    display: block;
+    width: 440px;
+    height: 360px;
+    background-color: #87f0e2;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: transform 30s ease-in-out infinite both alternate,
+      movement 40s ease-in-out infinite both;
+  }
+
+  .blobBlue {
+    content: "";
+    position: absolute;
+    top: 480px;
+    right: 500px;
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-color: #caf2ff;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: transform 40s ease-in-out infinite both alternate,
+      movement 50s ease-in-out infinite both;
+  }
+
+  .blobPurple {
+    content: "";
+    position: absolute;
+    top: 560px;
+    right: 360px;
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-color: #6e71e4;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: transform 10s ease-in-out infinite both alternate,
+      movement 20s ease-in-out infinite both;
+  }
+
+  @media (max-width: 1080px) {
+    .blobGreen {
+      display: none;
+    }
+    .blobBlue {
+      display: none;
+    }
+    .blobPurple {
+      display: none;
+    }
+  }
+}
+
+@keyframes transform {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@keyframes movement {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(6%) rotateY(30deg);
   }
 }
 

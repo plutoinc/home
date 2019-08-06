@@ -11,21 +11,29 @@ const MainSection = params => {
     <section
       className={`${styles.mainSectionContainer} ${shown ? styles.shown : ""}`}
     >
-      <div className={styles.backgroundImg}>
-        <div className={styles.innerContainer}>
-          <div className={styles.title}>Rediscover knowledge</div>
-          <div className={styles.subTitle}>
-            Pluto, where new research begins...
-          </div>
-          <div className={styles.buttonWrapper}>
-            <Link className={styles.ourProductButton} to="/product">
-              Our Product
-            </Link>
+      <div className={styles.blobs}>
+        <div className={styles.blobGreen} />
+        <div className={styles.blobBlue} />
+        <div className={styles.blobPurple} />
+        <div className={styles.backgroundImg}>
+          <div className={styles.innerContainer}>
+            <div className={styles.title}>Rediscover knowledge</div>
+            <div className={styles.subTitle}>
+              Pluto, where new research begins...
+            </div>
+            <div className={styles.buttonWrapper}>
+              <Link className={styles.ourProductButton} to="/product">
+                Our Product
+              </Link>
 
-            <Link className={styles.learnMoreButton} to="/contact">
-              Contact Us
-              <Icon icon="ARROW_FORWARD" className={styles.forwardArrowIcon} />
-            </Link>
+              <Link className={styles.learnMoreButton} to="/contact">
+                Contact Us
+                <Icon
+                  icon="ARROW_FORWARD"
+                  className={styles.forwardArrowIcon}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
