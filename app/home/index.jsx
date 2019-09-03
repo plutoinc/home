@@ -14,12 +14,7 @@ import PressSection from "./components/pressSection";
 import ServiceInfoSection from "./components/serviceInfoSection";
 
 // actions
-import {
-  getRecentBlogPosts,
-  changeEmailInput,
-  leaveScrollTop,
-  enterScrollTop
-} from "./actions";
+import { changeEmailInput, leaveScrollTop, enterScrollTop } from "./actions";
 // helpers
 import EnvChecker from "../helpers/envChecker";
 import SolutionSection from "./components/solutionSection";
@@ -59,9 +54,6 @@ class HomeContainer extends React.PureComponent {
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(getRecentBlogPosts());
-
     if (!EnvChecker.isServer()) {
       window.addEventListener("scroll", this.handleScroll);
     }
@@ -168,9 +160,7 @@ class HomeContainer extends React.PureComponent {
     } else {
       try {
         await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${
-            emailInput
-          }`
+          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`
         );
 
         ReactGA.event({
