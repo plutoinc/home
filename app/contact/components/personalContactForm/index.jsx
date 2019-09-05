@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Axios from "axios";
 import { Field, Form, Formik } from "formik";
+import FeedbackManager from "@pluto_network/scinapse-feedback";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 import styles from "./personalContactForm.scss";
@@ -86,6 +87,8 @@ class PersonalContactForm extends React.Component {
               email,
               comments
             } = values;
+            const feedbackManger = new FeedbackManager();
+            const feedbackDesc = `type: Researcher contact / name: ${firstName} ${lastName} / university: ${affiliation} / email: ${email} / comment: ${comments}`;
             const finalParams = {
               first_name: firstName,
               last_name: lastName,
@@ -95,6 +98,14 @@ class PersonalContactForm extends React.Component {
             };
 
             try {
+              await feedbackManger.sendTicketToFreshdesk({
+                email,
+                description: feedbackDesc,
+                subject: "Researcher : " + email,
+                status: 2,
+                priority: 2,
+                source: 1
+              });
               await Axios.post(
                 `https://api.scinapse.io/contact/researcher`,
                 finalParams
