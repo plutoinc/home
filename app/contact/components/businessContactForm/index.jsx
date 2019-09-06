@@ -6,6 +6,7 @@ import FeedbackManager from "@pluto_network/scinapse-feedback";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
 import Icon from "../../../components/icons";
 import styles from "./businessContactForm.scss";
+import validateEmail from "../../../helpers/validateEmail";
 
 class BusinessContactForm extends React.Component {
   constructor(props) {
@@ -244,6 +245,10 @@ class BusinessContactForm extends React.Component {
     const errors = {};
     for (const key of Object.keys(values)) {
       if (key === "comments") break;
+
+      if (key === "email" && !validateEmail(values[key])) {
+        errors.email = "Please enter valid e-mail address.";
+      }
 
       if (!values[key] || values[key].length === 0) {
         errors[key] = `Please enter ${key}`;
