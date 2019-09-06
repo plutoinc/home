@@ -203,7 +203,7 @@ class BusinessContactForm extends React.Component {
                         props.touched.email && props.errors.email
                     })}
                     name="email"
-                    placeholder="ex) tylor@pluto.network"
+                    placeholder="ex) team@pluto.network"
                   />
                   {props.touched.email && props.errors.email && (
                     <div className={styles.errorMsg}>{props.errors.email}</div>
