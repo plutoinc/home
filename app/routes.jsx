@@ -8,6 +8,7 @@ import FAQContainer from "./faq";
 import ProductContainer from "./product";
 import SolutionContainer from "./solution";
 import ContactContainer from "./contact";
+import AboutUsContainer from "./aboutUs";
 
 export const WHITE_PAPER_ADDRESS =
   "https://assets.pluto.network/Pluto_white_paper_v04_180719_1355_BSH.pdf";
@@ -31,6 +32,10 @@ const createRoute = () => [
   </Route>,
   <Route path="/contact" component={RootComponent}>
     <IndexRoute component={ContactContainer} />
+    <Route path="*" component={NoPage} />
+  </Route>,
+  <Route path="/aboutUs" component={RootComponent}>
+    <IndexRoute component={AboutUsContainer} />
     <Route path="*" component={NoPage} />
   </Route>,
   <Route path="/" component={RootComponent}>

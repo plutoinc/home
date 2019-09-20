@@ -1,0 +1,74 @@
+.plutoInfoContainer {
+  height: 100%;
+  margin: 0 auto;
+  background-color: #5b83ee;
+}
+
+.backgroundImg {
+  background: url("https://assets.pluto.network/pluto_team_hompage/circle-team%403x.png");
+  padding: 184px 0 120px 0;
+  max-width: 1440px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 891px auto;
+  background-repeat: no-repeat;
+  background-position: 95% 100%;
+  position: relative;
+
+  @media (max-width: 1080px) {
+    padding: 120px 0;
+    background-size: 500px;
+    background-position: bottom;
+  }
+
+  @media (max-width: 450px) {
+    background-size: 130%;
+    background-position: bottom;
+  }
+}
+
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 130px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoImg {
+  width: 200px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.contents {
+  max-width: 478px;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 1080px) {
+  .logoImg {
+    width: 160px;
+    height: 61px;
+  }
+
+  .contents {
+    max-width: 342px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .innerContainer {
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 200px;
+    justify-content: center;
+  }
+}

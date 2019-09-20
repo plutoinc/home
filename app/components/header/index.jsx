@@ -22,7 +22,7 @@ class Header extends React.PureComponent {
       <header
         className={`${styles.headerContainer} ${
           this.state.isMenuOpen ? styles.isOpen : ""
-        } ${isTop ? styles.topToHeader : ""}`}
+        } ${isTop && currentCategory !== "aboutUs" ? styles.topToHeader : ""}`}
       >
         <div
           className={`${styles.menuListOverlay} ${
@@ -42,20 +42,6 @@ class Header extends React.PureComponent {
           </Link>
 
           <ul className={styles.menuList}>
-            <li
-              className={`${styles.menuItem} ${currentCategory === "home" &&
-                styles.active}`}
-            >
-              <Link
-                to="/"
-                onClick={() => {
-                  trackAction("/", "Header");
-                }}
-              >
-                Home
-              </Link>
-            </li>
-
             <li
               className={`${styles.menuItem} ${currentCategory === "product" &&
                 styles.active}`}
@@ -81,6 +67,20 @@ class Header extends React.PureComponent {
                 }}
               >
                 Solution
+              </Link>
+            </li>
+
+            <li
+              className={`${styles.menuItem} ${currentCategory === "aboutUs" &&
+                styles.active}`}
+            >
+              <Link
+                to="/aboutUs"
+                onClick={() => {
+                  trackAction("/aboutUs", "Header");
+                }}
+              >
+                About us
               </Link>
             </li>
 

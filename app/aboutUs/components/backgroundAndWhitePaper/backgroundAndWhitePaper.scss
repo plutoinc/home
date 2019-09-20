@@ -1,0 +1,100 @@
+$mobile-width: 768px;
+
+.backgroundAndWhitePaperContainer {
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f5f6fa;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 46px 0 52px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titleWrapper {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #062e4e;
+  margin-bottom: 24px;
+}
+
+.buttonWrapper {
+  .learnMoreButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 196px;
+    height: 44px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: #5b83ee;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #456eda;
+      color: white;
+    }
+
+    .forwardArrowIcon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      margin-left: 8px;
+      transform: rotateY(180deg);
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .learnMoreGrayButton {
+    @extend .learnMoreButton;
+    background-color: #e7eaef;
+    color: #5b83ee;
+    margin-left: 22px;
+
+    &:hover {
+      background-color: #d8dde7;
+      text-decoration: none;
+      color: #5b83ee;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .innerContainer {
+    padding: 52px 16px;
+    justify-content: center;
+  }
+
+  .titleWrapper {
+    font-size: 24px;
+    line-height: 1.75;
+    text-align: center;
+    color: #062e4e;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .learnMoreGrayButton {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+  }
+}

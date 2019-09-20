@@ -1,0 +1,110 @@
+$mobile-width: 768px;
+
+.whatWeDoContainer {
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fbfbfd;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 106px 130px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftBox {
+  img {
+    max-width: 579px;
+    width: 100%;
+    height: 159px;
+    object-fit: contain;
+  }
+}
+
+.rightBox {
+  max-width: 577px;
+
+  img {
+    display: none;
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.56;
+    color: #062e4e;
+    margin-bottom: 27px;
+  }
+
+  .content {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #667997;
+    margin-bottom: 32px;
+  }
+
+  .learnMoreButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 196px;
+    height: 44px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: #5b83ee;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #456eda;
+      color: white;
+    }
+
+    .forwardArrowIcon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      margin-left: 8px;
+      transform: rotateY(180deg);
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .innerContainer {
+    padding: 52px 16px;
+    justify-content: center;
+  }
+
+  .leftBox {
+    display: none;
+  }
+
+  .rightBox {
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+      margin: 5px 0 32px 0;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
