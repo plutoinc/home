@@ -59,19 +59,6 @@ $mobile-width: 768px;
       }
     }
   }
-
-  .learnMoreGrayButton {
-    @extend .learnMoreButton;
-    background-color: #e7eaef;
-    color: #5b83ee;
-    margin-left: 22px;
-
-    &:hover {
-      background-color: #d8dde7;
-      text-decoration: none;
-      color: #5b83ee;
-    }
-  }
 }
 
 @media (max-width: 1080px) {
@@ -91,10 +78,5 @@ $mobile-width: 768px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .learnMoreGrayButton {
-      margin-left: 0;
-      margin-top: 12px;
-    }
   }
 }

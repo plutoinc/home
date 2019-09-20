@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router";
 // styles
 import Icon from "../../../components/icons";
 import styles from "./backgroundAndWhitePaper.scss";
 import withStyles from "isomorphic-style-loader/lib/withStyles";
+import { WHITE_PAPER_ADDRESS } from "../../../routes";
 
 const BackgroundAndWhitePaper = () => {
   return (
@@ -13,13 +13,10 @@ const BackgroundAndWhitePaper = () => {
           Our background and former white paper
         </div>
         <div className={styles.buttonWrapper}>
-          <Link className={styles.learnMoreButton} to="/solution">
-            Former website
-          </Link>
-          <Link className={styles.learnMoreGrayButton} to="/solution">
+          <a className={styles.learnMoreButton} href={WHITE_PAPER_ADDRESS}>
             Whitepaper
             <Icon icon="ARROW_IOS_DOWN" className={styles.forwardArrowIcon} />
-          </Link>
+          </a>
         </div>
       </div>
     </section>
