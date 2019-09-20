@@ -7,13 +7,13 @@
 .backgroundImg {
   background: url("https://assets.pluto.network/pluto_team_hompage/circle-team%403x.png");
   padding: 184px 0 120px 0;
-  max-width: 1440px;
+  max-width: 1080px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   background-size: 891px auto;
   background-repeat: no-repeat;
-  background-position: 95% 100%;
+  background-position: right bottom;
   position: relative;
 
   @media (max-width: 1080px) {
@@ -31,7 +31,6 @@
 .innerContainer {
   width: 100%;
   height: 100%;
-  padding: 0 130px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
