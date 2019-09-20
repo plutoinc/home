@@ -16,8 +16,8 @@ const PlutoInfo = () => {
 
             <div className={styles.contents}>
               A group of highly talented engineers and researchers who are
-              passionate about scholarly communication. We're here to break down
-              barriers in academia.
+              passionate about scholarly communication. <br /> We're here to
+              break down barriers in academia.
               <br />
               <br />
               Not only do we enjoy solving problems surrounding the academia

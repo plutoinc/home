@@ -44,8 +44,8 @@ $mobile-width: 768px;
   }
 
   .content {
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.6;
     color: #667997;
     margin-bottom: 32px;
   }
@@ -55,7 +55,7 @@ $mobile-width: 768px;
     align-items: center;
     justify-content: center;
     width: 196px;
-    height: 44px;
+    height: 48px;
     border-radius: 4px;
     font-size: 18px;
     font-weight: 500;
@@ -97,11 +97,22 @@ $mobile-width: 768px;
   }
 
   .rightBox {
+    max-width: 100%;
+
+    .title {
+      text-align: center;
+    }
+
+    .learnMoreButton {
+      width: 100%;
+    }
+
     img {
       display: block;
+      max-width: 500px;
       width: 100%;
       object-fit: contain;
-      margin: 5px 0 32px 0;
+      margin: 5px auto 32px auto;
     }
 
     .content {

@@ -6,24 +6,31 @@
 
 .backgroundImg {
   background: url("https://assets.pluto.network/pluto_team_hompage/circle-team%403x.png");
-  padding: 184px 0 120px 0;
+  padding: 120px 0 140px 0;
   max-width: 1080px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-size: 891px auto;
+  background-size: 760px auto;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: 125% bottom;
   position: relative;
 
   @media (max-width: 1080px) {
-    padding: 120px 0;
-    background-size: 500px;
+    padding: 80px 0 300px 0;
+    background-size: 80%;
     background-position: bottom;
   }
 
-  @media (max-width: 450px) {
-    background-size: 130%;
+  @media (max-width: 768px) {
+    padding: 80px 0 200px 0;
+    background-size: 100%;
+    background-position: bottom;
+  }
+
+  @media (max-width: 400px) {
+    padding: 80px 0 40px 0;
+    background-size: 120%;
     background-position: bottom;
   }
 }
@@ -38,15 +45,17 @@
 }
 
 .logoImg {
-  width: 200px;
+  width: 160px;
   height: 75px;
   object-fit: contain;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
 .contents {
-  max-width: 478px;
-  font-size: 20px;
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.6;
   color: white;
 }
 
@@ -57,9 +66,9 @@
   }
 
   .contents {
-    max-width: 342px;
+    max-width: 100%;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: center;
     color: #ffffff;
   }

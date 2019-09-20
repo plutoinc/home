@@ -1,20 +1,17 @@
 .inTheFutureContainer {
-  height: 561px;
+  height: 480px;
   margin: 0 auto;
   background-color: #5b83ee;
 }
 
 .backgroundImg {
   background: url("https://assets.pluto.network/pluto_team_hompage/team-picture%403x.png");
-  padding: 184px 0 120px 0;
+  background-size: cover;
+  padding: 120px 0 120px 0;
   height: 100%;
-  width: 100%;
-  background-size: 100% 561px;
   background-repeat: no-repeat;
   position: relative;
-
-  @media (max-width: 1080px) {
-  }
+  background-position: center;
 }
 
 .innerContainer {
@@ -38,8 +35,8 @@
 
 .content {
   max-width: 950px;
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.6;
   text-align: center;
   color: white;
   margin: 0 auto;
@@ -51,12 +48,6 @@
     height: 654px;
   }
 
-  .backgroundImg {
-    background: url("https://assets.pluto.network/pluto_team_hompage/mobile-team-feature%403x.jpg");
-    background-size: 100% 654px;
-    background-repeat: no-repeat;
-    padding: 0;
-  }
   .content {
     font-size: 18px;
     line-height: 1.78;
@@ -68,5 +59,16 @@
     text-align: center;
     padding: 183px 16px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 1080px) {
+  .backgroundImg {
+    background: url("https://assets.pluto.network/pluto_team_hompage/mobile-team-feature%403x.jpg");
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
   }
 }

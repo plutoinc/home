@@ -16,7 +16,7 @@ $mobile-width: 768px;
 }
 
 .titleWrapper {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
@@ -30,7 +30,7 @@ $mobile-width: 768px;
     align-items: center;
     justify-content: center;
     width: 196px;
-    height: 44px;
+    height: 48px;
     border-radius: 4px;
     font-size: 18px;
     font-weight: 500;
@@ -78,5 +78,8 @@ $mobile-width: 768px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    .learnMoreButton {
+      width: 100%;
+    }
   }
 }
