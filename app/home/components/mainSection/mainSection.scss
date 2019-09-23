@@ -3,7 +3,7 @@ $container-width: 1080px;
 
 .mainSectionContainer {
   padding-top: $header-height;
-  height: 800px;
+  height: 720px;
   overflow: hidden;
   background: linear-gradient(
     to bottom,
@@ -19,7 +19,7 @@ $container-width: 1080px;
     max-width: $container-width;
     margin: 0 auto;
     position: relative;
-    padding-top: 120px;
+    padding: 120px 16px 0 16px;
     display: flex;
     flex-direction: column;
     svg {
@@ -31,7 +31,7 @@ $container-width: 1080px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
+    padding: 12px 18px;
     border-radius: 4px;
     background-color: #5b83ee;
     font-size: 18px;
@@ -119,9 +119,9 @@ $container-width: 1080px;
 }
 
 .title {
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 500;
-  color: #364a6a;
+  color: #062e4e;
   margin-bottom: 8px;
 
   @media (max-width: 1080px) {
@@ -157,7 +157,7 @@ $container-width: 1080px;
 
 .subTitle {
   font-size: 26px;
-  color: #7085a8;
+  color: #667997;
 
   @media (max-width: 1080px) {
     text-align: center;

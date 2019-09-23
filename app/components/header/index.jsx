@@ -20,14 +20,16 @@ class Header extends React.PureComponent {
     const { isTop, currentCategory } = this.props;
     return (
       <header
-        className={`${styles.headerContainer} ${
-          this.state.isMenuOpen ? styles.isOpen : ""
-        } ${isTop ? styles.topToHeader : ""}`}
+        className={`${styles.headerContainer} ${this.state.isMenuOpen
+          ? styles.isOpen
+          : ""} ${isTop && currentCategory !== "aboutUs"
+          ? styles.topToHeader
+          : ""}`}
       >
         <div
-          className={`${styles.menuListOverlay} ${
-            this.state.isMenuOpen ? styles.isOpen : ""
-          }`}
+          className={`${styles.menuListOverlay} ${this.state.isMenuOpen
+            ? styles.isOpen
+            : ""}`}
           onClick={this.toggleMobileMenu}
         />
         <div className={`${styles.innerContainer} `}>
@@ -48,6 +50,7 @@ class Header extends React.PureComponent {
             >
               <Link
                 to="/"
+                className={styles.logoWrapper}
                 onClick={() => {
                   trackAction("/", "Header");
                 }}
@@ -81,6 +84,20 @@ class Header extends React.PureComponent {
                 }}
               >
                 Solution
+              </Link>
+            </li>
+
+            <li
+              className={`${styles.menuItem} ${currentCategory === "aboutUs" &&
+                styles.active}`}
+            >
+              <Link
+                to="/aboutUs"
+                onClick={() => {
+                  trackAction("/aboutUs", "Header");
+                }}
+              >
+                About us
               </Link>
             </li>
 

@@ -1,0 +1,74 @@
+.inTheFutureContainer {
+  height: 480px;
+  margin: 0 auto;
+  background-color: #5b83ee;
+}
+
+.backgroundImg {
+  background: url("https://assets.pluto.network/pluto_team_hompage/team-picture%403x.png");
+  background-size: cover;
+  padding: 120px 0 120px 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+}
+
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 130px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backgroundOpacityColor {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.38;
+  background-color: #082438;
+}
+
+.content {
+  max-width: 950px;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+@media (max-width: 1080px) {
+  .inTheFutureContainer {
+    height: 654px;
+  }
+
+  .content {
+    font-size: 18px;
+    line-height: 1.78;
+    text-align: center;
+    color: white;
+  }
+
+  .innerContainer {
+    text-align: center;
+    padding: 183px 16px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1080px) {
+  .backgroundImg {
+    background: url("https://assets.pluto.network/pluto_team_hompage/mobile-team-feature%403x.jpg");
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+  }
+}
