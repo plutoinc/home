@@ -96,9 +96,7 @@ export async function handler(event, context) {
     const userLocale = acceptLanguage.get(event.headers["Accept-Language"]);
 
     try {
-      const bundledJsForBrowserPath = `https://d146wza8np03cp.cloudfront.net/${
-        DeployConfig.AWS_S3_FOLDER_PREFIX
-      }/${version}/bundleBrowser.js`;
+      const bundledJsForBrowserPath = `https://d146wza8np03cp.cloudfront.net/${DeployConfig.AWS_S3_FOLDER_PREFIX}/${version}/bundleBrowser.js`;
       const response = await serverSideRender(
         requestPath,
         bundledJsForBrowserPath,
@@ -115,7 +113,7 @@ export async function handler(event, context) {
       });
     } catch (e) {
       console.error(e);
-      console.error(e.meesage);
+      console.error(e.message);
       context.succeed({
         statusCode: 500,
         headers: {
