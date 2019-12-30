@@ -1,7 +1,8 @@
 service: pluto-home
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
+  logRetentionInDays: 30
   environment: ${file(./env/${opt:stage}.yml)}
   iamRoleStatements:
     - Effect: "Allow"
@@ -38,10 +39,6 @@ functions:
 
 resources:
   Resources:
-    PlutoRenderLogGroup:
-      Properties:
-        RetentionInDays: "30"
-
     CloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
       Properties:
