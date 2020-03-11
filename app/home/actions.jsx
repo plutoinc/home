@@ -31,9 +31,3 @@ export function leaveScrollTop() {
     type: ACTION_TYPES.LEAVE_SCROLL_TOP
   };
 }
-
-export function emailSubscribed() {
-  return {
-    type: ACTION_TYPES.EMAIL_SUBSCRIPBED
-  };
-}
