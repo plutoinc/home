@@ -1,7 +1,7 @@
 service: pluto-home
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   environment: ${file(./env/${opt:stage}.yml)}
   iamRoleStatements:
     - Effect: "Allow"
