@@ -12,7 +12,6 @@ import { Provider } from "react-redux";
 import ReactGA from "react-ga";
 // server
 import { handler as lambdaHandler, serverSideRender } from "./server";
-import mailHandler from "./mailServer";
 // Middleware
 import * as ReactRouterRedux from "react-router-redux";
 import thunkMiddleware from "redux-thunk";
