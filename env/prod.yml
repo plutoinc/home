@@ -1,3 +1,2 @@
-MAILCHIMP_API_KEY: ${env:MAILCHIMP_API_KEY}
 DNS_ALIAS1: pluto.network
 DNS_ALIAS2: www.pluto.network

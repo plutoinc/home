@@ -50,7 +50,6 @@ class HomeContainer extends React.PureComponent {
     this.handleScroll();
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.subscribeEmail = this.subscribeEmail.bind(this);
   }
 
   componentDidMount() {
@@ -147,35 +146,6 @@ class HomeContainer extends React.PureComponent {
   handleEmailChange(e) {
     const { dispatch } = this.props;
     dispatch(changeEmailInput(e.currentTarget.value));
-  }
-
-  async subscribeEmail(e, from) {
-    const { homeState, dispatch } = this.props;
-    e.preventDefault();
-    const emailInput = homeState.get("email");
-    // e-mail validation by regular expression
-    const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!reg.test(emailInput)) {
-      alert("Please input valid e-mail");
-    } else {
-      try {
-        await Axios.post(
-          `https://gesqspxc8i.execute-api.us-east-1.amazonaws.com/prod/subscribeMailingList?email=${emailInput}`
-        );
-
-        ReactGA.event({
-          category: "subscribe",
-          action: `subscribe-from-${from}`,
-          label: "subscribe-email"
-        });
-
-        // alert("You are on the subscribe list now");
-        dispatch(emailSubscribed());
-        dispatch(changeEmailInput(""));
-      } catch (err) {
-        alert(`Failed: ${err.response.data.error}`);
-      }
-    }
   }
 }
 

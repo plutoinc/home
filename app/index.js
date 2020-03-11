@@ -136,4 +136,3 @@ if (!EnvChecker.isServer()) {
 
 // Lambda handler
 export const handler = lambdaHandler;
-export const subscribeMailHandler = mailHandler;
