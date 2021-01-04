@@ -93,7 +93,7 @@
   "dependencies": {
     "@pluto_network/scinapse-feedback": "0.0.7",
     "accept-language": "^3.0.17",
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "babel-runtime": "^6.23.0",
     "bootstrap": "^3.3.7",
     "formik": "^1.5.8",
